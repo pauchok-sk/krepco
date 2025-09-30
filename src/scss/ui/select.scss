@@ -1,0 +1,94 @@
+.select {
+  position: relative;
+
+  &._open {
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .select-input {
+      pointer-events: all;
+      border-color: var(--primary);
+      border-radius: 10px 10px 0px 0px;
+    }
+    .select-btn {
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-btn {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .arrow {
+      position: absolute;
+      right: 19px;
+      width: 10px;
+      height: 10px;
+      color: var(--silver);
+      z-index: 1;
+
+      transition: transform 0.3s ease;
+    }
+  }
+  &-input {
+    pointer-events: none;
+  }
+  &-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid var(--primary);
+    border-top: none;
+
+    max-height: 150px;
+    overflow-y: auto;
+
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+  }
+  &-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: var(--dark);
+
+    font-size: 16px;
+    line-height: 81%;
+
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: rgba(237, 110, 0, 0.2);
+    }
+    &._active {
+      background-color: rgba(237, 110, 0, 0.2);
+      pointer-events: none;
+    }
+
+    .sub {
+      font-size: 12px;
+      line-height: 125%;
+      color: var(--gray);
+    }
+  }
+  &-not-found {
+    padding: 10px 20px;
+
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 81%;
+  }
+}

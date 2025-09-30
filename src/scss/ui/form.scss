@@ -1,0 +1,20 @@
+.input-control {
+  width: 100%;
+}
+.input {
+  outline: none;
+  width: 100%;
+  padding: 13px 20px;
+  border: 1px solid var(--silver);
+  border-radius: 10px;
+
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 81%;
+
+  transition: border-color .3s ease, border-radius .3s ease;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
