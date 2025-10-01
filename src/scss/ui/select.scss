@@ -45,11 +45,9 @@
     right: 0;
     background-color: white;
     border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
     border: 1px solid var(--primary);
     border-top: none;
-
-    max-height: 150px;
-    overflow-y: auto;
 
     transform: translateY(30px);
     opacity: 0;
@@ -59,6 +57,24 @@
       transform 0.4s ease,
       opacity 0.4s ease,
       visibility 0.4s ease;
+  }
+  &-container {
+    max-height: 150px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: white;
+      border-radius: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--alto);
+      border-radius: 6px;
+      border: 3px solid white;
+    }
   }
   &-item {
     cursor: pointer;
@@ -73,6 +89,10 @@
     @include hover {
       background-color: rgba(237, 110, 0, 0.2);
     }
+    @include tablet-min {
+      padding: 10px 15px;
+    }
+
     &._active {
       background-color: rgba(237, 110, 0, 0.2);
       pointer-events: none;
@@ -90,5 +110,9 @@
     color: var(--gray);
     font-size: 16px;
     line-height: 81%;
+    @include tablet-min {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
   }
 }

@@ -15,4 +15,4 @@ Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
 
-Fancybox.show([{ src: "#modal-call", type: "inline" }]);
+// Fancybox.show([{ src: "#modal-call", type: "inline" }]);

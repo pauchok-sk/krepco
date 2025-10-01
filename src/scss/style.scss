@@ -15,9 +15,11 @@
 @import "./ui/drop-catalog";
 @import "./ui/form";
 @import "./ui/select";
+@import "./ui/scrollbar";
 
 // widgets
 @import "./widgets/modal";
+@import "./widgets/drop-catalog";
 
 // components
 @import "./components/header";

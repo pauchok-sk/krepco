@@ -1,8 +1,22 @@
-.btn {
+.btn-s {
+  @include flex-center;
   cursor: pointer;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  color: inherit;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  padding: 17px 20px;
+  border-radius: 10px;
+  width: fit-content;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 81%;
+  color: white;
+
+  transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+
+  @include hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
 }
