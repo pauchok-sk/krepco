@@ -1,0 +1,6 @@
+.sect-m {
+  margin: 80px 0px;
+  @include tablet {
+    margin: 70px 0px;
+  }
+}

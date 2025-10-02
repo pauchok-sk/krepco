@@ -71,7 +71,7 @@ export default function spoller() {
           spollerTitle.classList.toggle("_spoller-active");
           _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
         }
-        e.preventDefault();
+        // e.preventDefault();
       }
     }
     function hideSpollersBody(spollersBlock) {

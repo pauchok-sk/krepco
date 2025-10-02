@@ -1961,8 +1961,13 @@
   </div>
 </div>
 
-<div class="burger">
-  <div class="burger__window">
+<div class="burger-overlay" id="burger-overlay"></div>
+<div class="burger" id="burger">
+  <div
+    class="burger__window _active"
+    style="opacity: 1"
+    data-burger-menu="main"
+  >
     <div class="burger__container">
       <div class="burger__head">
         <div class="burger__head-title">Меню</div>
@@ -1991,10 +1996,325 @@
         </div>
         <div data-burger-close class="burger__close">
           <svg>
-            <use xlink:href='img/icons/icons.svg#icon-close'></use>
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
           </svg>
         </div>
       </div>
+      <ul class="list burger__list">
+        <li data-burger-menu-btn="menu-1">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Метизы, крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-2">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Такелаж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-1">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Метизы, крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-2">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Такелаж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-1">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Метизы, крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-2">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Такелаж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-1">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Метизы, крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-2">
+          <img src="@img/category.svg" alt="icon" />
+          <a href="#">Такелаж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+      </ul>
+      <a href="#" class="burger__primary-btn">Калькулятор</a>
+      <div class="burger__menu">
+        <div data-spollers class="burger__menu-item">
+          <div class="burger__menu-title">Покупателям</div>
+          <ul class="list burger__menu-list">
+            <li><a href="#" class="btn">Оплата</a></li>
+            <li><a href="#" class="btn">Доставка</a></li>
+            <li>
+              <span data-spoller data-event class="btn">
+                <a href="#">Производство и услуги</a>
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                </svg>
+              </span>
+              <ul class="list">
+                <li><a href="#" class="btn">Болты БСР</a></li>
+                <li><a href="#" class="btn">Болты для фундамента</a></li>
+                <li><a href="#" class="btn">Порошковая покраска</a></li>
+                <li><a href="#" class="btn">Закладные детали</a></li>
+                <li><a href="#" class="btn">Блог</a></li>
+                <li><a href="#" class="btn">Контакты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="burger__menu-item">
+          <div class="burger__menu-title">Контактная информация</div>
+          <div class="burger__address">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-location"></use>
+            </svg>
+            <span>Москва, Каширский проезд 17/4 (склад)</span>
+          </div>
+          <a href="mailto:moscow+1320725@krepco.ru" class="burger__mail">
+            moscow+1320725@krepco.ru
+          </a>
+          <a href="tel:84957139139" class="burger__tel">8 (495) 7-139-139</a>
+        </div>
+        <div class="burger__footer">
+          <div class="burger__social">
+            <a href="#" target="_blank" class="burger__social-btn">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-wh"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="burger__social-btn">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+              </svg>
+            </a>
+          </div>
+          <a href="#modal-call" data-fancybox class="btn-s burger__connect-btn">
+            Связаться с нами
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="burger__window" data-burger-menu="menu-1">
+    <div class="burger__container">
+      <div class="burger__head">
+        <div class="burger__back" data-burger-menu-btn="main">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-prev"></use>
+          </svg>
+          <span>Меню</span>
+        </div>
+        <div class="burger__head-title">Каталог</div>
+        <div data-burger-close class="burger__close">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+      <ul class="list burger__list">
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="burger__window" data-burger-menu="menu-2">
+    <div class="burger__container">
+      <div class="burger__head">
+        <div class="burger__back" data-burger-menu-btn="main">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-prev"></use>
+          </svg>
+          <span>Меню</span>
+        </div>
+        <div class="burger__head-title">Каталог</div>
+        <div data-burger-close class="burger__close">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+      <ul class="list burger__list">
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Анкера</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Болты</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+        <li data-burger-menu-btn="menu-3">
+          <a href="#">Антивандальный крепеж</a>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="burger__window" data-burger-menu="menu-3">
+    <div class="burger__container">
+      <div class="burger__head">
+        <div class="burger__back" data-burger-menu-btn="menu-2">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-prev"></use>
+          </svg>
+          <span>Каталог</span>
+        </div>
+        <div class="burger__head-title">Каталог</div>
+        <div data-burger-close class="burger__close">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+      <ul class="list burger__list">
+        <li>
+          <a href="#">Анкерный болт распорный (анкер-болт)</a>
+        </li>
+        <li>
+          <a href="#">Анкер латунный (цанга)</a>
+        </li>
+        <li>
+          <a href="#">Анкер-клин потолочный</a>
+        </li>
+        <li>
+          <a href="#">Анкерный болт распорный (анкер-болт)</a>
+        </li>
+        <li>
+          <a href="#">Анкер латунный (цанга)</a>
+        </li>
+        <li>
+          <a href="#">Анкер-клин потолочный</a>
+        </li>
+        <li>
+          <a href="#">Анкерный болт распорный (анкер-болт)</a>
+        </li>
+        <li>
+          <a href="#">Анкер латунный (цанга)</a>
+        </li>
+        <li>
+          <a href="#">Анкер-клин потолочный</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

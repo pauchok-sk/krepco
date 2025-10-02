@@ -1,9 +1,12 @@
 import "../scss/style.scss";
+import burger from "./files/burger.js";
+import burgerMenus from "./files/burgerMenus.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
 import inputmask from "./files/inputmask.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import select from "./files/select.js";
+import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 
 spoller();
@@ -12,6 +15,9 @@ dropdown();
 inputmask();
 select();
 dropCatalog();
+burger();
+burgerMenus();
+sliders();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

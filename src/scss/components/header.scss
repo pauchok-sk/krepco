@@ -168,6 +168,7 @@
   }
   &__logo {
     display: block;
+    flex-shrink: 0;
     width: 245px;
 
     @include laptop-middle {
