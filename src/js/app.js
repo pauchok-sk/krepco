@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
 import inputmask from "./files/inputmask.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
@@ -10,6 +11,7 @@ mediaAdaptive();
 dropdown();
 inputmask();
 select();
+dropCatalog();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

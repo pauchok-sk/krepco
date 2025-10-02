@@ -1,0 +1,66 @@
+.burger {
+  position: fixed;
+  overflow-y: auto;
+  inset: 0;
+  background-color: var(--alabaster);
+  z-index: 100;
+  &__window {
+    transition: opacity 0.4s ease;
+  }
+  &__container {
+    padding: 20px;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+  }
+  &__head-title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 120%;
+  }
+  &__dropdown {
+  }
+  &__dropdown-btn {
+    display: flex;
+    align-items: center;
+
+    &._active {
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      margin-right: 8px;
+    }
+    .arrow {
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+
+      transition: transform .3s ease;
+    }
+  }
+  &__close {
+    @include flex-center;
+    width: 25px;
+    height: 25px;
+
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

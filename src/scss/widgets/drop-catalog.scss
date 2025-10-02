@@ -14,9 +14,26 @@
   height: 100%;
   max-height: calc(100vh - 290px);
 
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  &._open {
+    opacity: 1;
+    visibility: visible;
+  }
+
   &__menu {
     height: 100%;
+    width: 455px;
     overflow-y: auto;
+
+    @include laptop {
+      width: 425px;
+    }
 
     &::-webkit-scrollbar {
       width: 0;
@@ -39,6 +56,14 @@
     transition: background-color 0.3s ease;
 
     @include hover {
+      background-color: #fff;
+
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+    &._active {
       background-color: #fff;
 
       &::before,
@@ -100,6 +125,9 @@
     height: 100%;
     overflow-y: auto;
     padding-right: 40px;
+    @include laptop-middle {
+      padding-right: 20px;
+    }
   }
   &__container {
     padding-left: 40px;
@@ -112,6 +140,14 @@
     padding-bottom: 40px;
     width: 100%;
     border-bottom: 2px solid var(--alto);
+    @include laptop {
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
   }
   &__item {
     a {
@@ -134,6 +170,9 @@
     min-height: 145px;
     height: fit-content;
     grid-area: 4/3/11/4;
+    @include laptop-middle {
+      grid-area: 8/2/17/3;
+    }
   }
   &__reklam-tag {
     padding: 4px 5px;
@@ -146,7 +185,7 @@
     margin-bottom: 7px;
   }
   &__reklam-title {
-    font-weight: 600;
+    font-weight: 900;
     font-size: 14px;
     line-height: 120%;
   }
@@ -160,7 +199,7 @@
     padding: 10px 0px;
   }
   &__tags-item-title {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 16px;
     margin: 0px 0px 20px 0px;
   }
@@ -175,12 +214,25 @@
       padding: 5px 10px;
       background-color: var(--wild);
 
-      transition: background-color .3s ease, color .3s ease;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 
       @include hover {
         background-color: var(--primary);
         color: white;
       }
     }
+  }
+}
+
+[data-drop-menu] {
+  display: none;
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  &._active {
+    display: block;
   }
 }

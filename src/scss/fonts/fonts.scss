@@ -1,8 +1,8 @@
 @font-face {
 	font-family: MuseoSansCyrl;
 	font-display: swap;
-	src: url("../fonts/MuseoSansCyrl-Light.woff2") format("woff2");
-	font-weight: 300;
+	src: url("../fonts/MuseoSansCyrl-Black.woff2") format("woff2");
+	font-weight: 900;
 	font-style: normal;
 }
 @font-face {
@@ -10,6 +10,13 @@
 	font-display: swap;
 	src: url("../fonts/MuseoSansCyrl-Bold.woff2") format("woff2");
 	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: MuseoSansCyrl;
+	font-display: swap;
+	src: url("../fonts/MuseoSansCyrl-Light.woff2") format("woff2");
+	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
