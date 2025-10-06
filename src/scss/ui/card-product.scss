@@ -1,0 +1,85 @@
+.card-product {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__top {
+    @include flex-between;
+    gap: 10px;
+  }
+  &__id {
+    font-size: 10px;
+  }
+  &__tag {
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 5px;
+    background: var(--primary-light);
+    color: var(--primary);
+
+    &._green {
+      background: var(--green-light);
+      color: var(--green);
+    }
+  }
+  &__slider {
+    width: 100%;
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/0.85;
+  }
+  &__slider-pagination {
+    @include flex-center;
+    gap: 5px;
+
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      opacity: 1 !important;
+      margin: 0 !important;
+      background-color: var(--alto);
+      width: 4px;
+      height: 4px;
+
+      transition: background-color 0.3s ease;
+      @include hover {
+        background-color: var(--primary);
+      }
+
+      &.swiper-pagination-bullet-active {
+        background-color: var(--primary);
+      }
+    }
+  }
+  &__title {
+    @include overflowText(3);
+    width: fit-content;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0px 20px 0px;
+
+    transition: color .3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--dusty);
+
+    strong {
+      font-weight: 900;
+      color: var(--dark);
+      &._red {
+        color: var(--red);
+      }
+    }
+  }
+}

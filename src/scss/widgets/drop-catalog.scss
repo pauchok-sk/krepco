@@ -37,6 +37,7 @@
     height: 100%;
     width: 455px;
     overflow-y: auto;
+    background-color: var(--wild);
 
     @include laptop {
       width: 425px;

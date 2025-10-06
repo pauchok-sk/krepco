@@ -18,6 +18,8 @@
 @import "./ui/sect";
 @import "./ui/title";
 @import "./ui/placeholder-iteration";
+@import "./ui/card-category";
+@import "./ui/card-product";
 
 // widgets
 @import "./widgets/modal";
@@ -29,5 +31,7 @@
 
 @import "./components/section-hero";
 @import "./components/section-about";
+@import "./components/section-catalog";
+@import "./components/section-switcher";
 
 @import "./components/footer";

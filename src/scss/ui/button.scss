@@ -1,4 +1,4 @@
-.btn-s {
+.btn {
   @include flex-center;
   cursor: pointer;
   border: 1px solid var(--primary);
@@ -6,6 +6,7 @@
   padding: 17px 20px;
   border-radius: 10px;
   width: fit-content;
+  user-select: none;
 
   text-align: center;
   font-weight: 600;

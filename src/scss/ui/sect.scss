@@ -4,3 +4,12 @@
     margin: 70px 0px;
   }
 }
+.section-head {
+  @include flex-between;
+  gap: 30px;
+  margin-bottom: 50px;
+  
+  @include tablet-min {
+    margin-bottom: 25px;
+  }
+}

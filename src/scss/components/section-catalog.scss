@@ -1,0 +1,58 @@
+.section-catalog {
+  &__head {
+    @include tablet-min {
+      align-items: start;
+    }
+  }
+  &__btn {
+    @include tablet-min {
+      display: none;
+    }
+  }
+  &__mob-btn {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(237, 110, 0, 0.2);
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 130%;
+    color: var(--primary);
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: white;
+      background-color: var(--primary);
+    }
+
+    @media (min-width: 576px) {
+      display: none;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+
+    @include laptop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet-min {
+      gap: 10px;
+    }
+  }
+}
