@@ -1,16 +1,25 @@
 .card-product {
-  padding: 20px;
+  padding: 18px;
   background-color: white;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  @include tablet {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
   &__top {
     @include flex-between;
     gap: 10px;
   }
   &__id {
     font-size: 10px;
+    @include tablet {
+      font-size: 8px;
+      color: var(--dusty);
+    }
   }
   &__tag {
     font-size: 12px;
@@ -19,9 +28,18 @@
     background: var(--primary-light);
     color: var(--primary);
 
+    @include tablet {
+      padding: 5px;
+      font-size: 8px;
+    }
+
     &._green {
       background: var(--green-light);
       color: var(--green);
+    }
+    &._red {
+      color: var(--red);
+      background-color: var(--red-light);
     }
   }
   &__slider {
@@ -32,6 +50,15 @@
     align-items: center;
     justify-content: center;
     aspect-ratio: 1/0.85;
+
+    @include tablet {
+      aspect-ratio: 1/0.7;
+    }
+
+    img {
+      max-height: 100%;
+      object-fit: contain;
+    }
   }
   &__slider-pagination {
     @include flex-center;
@@ -62,24 +89,214 @@
     font-size: 16px;
     margin: 10px 0px 20px 0px;
 
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 
     @include hover {
       color: var(--primary);
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+    @include tablet-min {
+      font-size: 12px;
     }
   }
   &__price {
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 20px;
 
     color: var(--dusty);
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    &._red {
+      strong {
+        color: var(--red);
+      }
+    }
+    &._disabled {
+      strong {
+        color: var(--dusty);
+      }
+    }
 
     strong {
       font-weight: 900;
       color: var(--dark);
-      &._red {
-        color: var(--red);
+    }
+  }
+  &__footer {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    @include laptop-min {
+      flex-direction: column;
+      gap: 10px;
+    }
+    @include tablet {
+      .card-product__counter {
+        display: none;
       }
+
+      &._active {
+        .card-product__counter {
+          display: flex;
+        }
+        .card-product__cart-btn {
+          display: none;
+        }
+      }
+    }
+  }
+  &__counter {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 5px;
+    border: 1px solid var(--alto);
+    width: 100px;
+    flex: 1;
+    @include laptop-min {
+      width: 100%;
+      flex: none;
+    }
+    @include tablet {
+      border-radius: 5px;
+    }
+  }
+  &__counter-btn {
+    @include flex-center;
+    width: 25px;
+    height: 45px;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    &._disabled {
+      pointer-events: none;
+      color: var(--disty);
+    }
+    @include tablet {
+      height: 28px;
+    }
+  }
+  &__counter-input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    -moz-appearance: textfield;
+
+    font-size: 15px;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__cart-btn {
+    width: 115px;
+    @media (min-width: 1024px) {
+      padding: 5px !important;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 108%;
+      border-radius: 5px;
+      padding: 8px 5px !important;
+    }
+  }
+  &__order-btn {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: none;
+    border-radius: 10px;
+    padding: 14px 20px;
+    width: fit-content;
+    background-color: rgba(235, 110, 3, 0.1);
+    border: none;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 81%;
+    color: var(--primary);
+
+    @include hover {
+      svg {
+        transform: rotate(-180deg);
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 108%;
+      border-radius: 5px;
+      padding: 7px 5px !important;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 10px;
+      border: 1px solid var(--primary);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      @include tablet {
+        border-radius: 5px;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 20px;
+
+      transition: transform 0.3s ease;
+
+      @include tablet {
+        width: 12px;
+        height: 16px;
+      }
+    }
+  }
+  &__time-info {
+    font-size: 14px;
+    color: var(--dusty);
+    align-self: center;
+    @include laptop-min {
+      align-self: start;
     }
   }
 }

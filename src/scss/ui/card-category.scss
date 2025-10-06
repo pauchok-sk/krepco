@@ -14,6 +14,23 @@
     border-radius: 10px;
   }
 
+  &._zumthor {
+    background-color: var(--zumthor);
+    border-color: var(--zumthor);
+  }
+  &._serenade {
+    background-color: var(--serenade);
+    border-color: var(--serenade);
+  }
+  &._white {
+    background-color: white;
+    border-color: white;
+  }
+  &._apricot {
+    background-color: var(--apricot);
+    border-color: var(--apricot);
+  }
+
   @include hover {
     border-color: var(--primary);
     .card-category__img {
@@ -29,9 +46,8 @@
     font-weight: 800;
     font-size: 16px;
     margin: 0px 0px 5px 0px;
-    @include tablet-min {
-      font-size: 10px;
-      word-break: break-all;
+    @include tablet {
+      font-size: 14px;
       @include overflowText(2);
     }
   }
@@ -40,7 +56,6 @@
     color: var(--dusty);
     margin-bottom: 30px;
     @include tablet-min {
-      font-size: 8px;
       margin-bottom: 25px;
     }
   }
@@ -55,7 +70,7 @@
     display: block;
     width: 100px;
 
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
 
     @include tablet-min {
       width: 40px;
@@ -70,7 +85,10 @@
     background-color: white;
     flex-shrink: 0;
 
-    transition: color .3s ease, transform .3s ease, background-color .3s ease;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease,
+      background-color 0.3s ease;
 
     @include tablet-min {
       display: none;

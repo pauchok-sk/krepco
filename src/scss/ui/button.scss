@@ -14,10 +14,24 @@
   line-height: 81%;
   color: white;
 
-  transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 
   @include hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
+  }
+
+  &._outline {
+    background-color: transparent;
+    color: var(--dark);
+
+    @include hover {
+      border: 1px solid var(--primary);
+      background-color: var(--primary);
+      color: white;
+    }
   }
 }

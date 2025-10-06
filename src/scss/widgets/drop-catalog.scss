@@ -177,10 +177,11 @@
     width: 100%;
     min-height: 145px;
     height: fit-content;
-    grid-area: 4/3/11/4;
-    @include laptop-middle {
-      grid-area: 8/2/17/3;
-    }
+    
+    // grid-area: 4/3/11/4;
+    // @include laptop-middle {
+    //   grid-area: 8/2/17/3;
+    // }
   }
   &__reklam-tag {
     padding: 4px 5px;

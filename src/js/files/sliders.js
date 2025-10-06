@@ -23,11 +23,11 @@ export default function sliders() {
     switcherSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 700,
-        slidesPerView: 5,
-        spaceBetween: 20,
-        // autoplay: {
-        //   delay: 3200,
-        // },
+        slidesPerView: 2,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 3200,
+        },
         navigation: {
           prevEl: slider
             .closest(".section-switcher__tab-wrapper")
@@ -40,6 +40,24 @@ export default function sliders() {
           el: ".section-hero__slider-pagination",
           clickable: true,
         },
+        breakpoints: {
+          1500: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        },
       });
     });
   }
@@ -50,9 +68,9 @@ export default function sliders() {
     productSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 700,
-        autoplay: {
-          delay: 3500,
-        },
+        // autoplay: {
+        //   delay: 3500,
+        // },
         pagination: {
           el: slider.nextElementSibling,
           clickable: true,

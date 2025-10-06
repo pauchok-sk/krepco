@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251006163139">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251006163139">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251006163139">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251007004009">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251007004009">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251007004009">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -2586,7 +2586,7 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="card-category">
+					<a href="#" class="card-category _zumthor">
 						<h5 class="card-category__title">Метизы, Крепеж</h5>
 						<div class="card-category__count">1 298 товаров</div>
 						<div class="card-category__bottom">
@@ -2598,7 +2598,7 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="card-category">
+					<a href="#" class="card-category _serenade">
 						<h5 class="card-category__title">Перфорированный крепеж</h5>
 						<div class="card-category__count">1 298 товаров</div>
 						<div class="card-category__bottom">
@@ -2610,7 +2610,7 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="card-category">
+					<a href="#" class="card-category _white">
 						<h5 class="card-category__title">Метизы, Крепеж</h5>
 						<div class="card-category__count">1 298 товаров</div>
 						<div class="card-category__bottom">
@@ -2622,7 +2622,7 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="card-category">
+					<a href="#" class="card-category _apricot">
 						<h5 class="card-category__title">Перфорированный крепеж</h5>
 						<div class="card-category__count">1 298 товаров</div>
 						<div class="card-category__bottom">
@@ -2641,15 +2641,19 @@
 		<section class="section-switcher section-margin">
 			<div class="container">
 				<div class="section-switcher__nav">
-					<div class="section-switcher__nav-btn _active">Новинки</div>
+					<div data-switcher-tab-btn="new" class="section-switcher__nav-btn _active">
+						Новинки
+					</div>
 					<div class="section-switcher__switch"></div>
-					<div class="section-switcher__nav-btn">Скидки</div>
+					<div data-switcher-tab-btn="discount" class="section-switcher__nav-btn">
+						Скидки
+					</div>
 				</div>
-				<div class="section-switcher__tab _active" style="opacity: 1;">
+				<div data-switcher-tab="new" class="section-switcher__tab _active _show">
 					<div class="section-switcher__tab-wrapper">
 						<div class="section-switcher__slider-btn _prev">
 							<svg>
-								<use xlink:href='img/icons/icons.svg#icon-prev-line'></use>
+								<use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
 							</svg>
 						</div>
 						<div class="swiper section-switcher__slider">
@@ -2663,35 +2667,597 @@
 										<a href="#" class="swiper card-product__slider">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide card-product__slide">
-													<img src="img/product.png" alt="image">
+													<img src="img/product.png" alt="image" />
 												</div>
 												<div class="swiper-slide card-product__slide">
-													<img src="img/product.png" alt="image">
+													<img src="img/product.png" alt="image" />
 												</div>
 												<div class="swiper-slide card-product__slide">
-													<img src="img/product.png" alt="image">
+													<img src="img/product.png" alt="image" />
 												</div>
 											</div>
 										</a>
 										<div class="card-product__slider-pagination"></div>
-										<a href="#" class="card-product__title">Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200 кл.пр.8.8 цинк</a>
-										<div class="card-product__price"><strong>34.47 ₽</strong> / шт</div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _red">распродажа</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price _red">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
 										<div class="card-product__footer">
-
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag">хит</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price _disabled">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer">
+											<button class="card-product__order-btn">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-timer"></use>
+												</svg>
+												<span>Заказать</span>
+											</button>
+											<div class="card-product__time-info">от 1 рабочего дня</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag">хит</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price _disabled">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer">
+											<button class="card-product__order-btn">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-timer"></use>
+												</svg>
+												<span>Заказать</span>
+											</button>
+											<div class="card-product__time-info">от 1 рабочего дня</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="section-switcher__slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-next-line"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div data-switcher-tab="discount" class="section-switcher__tab">
+					<div class="section-switcher__tab-wrapper">
 						<div class="section-switcher__slider-btn _prev">
 							<svg>
-								<use xlink:href='img/icons/icons.svg#icon-next-line'></use>
+								<use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
+							</svg>
+						</div>
+						<div class="swiper section-switcher__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-switcher__slide">
+									<div class="card-product">
+										<div class="card-product__top">
+											<div class="card-product__id">RB-М30</div>
+											<div class="card-product__tag _green">новинка</div>
+										</div>
+										<a href="#" class="swiper card-product__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+												<div class="swiper-slide card-product__slide">
+													<img src="img/product.png" alt="image" />
+												</div>
+											</div>
+										</a>
+										<div class="card-product__slider-pagination"></div>
+										<a href="#" class="card-product__title">
+											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+											М12*200 кл.пр.8.8 цинк
+										</a>
+										<div class="card-product__price">
+											<strong>34.47 ₽</strong>
+											/ шт
+										</div>
+										<div class="card-product__footer _active">
+											<form action="#" class="card-product__counter">
+												<div class="card-product__counter-btn _minus">-</div>
+												<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+												<div class="card-product__counter-btn _plus">+</div>
+											</form>
+											<button class="btn card-product__cart-btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-switcher__slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-next-line"></use>
 							</svg>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 
 	</main>
 	<div class="modal" id="modal-call">
@@ -2762,10 +3328,10 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251006163139"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251006163139"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251006163139"></script>
-	<script src="js/app.min.js?_v=20251006163139"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251007004009"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251007004009"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251007004009"></script>
+	<script src="js/app.min.js?_v=20251007004009"></script>
 </body>
 
 </html>

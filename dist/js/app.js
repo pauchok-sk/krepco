@@ -56,6 +56,35 @@
             });
         }
     }
+    function cardProductCounter() {
+        const counters = document.querySelectorAll(".card-product__counter");
+        if (counters.length) counters.forEach(counter => {
+            const input = counter.querySelector(".card-product__counter-input");
+            const min = +input.min;
+            const max = +input.max;
+            const btnPlus = counter.querySelector(".card-product__counter-btn._plus");
+            const btnMinus = counter.querySelector(".card-product__counter-btn._minus");
+            if (+input.value <= min) btnMinus.classList.add("_disabled");
+            if (+input.value >= max) btnPlus.classList.add("_disabled");
+            btnPlus.addEventListener("click", () => {
+                change("plus");
+            });
+            btnMinus.addEventListener("click", () => {
+                change("minus");
+            });
+            input.addEventListener("input", e => {
+                const value = +e.target.value;
+                if (value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
+                if (value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
+                if (value > max) input.value = 100; else if (value < min) input.value = 1;
+            });
+            function change(action) {
+                if (action === "minus") input.value = +input.value - 1; else if (action === "plus") input.value = +input.value + 1;
+                if (+input.value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
+                if (+input.value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
+            }
+        });
+    }
     function dropCatalog() {
         const buttons = document.querySelectorAll("[data-drop-menu-btn]");
         if (buttons.length) {
@@ -349,8 +378,11 @@
         if (switcherSliders.length) switcherSliders.forEach(slider => {
             new Swiper(slider, {
                 speed: 700,
-                slidesPerView: 5,
-                spaceBetween: 20,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3200
+                },
                 navigation: {
                     prevEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._prev"),
                     nextEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._next")
@@ -358,6 +390,24 @@
                 pagination: {
                     el: ".section-hero__slider-pagination",
                     clickable: true
+                },
+                breakpoints: {
+                    1500: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    }
                 }
             });
         });
@@ -365,9 +415,6 @@
         if (productSliders.length) productSliders.forEach(slider => {
             new Swiper(slider, {
                 speed: 700,
-                autoplay: {
-                    delay: 3500
-                },
                 pagination: {
                     el: slider.nextElementSibling,
                     clickable: true
@@ -564,6 +611,40 @@
             });
         }
     }
+    function switcherTab() {
+        const buttons = document.querySelectorAll("[data-switcher-tab-btn]");
+        if (buttons.length) {
+            const tabs = document.querySelectorAll("[data-switcher-tab]");
+            const switchTarget = document.querySelector(".section-switcher__switch");
+            switchTarget.addEventListener("click", () => {
+                const btnNotActive = document.querySelector("[data-switcher-tab-btn]:not(._active)");
+                const id = btnNotActive.dataset.switcherTabBtn;
+                buttons.forEach(b => b.classList.remove("_active"));
+                btnNotActive.classList.add("_active");
+                change(id);
+            });
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const id = btn.dataset.switcherTabBtn;
+                    buttons.forEach(b => b.classList.remove("_active"));
+                    btn.classList.add("_active");
+                    change(id);
+                });
+            });
+            function change(id) {
+                tabs.forEach(t => {
+                    t.classList.remove("_active");
+                    t.classList.remove("_show");
+                });
+                const currentTab = document.querySelector(`[data-switcher-tab="${id}"]`);
+                switchTarget.classList.toggle("_right");
+                currentTab.classList.add("_active");
+                setTimeout(() => {
+                    currentTab.classList.add("_show");
+                }, 150);
+            }
+        }
+    }
     spoller();
     mediaAdaptive();
     dropdown();
@@ -575,6 +656,8 @@
     sliders();
     placeholderIteration();
     headerScroll();
+    cardProductCounter();
+    switcherTab();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });
