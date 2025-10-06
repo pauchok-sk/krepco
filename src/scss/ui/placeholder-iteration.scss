@@ -1,0 +1,12 @@
+[data-placeholder-iteration] {
+  
+  &::placeholder {
+    transition: opacity .3s linear;
+  }
+
+  &._hide {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}

@@ -1,13 +1,14 @@
-.m-title {
+.main-title {
   font-weight: 900;
   font-size: 40px;
+  margin: 0;
 
   @include tablet {
     font-size: 26px;
   }
 }
 
-.s-title {
+.section-title {
   font-weight: 900;
   font-size: 32px;
   line-height: 120%;
@@ -18,7 +19,7 @@
   }
 }
 
-.t-title {
+.third-title {
   font-weight: 900;
   font-size: 24px;
   margin: 0;

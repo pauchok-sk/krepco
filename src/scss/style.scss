@@ -17,6 +17,7 @@
 @import "./ui/scrollbar";
 @import "./ui/sect";
 @import "./ui/title";
+@import "./ui/placeholder-iteration";
 
 // widgets
 @import "./widgets/modal";
@@ -26,7 +27,7 @@
 // components
 @import "./components/header";
 
-@import "./components/s-hero";
-@import "./components/s-about";
+@import "./components/section-hero";
+@import "./components/section-about";
 
 @import "./components/footer";

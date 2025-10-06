@@ -1,5 +1,5 @@
 export default function sliders() {
-  const heroSlider = document.querySelector(".s-hero__slider");
+  const heroSlider = document.querySelector(".section-hero__slider");
 
   if (heroSlider) {
     const swiper = new Swiper(heroSlider, {
@@ -9,7 +9,7 @@ export default function sliders() {
         delay: 3500
       },
       pagination: {
-        el: ".s-hero__slider-pagination",
+        el: ".section-hero__slider-pagination",
         clickable: true
       }
     })
