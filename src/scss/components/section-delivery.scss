@@ -1,5 +1,11 @@
 .section-delivery {
   overflow: hidden;
+  @include tablet {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    padding-bottom: 55px;
+  }
   &__head-btn {
     @include tablet-min {
       display: none;
@@ -8,12 +14,16 @@
   &__wrapper {
     position: relative;
     z-index: 1;
+    @include tablet {
+      position: static;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 610px;
+    color: black;
 
     @include laptop-min {
       max-width: 450px;
@@ -48,6 +58,9 @@
     @include laptop-min {
       width: 300px;
     }
+    @include tablet {
+      display: none;
+    }
   }
   &__map {
     position: absolute;
@@ -61,8 +74,18 @@
     @include laptop-min {
       right: -660px;
     }
+    @include tablet {
+      bottom: -100px;
+      left: 40px;
+      right: auto;
+      top: auto;
+    }
   }
   &__adv-slider {
+    overflow: visible !important;
+    @include tablet {
+      margin-top: 240px;
+    }
     .swiper-wrapper {
       @media (min-width: 768px) {
         display: grid;
@@ -87,6 +110,15 @@
     font-size: 16px;
     color: black;
 
+    @include tablet {
+      font-size: 15px;
+      padding: 15px;
+      width: 240px;
+      gap: 10px;
+
+      font-size: 15px;
+    }
+
     .icon {
       display: block;
       width: 24px;
@@ -99,6 +131,9 @@
     strong {
       display: block;
       font-weight: 800;
+      @include tablet {
+        line-height: 130%;
+      }
     }
   }
 }

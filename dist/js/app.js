@@ -438,6 +438,63 @@
                 }
             });
         }
+        const deliveryAdvSlider = document.querySelector(".section-delivery__adv-slider");
+        if (deliveryAdvSlider && window.matchMedia("(max-width: 767px)").matches) {
+            new Swiper(deliveryAdvSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3200
+                }
+            });
+        }
+        const partnersSlider = document.querySelector(".section-partners__slider");
+        if (partnersSlider) {
+            new Swiper(partnersSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3500
+                },
+                navigation: {
+                    prevEl: ".section-partners .slider-btn._prev",
+                    nextEl: ".section-partners .slider-btn._next"
+                },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 6,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20
+                    }
+                }
+            });
+        }
+        const certificatesSlider = document.querySelector(".section-certificates__slider");
+        if (certificatesSlider) {
+            new Swiper(certificatesSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3200
+                },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    },
+                    576: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
