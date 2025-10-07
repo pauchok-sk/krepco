@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251007224534">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251007224534">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251007224534">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251008005937">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251008005937">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251008005937">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -3738,6 +3738,13 @@
 			<div class="container">
 				<div class="section-head">
 					<h2 class="section-title">Сертификаты</h2>
+					<a href="#" class="btn section-certificates__btn">Все сертификаты</a>
+					<a href="#" class="btn-mob">
+						<span>Все</span>
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-next'></use>
+						</svg>
+					</a>
 				</div>
 				<div class="swiper section-certificates__slider">
 					<div class="swiper-wrapper">
@@ -3772,6 +3779,917 @@
 				</div>
 			</div>
 		</section>
+		<section class="section-margin section-reviews">
+			<div class="container tabs">
+				<div class="section-head">
+					<h2 class="section-title">Все отзывы</h2>
+					<a href="#modal-review" data-fancybox class="btn section-reviews__head-btn _outline">
+						Оставить отзыв
+					</a>
+					<a href="#" class="btn-mob">
+						<span>Все</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-next"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="tabs-nav section-reviews__nav">
+					<div data-tab-btn="tab-1" class="section-reviews__nav-btn _active">
+						Все отзывы
+					</div>
+					<div data-tab-btn="tab-2" class="section-reviews__nav-btn">
+						Благодарственные письма
+					</div>
+					<div data-tab-btn="tab-3" class="section-reviews__nav-btn">
+						WhatsApp отзывы
+					</div>
+					<div data-tab-btn="tab-4" class="section-reviews__nav-btn">
+						Яндекс отзывы
+					</div>
+				</div>
+				<div class="tabs-content">
+					<div data-tab="tab-1" class="_active _show">
+						<div class="section-reviews__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<div class="section-reviews__slide-body">
+										<div class="section-reviews__slide-head">
+											<div class="section-reviews__stars">
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star _active">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+												<svg class="star">
+													<use xlink:href="img/icons/icons.svg#icon-star"></use>
+												</svg>
+											</div>
+											<img src="img/review-logo.svg" alt="logo" class="section-reviews__slide-logo" />
+										</div>
+										<p class="section-reviews__slide-content">
+											Очень довольна магазином, работники внимательны и всё
+											подскажут и вместе с помощником я приобрету всё что мне нужно,
+											в магазине всё есть, а если нету можно заказать, так же есть
+											чистый туалет при необходимости, так как я инвалид. Коллектив
+											сплочённый и могут ответить и посоветовать за любой
+											инструмент. Магазин очень большой и просторный. Спасибо
+										</p>
+									</div>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-2">
+						<div class="section-reviews__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-3">
+						<div class="section-reviews__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/wh-review.jpg" data-fancybox="reviews-whats" class="section-reviews__slide-gallery">
+										<img src="img/wh-review.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-4">
+						<div class="section-reviews__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide section-reviews__slide">
+									<a href="img/letter.jpg" data-fancybox="reviews-letters" class="section-reviews__slide-gallery">
+										<img src="img/letter.jpg" alt="image" />
+									</a>
+									<div class="section-reviews__slide-author">
+										<img src="img/production-card.jpg" alt="" class="section-reviews__author-avatar" />
+										<div>
+											<div class="section-reviews__author-head">
+												<h6 class="section-reviews__author-title">Аня Отсевич</h6>
+												<div class="section-reviews__author-date">7 мая 2025</div>
+											</div>
+											<p class="section-reviews__author-content">
+												Руководитель отдела снабжения
+												<br />
+												ООО “СТРОЙРОС”
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-margin section-useful">
+			<div class="container">
+				<div class="section-head">
+					<h2 class="section-title">Полезные статьи</h2>
+					<a href="#" class="btn _outline">Больше статей</a>
+					<a href="#" class="btn-mob">
+						<span>Все</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-next"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="swiper section-useful__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-useful__slide">
+							<div class="card-article">
+								<a href="#" class="card-article__gallery">
+									<img src="img/article.jpg" alt="image" />
+								</a>
+								<div class="card-article__body">
+									<a href="#" class="card-article__title">
+										Основные типы и особенности крепежей для гипсокартона
+									</a>
+									<p class="card-article__content">
+										Гипсокартон на протяжении многих лет остается одним из самых
+										востребованных материалов в строит...
+									</p>
+									<div class="card-article__bottom">
+										<div class="card-article__date">17.09.2024</div>
+										<div class="card-article__info">
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-eye"></use>
+												</svg>
+												<span>82</span>
+											</div>
+											<div class="card-article__info-item">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+												</svg>
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 	<div class="modal" id="modal-call">
@@ -3837,15 +4755,42 @@
 		</div>
 	</div>
 
+	<div class="modal" id="modal-review">
+		<div class="modal__body">
+			<div data-fancybox-close class="modal__close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</div>
+			<h3 class="modal__title">Отправить отзыв</h3>
+			<p class="modal__content">Спасибо!</p>
+			<form action="#" class="modal__form">
+				<div class="input-control">
+					<input type="text" placeholder="Имя" name="Имя" class="input" />
+				</div>
+				<div class="input-control">
+					<input type="tel" placeholder="+7 (___) ___-__-__" name="Телефон" class="input" />
+				</div>
+				<div class="input-control _scrollbar">
+					<textarea name="Отзыв" placeholder="Ваш отзыв" rows="7" class="input _scrollbar"></textarea>
+				</div>
+				<p class="modal__form-policy">
+					Нажимая на кнопку, вы соглашаетесь с условиями обработки
+					<a href="#" target="_blank">персональных данных</a>
+				</p>
+				<button type="submit" class="btn modal__form-send">Отправить</button>
+			</form>
+		</div>
+	</div>
 	<footer class="footer">
 		<div class="container">
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251007224534"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251007224534"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251007224534"></script>
-	<script src="js/app.min.js?_v=20251007224534"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251008005937"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251008005937"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251008005937"></script>
+	<script src="js/app.min.js?_v=20251008005937"></script>
 </body>
 
 </html>

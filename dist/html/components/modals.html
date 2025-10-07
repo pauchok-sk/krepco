@@ -60,3 +60,31 @@
 		</form>
 	</div>
 </div>
+
+<div class="modal" id="modal-review">
+	<div class="modal__body">
+		<div data-fancybox-close class="modal__close">
+			<svg>
+				<use xlink:href='img/icons/icons.svg#icon-close'></use>
+			</svg>
+		</div>
+		<h3 class="modal__title">Отправить отзыв</h3>
+		<p class="modal__content">Спасибо!</p>
+		<form action="#" class="modal__form">
+			<div class="input-control">
+				<input type="text" placeholder="Имя" name="Имя" class="input" />
+			</div>
+			<div class="input-control">
+				<input type="tel" placeholder="+7 (___) ___-__-__" name="Телефон" class="input" />
+			</div>
+			<div class="input-control _scrollbar">
+				<textarea name="Отзыв" placeholder="Ваш отзыв" rows="7" class="input _scrollbar"></textarea>
+			</div>
+			<p class="modal__form-policy">
+				Нажимая на кнопку, вы соглашаетесь с условиями обработки
+				<a href="#" target="_blank">персональных данных</a>
+			</p>
+			<button type="submit" class="btn modal__form-send">Отправить</button>
+		</form>
+	</div>
+</div>

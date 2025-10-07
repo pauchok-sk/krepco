@@ -9,6 +9,8 @@
   padding: 40px 40px 25px 40px;
   z-index: 1;
 
+  transition: box-shadow .3s ease;
+
   @include tablet {
     padding: 20px;
     min-height: 115px;
@@ -16,6 +18,8 @@
   }
 
   @include hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+
     .card-fasteners__btn {
       opacity: 1;
     }

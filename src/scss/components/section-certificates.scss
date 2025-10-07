@@ -1,5 +1,10 @@
 .section-certificates {
   overflow: hidden;
+  &__btn {
+    @include tablet-min {
+      display: none;
+    }
+  }
   &__slider {
     @include laptop-middle {
       overflow: visible !important;

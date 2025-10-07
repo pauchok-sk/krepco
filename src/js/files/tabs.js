@@ -15,10 +15,11 @@ export default function tabs() {
           t.classList.remove("_active");
           t.classList.remove("_show");
         });
+
         currentTab.classList.add("_active");
         setTimeout(() => {
-          t.classList.add("_show");
-        }, 10);
+          currentTab.classList.add("_show");
+        }, 150);
 
         allButtons.forEach((b) => b.classList.remove("_active"));
         btn.classList.add("_active");

@@ -166,6 +166,18 @@
             });
         }
     }
+    function inputControlScrollbar() {
+        const controls = document.querySelectorAll(".input-control._scrollbar");
+        if (controls.length) controls.forEach(control => {
+            const input = control.querySelector(".input");
+            input.addEventListener("blur", () => {
+                control.classList.remove("_border-primary");
+            });
+            input.addEventListener("focus", () => {
+                control.classList.add("_border-primary");
+            });
+        });
+    }
     function inputmask() {
         const inputs = document.querySelectorAll('input[type="tel"]');
         const im = new Inputmask("+7 (999) 999-99-99");
@@ -495,6 +507,44 @@
                 }
             });
         }
+        const reviewsSliders = document.querySelectorAll(".section-reviews__slider");
+        if (reviewsSliders.length) reviewsSliders.forEach(slider => {
+            new Swiper(slider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3700
+                },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    }
+                }
+            });
+        });
+        const usefulSlider = document.querySelector(".section-useful__slider");
+        if (usefulSlider) {
+            new Swiper(usefulSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3600
+                },
+                breakpoints: {
+                    1366: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    576: {
+                        slidesPerView: "auto",
+                        spaceBetween: 25
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
@@ -734,8 +784,8 @@
                 });
                 currentTab.classList.add("_active");
                 setTimeout(() => {
-                    t.classList.add("_show");
-                }, 10);
+                    currentTab.classList.add("_show");
+                }, 150);
                 allButtons.forEach(b => b.classList.remove("_active"));
                 btn.classList.add("_active");
             });
@@ -755,6 +805,7 @@
     cardProductCounter();
     switcherTab();
     tabs();
+    inputControlScrollbar();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

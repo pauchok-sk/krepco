@@ -11,5 +11,9 @@
   
   @include tablet-min {
     margin-bottom: 25px;
+
+    .btn {
+      display: none;
+    }
   }
 }

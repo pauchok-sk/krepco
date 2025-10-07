@@ -35,3 +35,35 @@
     }
   }
 }
+
+.btn-mob {
+  @include flex-center;
+  gap: 2px;
+  border: none;
+  outline: none;
+  width: fit-content;
+  background-color: rgba(237, 110, 0, 0.2);
+  padding: 7px 10px;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 130%;
+  color: var(--primary);
+
+  transition: color .3s ease, background-color .3s ease;
+
+  @include hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  @media (min-width: 575px) {
+    display: none;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}

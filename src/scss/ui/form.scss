@@ -1,5 +1,21 @@
 .input-control {
   width: 100%;
+
+  &._scrollbar {
+    border: 1px solid var(--silver);
+    border-radius: 10px;
+    overflow: hidden;
+    
+    transition: border-color .3s ease;
+
+    &._border-primary {
+      border-color: var(--primary);
+    }
+    
+    .input {
+      border: none;
+    }
+  }
 }
 .input {
   outline: none;
@@ -12,9 +28,25 @@
   font-size: 16px;
   line-height: 81%;
 
-  transition: border-color .3s ease, border-radius .3s ease;
+  transition:
+    border-color 0.3s ease,
+    border-radius 0.3s ease;
 
   &:focus {
     border-color: var(--primary);
+  }
+}
+textarea.input {
+  resize: none;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 100px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 2px solid white;
+    margin: 2px;
   }
 }

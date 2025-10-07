@@ -2,8 +2,12 @@
   overflow: hidden;
   &__slider {
     overflow: visible !important;
+    @media (min-width: 1024px) {
+      padding: 10px 0px;
+    }
   }
   &__slider-wrapper {
+    overflow: visible !important;
     @media (min-width: 1199px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

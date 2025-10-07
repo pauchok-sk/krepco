@@ -1,0 +1,25 @@
+.section-useful {
+  overflow: hidden;
+
+  &__slider {
+    padding: 10px 0px;
+    @include laptop {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    height: auto !important;
+
+    @include laptop {
+      width: 355px !important;
+    }
+    @include tablet-min {
+      width: 265px !important;
+    }
+
+    .card-article {
+      height: 100%;
+    }
+  }
+}

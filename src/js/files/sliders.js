@@ -137,7 +137,9 @@ export default function sliders() {
     });
   }
 
-  const certificatesSlider = document.querySelector(".section-certificates__slider");
+  const certificatesSlider = document.querySelector(
+    ".section-certificates__slider"
+  );
 
   if (certificatesSlider) {
     const swiper = new Swiper(certificatesSlider, {
@@ -155,6 +157,52 @@ export default function sliders() {
         576: {
           slidesPerView: "auto",
           spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const reviewsSliders = document.querySelectorAll(".section-reviews__slider");
+
+  if (reviewsSliders.length) {
+    reviewsSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 800,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        autoplay: {
+          delay: 3700,
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  }
+
+  const usefulSlider = document.querySelector(
+    ".section-useful__slider"
+  );
+
+  if (usefulSlider) {
+    const swiper = new Swiper(usefulSlider, {
+      speed: 800,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3600,
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+        576: {
+          slidesPerView: "auto",
+          spaceBetween: 25,
         },
       },
     });
