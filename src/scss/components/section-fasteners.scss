@@ -1,0 +1,23 @@
+.section-fasteners {
+  overflow: hidden;
+  &__slider {
+    overflow: visible !important;
+  }
+  &__slider-wrapper {
+    @media (min-width: 1199px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    
+    .swiper-slide {
+      box-sizing: border-box;
+      @include laptop-middle {
+        width: 390px !important;
+      }
+      @include tablet {
+        width: 265px !important;
+      }
+    }
+  }
+}

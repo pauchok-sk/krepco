@@ -1,0 +1,120 @@
+.card-fasteners {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 300px;
+  border-radius: 20px;
+  background-color: var(--wild);
+  padding: 40px 40px 25px 40px;
+  z-index: 1;
+
+  @include tablet {
+    padding: 20px;
+    min-height: 115px;
+    border-radius: 15px;
+  }
+
+  @include hover {
+    .card-fasteners__btn {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 345px;
+    aspect-ratio: 1/1;
+    transform: rotate(25deg);
+    right: -85px;
+    bottom: -130px;
+    z-index: -2;
+
+    transition: opacity 0.3s ease;
+
+    @include tablet {
+      width: 130px;
+      right: -30px;
+      bottom: -50px;
+    }
+  }
+
+  &::before {
+    background: url('@img/rhomb-gray.svg') center / 100% auto no-repeat;
+  }
+  &::after {
+    opacity: 0;
+    background: url('@img/rhomb-white.svg') center / 100% auto no-repeat;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+
+    @include hover {
+      .circle {
+        background-color: var(--primary);
+        color: white;
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+
+    .circle {
+      @include flex-center;
+      border-radius: 50%;
+      background-color: white;
+      width: 20px;
+      height: 20px;
+
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    width: 235px;
+    right: 0;
+    object-fit: contain;
+    object-position: right bottom;
+    bottom: 0;
+    z-index: -1;
+
+    @include tablet {
+      width: 145px;
+      height: 100%;
+    }
+  }
+}

@@ -20,6 +20,7 @@
 @import "./ui/placeholder-iteration";
 @import "./ui/card-category";
 @import "./ui/card-product";
+@import "./ui/card-fasteners";
 
 // widgets
 @import "./widgets/modal";
@@ -33,5 +34,9 @@
 @import "./components/section-about";
 @import "./components/section-catalog";
 @import "./components/section-switcher";
+@import "./components/section-fasteners";
+@import "./components/section-popular";
+@import "./components/section-production";
+@import "./components/section-delivery";
 
 @import "./components/footer";

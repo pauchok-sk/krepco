@@ -68,14 +68,30 @@ export default function sliders() {
     productSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 700,
-        // autoplay: {
-        //   delay: 3500,
-        // },
         pagination: {
           el: slider.nextElementSibling,
           clickable: true,
         },
       });
+    });
+  }
+
+  const fastenersSlider = document.querySelector(".section-fasteners__slider");
+
+  if (fastenersSlider && window.matchMedia("(max-width: 1199px)").matches) {
+    const swiper = new Swiper(fastenersSlider, {
+      speed: 800,
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3500,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 25,
+        },
+      },
     });
   }
 }

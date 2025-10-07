@@ -1,6 +1,11 @@
-.tab {
+[data-tab] {
   display: none;
-  &.active {
+
+  transition: opacity .4s ease;
+  &._active {
     display: block;
+  }
+  &._show {
+    opacity: 1;
   }
 }

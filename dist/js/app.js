@@ -421,6 +421,23 @@
                 }
             });
         });
+        const fastenersSlider = document.querySelector(".section-fasteners__slider");
+        if (fastenersSlider && window.matchMedia("(max-width: 1199px)").matches) {
+            new Swiper(fastenersSlider, {
+                speed: 800,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3500
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: "auto",
+                        spaceBetween: 25
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
@@ -645,6 +662,28 @@
             }
         }
     }
+    function tabs() {
+        const buttons = document.querySelectorAll("[data-tab-btn]");
+        if (buttons.length) buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const container = btn.closest(".tabs");
+                const tabId = btn.dataset.tabBtn;
+                const allButtons = container.querySelector(".tabs-nav").querySelectorAll("[data-tab-btn]");
+                const allTabs = Array.from(container.querySelector(".tabs-content").children).filter(child => child.hasAttribute("data-tab"));
+                const currentTab = container.querySelector(`[data-tab="${tabId}"]`);
+                allTabs.forEach(t => {
+                    t.classList.remove("_active");
+                    t.classList.remove("_show");
+                });
+                currentTab.classList.add("_active");
+                setTimeout(() => {
+                    t.classList.add("_show");
+                }, 10);
+                allButtons.forEach(b => b.classList.remove("_active"));
+                btn.classList.add("_active");
+            });
+        });
+    }
     spoller();
     mediaAdaptive();
     dropdown();
@@ -658,6 +697,7 @@
     headerScroll();
     cardProductCounter();
     switcherTab();
+    tabs();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

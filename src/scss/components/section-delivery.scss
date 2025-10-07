@@ -1,0 +1,104 @@
+.section-delivery {
+  overflow: hidden;
+  &__head-btn {
+    @include tablet-min {
+      display: none;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 610px;
+
+    @include laptop-min {
+      max-width: 450px;
+    }
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+
+      font-size: 20px;
+
+      @include laptop-min {
+        font-size: 18px;
+      }
+      @include tablet {
+        font-size: 15px;
+      }
+
+      svg {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        color: var(--primary);
+      }
+    }
+  }
+  &__car {
+    display: block;
+    width: 520px;
+    margin: 55px 0px 50px 0px;
+    @include laptop-min {
+      width: 300px;
+    }
+  }
+  &__map {
+    position: absolute;
+    right: -35px;
+    top: -15px;
+    max-width: none;
+    z-index: -1;
+    @include laptop {
+      right: -510px;
+    }
+    @include laptop-min {
+      right: -660px;
+    }
+  }
+  &__adv-slider {
+    .swiper-wrapper {
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        @include laptop-middle {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+  &__adv-item {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    box-sizing: border-box;
+
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: var(--wild);
+
+    font-size: 16px;
+    color: black;
+
+    .icon {
+      display: block;
+      width: 24px;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+    strong {
+      display: block;
+      font-weight: 800;
+    }
+  }
+}

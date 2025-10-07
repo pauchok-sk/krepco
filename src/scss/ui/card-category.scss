@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 19px;
   border-radius: 15px;
+  aspect-ratio: 1/1;
   border: 1px solid var(--wild);
   background-color: var(--wild);
   transition:
@@ -29,6 +30,10 @@
   &._apricot {
     background-color: var(--apricot);
     border-color: var(--apricot);
+  }
+  &._givry {
+    background-color: var(--givry);
+    border-color: var(--givry);
   }
 
   @include hover {
@@ -84,6 +89,7 @@
     color: var(--alto);
     background-color: white;
     flex-shrink: 0;
+    margin-left: auto;
 
     transition:
       color 0.3s ease,

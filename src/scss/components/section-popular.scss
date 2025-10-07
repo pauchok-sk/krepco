@@ -1,0 +1,75 @@
+.section-popular {
+  &__btn {
+    @include tablet-min {
+      display: none;
+    }
+  }
+  &__nav {
+    background-color: white;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    @include tablet-min {
+      padding: 10px;
+      border-radius: 10px;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  &__nav-btn {
+    cursor: pointer;
+    padding: 14px 20px;
+    border-radius: 10px;
+
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--wild);
+    }
+    @include tablet-min {
+      font-size: 12px;
+      padding: 6px 15px;
+      border-radius: 6px;
+    }
+
+    &._active {
+      background-color: var(--wild);
+      color: var(--primary);
+      pointer-events: none;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    @include desktop {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include laptop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      gap: 10px;
+    }
+  }
+}

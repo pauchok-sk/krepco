@@ -12,6 +12,7 @@ import select from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import switcherTab from "./files/switcherTab.js";
+import tabs from "./files/tabs.js";
 
 spoller();
 mediaAdaptive();
@@ -26,6 +27,7 @@ placeholderIteration();
 headerScroll();
 cardProductCounter();
 switcherTab();
+tabs();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,
