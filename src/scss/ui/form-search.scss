@@ -1,4 +1,5 @@
 .form-search {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,6 +8,14 @@
   padding: 14px 15px;
   border: 1px solid var(--primary);
   border-radius: 10px;
+
+  &._open {
+    .form-search__drop {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
 
   &__btn {
     cursor: pointer;
@@ -20,7 +29,7 @@
 
     color: var(--gray);
 
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 
     @include hover {
       color: var(--primary);
@@ -43,6 +52,112 @@
 
     &::placeholder {
       color: var(--gray);
+    }
+  }
+  &__drop {
+    position: absolute;
+    z-index: 30;
+    background-color: white;
+    border-radius: 10px;
+    max-height: 605px;
+    padding: 30px 25px;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    background-color: var(--alabaster);
+    overflow-y: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+
+    @include laptop {
+      padding: 20px;
+    }
+  }
+  &__product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    @include laptop {
+      padding: 0;
+    }
+  }
+  &__img {
+    display: block;
+    aspect-ratio: 1/1;
+    width: 100px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px;
+
+    transition: opacity 0.3s ease;
+    @include hover {
+      opacity: 0.8;
+    }
+    @include laptop {
+      width: 60px;
+    }
+  }
+  &__product-title {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    @include laptop {
+      font-size: 14px;
+    }
+  }
+  &__product-id {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    color: var(--dusty);
+
+    span {
+      color: var(--dark);
+    }
+  }
+  &__prices {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__price {
+    font-weight: 900;
+    font-size: 16px;
+
+    &._red {
+      color: var(--red);
+    }
+    &._green {
+      color: var(--green);
+    }
+  }
+  &__product-tag {
+    padding: 4px 6px;
+    background-color: var(--primary-light);
+    border-radius: 5px;
+
+    font-size: 12px;
+    color: var(--primary);
+
+    &._red {
+      color: var(--red);
+      background-color: var(--red-light);
+    }
+    &._green {
+      color: var(--green);
+      background-color: var(--green-light);
     }
   }
 }

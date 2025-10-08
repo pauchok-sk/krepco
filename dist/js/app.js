@@ -177,6 +177,12 @@
             });
         });
     }
+    function formSearch() {
+        const formSearch = document.querySelector(".form-search");
+        if (formSearch) window.addEventListener("scroll", () => {
+            if (formSearch.classList.contains("_open")) formSearch.classList.remove("_open");
+        });
+    }
     function headerScroll() {
         const header = document.querySelector(".header");
         if (header) {
@@ -829,6 +835,7 @@
     tabs();
     inputControlScrollbar();
     filesChange();
+    formSearch();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

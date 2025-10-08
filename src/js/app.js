@@ -5,6 +5,7 @@ import cardProductCounter from "./files/cardProductCounter.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
 import filesChange from "./files/filesChange.js";
+import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
@@ -32,6 +33,7 @@ switcherTab();
 tabs();
 inputControlScrollbar();
 filesChange();
+formSearch();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,
