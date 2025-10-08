@@ -34,6 +34,16 @@
       color: white;
     }
   }
+  &._dark {
+    border-color: var(--dark);
+    background-color: var(--dark);
+    color: white;
+    @include hover {
+      background-color: black;
+      border-color: black;
+      color: white
+    }
+  }
 }
 
 .btn-mob {

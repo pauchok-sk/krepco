@@ -1,0 +1,45 @@
+.footer {
+  padding-bottom: 15px;
+  background-color: var(--dark);
+  color: white;
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    gap: 90px;
+    margin-bottom: 60px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+  }
+  &__title {
+    flex: 0 1 355px;
+  }
+  &__form {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+    @include laptop-middle {
+      gap: 30px;
+    }
+  }
+  &__form-input {
+    padding: 0px 0px 30px 0px;
+    border: none;
+    border-bottom: 4px solid var(--dusty);
+    flex: 1;
+    background-color: transparent;
+    outline: none;
+
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+
+    &::placeholder {
+      color: var(--dusty);
+    }
+  }
+  &__form-send {
+    flex-shrink: 0;
+  }
+}

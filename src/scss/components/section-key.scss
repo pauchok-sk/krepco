@@ -1,0 +1,136 @@
+.section-key {
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__content {
+    flex: 1;
+  }
+  &__spollers {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__spoller-btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    gap: 10px;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      transition: transform 0.3s ease;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+
+    a {
+      display: block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: var(--wild);
+
+      font-size: 16px;
+
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+      @include hover {
+        color: var(--white);
+        background-color: var(--primary-light);
+      }
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+  }
+  &__sidebar {
+    position: sticky;
+    top: 20px;
+    width: 355px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--wild);
+    @include laptop-min {
+      width: 300px;
+    }
+    @include tablet {
+      position: static;
+      margin: 50px auto;
+      width: 400px;
+      max-width: 100%;
+    }
+  }
+  &__sidebar-body {
+    position: relative;
+    padding: 44px 35px;
+    z-index: 1;
+    @include laptop-min {
+      padding: 30px;
+    }
+  }
+  &__sidebar-bg {
+    position: absolute;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @include tablet {
+      bottom: auto;
+      top: 25px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__sidebar-title {
+    margin-bottom: 20px;
+  }
+  &__sidebar-img {
+    display: block;
+    width: 100%;
+    margin-top: 130px;
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+  &__sidebar-btn {
+    margin-top: 45px;
+    @include tablet {
+      margin: 25px auto 0px auto;
+    }
+  }
+  &__content-wrapper {
+    margin-top: 50px;
+  }
+}

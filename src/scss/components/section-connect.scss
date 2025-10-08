@@ -1,0 +1,151 @@
+.section-connect {
+  @include tablet-min {
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--primary);
+    padding: 20px 0px;
+    margin: 0 !important;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 70px;
+      background-color: var(--primary);
+      transform: translateY(100%);
+      z-index: -1;
+    }
+  }
+  &__head {
+    margin-bottom: 20px;
+    @include tablet {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -999;
+      left: -10000px;
+    }
+  }
+  &__head-content {
+    font-size: 20px;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -999;
+      left: -10000px;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+    color: white;
+    border-radius: 16px;
+    background-color: var(--primary);
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+    @include tablet-min {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 650px;
+  }
+  &__main-title {
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    font-size: 20px;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+  &__guarantee {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+
+    font-size: 16px;
+    line-height: 120%;
+
+    @include tablet {
+      display: none;
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    flex-shrink: 0;
+    @include laptop-min {
+      width: 100%;
+    }
+
+    .input-control {
+      display: flex;
+      gap: 20px;
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      .input,
+      .btn,
+      .btn-file {
+        flex: 1;
+        @include tablet {
+          flex: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__form-send {
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__form-policy {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

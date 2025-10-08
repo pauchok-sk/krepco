@@ -4,6 +4,7 @@ import burgerMenus from "./files/burgerMenus.js";
 import cardProductCounter from "./files/cardProductCounter.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
+import filesChange from "./files/filesChange.js";
 import headerScroll from "./files/headerScroll.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
@@ -30,9 +31,10 @@ cardProductCounter();
 switcherTab();
 tabs();
 inputControlScrollbar();
+filesChange();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
 
-// Fancybox.show([{ src: "#modal-review", type: "inline" }]);
+// Fancybox.show([{ src: "#modal-order", type: "inline" }]);

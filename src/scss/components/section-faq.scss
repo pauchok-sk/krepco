@@ -1,0 +1,183 @@
+.section-faq {
+  overflow: hidden;
+  &__nav {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 30px;
+    margin: 0 -30px;
+    @include tablet {
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+  }
+  &__nav-btn {
+    cursor: pointer;
+    padding: 14px 20px;
+    border-radius: 10px;
+
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--wild);
+    }
+    @include tablet {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+
+    &._active {
+      pointer-events: none;
+      color: var(--primary);
+      background-color: var(--wild);
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 25px;
+    margin-top: 25px;
+
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__sidebar {
+    position: relative;
+    overflow: hidden;
+    width: 355px;
+    max-width: 100%;
+    flex-shrink: 0;
+    padding: 20px 35px 40px 35px;
+    border-radius: 16px;
+    background-color: var(--wild);
+    z-index: 1;
+    @include laptop-min {
+      margin: 0 auto;
+    }
+    @include tablet {
+      width: 400px;
+      padding: 20px 20px 40px 20px;
+    }
+  }
+  &__sidebar-title {
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+    }
+  }
+  &__sidebar-content {
+    font-size: 16px;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      max-width: 280px;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 12px;
+  }
+  &__social-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--dark);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__tel {
+    margin-top: 15px;
+    display: block;
+    width: fit-content;
+
+    font-weight: 800;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__time {
+    color: var(--primary);
+    font-size: 16px;
+    margin: 0px 0px 25px 0px;
+  }
+  &__sidebar-btn {
+  }
+  &__sidebar-decor {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__spollers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__spoller {
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+  }
+  &__spoller-btn {
+    @include flex-between;
+    gap: 20px;
+    cursor: pointer;
+    padding: 20px 40px; 
+    transition: color .3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      padding: 20px;
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 15px;
+      height: 15px;
+
+      transition: transform .3s ease;
+    }
+  }
+  &__spoller-body {
+    padding: 10px 40px 20px 40px;
+    @include tablet {
+      padding: 10px 20px 20px 20px;
+    }
+  }
+}

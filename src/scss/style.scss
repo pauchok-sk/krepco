@@ -24,6 +24,7 @@
 @import "./ui/slider";
 @import "./ui/tab";
 @import "./ui/card-article";
+@import "./ui/content";
 
 // widgets
 @import "./widgets/modal";
@@ -45,5 +46,8 @@
 @import "./components/section-certificates";
 @import "./components/section-reviews";
 @import "./components/section-useful";
+@import "./components/section-key";
+@import "./components/section-faq";
+@import "./components/section-connect";
 
 @import "./components/footer";
