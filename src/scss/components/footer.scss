@@ -1,7 +1,33 @@
 .footer {
-  padding-bottom: 15px;
-  background-color: var(--dark);
-  color: white;
+  position: relative;
+  padding-top: 255px;
+  overflow: hidden;
+  z-index: 1;
+
+  @include laptop-middle {
+    padding-top: 175px;
+  }
+  @include tablet-min {
+    padding-top: 70px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2285px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("@img/footer-decor-big.svg") 0 0 / 100% auto no-repeat;
+    z-index: -1;
+  }
+
+  &__body {
+    padding-bottom: 15px;
+    background-color: #333;
+    color: white;
+  }
   &__head {
     display: flex;
     align-items: flex-end;
@@ -10,9 +36,16 @@
     @include laptop-middle {
       gap: 20px;
     }
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 35px;
+    }
   }
   &__title {
     flex: 0 1 355px;
+    @include tablet-min {
+      max-width: 245px;
+    }
   }
   &__form {
     flex: 1;
@@ -21,6 +54,14 @@
     gap: 60px;
     @include laptop-middle {
       gap: 30px;
+    }
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+      gap: 24px;
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
     }
   }
   &__form-input {
@@ -33,7 +74,14 @@
 
     color: white;
     font-size: 25px;
-    font-weight: 600;
+
+    @include tablet {
+      font-size: 16px;
+      padding-bottom: 20px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
 
     &::placeholder {
       color: var(--dusty);
@@ -41,5 +89,8 @@
   }
   &__form-send {
     flex-shrink: 0;
+    @include tablet-min {
+      width: 100%;
+    }
   }
 }

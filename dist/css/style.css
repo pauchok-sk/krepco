@@ -2700,8 +2700,26 @@ textarea.input::-webkit-scrollbar-thumb {
   text-underline-offset: 3px
 }
 .footer {
+  position: relative;
+  padding-top: 255px;
+  overflow: hidden;
+  z-index: 1
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  width: 2285px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url(../img/footer-decor-big.svg) 0 0/100% auto no-repeat;
+  z-index: -1
+}
+.footer__body {
   padding-bottom: 15px;
-  background-color: var(--dark);
+  background-color: #333;
   color: #fff
 }
 .footer__head {
@@ -2727,8 +2745,7 @@ textarea.input::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,0);
   outline: 0;
   color: #fff;
-  font-size: 25px;
-  font-weight: 600
+  font-size: 25px
 }
 .footer__form-input::-webkit-input-placeholder {
   color: var(--dusty)
@@ -2976,6 +2993,9 @@ textarea.input::-webkit-scrollbar-thumb {
   .section-reviews__author-head {
     justify-content: start
   }
+  .footer {
+    padding-top: 175px
+  }
   .footer__head {
     gap: 20px
   }
@@ -3075,6 +3095,15 @@ textarea.input::-webkit-scrollbar-thumb {
   }
   .section-connect__form {
     width: 100%
+  }
+  .footer__head {
+    flex-wrap: wrap;
+    gap: 35px
+  }
+  .footer__form {
+    flex: none;
+    width: 100%;
+    gap: 24px
   }
 }
 @media (max-width:767px) {
@@ -3395,6 +3424,10 @@ textarea.input::-webkit-scrollbar-thumb {
   .section-connect__form-policy {
     font-size: 15px
   }
+  .footer__form-input {
+    font-size: 16px;
+    padding-bottom: 20px
+  }
 }
 @media (max-width:575px) {
   .select-item {
@@ -3587,6 +3620,21 @@ textarea.input::-webkit-scrollbar-thumb {
   .section-connect__body {
     padding: 0;
     background-color: rgba(0,0,0,0)
+  }
+  .footer {
+    padding-top: 70px
+  }
+  .footer__title {
+    max-width: 245px
+  }
+  .footer__form {
+    flex-wrap: wrap
+  }
+  .footer__form-input {
+    width: 100%
+  }
+  .footer__form-send {
+    width: 100%
   }
 }
 @media (min-width:576px)and (max-width:1199px) {
