@@ -194,7 +194,7 @@
         if (dropdowns.length) {
             const bodies = document.querySelectorAll(".dropdown-body");
             bodies.forEach(body => {
-                hide(body);
+                hide(body, 0);
             });
             dropdowns.forEach(drop => {
                 drop.addEventListener("mousemove", e => {
