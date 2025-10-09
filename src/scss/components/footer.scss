@@ -1,18 +1,15 @@
-.footer {
+body > footer {
   position: relative;
   padding-top: 255px;
   overflow: hidden;
   width: 100%;
   z-index: 1;
-
   @include laptop-middle {
     padding-top: 175px;
   }
   @include tablet-min {
     padding-top: 70px;
-
   }
-
   &::before {
     position: absolute;
     content: "";
@@ -24,7 +21,9 @@
     background: url("@img/footer-decor-big.svg") 0 0 / 100% auto no-repeat;
     z-index: -1;
   }
+}
 
+.footer {
   &__body {
     padding-bottom: 10px;
     background-color: #333;

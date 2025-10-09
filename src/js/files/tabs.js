@@ -6,14 +6,18 @@ export default function tabs() {
       btn.addEventListener("click", () => {
         const container = btn.closest(".tabs");
         const tabId = btn.dataset.tabBtn;
-        const allButtons = container.querySelector(".tabs-nav").querySelectorAll("[data-tab-btn]");
-        const allTabs = Array.from(container.querySelector(".tabs-content").children).filter(child => child.hasAttribute("data-tab"));
+        const allButtons = container
+          .querySelector(".tabs-nav")
+          .querySelectorAll("[data-tab-btn]");
+        const allTabs = Array.from(
+          container.querySelector(".tabs-content").children
+        ).filter((child) => child.hasAttribute("data-tab"));
 
         const currentTab = container.querySelector(`[data-tab="${tabId}"]`);
 
         allTabs.forEach((t) => {
-          t.classList.remove("_active");
           t.classList.remove("_show");
+          t.classList.remove("_active");
         });
 
         currentTab.classList.add("_active");

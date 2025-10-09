@@ -13,6 +13,10 @@
   &__top {
     @include flex-between;
     gap: 10px;
+    min-height: 22px;
+    @include tablet-min {
+      min-height: 20px;
+    }
   }
   &__id {
     font-size: 10px;
@@ -297,6 +301,9 @@
     align-self: center;
     @include laptop-min {
       align-self: start;
+    }
+    @include tablet-min {
+      display: none;
     }
   }
 }

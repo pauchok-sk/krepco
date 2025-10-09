@@ -1,5 +1,5 @@
 export default function headerScroll() {
-  const header = document.querySelector(".header");
+  const header = document.querySelector("header");
 
   if (header) {
     let lastScrollTop = 0;

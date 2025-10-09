@@ -1,4 +1,4 @@
-.header {
+body > header {
   position: sticky;
   top: 0;
   background-color: white;
@@ -6,7 +6,7 @@
   box-shadow: 0 4px 10px 0 rgba(128, 128, 128, 0.1);
   z-index: 50;
 
-  transition: transform .4s ease;
+  transition: transform 0.4s ease;
 
   &._scroll {
     transform: translateY(-100%);
@@ -16,6 +16,9 @@
     padding: 0;
     box-shadow: none;
   }
+}
+
+.header {
   &__top {
     @include flex-between;
     padding: 17px 0px;
@@ -316,7 +319,7 @@
       height: 1px;
       opacity: 0;
       background-color: currentColor;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
     }
 
     @include hover {

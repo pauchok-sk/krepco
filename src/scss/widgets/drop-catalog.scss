@@ -12,14 +12,15 @@
   border-radius: 20px;
   height: 840px;
   max-height: calc(100vh - 290px);
-  
+
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
 
   transition:
     opacity 0.4s ease,
-    visibility 0.4s ease, transform .4s ease;
+    visibility 0.4s ease,
+    transform 0.4s ease;
 
   z-index: 50;
 
@@ -41,6 +42,9 @@
 
     @include laptop {
       width: 425px;
+    }
+    @include laptop-middle {
+      width: 320px;
     }
 
     &::-webkit-scrollbar {
@@ -70,6 +74,13 @@
       &::after {
         opacity: 1;
       }
+    }
+    @include laptop {
+      font-size: 18px;
+      padding: 16px;
+    }
+    @include laptop-middle {
+      font-size: 16px;
     }
     &._active {
       background-color: #fff;
@@ -139,22 +150,48 @@
   }
   &__container {
     padding-left: 40px;
+    @include laptop {
+      padding-left: 20px;
+    }
   }
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: start;
     gap: 70px;
     row-gap: 20px;
     padding-bottom: 40px;
     width: 100%;
     border-bottom: 2px solid var(--alto);
-    @include laptop {
+    @include desktop {
       gap: 30px;
       row-gap: 20px;
     }
-    @include laptop-middle {
-      grid-template-columns: repeat(2, 1fr);
+    @include laptop {
       gap: 20px;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex: 1;
+    gap: 70px;
+    row-gap: 20px;
+    @include desktop {
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include laptop {
+      gap: 20px;
+    }
+  }
+  &__nav-item {
+    flex: 1;
+    // width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include laptop {
+      // width: 205px;
     }
   }
   &__item {
@@ -167,21 +204,25 @@
         color: var(--primary);
         text-decoration: underline;
       }
+      @include laptop-middle {
+        font-size: 14px;
+      }
     }
   }
   &__reklam {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: flex-end;
+    width: 260px;
     border-radius: 10px;
     padding: 20px 10px;
-    width: 100%;
     min-height: 145px;
     height: fit-content;
-    
-    // grid-area: 4/3/11/4;
-    // @include laptop-middle {
-    //   grid-area: 8/2/17/3;
-    // }
+
+    @include laptop {
+      width: 205px;
+    }
   }
   &__reklam-tag {
     padding: 4px 5px;

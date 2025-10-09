@@ -279,15 +279,16 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(237,110,0,.2);
-  padding: 7px 10px;
+  padding: 8px 10px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 10px;
-  line-height: 130%;
+  line-height: 100%;
   color: var(--primary);
   transition: color .3s ease,background-color .3s ease
 }
 .btn-mob svg {
+  display: block;
   width: 10px;
   height: 10px
 }
@@ -299,24 +300,12 @@ body {
 .dropdown {
   position: relative
 }
-.dropdown._open .dropdown-body {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible
-}
 .dropdown-body {
   position: absolute;
   right: 0;
   padding-top: 5px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(30px);
-  transform: translateY(30px);
-  z-index: 10;
-  transition: opacity .4s ease,visibility .4s ease,-webkit-transform .4s ease;
-  transition: opacity .4s ease,visibility .4s ease,transform .4s ease;
-  transition: opacity .4s ease,visibility .4s ease,transform .4s ease,-webkit-transform .4s ease
+  overflow: hidden;
+  z-index: 10
 }
 .dropdown-inside {
   width: -webkit-fit-content;
@@ -805,7 +794,8 @@ textarea.input::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px
+  gap: 10px;
+  min-height: 22px
 }
 .card-product__id {
   font-size: 10px
@@ -1341,13 +1331,26 @@ textarea.input::-webkit-scrollbar-thumb {
   padding-left: 40px
 }
 .drop-catalog__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  align-items: start;
   gap: 70px;
   row-gap: 20px;
   padding-bottom: 40px;
   width: 100%;
   border-bottom: 2px solid var(--alto)
+}
+.drop-catalog__nav {
+  display: flex;
+  flex: 1;
+  gap: 70px;
+  row-gap: 20px
+}
+.drop-catalog__nav-item {
+  flex: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
 }
 .drop-catalog__item a {
   font-size: 16px;
@@ -1355,11 +1358,13 @@ textarea.input::-webkit-scrollbar-thumb {
   transition: color .3s ease
 }
 .drop-catalog__reklam {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: flex-end;
+  width: 260px;
   border-radius: 10px;
   padding: 20px 10px;
-  width: 100%;
   min-height: 145px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1653,7 +1658,7 @@ textarea.input::-webkit-scrollbar-thumb {
   width: 10px;
   height: 10px
 }
-.header {
+body>header {
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -1664,7 +1669,7 @@ textarea.input::-webkit-scrollbar-thumb {
   transition: transform .4s ease;
   transition: transform .4s ease,-webkit-transform .4s ease
 }
-.header._scroll {
+body>header._scroll {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%)
 }
@@ -1905,7 +1910,9 @@ textarea.input::-webkit-scrollbar-thumb {
 }
 .section-hero__slide {
   position: relative;
-  padding: 84px 100px;
+  display: flex!important;
+  align-items: center;
+  padding: 24px 100px;
   box-sizing: border-box;
   border-radius: 20px;
   min-height: 380px;
@@ -1913,7 +1920,10 @@ textarea.input::-webkit-scrollbar-thumb {
   color: #fff;
   z-index: 1
 }
-.section-hero__slide-pciture {
+.section-hero__slide._dark-color {
+  color: var(--dark)
+}
+.section-hero__slide-picture {
   position: absolute;
   display: block;
   width: 100%;
@@ -1924,7 +1934,7 @@ textarea.input::-webkit-scrollbar-thumb {
   left: 0;
   z-index: -1
 }
-.section-hero__slide-pciture img {
+.section-hero__slide-picture img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1938,6 +1948,18 @@ textarea.input::-webkit-scrollbar-thumb {
   font-weight: 600;
   font-size: 50px;
   margin: 0 0 20px 0
+}
+.section-hero__slide-content {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 20px
+}
+.section-hero__slide-content p {
+  margin: 0
+}
+.section-hero__slide-content p:not(:last-child) {
+  margin-bottom: 18px
 }
 .section-hero__slider-pagination {
   position: absolute;
@@ -1986,18 +2008,31 @@ textarea.input::-webkit-scrollbar-thumb {
   gap: 25px;
   margin-top: 45px
 }
-.section-about__adv .separator {
-  height: 100px;
-  width: 1px;
-  background-color: var(--primary);
-  align-self: center
-}
 .section-about__adv-item {
   position: relative;
   flex: 1
 }
+.section-about__adv-item:not(:last-child) {
+  padding-right: 25px
+}
+.section-about__adv-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  height: 100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  width: 1px;
+  background-color: var(--primary);
+  align-self: center
+}
 .section-about__adv-icon {
-  display: block
+  display: block;
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+  object-fit: contain
 }
 .section-about__adv-title {
   margin: 30px 0 8px 0
@@ -2268,6 +2303,9 @@ textarea.input::-webkit-scrollbar-thumb {
   right: -35px;
   top: -15px;
   max-width: none;
+  pointer-events: none;
+  -webkit-transform: scale(1);
+  transform: scale(1);
   z-index: -1
 }
 .section-delivery__adv-slider {
@@ -2276,6 +2314,7 @@ textarea.input::-webkit-scrollbar-thumb {
 .section-delivery__adv-item {
   display: flex;
   align-items: start;
+  height: auto!important;
   gap: 15px;
   box-sizing: border-box;
   padding: 15px 20px;
@@ -2597,7 +2636,7 @@ textarea.input::-webkit-scrollbar-thumb {
 .section-key__content-wrapper {
   margin-top: 50px
 }
-.section-faq {
+.section-faq__top {
   overflow: hidden
 }
 .section-faq__nav {
@@ -2629,14 +2668,19 @@ textarea.input::-webkit-scrollbar-thumb {
   margin-top: 25px
 }
 .section-faq__sidebar {
-  position: relative;
-  overflow: hidden;
+  position: sticky;
+  top: 20px;
   width: 355px;
   max-width: 100%;
-  flex-shrink: 0;
+  flex-shrink: 0
+}
+.section-faq__sidebar-body {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--wild);
+  width: 100%;
   padding: 20px 35px 40px 35px;
   border-radius: 16px;
-  background-color: var(--wild);
   z-index: 1
 }
 .section-faq__sidebar-title {
@@ -2789,14 +2833,14 @@ textarea.input::-webkit-scrollbar-thumb {
   text-decoration: underline;
   text-underline-offset: 3px
 }
-.footer {
+body>footer {
   position: relative;
   padding-top: 255px;
   overflow: hidden;
   width: 100%;
   z-index: 1
 }
-.footer::before {
+body>footer::before {
   position: absolute;
   content: "";
   width: 2285px;
@@ -3011,22 +3055,6 @@ textarea.input::-webkit-scrollbar-thumb {
     gap: 20px
   }
 }
-@media (min-width:1023px)and (any-hover:hover) {
-  .dropdown:hover .dropdown-body {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible
-  }
-}
-@media (min-width:1023px)and (hover:none) {
-  .dropdown:active .dropdown-body {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible
-  }
-}
 @media (min-width:1024px) {
   .card-product__cart-btn {
     padding: 5px!important
@@ -3106,6 +3134,14 @@ textarea.input::-webkit-scrollbar-thumb {
   }
 }
 @media (max-width:1539px) {
+  .drop-catalog__wrapper {
+    gap: 30px;
+    row-gap: 20px
+  }
+  .drop-catalog__nav {
+    gap: 30px;
+    row-gap: 20px
+  }
   .section-catalog__grid {
     grid-template-columns: repeat(5,1fr)
   }
@@ -3143,9 +3179,21 @@ textarea.input::-webkit-scrollbar-thumb {
   .drop-catalog__menu {
     width: 425px
   }
+  .drop-catalog__menu-item {
+    font-size: 18px;
+    padding: 16px
+  }
+  .drop-catalog__container {
+    padding-left: 20px
+  }
   .drop-catalog__wrapper {
-    gap: 30px;
-    row-gap: 20px
+    gap: 20px
+  }
+  .drop-catalog__nav {
+    gap: 20px
+  }
+  .drop-catalog__reklam {
+    width: 205px
   }
   .section-catalog__grid {
     grid-template-columns: repeat(4,1fr)
@@ -3167,12 +3215,17 @@ textarea.input::-webkit-scrollbar-thumb {
   }
 }
 @media (max-width:1199px) {
+  .drop-catalog__menu {
+    width: 320px
+  }
+  .drop-catalog__menu-item {
+    font-size: 16px
+  }
   .drop-catalog__body-container {
     padding-right: 20px
   }
-  .drop-catalog__wrapper {
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px
+  .drop-catalog__item a {
+    font-size: 14px
   }
   .header__list>li:nth-child(2),
   .header__list>li:nth-child(3),
@@ -3206,6 +3259,9 @@ textarea.input::-webkit-scrollbar-thumb {
   }
   .section-about__adv {
     gap: 20px
+  }
+  .section-about__adv-item:not(:last-child) {
+    padding-right: 20px
   }
   .section-switcher__tab-wrapper {
     padding: 0 10px
@@ -3246,7 +3302,7 @@ textarea.input::-webkit-scrollbar-thumb {
   .section-reviews__author-head {
     justify-content: start
   }
-  .footer {
+  body>footer {
     padding-top: 175px
   }
   .footer__head {
@@ -3308,7 +3364,10 @@ textarea.input::-webkit-scrollbar-thumb {
     grid-template-columns: repeat(2,1fr);
     gap: 30px
   }
-  .section-about__adv .separator {
+  .section-about__adv-item:not(:last-child) {
+    padding-right: 0
+  }
+  .section-about__adv-item:not(:last-child)::after {
     display: none
   }
   .section-catalog__grid {
@@ -3342,7 +3401,8 @@ textarea.input::-webkit-scrollbar-thumb {
     flex-wrap: wrap
   }
   .section-faq__sidebar {
-    margin: 0 auto
+    margin: 0 auto;
+    position: static
   }
   .section-faq__spollers {
     flex: none;
@@ -3480,7 +3540,7 @@ textarea.input::-webkit-scrollbar-thumb {
     font-size: 18px;
     margin: 20px 0
   }
-  .header {
+  body>header {
     padding: 0;
     box-shadow: none
   }
@@ -3576,7 +3636,10 @@ textarea.input::-webkit-scrollbar-thumb {
   .section-delivery__adv-item {
     font-size: 15px;
     padding: 15px;
-    width: 240px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
     gap: 10px;
     font-size: 15px
   }
@@ -3629,7 +3692,9 @@ textarea.input::-webkit-scrollbar-thumb {
     padding: 6px 10px
   }
   .section-faq__sidebar {
-    width: 400px;
+    width: 400px
+  }
+  .section-faq__sidebar-body {
     padding: 20px 20px 40px 20px
   }
   .section-faq__sidebar-content {
@@ -3736,8 +3801,14 @@ textarea.input::-webkit-scrollbar-thumb {
   .card-category__circle {
     display: none
   }
+  .card-product__top {
+    min-height: 20px
+  }
   .card-product__title {
     font-size: 12px
+  }
+  .card-product__time-info {
+    display: none
   }
   .card-article__gallery {
     aspect-ratio: 1/.89
@@ -3782,14 +3853,15 @@ textarea.input::-webkit-scrollbar-thumb {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30px
+    width: 30px;
+    height: 30px
   }
   .section-about__adv-title {
     margin: 0 0 12px 0
   }
   .section-about__adv-content {
     font-size: 15px;
-    padding-right: 20px
+    padding-right: 56px
   }
   .section-catalog__head {
     align-items: start
@@ -3902,7 +3974,7 @@ textarea.input::-webkit-scrollbar-thumb {
     padding: 0;
     background-color: rgba(0,0,0,0)
   }
-  .footer {
+  body>footer {
     padding-top: 70px
   }
   .footer__body {

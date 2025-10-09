@@ -4,6 +4,8 @@ export default function sliders() {
   if (heroSlider) {
     const swiper = new Swiper(heroSlider, {
       speed: 700,
+      slidesPerView: 1,
+      speaceBetween: 20,
       effect: "fade",
       autoplay: {
         delay: 3500,
@@ -25,9 +27,9 @@ export default function sliders() {
         speed: 700,
         slidesPerView: 2,
         spaceBetween: 10,
-        autoplay: {
-          delay: 3200,
-        },
+        // autoplay: {
+        //   delay: 3200,
+        // },
         navigation: {
           prevEl: slider
             .closest(".section-switcher__tab-wrapper")
@@ -35,10 +37,6 @@ export default function sliders() {
           nextEl: slider
             .closest(".section-switcher__tab-wrapper")
             .querySelector(".section-switcher__slider-btn._next"),
-        },
-        pagination: {
-          el: ".section-hero__slider-pagination",
-          clickable: true,
         },
         breakpoints: {
           1500: {
@@ -183,9 +181,7 @@ export default function sliders() {
     });
   }
 
-  const usefulSlider = document.querySelector(
-    ".section-useful__slider"
-  );
+  const usefulSlider = document.querySelector(".section-useful__slider");
 
   if (usefulSlider) {
     const swiper = new Swiper(usefulSlider, {
