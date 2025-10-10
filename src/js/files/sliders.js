@@ -65,12 +65,22 @@ export default function sliders() {
   if (productSliders.length) {
     productSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
-        speed: 700,
+        speed: 900,
         pagination: {
           el: slider.nextElementSibling,
           clickable: true,
         },
       });
+
+      const switches = slider.querySelectorAll(".card-product__slide-switch");
+
+      if (switches.length) {
+        switches.forEach((sw, index) => {
+          sw.addEventListener("mouseenter", () => {
+            swiper.slideTo(index);
+          });
+        });
+      }
     });
   }
 

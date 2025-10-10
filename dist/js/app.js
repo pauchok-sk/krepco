@@ -510,12 +510,18 @@
         });
         const productSliders = document.querySelectorAll(".card-product__slider");
         if (productSliders.length) productSliders.forEach(slider => {
-            new Swiper(slider, {
-                speed: 700,
+            const swiper = new Swiper(slider, {
+                speed: 900,
                 pagination: {
                     el: slider.nextElementSibling,
                     clickable: true
                 }
+            });
+            const switches = slider.querySelectorAll(".card-product__slide-switch");
+            if (switches.length) switches.forEach((sw, index) => {
+                sw.addEventListener("mouseenter", () => {
+                    swiper.slideTo(index);
+                });
             });
         });
         const fastenersSlider = document.querySelector(".section-fasteners__slider");

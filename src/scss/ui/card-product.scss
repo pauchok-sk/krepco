@@ -10,6 +10,17 @@
     padding: 10px;
   }
 
+  &__slide-switches {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 10;
+  }
+  &__slide-switch {
+  display: flex;
+  height: 100%;
+  flex: 1
+  }
   &__top {
     @include flex-between;
     gap: 10px;
