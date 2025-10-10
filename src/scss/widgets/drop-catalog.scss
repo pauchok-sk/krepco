@@ -1,37 +1,44 @@
 .drop-catalog {
   position: fixed;
-  display: flex;
-  align-items: start;
-  overflow: hidden;
-  width: 1500px;
   max-width: calc(100% - 60px);
+  width: 1500px;
   top: 145px;
-  left: calc(50vw - 750px);
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-  background-color: white;
-  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   height: 840px;
   max-height: calc(100vh - 290px);
 
-  transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
 
   transition:
     opacity 0.4s ease,
-    visibility 0.4s ease,
-    transform 0.4s ease;
+    visibility 0.4s ease;
 
   z-index: 50;
-
-  @media (max-width: 1560px) {
-    left: 30px;
-  }
 
   &._open {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+
+    .drop-catalog__inside {
+      transform: translateY(0);
+    }
+  }
+
+  &__inside {
+    display: flex;
+    align-items: start;
+    overflow: hidden;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    background-color: white;
+    border-radius: 20px;
+
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
+
+    transition: transform .4s ease;
   }
 
   &__menu {
