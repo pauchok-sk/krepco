@@ -387,6 +387,31 @@
             }, +item.dataset.placeholderDelay);
         });
     }
+    function priceRange() {
+        const priceRange = document.querySelector("#price-range");
+        if (priceRange) {
+            const inputMin = document.querySelector("#input-price-min");
+            const inputMax = document.querySelector("#input-price-max");
+            const inputs = [ inputMin, inputMax ];
+            noUiSlider.create(priceRange, {
+                start: [ +inputMin.value, +inputMax.value ],
+                connect: true,
+                range: {
+                    min: +inputMin.value,
+                    max: +inputMax.value
+                },
+                step: 1
+            });
+            priceRange.noUiSlider.on("update", (values, handle) => {
+                inputs[handle].value = Math.round(values[handle]);
+            });
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    if (input.value < input.min) input.value = input.min;
+                });
+            });
+        }
+    }
     function select_select() {
         const buttons = document.querySelectorAll(".select-btn");
         if (buttons.length) {
@@ -417,9 +442,10 @@
                     e.stopPropagation();
                     const select = btn.closest(".select");
                     const input = select.querySelector(".select-input");
+                    const isInputReadonly = input.dataset.readonly;
                     if (select.classList.contains("_open")) {
                         select.classList.remove("_open");
-                        input.setAttribute("readonly", "");
+                        if (!isInputReadonly) input.setAttribute("readonly", "");
                     } else {
                         selects.forEach(s => {
                             s.addEventListener("click", () => {
@@ -427,8 +453,10 @@
                             });
                         });
                         select.classList.add("_open");
-                        input.removeAttribute("readonly");
-                        input.focus();
+                        if (!isInputReadonly) {
+                            input.removeAttribute("readonly");
+                            input.focus();
+                        }
                     }
                 });
             });
@@ -918,6 +946,7 @@
     inputControlScrollbar();
     filesChange();
     formSearch();
+    priceRange();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

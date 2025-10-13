@@ -14,3 +14,20 @@
     border: 3px solid white;
   }
 }
+
+._scrollbar-simple {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--alto);
+    border-radius: 6px;
+    border: 3px solid var(--alabaster);
+  }
+}

@@ -4,6 +4,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   @include tablet {
     border-radius: 10px;

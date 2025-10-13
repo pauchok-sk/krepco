@@ -11,6 +11,7 @@ import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import placeholderIteration from "./files/placeholderIteration.js";
+import priceRange from "./files/priceRange.js";
 import select from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
@@ -34,6 +35,7 @@ tabs();
 inputControlScrollbar();
 filesChange();
 formSearch();
+priceRange();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

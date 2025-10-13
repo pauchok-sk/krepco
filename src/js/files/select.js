@@ -40,10 +40,14 @@ export default function select() {
 
         const select = btn.closest(".select");
         const input = select.querySelector(".select-input");
+        const isInputReadonly = input.dataset.readonly;
 
         if (select.classList.contains("_open")) {
           select.classList.remove("_open");
-          input.setAttribute("readonly", "");
+
+          if (!isInputReadonly) {
+            input.setAttribute("readonly", "");
+          }
         } else {
           selects.forEach((s) => {
             s.addEventListener("click", () => {
@@ -52,9 +56,11 @@ export default function select() {
           });
 
           select.classList.add("_open");
-          input.removeAttribute("readonly");
-
-          input.focus();
+          if (!isInputReadonly) {
+            input.removeAttribute("readonly");
+  
+            input.focus();
+          }
         }
       });
     });

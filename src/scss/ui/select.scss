@@ -11,6 +11,10 @@
       pointer-events: all;
       border-color: var(--primary);
       border-radius: 10px 10px 0px 0px;
+
+      &:read-only {
+        pointer-events: none;
+      }
     }
     .select-btn {
       .arrow {
