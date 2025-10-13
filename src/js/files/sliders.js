@@ -27,9 +27,9 @@ export default function sliders() {
         speed: 700,
         slidesPerView: 2,
         spaceBetween: 10,
-        // autoplay: {
-        //   delay: 3200,
-        // },
+        autoplay: {
+          delay: 3200,
+        },
         navigation: {
           prevEl: slider
             .closest(".section-switcher__tab-wrapper")
@@ -210,6 +210,24 @@ export default function sliders() {
           slidesPerView: "auto",
           spaceBetween: 25,
         },
+      },
+    });
+  }
+
+  const bannerSlider = document.querySelector(".section-banner__slider");
+
+  if (bannerSlider) {
+    const swiper = new Swiper(bannerSlider, {
+      speed: 700,
+      slidesPerView: 1,
+      speaceBetween: 20,
+      effect: "fade",
+      autoplay: {
+        delay: 3500,
+      },
+      pagination: {
+        el: ".section-banner__slider-pagination",
+        clickable: true,
       },
     });
   }

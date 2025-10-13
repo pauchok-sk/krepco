@@ -4,6 +4,22 @@
       align-items: start;
     }
   }
+  &__title-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__subtitle {
+    font-size: 12px;
+    color: var(--dusty);
+    margin-bottom: 7px;
+    @include tablet {
+      margin-bottom: 4px;
+    }
+  }
   &__btn {
     @include tablet-min {
       display: none;
