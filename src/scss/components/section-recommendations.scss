@@ -1,0 +1,17 @@
+.section-recommendation {
+  overflow: hidden;
+  &__slider {
+    @include desktop {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    @include desktop {
+      width: 275px !important;
+    }
+    @include tablet {
+      width: 155px !important;
+    }
+  }
+}

@@ -1,8 +1,13 @@
 .section-shop {
+  @include laptop-min {
+    overflow: hidden;
+  }
   &__head {
     display: flex;
     align-items: start;
     gap: 35px;
+    @include laptop-min {
+    }
   }
   &__info-search {
     width: 295px;
@@ -10,6 +15,10 @@
 
     font-size: 16px;
     color: var(--dusty);
+
+    @include laptop-min {
+      display: none;
+    }
   }
   &__head-list {
     flex: 1;
@@ -17,8 +26,19 @@
     flex-wrap: wrap;
     gap: 35px;
     row-gap: 20px;
+    @include laptop-min {
+      padding: 0 30px;
+      margin: 0 -30px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+    @include tablet {
+      padding: 0 20px;
+      margin: 0 -20px;
+    }
 
     a {
+      display: block;
       font-size: 16px;
       border-bottom: 1px dashed var(--dusty);
 
@@ -37,6 +57,11 @@
     align-items: start;
     gap: 35px;
     margin-top: 40px;
+
+    @include laptop-min {
+      flex-direction: column-reverse;
+      margin-top: 30px;
+    }
   }
   &__sidebar {
     position: sticky;
@@ -46,20 +71,96 @@
     gap: 40px;
     width: 295px;
     flex-shrink: 0;
-    max-height: calc(100vh - 20px);
-    overflow-y: auto;
 
-    &::-webkit-scrollbar {
-      width: 0;
+    @include laptop-min {
+      width: 100%;
     }
   }
   &__block {
     width: 100%;
   }
+  &__filters-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 90;
+
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+
+    &._active {
+      opacity: 0.5;
+      visibility: visible;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+  &__filters {
+    @include laptop-min {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      width: 320px;
+      max-width: 100%;
+      overflow-y: auto;
+      z-index: 100;
+
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+
+      transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        transform 0.4s ease;
+
+      &._active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+
+      .section-shop__block-body {
+        border-radius: 0px 15px 15px 0px;
+        border: none;
+        padding-top: 55px;
+      }
+    }
+  }
   &__block-body {
+    position: relative;
     padding: 20px;
     border: 1px solid var(--alto);
     border-radius: 15px;
+  }
+  &__filters-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__block-head {
     @include flex-between;
@@ -233,8 +334,6 @@
       gap: 10px;
     }
   }
-  &__variant {
-  }
   &__variant-input {
     display: none;
 
@@ -284,7 +383,7 @@
     width: 190px;
     max-width: 100%;
   }
-  &__filters-btn {
+  &__filters-nav-btn {
     width: 100%;
   }
   &__delivery {
@@ -296,12 +395,20 @@
     border-radius: 15px;
     background: rgba(235, 110, 3, 0.1);
     border: 1px solid var(--primary);
+
+    @include laptop-min {
+      width: 400px;
+      max-width: 100%;
+    }
   }
   &__delivery-icon {
     width: 24px;
     height: 24px;
     color: var(--primary);
     flex-shrink: 0;
+    @include laptop-min {
+      display: none;
+    }
   }
   &__delivery-body {
     flex: 1;
@@ -310,11 +417,31 @@
     font-size: 16px;
     color: black;
     margin: 0;
+  }
+  &__delivery-bottom {
+    @include flex-between;
+    gap: 20px;
 
-    span {
-      display: block;
-      color: var(--dusty);
-      margin-top: 2px;
+    @include laptop-min {
+      margin-top: 10px;
+    }
+
+    svg {
+      width: 60px;
+      height: 60px;
+      color: var(--primary);
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  &__delivery-bottom-content {
+    font-size: 16px;
+    display: block;
+    color: var(--dusty);
+    margin-top: 2px;
+    @include laptop-min {
+      margin-top: 0;
     }
   }
   &__delivery-btn {
@@ -328,6 +455,11 @@
     text-underline-offset: 2px;
     @include hover {
       text-decoration: none;
+    }
+  }
+  &__sections-wrapper {
+    @include laptop-min {
+      display: none;
     }
   }
   &__sections {
@@ -355,12 +487,71 @@
   &__main {
     flex: 1;
   }
+  &__main-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+
+    a {
+      display: block;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: var(--wild);
+
+      font-size: 16px;
+
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+      @include hover {
+        color: white;
+        background-color: var(--primary);
+      }
+      @include laptop-min {
+        font-size: 15px;
+      }
+    }
+  }
+  &__filters-btn {
+    @include flex-between;
+    cursor: pointer;
+    padding: 19px 15px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid var(--primary);
+    color: var(--dark);
+    margin: 0px auto 20px auto;
+    width: 100%;
+    max-width: 500px;
+
+    font-weight: 900;
+    font-size: 18px;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+    }
+  }
   &__main-head {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
     width: 100%;
+    @include laptop-min {
+      gap: 10px;
+      margin-bottom: 20px;
+    }
   }
   &__sort-item {
     display: flex;
@@ -379,10 +570,51 @@
   }
   &__orderby-select {
     width: 130px;
+
+    @include laptop-min {
+      width: fit-content;
+
+      &._open {
+        .select-btn {
+          border-color: var(--primary);
+        }
+      }
+
+      .select-btn {
+        padding: 10px 15px;
+        border: 1px solid var(--silver);
+        width: 88px;
+        border-radius: 10px;
+
+        transition: border-color 0.3s ease;
+      }
+      .select-input {
+        display: none;
+      }
+      .select-body {
+        width: fit-content;
+        margin-top: 5px;
+        border-radius: 10px;
+        border-top: 1px solid var(--primary);
+      }
+    }
+
+    .icon {
+      width: 23px;
+      height: 23px;
+      color: var(--dusty);
+
+      @media (min-width: 1023px) {
+        display: none;
+      }
+    }
   }
   &__sort-content {
     font-size: 14px;
     color: var(--dusty);
+    @include laptop-min {
+      display: none;
+    }
   }
   &__number-select {
     width: 82px;
@@ -405,6 +637,9 @@
     padding: 8px 15px;
     background-color: var(--wild);
     margin-left: auto;
+    @include laptop-min {
+      padding: 8px 15px;
+    }
   }
   &__view-btn {
     @include flex-center;
@@ -422,6 +657,14 @@
       color: white;
       background-color: var(--primary);
     }
+    @include tablet {
+      width: 30px;
+      height: 30px;
+      &._list-full {
+        display: none;
+      }
+    }
+
     &._active {
       color: white;
       background-color: var(--primary);
@@ -437,5 +680,35 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     row-gap: 40px;
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+  &__navigation {
+    margin-top: 35px;
+
+    @include tablet {
+      margin-top: 20px;
+      .pagination {
+        display: none;
+      }
+    }
+  }
+  &__btn-more {
+    width: 100%;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__bottom-item {
+  }
+  &__bottom-title {
+  }
+  &__bottom-list {
   }
 }

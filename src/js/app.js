@@ -5,11 +5,13 @@ import cardProductCounter from "./files/cardProductCounter.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
 import filesChange from "./files/filesChange.js";
+import filters from "./files/fitlers.js";
 import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
+import more from "./files/more.js";
 import placeholderIteration from "./files/placeholderIteration.js";
 import priceRange from "./files/priceRange.js";
 import select from "./files/select.js";
@@ -36,6 +38,8 @@ inputControlScrollbar();
 filesChange();
 formSearch();
 priceRange();
+filters();
+more();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

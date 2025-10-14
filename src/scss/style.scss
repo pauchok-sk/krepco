@@ -26,6 +26,8 @@
 @import "./ui/card-article";
 @import "./ui/content";
 @import "./ui/breadcrumbs";
+@import "./ui/pagination";
+@import "./ui/more-item";
 
 // widgets
 @import "./widgets/modal";
@@ -52,5 +54,6 @@
 @import "./components/section-connect";
 @import "./components/section-banner";
 @import "./components/section-shop";
+@import "./components/section-recommendations";
 
 @import "./components/footer";

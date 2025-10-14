@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251014001259">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251014001259">
-	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251014001259">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251014001259">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251014122631">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251014122631">
+	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251014122631">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251014122631">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -1157,7 +1157,6 @@
 	</aside>
 
 	<main>
-
 		<div class="breadcrumbs">
 			<div class="container">
 				<div class="breadcrumbs-wrapper">
@@ -1454,7 +1453,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-margin section-shop">
+		<section class="section-margin section-shop" id="shop">
 			<div class="container">
 				<div class="section-shop__head">
 					<div class="section-shop__info-search">Найдено 1 298 товаров</div>
@@ -1468,8 +1467,13 @@
 				</div>
 				<div class="section-shop__wrapper">
 					<div class="section-shop__sidebar">
-						<form class="section-shop__block" id="filters">
-							<div class="section-shop__block-body">
+						<div class="section-shop__block section-shop__filters" id="filters">
+							<form class="section-shop__block-body">
+								<div class="section-shop__filters-close" id="filters-close">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-close"></use>
+									</svg>
+								</div>
 								<div class="section-shop__block-head">
 									<h3 class="section-shop__block-title">Фильтр товаров</h3>
 									<svg>
@@ -1841,15 +1845,15 @@
 									</div>
 								</div>
 								<div class="section-shop__filters-nav">
-									<button type="submit" class="btn section-shop__filters-btn">
+									<button type="submit" class="btn section-shop__filters-nav-btn">
 										Показать 2 товара
 									</button>
-									<button type="button" class="btn _outline section-shop__filters-btn">
+									<button type="button" class="btn _outline section-shop__filters-nav-btn">
 										Сбросить фильтр
 									</button>
 								</div>
-							</div>
-						</form>
+							</form>
+						</div>
 						<div class="section-shop__delivery">
 							<svg class="section-shop__delivery-icon">
 								<use xlink:href="img/icons/icons.svg#icon-truck"></use>
@@ -1859,14 +1863,23 @@
 									Если что-то не нашли на сайте – не расстраивайтесь, у нас это
 									можно заказать
 									<br />
-									<span>от 1 рабочего дня</span>
 								</p>
-								<a href="#modal-call" data-fancybox class="section-shop__delivery-btn">
-									Заказать
-								</a>
+								<div class="section-shop__delivery-bottom">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-truck"></use>
+									</svg>
+									<div>
+										<span class="section-shop__delivery-bottom-content">
+											от 1 рабочего дня
+										</span>
+										<a href="#modal-call" data-fancybox class="section-shop__delivery-btn">
+											Заказать
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="section-shop__block">
+						<div class="section-shop__block section-shop__sections-wrapper">
 							<div class="section-shop__block-body">
 								<div class="section-shop__block-head">
 									<h3 class="section-shop__block-title">Разделы</h3>
@@ -1894,11 +1907,28 @@
 						</div>
 					</div>
 					<div class="section-shop__main">
+						<ul class="list section-shop__main-list">
+							<li><a href="#">Для пустотелого кирпича</a></li>
+							<li><a href="#">Для природного камня</a></li>
+							<li><a href="#">Для бетона</a></li>
+							<li><a href="#">Для кирпича</a></li>
+							<li><a href="#">Для газобетона</a></li>
+							<li><a href="#">Для газобетона</a></li>
+						</ul>
+						<button class="section-shop__filters-btn" id="filters-open">
+							<span>Фильтр товаров</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-filters-stroke"></use>
+							</svg>
+						</button>
 						<div class="section-shop__main-head">
 							<div class="section-shop__sort-item">
 								<div class="select section-shop__orderby-select">
 									<div class="select-btn">
 										<input type="text" class="input select-input" placeholder="Cортировать" readonly data-readonly="true" />
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#icon-sort"></use>
+										</svg>
 										<svg class="arrow">
 											<use xlink:href="img/icons/icons.svg#icon-down"></use>
 										</svg>
@@ -1931,17 +1961,17 @@
 								</div>
 							</div>
 							<div class="section-shop__view-nav">
-								<a href="#" class="section-shop__view-btn _active">
+								<a href="#" class="section-shop__view-btn _grid _active">
 									<svg>
 										<use xlink:href="img/icons/icons.svg#icon-grid"></use>
 									</svg>
 								</a>
-								<a href="#" class="section-shop__view-btn">
+								<a href="#" class="section-shop__view-btn _list">
 									<svg>
 										<use xlink:href="img/icons/icons.svg#icon-list"></use>
 									</svg>
 								</a>
-								<a href="#" class="section-shop__view-btn">
+								<a href="#" class="section-shop__view-btn _list-full">
 									<svg>
 										<use xlink:href="img/icons/icons.svg#icon-list-full"></use>
 									</svg>
@@ -1980,7 +2010,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2021,7 +2051,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2104,7 +2134,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2144,7 +2174,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2185,7 +2215,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2268,7 +2298,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2308,7 +2338,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2349,7 +2379,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2432,7 +2462,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2472,7 +2502,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2513,7 +2543,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2596,7 +2626,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2636,7 +2666,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2677,7 +2707,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2760,7 +2790,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2800,7 +2830,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2841,7 +2871,7 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2924,7 +2954,588 @@
 									<strong>34.47 ₽</strong>
 									/ шт
 								</div>
-								<div class="card-product__footer _active">
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="section-shop__navigation">
+							<div class="pagination">
+								<a href="#" class="pagination-arrow">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
+									</svg>
+								</a>
+								<div class="pagination-item _active">1</div>
+								<a href="#" class="pagination-item">2</a>
+								<a href="#" class="pagination-item">3</a>
+								<a href="#" class="pagination-arrow">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-next-line"></use>
+									</svg>
+								</a>
+							</div>
+							<button class="btn section-shop__btn-more">Показать ещё</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-shop__filters-overlay" id="filters-overlay"></div>
+		</section>
+
+		<section class="section-margin section-key">
+			<div class="container section-key__container">
+				<div class="section-key__recommendations">
+					<div class="section-key__recommendations-item">
+						<h3 class="section-key__recommendations-title">Диаметр, мм:</h3>
+						<ul class="list section-key__recommendations-list">
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">12</a></li>
+							<li><a href="#">14</a></li>
+							<li><a href="#">16</a></li>
+							<li><a href="#">18</a></li>
+							<li><a href="#">20</a></li>
+							<li><a href="#">24</a></li>
+							<li><a href="#">25</a></li>
+						</ul>
+					</div>
+					<div class="section-key__recommendations-item">
+						<h3 class="section-key__recommendations-title">Длина, мм:</h3>
+						<ul class="list section-key__recommendations-list">
+							<li><a href="#">40</a></li>
+							<li><a href="#">60</a></li>
+							<li><a href="#">65</a></li>
+							<li><a href="#">85</a></li>
+							<li><a href="#">97</a></li>
+							<li><a href="#">100</a></li>
+							<li><a href="#">120</a></li>
+							<li><a href="#">125</a></li>
+							<li><a href="#">97</a></li>
+							<li><a href="#">100</a></li>
+							<li><a href="#">120</a></li>
+							<li><a href="#">125</a></li>
+							<li><a href="#">97</a></li>
+							<li><a href="#">100</a></li>
+							<li><a href="#">120</a></li>
+							<li><a href="#">125</a></li>
+							<li><a href="#">97</a></li>
+							<li><a href="#">100</a></li>
+							<li><a href="#">120</a></li>
+							<li><a href="#">125</a></li>
+						</ul>
+					</div>
+					<div data-da=".section-key__container, 767" class="section-key__recommendations-item">
+						<h3 class="section-key__recommendations-title">
+							Часто спрашивают
+						</h3>
+						<ul data-count-show="10" class="list section-key__recommendations-list container-more">
+							<li data-more-item>
+								<a href="#">Для пустотелых плит перекрытия</a>
+							</li>
+							<li data-more-item><a href="#">По дереву</a></li>
+							<li data-more-item><a href="#">Недорогие</a></li>
+							<li data-more-item><a href="#">10 мм</a></li>
+							<li data-more-item><a href="#">М10</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">12 мм</a></li>
+							<li data-more-item><a href="#">Для кирпичной стены</a></li>
+							<li data-more-item><a href="#">Большие</a></li>
+							<li data-more-item>
+								<a href="#">Для пустотелых плит перекрытия</a>
+							</li>
+							<li data-more-item><a href="#">По дереву</a></li>
+							<li data-more-item><a href="#">Недорогие</a></li>
+							<li data-more-item><a href="#">10 мм</a></li>
+							<li data-more-item><a href="#">М10</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">Большие</a></li>
+							<li data-more-item>
+								<a href="#">Для пустотелых плит перекрытия</a>
+							</li>
+							<li data-more-item><a href="#">По дереву</a></li>
+							<li data-more-item><a href="#">Недорогие</a></li>
+							<li data-more-item><a href="#">10 мм</a></li>
+							<li data-more-item><a href="#">М10</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">М8</a></li>
+							<li data-more-item><a href="#">12 мм</a></li>
+							<li data-more-item><a href="#">Для кирпичной стены</a></li>
+							<li data-more-item><a href="#">Большие</a></li>
+							<li>
+								<div data-more-btn>...Показать ещё</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-key__wrapper">
+					<div class="section-key__content">
+						<div class="section-key__content-wrapper">
+							<div class="content">
+								<h2>Описание и основные виды</h2>
+								<p>
+									Интернет-магазин KREPCO.RU предлагает купить крепеж мелким и
+									крупным оптом по выгодной цене. Занимаемся поставками
+									сертифицированной продукции от ведущих производителей.
+									Гарантируем отличное качество изделий, соответствие
+									действующим стандартам ГОСТ, DIN и ISO. Обеспечиваем
+									курьерскую доставку по Санкт-Петербургу, отгружаем со склада
+									в Москве, осуществляем доставку проверенными транспортными
+									компаниями в любые города России.
+								</p>
+								<h3>Что мы предлагаем</h3>
+
+								<p>
+									У нас можно купить строительный крепеж для монтажа, сборки
+									мебели и металлоконструкций, использования в быту и
+									профессиональной сфере. В ассортименте представлены изделия
+									из разных металлов:
+									<br />
+								</p>
+								<ul>
+									<li>
+										черные метизы – отличаются низкой ценой, используются в
+										сухих помещениях и для сборки временных конструкций;
+									</li>
+									<li>
+										оцинкованный крепеж – универсальная и наиболее
+										востребованная продукция;
+									</li>
+									<li>
+										изделия из нержавеющей стали – для применения во влажной и
+										агрессивной среде;
+									</li>
+									<li>латунные метизы – для работы с деревом;</li>
+									<li>
+										алюминиевый крепеж – обладает малым весом и высокой
+										пластичностью;
+									</li>
+									<li>
+										высокопрочные метизы – для сборки ответственных
+										конструкций и получения высоконадежных соединений.
+									</li>
+								</ul>
+
+								<p>
+									Широкий ассортимент метизов позволяет подобрать вариант
+									крепежа под любую задачу. Разнообразие продукции дает
+									возможность купить все необходимое для работы в одном
+									магазине, что сэкономит время и средства покупателя.
+									Подробная техническая информация по каждому продукту
+									облегчает и ускоряет выбор.
+								</p>
+
+								<h3>Почему с нами выгодно сотрудничать</h3>
+
+								<ul>
+									<li>
+										Максимальная автоматизация процессов обеспечивает быструю
+										обработку заказов.
+									</li>
+									<li>
+										Цена метизов оптом вполне доступна для любого бюджета.
+									</li>
+									<li>
+										Предусмотрены особые условия для постоянных клиентов и на
+										крупный опт. Кроме того, существенно сэкономить клиенты
+										смогут, совершая покупки в период действия акций.
+									</li>
+									<li>
+										Предоставляем квалифицированную помощь по выбору крепежа.
+									</li>
+									<li>
+										На наших складах всегда имеется достаточно продукции,
+										чтобы оперативно сформировать и отправить заказ. Если
+										какого-либо товара не окажется на наших складах, клиент
+										может его заказать, и мы обеспечим его наличие в
+										максимально сжатые сроки.
+									</li>
+								</ul>
+
+								<h3>Как заказать крепеж оптом в Москве</h3>
+
+								<p>
+									Если вы определились с назначением и выбором крепежа,
+									обращайтесь к нашим менеджерам по телефону или в
+									мессенджерах, чтобы сделать заказ. Или воспользуйтесь
+									удобной формой, чтобы оставить заявку, в этом случае
+									менеджер перезвонит вам через несколько минут, ответит на
+									вопросы, поможет оформить покупку.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div data-da=".section-key__content, 767, 1" class="section-key__sidebar">
+						<div class="section-key__sidebar-body">
+							<picture class="section-key__sidebar-bg">
+								<source srcset="img/key-sidebar-bg-mob.png" media="(max-width: 767px)" />
+								<img src="img/key-sidebar-bg.png" alt="image" />
+							</picture>
+							<h3 class="main-title section-key__sidebar-title">
+								Доставка
+								<br />
+								за наш счет
+							</h3>
+							<img src="img/car.png" alt="image" class="section-key__sidebar-img" />
+							<a href="#modal-order" data-fancybox class="btn section-key__sidebar-btn">
+								Заказать с доставкой
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-recommendation section-margin">
+			<div class="container">
+				<div class="section-head">
+					<h2 class="section-title">Хиты продаж</h2>
+				</div>
+				<div class="swiper section-recommendation__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
 									<form action="#" class="card-product__counter">
 										<div class="card-product__counter-btn _minus">-</div>
 										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
@@ -2935,6 +3546,1259 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-recommendation section-margin">
+			<div class="container">
+				<div class="section-head">
+					<h2 class="section-title">Вы недавно посмотрели</h2>
+				</div>
+				<div class="swiper section-recommendation__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide section-recommendation__slide">
+							<div class="card-product">
+								<div class="card-product__top">
+									<div class="card-product__id">RB-М30</div>
+									<div class="card-product__tag">хит</div>
+								</div>
+								<a href="#" class="swiper card-product__slider">
+									<div class="card-product__slide-switches">
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+										<div class="card-product__slide-switch"></div>
+									</div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+										<div class="swiper-slide card-product__slide">
+											<img src="img/product.png" alt="image" />
+										</div>
+									</div>
+								</a>
+								<div class="card-product__slider-pagination"></div>
+								<a href="#" class="card-product__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба М12*200
+									кл.пр.8.8 цинк
+								</a>
+								<div class="card-product__price">
+									<strong>34.47 ₽</strong>
+									/ шт
+								</div>
+								<div class="card-product__footer">
+									<form action="#" class="card-product__counter">
+										<div class="card-product__counter-btn _minus">-</div>
+										<input type="number" value="1" min="1" max="100" class="card-product__counter-input" />
+										<div class="card-product__counter-btn _plus">+</div>
+									</form>
+									<button class="btn card-product__cart-btn">В корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-faq section-margin tabs">
+			<div class="section-faq__top">
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">Ответы на частые вопросы</h2>
+					</div>
+					<div class="tabs-nav section-faq__nav">
+						<div data-tab-btn="tab-1" class="section-faq__nav-btn _active">
+							Общие вопросы
+						</div>
+						<div data-tab-btn="tab-2" class="section-faq__nav-btn">По доставке</div>
+						<div data-tab-btn="tab-3" class="section-faq__nav-btn">По оплате</div>
+						<div data-tab-btn="tab-4" class="section-faq__nav-btn">По возврату</div>
+						<div data-tab-btn="tab-5" class="section-faq__nav-btn">Юридические</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="tabs-content">
+					<div data-tab="tab-1" class="_active _show">
+						<div class="section-faq__wrapper">
+							<div class="section-faq__sidebar">
+								<div class="section-faq__sidebar-body">
+									<h3 class="section-faq__sidebar-title">
+										Не нашли ответа
+										<br />
+										на свой вопрос?
+									</h3>
+									<p class="section-faq__sidebar-content">
+										Свяжитесь с нами в WhatsApp, или по номеру и задайте ваш вопрос
+										менеджеру:
+									</p>
+									<div class="section-faq__social">
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+											</svg>
+										</a>
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+											</svg>
+										</a>
+									</div>
+									<a href="tel:84957139139" class="section-faq__tel">
+										8 495 7-139-139
+									</a>
+									<p class="section-faq__time">
+										Ежедневно
+										<br />
+										c 9 до 18
+									</p>
+									<a href="#modal-order" data-fancybox class="btn section-faq__sidebar-btn">
+										Задать вопрос
+									</a>
+									<picture class="section-faq__sidebar-decor">
+										<source srcset="img/women-mob.png" media="(max-width: 767px)" />
+										<img src="img/women.png" alt="image" />
+									</picture>
+								</div>
+							</div>
+							<div data-spollers class="section-faq__spollers">
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn _spoller-active">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какой крепеж лучше использовать для конкретных материалов,
+											таких как дерево, металл, пластик?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие существуют стандарты качества для крепежных изделий?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие могут быть проблемы при использовании крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-2">
+						<div class="section-faq__wrapper">
+							<div class="section-faq__sidebar">
+								<div class="section-faq__sidebar-body">
+									<h3 class="section-faq__sidebar-title">
+										Не нашли ответа
+										<br />
+										на свой вопрос?
+									</h3>
+									<p class="section-faq__sidebar-content">
+										Свяжитесь с нами в WhatsApp, или по номеру и задайте ваш вопрос
+										менеджеру:
+									</p>
+									<div class="section-faq__social">
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+											</svg>
+										</a>
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+											</svg>
+										</a>
+									</div>
+									<a href="tel:84957139139" class="section-faq__tel">
+										8 495 7-139-139
+									</a>
+									<p class="section-faq__time">
+										Ежедневно
+										<br />
+										c 9 до 18
+									</p>
+									<a href="#modal-order" data-fancybox class="btn section-faq__sidebar-btn">
+										Задать вопрос
+									</a>
+									<picture class="section-faq__sidebar-decor">
+										<source srcset="img/women-mob.png" media="(max-width: 767px)" />
+										<img src="img/women.png" alt="image" />
+									</picture>
+								</div>
+							</div>
+							<div data-spollers class="section-faq__spollers">
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn _spoller-active">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какой крепеж лучше использовать для конкретных материалов,
+											таких как дерево, металл, пластик?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие существуют стандарты качества для крепежных изделий?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие могут быть проблемы при использовании крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-3">
+						<div class="section-faq__wrapper">
+							<div class="section-faq__sidebar">
+								<div class="section-faq__sidebar-body">
+									<h3 class="section-faq__sidebar-title">
+										Не нашли ответа
+										<br />
+										на свой вопрос?
+									</h3>
+									<p class="section-faq__sidebar-content">
+										Свяжитесь с нами в WhatsApp, или по номеру и задайте ваш вопрос
+										менеджеру:
+									</p>
+									<div class="section-faq__social">
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+											</svg>
+										</a>
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+											</svg>
+										</a>
+									</div>
+									<a href="tel:84957139139" class="section-faq__tel">
+										8 495 7-139-139
+									</a>
+									<p class="section-faq__time">
+										Ежедневно
+										<br />
+										c 9 до 18
+									</p>
+									<a href="#modal-order" data-fancybox class="btn section-faq__sidebar-btn">
+										Задать вопрос
+									</a>
+									<picture class="section-faq__sidebar-decor">
+										<source srcset="img/women-mob.png" media="(max-width: 767px)" />
+										<img src="img/women.png" alt="image" />
+									</picture>
+								</div>
+							</div>
+							<div data-spollers class="section-faq__spollers">
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn _spoller-active">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какой крепеж лучше использовать для конкретных материалов,
+											таких как дерево, металл, пластик?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие существуют стандарты качества для крепежных изделий?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие могут быть проблемы при использовании крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-4">
+						<div class="section-faq__wrapper">
+							<div class="section-faq__sidebar">
+								<div class="section-faq__sidebar-body">
+									<h3 class="section-faq__sidebar-title">
+										Не нашли ответа
+										<br />
+										на свой вопрос?
+									</h3>
+									<p class="section-faq__sidebar-content">
+										Свяжитесь с нами в WhatsApp, или по номеру и задайте ваш вопрос
+										менеджеру:
+									</p>
+									<div class="section-faq__social">
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+											</svg>
+										</a>
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+											</svg>
+										</a>
+									</div>
+									<a href="tel:84957139139" class="section-faq__tel">
+										8 495 7-139-139
+									</a>
+									<p class="section-faq__time">
+										Ежедневно
+										<br />
+										c 9 до 18
+									</p>
+									<a href="#modal-order" data-fancybox class="btn section-faq__sidebar-btn">
+										Задать вопрос
+									</a>
+									<picture class="section-faq__sidebar-decor">
+										<source srcset="img/women-mob.png" media="(max-width: 767px)" />
+										<img src="img/women.png" alt="image" />
+									</picture>
+								</div>
+							</div>
+							<div data-spollers class="section-faq__spollers">
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn _spoller-active">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какой крепеж лучше использовать для конкретных материалов,
+											таких как дерево, металл, пластик?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие существуют стандарты качества для крепежных изделий?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие могут быть проблемы при использовании крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="tab-5">
+						<div class="section-faq__wrapper">
+							<div class="section-faq__sidebar">
+								<div class="section-faq__sidebar-body">
+									<h3 class="section-faq__sidebar-title">
+										Не нашли ответа
+										<br />
+										на свой вопрос?
+									</h3>
+									<p class="section-faq__sidebar-content">
+										Свяжитесь с нами в WhatsApp, или по номеру и задайте ваш вопрос
+										менеджеру:
+									</p>
+									<div class="section-faq__social">
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+											</svg>
+										</a>
+										<a href="#" target="_blank" class="section-faq__social-btn">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+											</svg>
+										</a>
+									</div>
+									<a href="tel:84957139139" class="section-faq__tel">
+										8 495 7-139-139
+									</a>
+									<p class="section-faq__time">
+										Ежедневно
+										<br />
+										c 9 до 18
+									</p>
+									<a href="#modal-order" data-fancybox class="btn section-faq__sidebar-btn">
+										Задать вопрос
+									</a>
+									<picture class="section-faq__sidebar-decor">
+										<source srcset="img/women-mob.png" media="(max-width: 767px)" />
+										<img src="img/women.png" alt="image" />
+									</picture>
+								</div>
+							</div>
+							<div data-spollers class="section-faq__spollers">
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn _spoller-active">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Как выбрать правильный тип крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какой крепеж лучше использовать для конкретных материалов,
+											таких как дерево, металл, пластик?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие существуют стандарты качества для крепежных изделий?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="section-faq__spoller">
+									<div data-spoller class="section-faq__spoller-btn">
+										<span class="third-title">
+											Какие могут быть проблемы при использовании крепежа?
+										</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-down"></use>
+										</svg>
+									</div>
+									<div>
+										<div class="section-faq__spoller-body">
+											<div class="content">
+												<p>
+													Выбор крепежа зависит от многих факторов, включая тип
+													материала, который вы собираетесь соединить, требования к
+													прочности соединения, условия эксплуатации и другие. Важно
+													учитывать также размеры и характеристики крепежных
+													элементов.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-connect section-margin">
+			<div class="container">
+				<div class="section-head section-connect__head">
+					<h2 class="section-title">Подача заявки</h2>
+				</div>
+				<p class="section-connect__head-content">
+					“Компания Крепко” производит и реализует рым-болты в различном исполнении.
+					Для оформления заказа воспользуйтесь функционалом интернет-магазина либо
+					помощью консультантов.
+				</p>
+				<div class="section-connect__body">
+					<div class="section-connect__main">
+						<h2 class="section-title section-connect__main-title">
+							Оставить заявку
+						</h2>
+						<p class="section-connect__content">
+							Оставьте свои контактные данные и комментарий. Менеджер свяжется с
+							вами в рабочее время и обсудит Ваш вопрос.
+						</p>
+						<div class="section-connect__guarantee">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-shield"></use>
+							</svg>
+							<span>Мы гарантируем безопасность и сохранность ваших данных</span>
+						</div>
+					</div>
+					<form action="#" class="section-connect__form">
+						<div class="input-control">
+							<input type="text" placeholder="Имя" class="input _white" />
+						</div>
+						<div class="input-control">
+							<input type="tel" placeholder="Телефон" class="input _white" />
+							<input type="email" placeholder="Email" class="input _white" />
+						</div>
+						<div class="input-control">
+							<textarea rows="7" class="input _white _scrollbar"></textarea>
+						</div>
+						<div class="input-control">
+							<input type="file" class="input-file" id="connect-file" />
+							<label for="connect-file" class="btn-file _white">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#icon-paper"></use>
+								</svg>
+								<span class="name">Прикрепить файл</span>
+								<div class="file-close _hide">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-close"></use>
+									</svg>
+								</div>
+							</label>
+							<button data-da=".section-connect__form, 767" type="submit" class="btn _dark section-connect__form-send">Отправить</button>
+						</div>
+						<p class="section-connect__form-policy">
+							Нажимая на кнопку “Отправить” Вы соглашаетесь с
+							<a href="#" target="_blank">политикой конфиденциальности</a>
+							и
+							<a href="#" target="_blank">персональной обработки данных</a>
+							.
+						</p>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -3251,11 +5115,11 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251014001259"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251014001259"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251014001259"></script>
-	<script src="./files/nouislider/nouislider.min.js?_v=20251014001259"></script>
-	<script src="js/app.min.js?_v=20251014001259"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251014122631"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251014122631"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251014122631"></script>
+	<script src="./files/nouislider/nouislider.min.js?_v=20251014122631"></script>
+	<script src="js/app.min.js?_v=20251014122631"></script>
 </body>
 
 </html>

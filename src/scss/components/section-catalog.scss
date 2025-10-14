@@ -1,4 +1,9 @@
 .section-catalog {
+  @include tablet-min {
+    padding: 20px 0px;
+    background-color: white;
+    border-radius: 20px;
+  }
   &__head {
     @include tablet-min {
       align-items: start;

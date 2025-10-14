@@ -231,4 +231,31 @@ export default function sliders() {
       },
     });
   }
+
+  const recSliders = document.querySelectorAll(
+    ".section-recommendation__slider"
+  );
+
+  if (recSliders.length) {
+    recSliders.forEach((slider, index) => {
+      const swiper = new Swiper(slider, {
+        speed: 700,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        autoplay: {
+          delay: 3200 + index * 100,
+        },
+        breakpoints: {
+          1540: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  }
 }

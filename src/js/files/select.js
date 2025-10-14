@@ -50,9 +50,7 @@ export default function select() {
           }
         } else {
           selects.forEach((s) => {
-            s.addEventListener("click", () => {
-              handleClose(s);
-            });
+            handleClose(s);
           });
 
           select.classList.add("_open");

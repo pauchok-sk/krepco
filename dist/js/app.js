@@ -239,6 +239,29 @@
             });
         });
     }
+    function filters() {
+        const filters = document.querySelector("#filters");
+        if (filters && window.matchMedia("(max-width: 1023px)").matches) {
+            const shop = document.querySelector("#shop");
+            const btnOpen = document.querySelector("#filters-open");
+            const btnClose = document.querySelector("#filters-close");
+            const overlay = document.querySelector("#filters-overlay");
+            btnOpen.addEventListener("click", handleOpen);
+            btnClose.addEventListener("click", handleClose);
+            overlay.addEventListener("click", handleClose);
+            function handleOpen() {
+                filters.classList.add("_active");
+                overlay.classList.add("_active");
+                document.body.classList.add("body-hidden");
+            }
+            function handleClose() {
+                filters.classList.remove("_active");
+                overlay.classList.remove("_active");
+                document.body.classList.remove("body-hidden");
+            }
+            shop.appendChild(filters);
+        }
+    }
     function formSearch() {
         const formSearch = document.querySelector(".form-search");
         if (formSearch) window.addEventListener("scroll", () => {
@@ -371,6 +394,27 @@
         const da = new DynamicAdapt("max");
         da.init();
     }
+    function more() {
+        const containers = document.querySelectorAll(".container-more");
+        if (containers.length) containers.forEach(container => {
+            const btn = container.querySelector("[data-more-btn]");
+            const count = +container.dataset.countShow;
+            const hideItems = Array.from(container.querySelectorAll("[data-more-item]")).filter(item => window.getComputedStyle(item).display === "none");
+            if (hideItems.length === 0) btn.remove();
+            btn.addEventListener("click", () => {
+                const items = container.querySelectorAll("[data-more-item]");
+                const hideItems = Array.from(items).filter(item => window.getComputedStyle(item).display === "none");
+                hideItems.splice(0, count).forEach(item => {
+                    item.style.display = "block";
+                    setTimeout(() => {
+                        item.style.opacity = 1;
+                        item.style.transform = "translateY(0)";
+                    });
+                });
+                if (hideItems.length <= 0) btn.remove();
+            });
+        });
+    }
     function placeholderIteration() {
         const items = document.querySelectorAll("[data-placeholder-iteration]");
         if (items.length) items.forEach(item => {
@@ -448,9 +492,7 @@
                         if (!isInputReadonly) input.setAttribute("readonly", "");
                     } else {
                         selects.forEach(s => {
-                            s.addEventListener("click", () => {
-                                handleClose(s);
-                            });
+                            handleClose(s);
                         });
                         select.classList.add("_open");
                         if (!isInputReadonly) {
@@ -683,6 +725,27 @@
                 }
             });
         }
+        const recSliders = document.querySelectorAll(".section-recommendation__slider");
+        if (recSliders.length) recSliders.forEach((slider, index) => {
+            new Swiper(slider, {
+                speed: 700,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3200 + index * 100
+                },
+                breakpoints: {
+                    1540: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20
+                    }
+                }
+            });
+        });
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
@@ -947,6 +1010,8 @@
     filesChange();
     formSearch();
     priceRange();
+    filters();
+    more();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

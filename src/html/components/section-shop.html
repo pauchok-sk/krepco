@@ -1,4 +1,4 @@
-<section class="section-margin section-shop">
+<section class="section-margin section-shop" id="shop">
   <div class="container">
     <div class="section-shop__head">
       <div class="section-shop__info-search">Найдено 1 298 товаров</div>
@@ -12,8 +12,13 @@
     </div>
     <div class="section-shop__wrapper">
       <div class="section-shop__sidebar">
-        <form class="section-shop__block" id="filters">
-          <div class="section-shop__block-body">
+        <div class="section-shop__block section-shop__filters" id="filters">
+          <form class="section-shop__block-body">
+            <div class="section-shop__filters-close" id="filters-close">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-close"></use>
+              </svg>
+            </div>
             <div class="section-shop__block-head">
               <h3 class="section-shop__block-title">Фильтр товаров</h3>
               <svg>
@@ -626,18 +631,18 @@
               </div>
             </div>
             <div class="section-shop__filters-nav">
-              <button type="submit" class="btn section-shop__filters-btn">
+              <button type="submit" class="btn section-shop__filters-nav-btn">
                 Показать 2 товара
               </button>
               <button
                 type="button"
-                class="btn _outline section-shop__filters-btn"
+                class="btn _outline section-shop__filters-nav-btn"
               >
                 Сбросить фильтр
               </button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
         <div class="section-shop__delivery">
           <svg class="section-shop__delivery-icon">
             <use xlink:href="img/icons/icons.svg#icon-truck"></use>
@@ -647,18 +652,27 @@
               Если что-то не нашли на сайте – не расстраивайтесь, у нас это
               можно заказать
               <br />
-              <span>от 1 рабочего дня</span>
             </p>
-            <a
-              href="#modal-call"
-              data-fancybox
-              class="section-shop__delivery-btn"
-            >
-              Заказать
-            </a>
+            <div class="section-shop__delivery-bottom">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-truck"></use>
+              </svg>
+              <div>
+                <span class="section-shop__delivery-bottom-content">
+                  от 1 рабочего дня
+                </span>
+                <a
+                  href="#modal-call"
+                  data-fancybox
+                  class="section-shop__delivery-btn"
+                >
+                  Заказать
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="section-shop__block">
+        <div class="section-shop__block section-shop__sections-wrapper">
           <div class="section-shop__block-body">
             <div class="section-shop__block-head">
               <h3 class="section-shop__block-title">Разделы</h3>
@@ -686,6 +700,20 @@
         </div>
       </div>
       <div class="section-shop__main">
+        <ul class="list section-shop__main-list">
+          <li><a href="#">Для пустотелого кирпича</a></li>
+          <li><a href="#">Для природного камня</a></li>
+          <li><a href="#">Для бетона</a></li>
+          <li><a href="#">Для кирпича</a></li>
+          <li><a href="#">Для газобетона</a></li>
+          <li><a href="#">Для газобетона</a></li>
+        </ul>
+        <button class="section-shop__filters-btn" id="filters-open">
+          <span>Фильтр товаров</span>
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-filters-stroke"></use>
+          </svg>
+        </button>
         <div class="section-shop__main-head">
           <div class="section-shop__sort-item">
             <div class="select section-shop__orderby-select">
@@ -697,6 +725,9 @@
                   readonly
                   data-readonly="true"
                 />
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons.svg#icon-sort"></use>
+                </svg>
                 <svg class="arrow">
                   <use xlink:href="img/icons/icons.svg#icon-down"></use>
                 </svg>
@@ -736,17 +767,17 @@
             </div>
           </div>
           <div class="section-shop__view-nav">
-            <a href="#" class="section-shop__view-btn _active">
+            <a href="#" class="section-shop__view-btn _grid _active">
               <svg>
                 <use xlink:href="img/icons/icons.svg#icon-grid"></use>
               </svg>
             </a>
-            <a href="#" class="section-shop__view-btn">
+            <a href="#" class="section-shop__view-btn _list">
               <svg>
                 <use xlink:href="img/icons/icons.svg#icon-list"></use>
               </svg>
             </a>
-            <a href="#" class="section-shop__view-btn">
+            <a href="#" class="section-shop__view-btn _list-full">
               <svg>
                 <use xlink:href="img/icons/icons.svg#icon-list-full"></use>
               </svg>
@@ -785,7 +816,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -832,7 +863,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -921,7 +952,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -967,7 +998,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1014,7 +1045,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1103,7 +1134,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1149,7 +1180,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1196,7 +1227,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1285,7 +1316,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1331,7 +1362,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1378,7 +1409,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1467,7 +1498,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1513,7 +1544,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1560,7 +1591,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1649,7 +1680,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1695,7 +1726,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1742,7 +1773,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1831,7 +1862,7 @@
               <strong>34.47 ₽</strong>
               / шт
             </div>
-            <div class="card-product__footer _active">
+            <div class="card-product__footer">
               <form action="#" class="card-product__counter">
                 <div class="card-product__counter-btn _minus">-</div>
                 <input
@@ -1847,7 +1878,26 @@
             </div>
           </div>
         </div>
+        <div class="section-shop__navigation">
+          <div class="pagination">
+            <a href="#" class="pagination-arrow">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
+              </svg>
+            </a>
+            <div class="pagination-item _active">1</div>
+            <a href="#" class="pagination-item">2</a>
+            <a href="#" class="pagination-item">3</a>
+            <a href="#" class="pagination-arrow">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-next-line"></use>
+              </svg>
+            </a>
+          </div>
+          <button class="btn section-shop__btn-more">Показать ещё</button>
+        </div>
       </div>
     </div>
   </div>
+  <div class="section-shop__filters-overlay" id="filters-overlay"></div>
 </section>

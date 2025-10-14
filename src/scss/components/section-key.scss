@@ -133,4 +133,69 @@
   &__content-wrapper {
     margin-top: 50px;
   }
+  &__recommendations {
+    margin-bottom: 80px;
+    @include tablet {
+      margin-bottom: 70px;
+      
+    }
+  }
+  &__recommendations-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @include tablet {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__recommendations-title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 120%;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    @include tablet-min {
+      font-size: 15px;
+    }
+  }
+  &__recommendations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    @include tablet {
+      gap: 10px;
+    }
+
+    a,
+    div {
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: var(--wild);
+
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+      @include hover {
+        background-color: var(--primary);
+        color: white;
+      }
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+    [data-more-item] {
+      @include first(10) {
+        transform: translateY(0);
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
 }
