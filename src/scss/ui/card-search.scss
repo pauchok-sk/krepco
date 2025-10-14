@@ -1,0 +1,41 @@
+.card-search {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--wild);
+  z-index: 1;
+
+  transition: background-color .3s ease;
+
+  @include hover {
+    background-color: var(--primary-light);
+  }
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 16px;
+    margin: 0px 0px 5px 0px;
+    padding-right: 30px;
+    @include tablet {
+      font-size: 14px
+    }
+  }
+  &__count {
+    font-size: 12px;
+    color: var(--dusty);
+    opacity: 0.84;
+  }
+  &__img {
+    position: absolute;
+    bottom: 10px;
+    right: -45px;
+    display: block;
+    width: 93px;
+    z-index: -1;
+  }
+}

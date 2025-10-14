@@ -6,31 +6,99 @@
   display: flex;
   gap: 40px;
 
+  @include laptop-middle {
+    gap: 20px;
+  }
+  @include tablet {
+    padding: 20px 15px;
+  }
+  @include tablet-min {
+    gap: 10px;
+    padding: 10px;
+  }
+
   &__gallery {
     position: relative;
     width: 235px;
     flex-shrink: 0;
+    @include laptop-middle {
+      width: 170px;
+    }
+    @include laptop-min {
+      width: 240px;
+    }
+    @include tablet {
+      width: calc(50% - 10px);
+    }
+    @include tablet-min {
+      width: calc(50% - 5px);
+    }
   }
   .card-product__title {
     margin: 0px 0px 20px 0px;
   }
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+    flex: 1;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
   &__body {
     flex: 1;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
   }
   &__nav {
     width: 240px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-   
+
+    @include laptop-middle {
+      width: 180px;
+    }
+    @include laptop-min {
+      width: 240px;
+    }
+    @include tablet {
+      width: 100%;
+      .card-product__counter {
+        display: none;
+      }
+
+      &._active {
+        .card-product__counter {
+          display: flex;
+        }
+        .card-product__cart-btn {
+          display: none;
+        }
+      }
+    }
+
     .card-product__counter {
       flex: none;
       width: 100%;
       margin-top: auto;
+      margin-bottom: 20px;
     }
   }
   &__cart-btn {
     width: 100%;
-    margin-top: 20px;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 108%;
+      border-radius: 5px;
+      padding: 8px 5px !important;
+      width: 100%;
+    }
   }
 }

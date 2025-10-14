@@ -330,6 +330,10 @@
     line-height: 143%;
     margin: 0;
 
+    @include tablet-min {
+      font-size: 13px;
+    }
+
     span {
       color: var(--dusty);
     }
