@@ -705,10 +705,9 @@
       display: none;
     }
   }
-  &__bottom-item {
-  }
-  &__bottom-title {
-  }
-  &__bottom-list {
+  &__grid-lines {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

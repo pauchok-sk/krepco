@@ -1,0 +1,36 @@
+.card-product-line {
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  gap: 40px;
+
+  &__gallery {
+    position: relative;
+    width: 235px;
+    flex-shrink: 0;
+  }
+  .card-product__title {
+    margin: 0px 0px 20px 0px;
+  }
+  &__body {
+    flex: 1;
+  }
+  &__nav {
+    width: 240px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+   
+    .card-product__counter {
+      flex: none;
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+  &__cart-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

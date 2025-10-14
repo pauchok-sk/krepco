@@ -833,6 +833,9 @@ textarea.input::-webkit-scrollbar-thumb {
 .card-product__id {
   font-size: 10px
 }
+.card-product__id span {
+  color: var(--dusty)
+}
 .card-product__tag {
   font-size: 12px;
   padding: 4px 6px;
@@ -1001,6 +1004,14 @@ textarea.input::-webkit-scrollbar-thumb {
   font-size: 14px;
   color: var(--dusty);
   align-self: center
+}
+.card-product__content {
+  font-size: 14px;
+  line-height: 143%;
+  margin: 0
+}
+.card-product__content span {
+  color: var(--dusty)
 }
 .card-fasteners {
   position: relative;
@@ -1295,6 +1306,40 @@ a.breadcrumbs-item:hover {
   transition: opacity .5s ease,-webkit-transform .5s ease;
   transition: opacity .5s ease,transform .5s ease;
   transition: opacity .5s ease,transform .5s ease,-webkit-transform .5s ease
+}
+.card-product-line {
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  gap: 40px
+}
+.card-product-line__gallery {
+  position: relative;
+  width: 235px;
+  flex-shrink: 0
+}
+.card-product-line .card-product__title {
+  margin: 0 0 20px 0
+}
+.card-product-line__body {
+  flex: 1
+}
+.card-product-line__nav {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column
+}
+.card-product-line__nav .card-product__counter {
+  flex: none;
+  width: 100%;
+  margin-top: auto
+}
+.card-product-line__cart-btn {
+  width: 100%;
+  margin-top: 20px
 }
 .modal {
   border-radius: 20px;
@@ -3524,6 +3569,11 @@ body>header._scroll {
 }
 .section-shop__btn-more {
   width: 100%
+}
+.section-shop__grid-lines {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px
 }
 .section-recommendation {
   overflow: hidden
