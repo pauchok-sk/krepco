@@ -1,7 +1,7 @@
 .section-shop {
-  @include laptop-min {
-    overflow: hidden;
-  }
+  // @include laptop-min {
+  //   overflow: hidden;
+  // }
   &__head {
     display: flex;
     align-items: start;

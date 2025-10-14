@@ -1308,7 +1308,6 @@ a.breadcrumbs-item:hover {
   transition: opacity .5s ease,transform .5s ease,-webkit-transform .5s ease
 }
 .card-product-line {
-  overflow: hidden;
   border-radius: 20px;
   padding: 20px;
   background-color: #fff;
@@ -4299,9 +4298,6 @@ body>footer::before {
   .section-connect__form {
     width: 100%
   }
-  .section-shop {
-    overflow: hidden
-  }
   .section-shop__info-search {
     display: none
   }
@@ -4543,9 +4539,6 @@ body>footer::before {
   }
   .card-product-line {
     padding: 20px 15px
-  }
-  .card-product-line__gallery {
-    width: calc(50% - 10px)
   }
   .card-product-line__nav {
     width: 100%
@@ -4927,11 +4920,14 @@ body>footer::before {
     font-size: 12px
   }
   .card-product-line {
+    align-items: start;
     gap: 10px;
     padding: 10px
   }
   .card-product-line__gallery {
-    width: calc(50% - 5px)
+    width: 130px;
+    position: sticky;
+    top: 10px
   }
   .modal {
     padding: 40px 15px 20px 15px;
