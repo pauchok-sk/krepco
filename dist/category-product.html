@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251015101522">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251015101522">
-	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251015101522">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251015101522">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251015104736">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251015104736">
+	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251015104736">
+	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251015104736">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251015104736">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -4635,7 +4636,7 @@
 			<div class="modal__body">
 				<div data-fancybox-close class="modal__close">
 					<svg>
-						<use xlink:href='img/icons/icons.svg#icon-close'></use>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
 					</svg>
 				</div>
 				<h3 class="modal__title">Заказать звонок</h3>
@@ -4698,7 +4699,7 @@
 			<div class="modal__body">
 				<div data-fancybox-close class="modal__close">
 					<svg>
-						<use xlink:href='img/icons/icons.svg#icon-close'></use>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
 					</svg>
 				</div>
 				<h3 class="modal__title">Отправить заявку</h3>
@@ -4755,15 +4756,15 @@
 						<textarea placeholder="Комментарий" rows="7" class="input _scrollbar"></textarea>
 					</div>
 					<div class="input-control">
-						<input type="file" class="input-file" id="order-file">
+						<input type="file" class="input-file" id="order-file" />
 						<label for="order-file" class="btn-file">
 							<svg class="icon">
-								<use xlink:href='img/icons/icons.svg#icon-paper'></use>
+								<use xlink:href="img/icons/icons.svg#icon-paper"></use>
 							</svg>
 							<span class="name">Прикрепить файл</span>
 							<div class="file-close _hide">
 								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-close'></use>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
 								</svg>
 							</div>
 						</label>
@@ -4781,7 +4782,7 @@
 			<div class="modal__body">
 				<div data-fancybox-close class="modal__close">
 					<svg>
-						<use xlink:href='img/icons/icons.svg#icon-close'></use>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
 					</svg>
 				</div>
 				<h3 class="modal__title">Отправить отзыв</h3>
@@ -4804,7 +4805,45 @@
 				</form>
 			</div>
 		</div>
+
+		<div class="modal" id="modal-share">
+			<div class="modal__body">
+				<div data-fancybox-close class="modal__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</div>
+				<h3 class="modal__title">Поделиться</h3>
+				<div class="shareon">
+					<a class="bluesky"></a>
+					<a class="facebook"></a>
+					<a class="fediverse"></a>
+					<a class="hackernews"></a>
+					<a class="linkedin"></a>
+					<a class="mastodon"></a>
+					<!-- FB App ID is required for the Messenger button to function -->
+					<a class="messenger" data-fb-app-id="0123456789012345"></a>
+					<a class="odnoklassniki"></a>
+					<a class="pinterest"></a>
+					<a class="pocket"></a>
+					<a class="reddit"></a>
+					<a class="teams"></a>
+					<a class="telegram"></a>
+					<a class="tumblr"></a>
+					<a class="twitter"></a>
+					<a class="viber"></a>
+					<a class="vkontakte"></a>
+					<a class="whatsapp"></a>
+					<a class="copy-url"></a>
+					<a class="email"></a>
+					<a class="print"></a>
+					<!-- Does not work in every browser -->
+					<a class="web-share"></a>
+				</div>
+			</div>
+		</div>
 	</aside>
+
 	<footer>
 		<div class="footer__body">
 			<div class="container">
@@ -4940,11 +4979,12 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251015101522"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251015101522"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251015101522"></script>
-	<script src="./files/nouislider/nouislider.min.js?_v=20251015101522"></script>
-	<script src="js/app.min.js?_v=20251015101522"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251015104736"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251015104736"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251015104736"></script>
+	<script src="./files/nouislider/nouislider.min.js?_v=20251015104736"></script>
+	<script src="./files/shareon/shareon.min.js?_v=20251015104736"></script>
+	<script src="js/app.min.js?_v=20251015104736"></script>
 </body>
 
 </html>

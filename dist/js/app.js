@@ -1019,4 +1019,5 @@
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });
+    Shareon.init();
 })();

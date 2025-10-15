@@ -1,0 +1,47 @@
+.section-product {
+  &__head {
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__head-wrapper {
+    @include flex-between;
+    gap: 10px;
+  }
+  &__id {
+    font-size: 16px;
+    color: var(--dusty);
+
+    @include tablet-min {
+      font-size: 12px;
+    }
+
+    span {
+      color: var(--dark);
+    }
+  }
+  &__btn-share {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 16px;
+    line-height: 87%;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet-min {
+      font-size: 12px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+    }
+  }
+}
