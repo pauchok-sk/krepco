@@ -1,0 +1,22 @@
+.tag {
+  width: fit-content;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: var(--primary-light);
+  color: var(--primary);
+
+  @include tablet {
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  &._green {
+    background: var(--green-light);
+    color: var(--green);
+  }
+  &._red {
+    color: var(--red);
+    background-color: var(--red-light);
+  }
+}

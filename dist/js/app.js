@@ -750,6 +750,26 @@
                 }
             });
         });
+        const productSlider = document.querySelector(".section-product__slider");
+        if (productSlider) {
+            const thumbSlider = document.querySelector(".section-product__thumb-slider");
+            new Swiper(thumbSlider, {
+                speed: 900,
+                direction: "vertical",
+                spaceBetween: 27,
+                slidesPerView: 4
+            });
+            new Swiper(productSlider, {
+                speed: 900,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3500
+                },
+                thumbs: {
+                    swiper: thumbSlider
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");

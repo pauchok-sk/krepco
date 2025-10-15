@@ -4,10 +4,16 @@
   }
   &__title {
     margin-bottom: 10px;
+    @include tablet-min {
+      margin-bottom: 0;
+    }
   }
   &__head-wrapper {
     @include flex-between;
     gap: 10px;
+    @include tablet-min {
+      display: none;
+    }
   }
   &__id {
     font-size: 16px;
@@ -34,6 +40,9 @@
     @include hover {
       color: var(--primary);
     }
+    @include laptop-middle {
+      display: none;
+    }
     @include tablet-min {
       font-size: 12px;
     }
@@ -42,6 +51,105 @@
       width: 24px;
       height: 24px;
       color: var(--primary);
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+  }
+  &__gallery {
+    display: flex;
+    gap: 25px;
+  }
+  &__thumb-slider {
+    width: 100px;
+    flex-shrink: 0;
+    height: 480px;
+  }
+  &__thumb-slide {
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(235, 110, 3, 0);
+
+    transition: border-color 0.3s ease;
+
+    @include hover {
+      border-color: var(--primary-light);
+    }
+    &.swiper-slide-thumb-active {
+      border-color: var(--primary);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slider {
+    width: 480px;
+
+    .tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+  }
+  &__slide {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+
+    outline: none;
+
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    img {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+
+      transition: transform .3s ease
+    }
+  }
+  &__slide-zoom {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    top: 15px;
+    right: 15px;
+    color: var(--dusty);
+
+    transition: color .3s ease;
+
+    z-index: 10;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }
