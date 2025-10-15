@@ -10,11 +10,19 @@
   }
   @include tablet {
     padding: 20px 15px;
+    border-radius: 15px;
   }
   @include tablet-min {
+    padding: 10px;
     align-items: start;
     gap: 10px;
-    padding: 10px;
+    padding: 0;
+    border-radius: 0;
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--wild);
+    }
   }
 
   &__gallery {
@@ -28,13 +36,44 @@
       width: 240px;
     }
     @include tablet-min {
-      width: 130px;
-      position: sticky;
-      top: 10px;
+      width: 70px;
+
+      .card-product__top {
+        min-height: none;
+        margin-bottom: 9px;
+      }
+      .card-product__id {
+        span {
+          display: none;
+        }
+      }
+      .card-product__tag {
+        display: none;
+      }
+      .card-product__slide {
+        aspect-ratio: 1/1;
+      }
+      .card-product__slider-pagination {
+        margin-top: 5px;
+
+        .swiper-pagination-bullet {
+          width: 3px;
+          height: 3px;
+        }
+      }
     }
   }
   .card-product__title {
     margin: 0px 0px 20px 0px;
+    @include mobile {
+      font-size: 10px;
+      margin-bottom: 0;
+    }
+  }
+  .card-product__content {
+    @include tablet-min {
+      display: none;
+    }
   }
   &__wrapper {
     display: flex;
@@ -45,6 +84,9 @@
     }
     @include laptop-min {
       flex-wrap: wrap;
+    }
+    @include tablet-min {
+      gap: 7px;
     }
   }
   &__body {
@@ -71,14 +113,21 @@
       .card-product__counter {
         display: none;
       }
+    }
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      .card-product__price {
+        margin: 0;
+        margin-left: auto;
+      }
+    }
 
-      &._active {
-        .card-product__counter {
-          display: flex;
-        }
-        .card-product__cart-btn {
-          display: none;
-        }
+    .card-product__tag {
+      @media (min-width: 576px) {
+        display: none;
       }
     }
 
@@ -87,6 +136,9 @@
       width: 100%;
       margin-top: auto;
       margin-bottom: 20px;
+      @include tablet {
+        display: none;
+      }
     }
   }
   &__cart-btn {
@@ -98,6 +150,107 @@
       border-radius: 5px;
       padding: 8px 5px !important;
       width: 100%;
+    }
+    @include tablet-min {
+      padding: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      @include tablet-min {
+        display: none;
+      }
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+      @media (min-width: 576px) {
+        display: none;
+      }
+    }
+  }
+  &__time-info {
+    font-size: 14px;
+    color: var(--dusty);
+    margin: auto 0px 15px 0px;
+    @include laptop-min {
+      align-self: start;
+    }
+    @include tablet-min {
+      display: none;
+    }
+  }
+  &__order-btn {
+    @include flex-center;
+    position: relative;
+    cursor: pointer;
+    gap: 10px;
+    outline: none;
+    border-radius: 10px;
+    padding: 14px 20px;
+    width: fit-content;
+    background-color: rgba(235, 110, 3, 0.1);
+    border: none;
+    width: 100%;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 81%;
+    color: var(--primary);
+
+    @include hover {
+      svg {
+        transform: rotate(-180deg);
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 108%;
+      border-radius: 5px;
+      padding: 7px 5px !important;
+    }
+    @include tablet-min {
+      padding: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 10px;
+      border: 1px solid var(--primary);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      @include tablet {
+        border-radius: 5px;
+      }
+    }
+
+    span {
+      @include tablet-min {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 20px;
+
+      transition: transform 0.3s ease;
+
+      @include tablet {
+        width: 12px;
+        height: 16px;
+      }
     }
   }
 }

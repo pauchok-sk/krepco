@@ -718,6 +718,11 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    @include tablet-min {
+      padding: 10px;
+      border-radius: 15px;
+      background-color: white;
+    }
   }
   &__product {
     margin-bottom: 40px;
