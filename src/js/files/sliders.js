@@ -245,6 +245,10 @@ export default function sliders() {
         autoplay: {
           delay: 3200 + index * 100,
         },
+        navigation: {
+          prevEl: slider.closest(".section-recommendation").querySelector(".slider-btn._prev"),
+          nextEl: slider.closest(".section-recommendation").querySelector(".slider-btn._next")
+        },
         breakpoints: {
           1540: {
             slidesPerView: 5,

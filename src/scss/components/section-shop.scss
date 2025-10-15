@@ -1,12 +1,10 @@
 .section-shop {
-  // @include laptop-min {
-  //   overflow: hidden;
-  // }
   &__head {
     display: flex;
     align-items: start;
     gap: 35px;
     @include laptop-min {
+      margin-bottom: 30px;
     }
   }
   &__info-search {
@@ -60,7 +58,7 @@
 
     @include laptop-min {
       flex-direction: column-reverse;
-      margin-top: 30px;
+      margin-top: 0;
     }
   }
   &__sidebar {
@@ -487,34 +485,25 @@
   &__main {
     flex: 1;
   }
-  &__main-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  &__main-list-wrapper {
     margin-bottom: 40px;
     @include laptop-min {
       margin-bottom: 30px;
     }
-
-    a {
-      display: block;
-      border-radius: 5px;
-      padding: 5px 10px;
-      background-color: var(--wild);
-
-      font-size: 16px;
-
-      transition:
-        color 0.3s ease,
-        background-color 0.3s ease;
-      @include hover {
-        color: white;
-        background-color: var(--primary);
-      }
-      @include laptop-min {
-        font-size: 15px;
-      }
+  }
+  &__main-list-title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 0px 0px 20px 0px;
+    @include tablet-min {
+      font-size: 15px;
     }
+  }
+  &__main-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   &__filters-btn {
     @include flex-between;
@@ -729,5 +718,123 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  &__product {
+    margin-bottom: 40px;
+    @include laptop-middle {
+      margin-bottom: 30px;
+    }
+  }
+  &__product-head {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 25px;
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+  }
+  &__product-count {
+    font-size: 16px;
+    color: var(--dusty);
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__product-wrapper {
+    display: flex;
+    align-items: start;
+    gap: 35px;
+    @include laptop-middle {
+      gap: 10px;
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__product-img {
+    position: sticky;
+    top: 20px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    @include laptop-middle {
+      width: 225px;
+      height: 225px;
+    }
+    @include tablet-min {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      position: static;
+    }
+  }
+  &__product-info {
+    flex: 0 1 730px;
+    @include tablet-min {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  &__product-content {
+    font-size: 20px;
+    color: black;
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    strong {
+      font-weight: 900;
+    }
+  }
+  &__product-application {
+    margin-top: 20px;
+    @include tablet-min {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+  &__application-title {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__application-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include tablet {
+      gap: 10px;
+    }
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      @include tablet {
+        width: 48px;
+        height: 48px;
+        border-radius: 5px;
+      }
+    }
   }
 }

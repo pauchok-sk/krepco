@@ -292,6 +292,14 @@ body {
   width: 10px;
   height: 10px
 }
+.btn-item {
+  display: block;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--wild);
+  font-size: 16px;
+  transition: color .3s ease,background-color .3s ease
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -1233,7 +1241,7 @@ textarea.input::-webkit-scrollbar-thumb {
 .breadcrumbs {
   margin: 56px 0 50px 0
 }
-.breadcrumbs>section {
+.breadcrumbs+section {
   margin-top: 0!important;
   padding-top: 0!important
 }
@@ -3485,19 +3493,19 @@ body>header._scroll {
 .section-shop__main {
   flex: 1
 }
+.section-shop__main-list-wrapper {
+  margin-bottom: 40px
+}
+.section-shop__main-list-title {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  margin: 0 0 20px 0
+}
 .section-shop__main-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 40px
-}
-.section-shop__main-list a {
-  display: block;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background-color: var(--wild);
-  font-size: 16px;
-  transition: color .3s ease,background-color .3s ease
+  gap: 10px
 }
 .section-shop__filters-btn {
   display: flex;
@@ -3612,6 +3620,72 @@ body>header._scroll {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px
+}
+.section-shop__product {
+  margin-bottom: 40px
+}
+.section-shop__product-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 25px
+}
+.section-shop__product-count {
+  font-size: 16px;
+  color: var(--dusty)
+}
+.section-shop__product-wrapper {
+  display: flex;
+  align-items: start;
+  gap: 35px
+}
+.section-shop__product-img {
+  position: sticky;
+  top: 20px;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.section-shop__product-info {
+  flex: 0 1 730px
+}
+.section-shop__product-content {
+  font-size: 20px;
+  color: #000
+}
+.section-shop__product-content p {
+  margin: 0
+}
+.section-shop__product-content p:not(:last-child) {
+  margin-bottom: 20px
+}
+.section-shop__product-content strong {
+  font-weight: 900
+}
+.section-shop__product-application {
+  margin-top: 20px
+}
+.section-shop__application-title {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 20px 0
+}
+.section-shop__application-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px
+}
+.section-shop__application-gallery img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .section-recommendation {
   overflow: hidden
@@ -3953,6 +4027,13 @@ body>footer::before {
     grid-area: 2/3/3/4
   }
 }
+@media (min-width:1540px) {
+  .section-recommendation__slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px
+  }
+}
 @media (max-width:1539px) {
   .drop-catalog__wrapper {
     gap: 30px;
@@ -3973,6 +4054,9 @@ body>footer::before {
   }
   .section-shop__grid-big {
     grid-template-columns: repeat(4,1fr)
+  }
+  .section-recommendation__slider-wrapper .slider-btn {
+    display: none
   }
   .section-recommendation__slider {
     overflow: visible!important
@@ -4169,6 +4253,16 @@ body>footer::before {
     grid-template-columns: repeat(3,1fr);
     gap: 20px
   }
+  .section-shop__product {
+    margin-bottom: 30px
+  }
+  .section-shop__product-wrapper {
+    gap: 10px
+  }
+  .section-shop__product-img {
+    width: 225px;
+    height: 225px
+  }
   body>footer {
     padding-top: 175px
   }
@@ -4186,6 +4280,9 @@ body>footer::before {
   }
 }
 @media (max-width:1023px) {
+  .btn-item {
+    font-size: 15px
+  }
   .card-product__slide-switches {
     display: none
   }
@@ -4298,6 +4395,9 @@ body>footer::before {
   .section-connect__form {
     width: 100%
   }
+  .section-shop__head {
+    margin-bottom: 30px
+  }
   .section-shop__info-search {
     display: none
   }
@@ -4309,7 +4409,7 @@ body>footer::before {
   }
   .section-shop__wrapper {
     flex-direction: column-reverse;
-    margin-top: 30px
+    margin-top: 0
   }
   .section-shop__sidebar {
     width: 100%
@@ -4359,11 +4459,8 @@ body>footer::before {
   .section-shop__sections-wrapper {
     display: none
   }
-  .section-shop__main-list {
+  .section-shop__main-list-wrapper {
     margin-bottom: 30px
-  }
-  .section-shop__main-list a {
-    font-size: 15px
   }
   .section-shop__main-head {
     gap: 10px;
@@ -4832,6 +4929,29 @@ body>footer::before {
   .section-shop__navigation .pagination {
     display: none
   }
+  .section-shop__product-head {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 35px
+  }
+  .section-shop__product-count {
+    font-size: 12px
+  }
+  .section-shop__product-content {
+    font-size: 15px
+  }
+  .section-shop__application-title {
+    font-size: 16px
+  }
+  .section-shop__application-gallery {
+    gap: 10px
+  }
+  .section-shop__application-gallery img {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px
+  }
   .section-recommendation__slide {
     width: 155px!important
   }
@@ -5093,6 +5213,25 @@ body>footer::before {
     min-height: 405px;
     align-items: start
   }
+  .section-shop__main-list-title {
+    font-size: 15px
+  }
+  .section-shop__product-wrapper {
+    flex-wrap: wrap
+  }
+  .section-shop__product-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    position: static
+  }
+  .section-shop__product-info {
+    display: flex;
+    flex-direction: column-reverse
+  }
+  .section-shop__product-application {
+    margin: 0 0 30px 0
+  }
   body>footer {
     padding-top: 70px
   }
@@ -5219,6 +5358,10 @@ body>footer::before {
   .btn-mob:hover {
     background-color: var(--primary);
     color: #fff
+  }
+  .btn-item:hover {
+    color: #fff;
+    background-color: var(--primary)
   }
   .dropdown-list a:hover {
     color: var(--primary)
@@ -5456,10 +5599,6 @@ body>footer::before {
   .section-shop__sections a:hover {
     color: var(--primary)
   }
-  .section-shop__main-list a:hover {
-    color: #fff;
-    background-color: var(--primary)
-  }
   .section-shop__view-btn:hover {
     color: #fff;
     background-color: var(--primary)
@@ -5496,6 +5635,10 @@ body>footer::before {
   .btn-mob:active {
     background-color: var(--primary);
     color: #fff
+  }
+  .btn-item:active {
+    color: #fff;
+    background-color: var(--primary)
   }
   .dropdown-list a:active {
     color: var(--primary)
@@ -5732,10 +5875,6 @@ body>footer::before {
   }
   .section-shop__sections a:active {
     color: var(--primary)
-  }
-  .section-shop__main-list a:active {
-    color: #fff;
-    background-color: var(--primary)
   }
   .section-shop__view-btn:active {
     color: #fff;

@@ -1,5 +1,18 @@
 .section-recommendation {
   overflow: hidden;
+  &__slider-wrapper {
+    @media (min-width: 1540px) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .slider-btn {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
   &__slider {
     @include desktop {
       overflow: visible !important;

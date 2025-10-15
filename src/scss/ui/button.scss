@@ -41,7 +41,7 @@
     @include hover {
       background-color: black;
       border-color: black;
-      color: white
+      color: white;
     }
   }
 }
@@ -61,7 +61,9 @@
   line-height: 100%;
   color: var(--primary);
 
-  transition: color .3s ease, background-color .3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 
   @include hover {
     background-color: var(--primary);
@@ -76,5 +78,25 @@
     display: block;
     width: 10px;
     height: 10px;
+  }
+}
+
+.btn-item {
+  display: block;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--wild);
+
+  font-size: 16px;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+  @include hover {
+    color: white;
+    background-color: var(--primary);
+  }
+  @include laptop-min {
+    font-size: 15px;
   }
 }
