@@ -2,6 +2,7 @@ import "../scss/style.scss";
 import burger from "./files/burger.js";
 import burgerMenus from "./files/burgerMenus.js";
 import cardProductCounter from "./files/cardProductCounter.js";
+import counter from "./files/counters.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
 import filesChange from "./files/filesChange.js";
@@ -40,6 +41,7 @@ formSearch();
 priceRange();
 filters();
 more();
+counter();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

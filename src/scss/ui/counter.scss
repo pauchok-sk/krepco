@@ -1,0 +1,53 @@
+.counter {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0px 5px;
+  border: 1px solid var(--alto);
+  width: 100px;
+  flex: 1;
+  @include laptop-min {
+    width: 100%;
+    flex: none;
+  }
+
+  &__btn {
+    @include flex-center;
+    width: 25px;
+    height: 45px;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    &._disabled {
+      pointer-events: none;
+      color: var(--disty);
+    }
+  }
+  &__input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    -moz-appearance: textfield;
+
+    font-size: 15px;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

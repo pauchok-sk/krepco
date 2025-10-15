@@ -276,20 +276,36 @@ export default function sliders() {
 
     const thumbSwiper = new Swiper(thumbSlider, {
       speed: 900,
-      direction: "vertical",
-      spaceBetween: 27,
-      slidesPerView: 4,
+      spaceBetween: 20,
+      direction: "horizontal",
+      slidesPerView: "auto",
+      breakpoints: {
+        1200: {
+          direction: "vertical",
+          spaceBetween: 27,
+          slidesPerView: 4,
+        },
+        768: {
+          spaceBetween: 24,
+          direction: "horizontal",
+          slidesPerView: "auto",
+        },
+      },
     });
 
     const swiper = new Swiper(productSlider, {
       speed: 900,
       spaceBetween: 20,
       autoplay: {
-        delay: 3500
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".section-product .slider-btn._prev",
+        nextEl: ".section-product .slider-btn._next",
       },
       thumbs: {
-        swiper: thumbSlider
-      }
+        swiper: thumbSlider,
+      },
     });
   }
 }

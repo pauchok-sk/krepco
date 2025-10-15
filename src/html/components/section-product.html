@@ -47,6 +47,16 @@
           </div>
         </div>
         <div class="swiper section-product__slider">
+          <div class="slider-btn _prev">
+            <svg>
+              <use xlink:href='img/icons/icons.svg#icon-prev-line'></use>
+            </svg>
+          </div>
+          <div class="slider-btn _next">
+            <svg>
+              <use xlink:href='img/icons/icons.svg#icon-next-line'></use>
+            </svg>
+          </div>
           <div class="tag _red">распродажа</div>
           <div class="swiper-wrapper">
             <a
@@ -127,34 +137,94 @@
       <div class="section-product__info">
         <div class="section-product__info-head">
           <h3 class="section-product__info-title">О товаре</h3>
-          <a href="#" class="section-product__info-all">
+          <a href="#" class="section-product__info-link">
             <span>Все товары категории</span>
             <svg>
-              <use xlink:href='img/icons/icons.svg#icon-next'></use>
+              <use xlink:href="img/icons/icons.svg#icon-next"></use>
             </svg>
           </a>
         </div>
         <ul class="list section-product__info-list">
-          <li>Диаметр – <span>36</span></li>
-          <li>Класс прочности – <span>5.8</span></li>
-          <li>Материал – <span>Сталь</span></li>
-          <li>Покрытие – <span>Цинк</span></li>
-          <li>Шаг резьбы – <span>4</span></li>
-          <li>Аналоги – <span>ISO 3266, ГОСТ 4751-72</span></li>
-          <li>Производитель – <span>Россия / Китай</span></li>
+          <li>
+            Диаметр –
+            <span>36</span>
+          </li>
+          <li>
+            Класс прочности –
+            <span>5.8</span>
+          </li>
+          <li>
+            Материал –
+            <span>Сталь</span>
+          </li>
+          <li>
+            Покрытие –
+            <span>Цинк</span>
+          </li>
+          <li>
+            Шаг резьбы –
+            <span>4</span>
+          </li>
+          <li>
+            Аналоги –
+            <span>ISO 3266, ГОСТ 4751-72</span>
+          </li>
+          <li>
+            Производитель – 
+            <span>Россия / Китай</span>
+          </li>
         </ul>
-        <a href="#product-descr" data-anchor class="section-product__anchor-descr">
+        <a href="#product-descr" data-anchor class="section-product__info-link">
           <span>Перейти к описанию</span>
           <svg>
-            <use xlink:href='img/icons/icons.svg#icon-next'></use>
+            <use xlink:href="img/icons/icons.svg#icon-next"></use>
           </svg>
         </a>
-        <a href="@img/about-adv-1.svg" class="section__file-download">
-          <svg>
-            <use xlink:href='img/icons/icons.svg#icon-file'></use>
-          </svg>
+        <a
+          href="@img/about-adv-1.svg"
+          download
+          class="section-product__file-download"
+        >
+          <img src="@img/file-icon.svg" alt="icon" />
           <span>Скачать сертификат</span>
         </a>
+      </div>
+      <div class="section-product__sidebar">
+        <div class="section-product__nav">
+          <div class="section-product__price-item">
+            <div class="section-product__price-title">Цена:</div>
+            <div class="section-product__price-value">
+              34 393.47 ₽
+              <span>/ шт</span>
+            </div>
+          </div>
+          <div class="section-product__price-item _primary">
+            <div class="section-product__price-title">Сумма:</div>
+            <div class="section-product__price-value">
+              399 786,94 ₽
+            </div>
+          </div>
+          <div class="section-product__nav-bottom">
+            <form action="#" class="counter">
+              <div class="counter__btn _minus">-</div>
+              <input
+                type="number"
+                value="1"
+                min="1"
+                max="100"
+                class="counter__input"
+              />
+              <div class="counter__btn _plus">+</div>
+            </form>
+            <button class="btn section-product__cart-btn">В корзину</button>
+          </div>
+        </div>
+        <p class="section-product__sidebar-content">
+          Цена может отличаться от цен в розничных магазинах.
+          <br />
+          <br />
+          Вы можете направить запрос на адрес e-mail: <a href="mailto:moscow@krepco.ru">moscow@krepco.ru</a>
+        </p>
       </div>
     </div>
   </div>
