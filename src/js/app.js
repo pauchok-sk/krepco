@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+import anchors from "./files/anchors.js";
 import burger from "./files/burger.js";
 import burgerMenus from "./files/burgerMenus.js";
 import cardProductCounter from "./files/cardProductCounter.js";
@@ -42,6 +43,7 @@ priceRange();
 filters();
 more();
 counter();
+anchors();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

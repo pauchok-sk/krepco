@@ -1,0 +1,324 @@
+.section-info {
+  overflow: hidden;
+  &__head {
+    overflow-x: auto;
+    margin: 0 -30px;
+    padding: 0 30px;
+
+    @include tablet {
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+  }
+  &__nav {
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  &__nav-btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    white-space: nowrap;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+      background-color: var(--wild);
+    }
+    @include tablet {
+      font-size: 16px;
+      padding: 15px 20px;
+    }
+  }
+  &__table {
+    margin-top: 60px;
+    @include laptop-middle {
+      margin-top: 40px;
+    }
+  }
+  &__table-head {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__table-head-cell {
+    font-weight: 900;
+    font-size: 16px;
+    &:nth-child(1) {
+      flex: 1;
+      @include laptop-middle {
+        flex: 0 1 385px;
+      }
+    }
+    &:nth-child(2) {
+      flex: 0 1 140px;
+      @include laptop-middle {
+        flex: 1;
+      }
+    }
+    &:nth-child(3) {
+      flex: 0 1 150px;
+      @include laptop-middle {
+        flex: 1;
+      }
+    }
+    &:nth-child(4) {
+      flex: 0 1 390px;
+      @include laptop-middle {
+        flex-basis: 300px;
+      }
+    }
+  }
+  &__table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__table-product {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+
+    font-size: 16px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 20px;
+      row-gap: 10px;
+    }
+    @include tablet {
+      padding: 10px;
+    }
+  }
+  &__table-product-title {
+    @include overflowText(2);
+    font-weight: 600;
+    flex: 1;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include laptop-middle {
+      flex: 0 1 385px;
+    }
+    @include laptop-min {
+      flex: 1;
+      order: 2;
+    }
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+  &__table-product-id {
+    flex: 0 1 140px;
+    @include laptop-middle {
+      flex: 1;
+    }
+    @include laptop-min {
+      order: 1;
+      flex: none;
+      width: 100%;
+      color: var(--dusty);
+    }
+    @include tablet {
+      font-size: 8px;
+    }
+  }
+  &__table-product-unit {
+    flex: 0 1 150px;
+    @include laptop-middle {
+      flex: 1;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__table-product-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 0 1 370px;
+
+    @include laptop-middle {
+      flex-basis: 280px;
+    }
+    @include laptop-min {
+      order: 3;
+      margin-left: auto;
+      flex: none;
+      gap: 15px;
+    }
+
+    .counter {
+      width: 100px !important;
+      @include laptop-min {
+        display: none;
+      }
+    }
+  }
+  &__table-product-price {
+    font-weight: 900;
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+  &__table-product-nav-wrapper {
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+    @include laptop-min {
+      margin: 0;
+    }
+  }
+  &__table-product-btn {
+    @include laptop-middle {
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+    }
+    @include tablet {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      @media (min-width: 1200px) {
+        display: none;
+      }
+      @include tablet {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    span {
+      @include laptop-middle {
+        display: none;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 25px;
+    margin-top: 50px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+  }
+  &__content-block {
+  }
+  &__content-title {
+    font-weight: 900;
+    font-size: 26px;
+    margin: 0px 0px 40px 0px;
+  }
+  &__content-descr {
+    font-size: 20px;
+    color: black;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__sidebar {
+    position: sticky;
+    top: 20px;
+    width: 355px;
+    flex-shrink: 0;
+  }
+  &__sidebar-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--alto);
+    }
+  }
+  &__product-gallery {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      border: 1px solid rgba(235, 110, 3, 0);
+      object-fit: cover;
+    }
+  }
+  &__product-body {
+  }
+  &__product-title {
+    @include overflowText(2);
+    display: block;
+    font-size: 12px;
+    color: var(--dusty);
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__product-bottom {
+    @include flex-between;
+    gap: 10px;
+    margin-top: 10px;
+
+    .counter {
+      flex: none;
+      width: 100px !important;
+    }
+  }
+  &__product-price {
+    font-weight: 900;
+    font-size: 16px;
+  }
+}

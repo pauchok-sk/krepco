@@ -73,9 +73,9 @@
     @include laptop {
       flex-direction: column-reverse;
       gap: 30px;
+      width: 550px;
     }
     @include laptop-middle {
-      width: 550px;
     }
     @include laptop-min {
       width: 360px;
@@ -93,10 +93,11 @@
     height: 480px;
     @include laptop {
       width: 100%;
-      height: auto;
+      height: 100px;
     }
     @include tablet {
       overflow: visible !important;
+      height: 75px;
     }
   }
   &__thumb-slide {
@@ -116,7 +117,7 @@
     &.swiper-slide-thumb-active {
       border-color: var(--primary);
     }
-    @include laptop-middle {
+    @include laptop {
       width: 100px !important;
     }
     @include tablet {
@@ -135,9 +136,6 @@
       width: 400px;
     }
     @include laptop {
-      width: 480px;
-    }
-    @include laptop-middle {
       width: 100%;
     }
 

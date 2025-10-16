@@ -280,7 +280,7 @@ export default function sliders() {
       direction: "horizontal",
       slidesPerView: "auto",
       breakpoints: {
-        1200: {
+        1366: {
           direction: "vertical",
           spaceBetween: 27,
           slidesPerView: 4,

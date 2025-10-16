@@ -1,5 +1,18 @@
 (() => {
     "use strict";
+    function anchors_anchors() {
+        document.querySelectorAll("[data-anchor]").forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                let href = this.getAttribute("href").substring(1);
+                const scrollTarget = document.getElementById(href);
+                if (scrollTarget) window.scrollBy({
+                    top: scrollTarget.getBoundingClientRect().top,
+                    behavior: "smooth"
+                });
+            });
+        });
+    }
     function burger() {
         const burgerOpen = document.querySelector("#burger-open");
         const burgerCloses = document.querySelectorAll("[data-burger-close]");
@@ -788,7 +801,7 @@
                 direction: "horizontal",
                 slidesPerView: "auto",
                 breakpoints: {
-                    1200: {
+                    1366: {
                         direction: "vertical",
                         spaceBetween: 27,
                         slidesPerView: 4
@@ -1082,6 +1095,7 @@
     filters();
     more();
     counter();
+    anchors_anchors();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });
