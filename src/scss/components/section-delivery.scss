@@ -69,6 +69,7 @@
     z-index: -1;
     width: 970px;
     height: 520px;
+
     @include laptop {
       right: -510px;
     }
@@ -81,31 +82,14 @@
       right: auto;
       top: auto;
     }
-    // position: absolute;
-    // right: -35px;
-    // top: -15px;
-    // max-width: none;
-    // pointer-events: none;
-    // transform: scale(1);
-    // z-index: -1;
-    // @include laptop {
-    //   right: -510px;
-    // }
-    // @include laptop-min {
-    //   right: -660px;
-    // }
-    // @include tablet {
-    //   bottom: -100px;
-    //   left: 40px;
-    //   right: auto;
-    //   top: auto;
-    // }
   }
   &__adv-slider {
     overflow: visible !important;
+
     @include tablet {
       margin-top: 240px;
     }
+
     .swiper-wrapper {
       @media (min-width: 768px) {
         display: grid;

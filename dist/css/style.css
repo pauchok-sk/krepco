@@ -323,6 +323,21 @@ body {
   width: 22px;
   height: 22px
 }
+.btn-prev {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--primary)
+}
+.btn-prev svg {
+  width: 20px;
+  height: 10px;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease,-webkit-transform .3s ease
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -4133,9 +4148,6 @@ body>header._scroll {
 .section-product__sidebar-content a {
   color: var(--primary)
 }
-.section-info {
-  overflow: hidden
-}
 .section-info__head {
   overflow-x: auto;
   margin: 0 -30px;
@@ -4252,6 +4264,7 @@ body>header._scroll {
 .section-info__content-title {
   font-weight: 900;
   font-size: 26px;
+  color: #000;
   margin: 0 0 40px 0
 }
 .section-info__content-descr {
@@ -4263,6 +4276,33 @@ body>header._scroll {
 }
 .section-info__content-descr p:not(:last-child) {
   margin-bottom: 20px
+}
+.section-info__content-spec {
+  max-width: 730px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  row-gap: 15px
+}
+.section-info__content-spec li {
+  font-size: 20px
+}
+.section-info__content-spec li span {
+  color: var(--dusty)
+}
+.section-info__content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+.section-info__sizes {
+  display: block;
+  width: 100%
+}
+.section-info__sizes img {
+  display: block;
+  width: 100%
 }
 .section-info__sidebar {
   position: sticky;
@@ -4325,6 +4365,32 @@ body>header._scroll {
 .section-info__product-price {
   font-weight: 900;
   font-size: 16px
+}
+.section-cart__title {
+  margin-bottom: 30px
+}
+.section-cart__warn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px 40px;
+  background-color: #fff;
+  gap: 25px;
+  margin-bottom: 30px;
+  width: 1090px;
+  max-width: 100%
+}
+.section-cart__warn .tag {
+  font-size: 12px;
+  padding: 4px 8px
+}
+.section-cart__warn-content {
+  font-size: 16px;
+  margin: 0
+}
+.section-cart__warn-content span {
+  color: var(--dusty)
 }
 body>footer {
   position: relative;
@@ -4940,6 +5006,9 @@ body>footer::before {
     font-size: 32px;
     line-height: 120%
   }
+  .section-info {
+    overflow: hidden
+  }
   .section-info__table {
     margin-top: 40px
   }
@@ -4977,6 +5046,25 @@ body>footer::before {
     border-radius: 10px
   }
   .section-info__table-product-btn span {
+    display: none
+  }
+  .section-info__content {
+    flex: none;
+    width: 100%
+  }
+  .section-info__content-title {
+    font-size: 32px;
+    line-height: 120%
+  }
+  .section-info__sizes-wrapper {
+    overflow-x: auto;
+    padding: 0 30px;
+    margin: 0 -30px
+  }
+  .section-info__sizes {
+    min-width: 1100px
+  }
+  .section-info__sidebar {
     display: none
   }
   body>footer {
@@ -5826,6 +5914,32 @@ body>footer::before {
     width: 18px;
     height: 18px
   }
+  .section-info__content-title {
+    font-size: 22px;
+    margin-bottom: 20px
+  }
+  .section-info__content-descr {
+    font-size: 15px
+  }
+  .section-info__content-descr p:not(:last-child) {
+    margin-bottom: 15px
+  }
+  .section-info__content-spec {
+    max-width: 500px
+  }
+  .section-info__content-spec li {
+    font-size: 15px
+  }
+  .section-info__sizes {
+    min-width: 760px
+  }
+  .section-cart__warn {
+    margin-bottom: 50px;
+    padding: 20px
+  }
+  .section-cart__warn-content span {
+    display: block
+  }
   .footer__head {
     margin-bottom: 50px
   }
@@ -6175,6 +6289,9 @@ body>footer::before {
   .section-product__btn-share {
     font-size: 12px
   }
+  .section-cart__warn-content {
+    font-size: 10px
+  }
   body>footer {
     padding-top: 70px
   }
@@ -6254,6 +6371,9 @@ body>footer::before {
   .section-search__grid {
     grid-template-columns: 1fr
   }
+  .section-info__content-spec {
+    grid-template-columns: 1fr
+  }
 }
 @media (min-width:576px)and (max-width:1199px) {
   .section-production__item:nth-child(1) {
@@ -6312,6 +6432,10 @@ body>footer::before {
   }
   .btn-play:hover {
     background-color: #000
+  }
+  .btn-prev:hover svg {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px)
   }
   .dropdown-list a:hover {
     color: var(--primary)
@@ -6634,6 +6758,10 @@ body>footer::before {
   }
   .btn-play:active {
     background-color: #000
+  }
+  .btn-prev:active svg {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px)
   }
   .dropdown-list a:active {
     color: var(--primary)

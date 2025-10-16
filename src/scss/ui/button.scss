@@ -114,7 +114,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: color .3s ease, background-color .3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 
   z-index: 10;
 
@@ -125,5 +127,27 @@
   svg {
     width: 22px;
     height: 22px;
+  }
+}
+
+.btn-prev {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--primary);
+
+  @include hover {
+    svg {
+      transform: translateX(-5px);
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 10px;
+    transition: transform .3s ease;
   }
 }

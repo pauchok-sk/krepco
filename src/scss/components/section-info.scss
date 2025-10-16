@@ -1,5 +1,7 @@
 .section-info {
-  overflow: hidden;
+  @include laptop-middle {
+    overflow: hidden;
+  }
   &__head {
     overflow-x: auto;
     margin: 0 -30px;
@@ -237,30 +239,107 @@
     flex-direction: column;
     gap: 50px;
     flex: 1;
+
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+    }
   }
   &__content-block {
   }
   &__content-title {
     font-weight: 900;
     font-size: 26px;
+    color: black;
     margin: 0px 0px 40px 0px;
+    @include laptop-middle {
+      font-size: 32px;
+      line-height: 120%;
+    }
+    @include tablet {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
   }
   &__content-descr {
     font-size: 20px;
     color: black;
 
+    @include tablet {
+      font-size: 15px;
+    }
+
     p {
       margin: 0;
       &:not(:last-child) {
         margin-bottom: 20px;
+        @include tablet {
+          margin-bottom: 15px;
+        }
       }
     }
   }
+  &__content-spec {
+    max-width: 730px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    row-gap: 15px;
+    @include tablet {
+      max-width: 500px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      font-size: 20px;
+      @include tablet {
+        font-size: 15px;
+      }
+
+      span {
+        color: var(--dusty);
+      }
+    }
+  }
+  &__content-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__sizes-wrapper {
+    @include laptop-middle {
+      overflow-x: auto;
+      padding: 0 30px;
+      margin: 0 -30px;
+    }
+  }
+  &__sizes {
+    display: block;
+    width: 100%;
+    @include laptop-middle {
+      min-width: 1100px;
+    }
+    @include tablet {
+      min-width: 760px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
   &__sidebar {
     position: sticky;
     top: 20px;
     width: 355px;
     flex-shrink: 0;
+
+    @include laptop-middle {
+      display: none;
+    }
   }
   &__sidebar-products {
     display: flex;

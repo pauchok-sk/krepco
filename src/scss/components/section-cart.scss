@@ -1,0 +1,41 @@
+.section-cart {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__warn {
+    @include flex-between;
+
+    border-radius: 20px;
+    padding: 20px 40px;
+    background-color: white;
+
+    gap: 25px;
+    margin-bottom: 30px;
+    width: 1090px;
+    max-width: 100%;
+    @include tablet {
+      margin-bottom: 50px;
+      padding: 20px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+  &__warn-content {
+    font-size: 16px;
+    margin: 0;
+
+    @include tablet-min {
+      font-size: 10px;
+    }
+
+    span {
+      color: var(--dusty);
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
