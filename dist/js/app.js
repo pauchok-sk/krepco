@@ -352,6 +352,29 @@
         const im = new Inputmask("+7 (999) 999-99-99");
         im.mask(inputs);
     }
+    function map() {
+        const maps = document.querySelectorAll(".map");
+        if (maps.length) maps.forEach(map => {
+            const center = JSON.parse(map.dataset.center);
+            const zoom = Number(map.dataset.zoom);
+            function init() {
+                const htmlMap = new ymaps.Map(map, {
+                    center,
+                    zoom
+                });
+                const placemark = new ymaps.Placemark(center, {}, {});
+                htmlMap.geoObjects.add(placemark);
+                htmlMap.controls.remove("geolocationControl");
+                htmlMap.controls.remove("searchControl");
+                htmlMap.controls.remove("trafficControl");
+                htmlMap.controls.remove("typeSelector");
+                htmlMap.controls.remove("fullscreenControl");
+                htmlMap.controls.remove("rulerControl");
+                htmlMap.behaviors.disable([ "scrollZoom" ]);
+            }
+            ymaps.ready(init);
+        });
+    }
     function mediaAdaptive() {
         function DynamicAdapt(type) {
             this.type = type;
@@ -1045,7 +1068,7 @@
             const tabs = switcher.querySelectorAll("[data-switcher-tab]");
             const switchTarget = switcher.querySelector(".switcher__switch");
             switchTarget.addEventListener("click", () => {
-                const btnNotActive = document.querySelector("[data-switcher-tab-btn]:not(._active)");
+                const btnNotActive = switcher.querySelector("[data-switcher-tab-btn]:not(._active)");
                 const id = btnNotActive.dataset.switcherTabBtn;
                 buttons.forEach(b => b.classList.remove("_active"));
                 btnNotActive.classList.add("_active");
@@ -1119,6 +1142,7 @@
     anchors_anchors();
     printBtn();
     cartAllCheckbox();
+    map();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

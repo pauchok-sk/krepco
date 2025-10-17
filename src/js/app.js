@@ -13,6 +13,7 @@ import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
+import map from "./files/map.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import more from "./files/more.js";
 import placeholderIteration from "./files/placeholderIteration.js";
@@ -48,6 +49,7 @@ counter();
 anchors();
 printBtn();
 cartAllCheckbox();
+map();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

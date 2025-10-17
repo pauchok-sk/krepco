@@ -9,7 +9,7 @@ export default function switcherTab() {
       const switchTarget = switcher.querySelector(".switcher__switch");
   
       switchTarget.addEventListener("click", () => {
-        const btnNotActive = document.querySelector("[data-switcher-tab-btn]:not(._active)");
+        const btnNotActive = switcher.querySelector("[data-switcher-tab-btn]:not(._active)");
         const id = btnNotActive.dataset.switcherTabBtn;
   
         buttons.forEach((b) => b.classList.remove("_active"));
