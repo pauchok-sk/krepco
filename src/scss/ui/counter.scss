@@ -5,7 +5,7 @@
   padding: 0px 5px;
   border: 1px solid var(--alto);
   width: 100px;
-  flex: 1;
+  // flex: 1;
   @include laptop-min {
     width: 100%;
     flex: none;

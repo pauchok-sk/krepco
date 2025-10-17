@@ -3,6 +3,7 @@ import anchors from "./files/anchors.js";
 import burger from "./files/burger.js";
 import burgerMenus from "./files/burgerMenus.js";
 import cardProductCounter from "./files/cardProductCounter.js";
+import cartAllCheckbox from "./files/cartAllCheckbox.js";
 import counter from "./files/counters.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
@@ -16,6 +17,7 @@ import mediaAdaptive from "./files/mediaAdaptive.js";
 import more from "./files/more.js";
 import placeholderIteration from "./files/placeholderIteration.js";
 import priceRange from "./files/priceRange.js";
+import printBtn from "./files/printBtn.js";
 import select from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
@@ -44,6 +46,8 @@ filters();
 more();
 counter();
 anchors();
+printBtn();
+cartAllCheckbox();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

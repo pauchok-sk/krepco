@@ -15,6 +15,23 @@
   }
 }
 
+._scrollbar-wild {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--wild);
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 6px;
+    border: 3px solid var(--wild);
+  }
+}
+
 ._scrollbar-simple {
   &::-webkit-scrollbar {
     width: 10px;

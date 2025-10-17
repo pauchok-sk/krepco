@@ -98,6 +98,20 @@
             }
         });
     }
+    function cartAllCheckbox() {
+        const selectAllInput = document.querySelector("#select-all");
+        if (selectAllInput) {
+            const allInputs = document.querySelectorAll(".card-product-cart .input-checkbox");
+            selectAllInput.addEventListener("change", e => {
+                if (e.target.checked) allInputs.forEach(i => i.checked = true); else allInputs.forEach(i => i.checked = false);
+            });
+            allInputs.forEach(input => {
+                input.addEventListener("change", e => {
+                    if (selectAllInput.checked = e.target.checked) selectAllInput.checked = false;
+                });
+            });
+        }
+    }
     function counter() {
         const counters = document.querySelectorAll(".counter");
         if (counters.length) counters.forEach(counter => {
@@ -269,7 +283,7 @@
                 e.stopPropagation();
                 e.preventDefault();
                 input.value = null;
-                name.textContent = "Прикрепить файл";
+                name.textContent = btn.dataset.text || "Прикрепить файл";
                 close.classList.add("_hide");
             });
             input.addEventListener("change", e => {
@@ -497,6 +511,12 @@
                 });
             });
         }
+    }
+    function printBtn() {
+        const buttons = document.querySelectorAll(".print-btn");
+        if (buttons.length) buttons.forEach(btn => {
+            btn.addEventListener("click", () => window.print());
+        });
     }
     function select_select() {
         const buttons = document.querySelectorAll(".select-btn");
@@ -1019,10 +1039,11 @@
         }
     }
     function switcherTab() {
-        const buttons = document.querySelectorAll("[data-switcher-tab-btn]");
-        if (buttons.length) {
-            const tabs = document.querySelectorAll("[data-switcher-tab]");
-            const switchTarget = document.querySelector(".section-switcher__switch");
+        const switchers = document.querySelectorAll(".switcher");
+        if (switchers.length) switchers.forEach(switcher => {
+            const buttons = switcher.querySelectorAll("[data-switcher-tab-btn]");
+            const tabs = switcher.querySelectorAll("[data-switcher-tab]");
+            const switchTarget = switcher.querySelector(".switcher__switch");
             switchTarget.addEventListener("click", () => {
                 const btnNotActive = document.querySelector("[data-switcher-tab-btn]:not(._active)");
                 const id = btnNotActive.dataset.switcherTabBtn;
@@ -1050,7 +1071,7 @@
                     currentTab.classList.add("_show");
                 }, 150);
             }
-        }
+        });
     }
     function tabs() {
         const buttons = document.querySelectorAll("[data-tab-btn]");
@@ -1096,6 +1117,8 @@
     more();
     counter();
     anchors_anchors();
+    printBtn();
+    cartAllCheckbox();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

@@ -1,27 +1,317 @@
 <section class="section-cart section-margin">
-	<div class="container">
+	<div class="container section-cart__container">
 		<h1 class="main-title section-cart__title">Мой заказ</h1>
 		<div class="section-cart__warn">
-			<p class="section-cart__warn-content">Не упустите распродажу <span>1 товар скоро подорожает</span></p>
+			<p class="section-cart__warn-content">
+				Не упустите распродажу
+				<span>1 товар скоро подорожает</span>
+			</p>
 			<div class="tag _red">осталось 9 дней</div>
+		</div>
+		<div class="section-cart__head">
+			<div class="section-cart__head-main">
+				<input type="checkbox" id="select-all" class="input-checkbox" />
+				<label for="select-all" class="label-checkbox">
+					<span>Выделить все</span>
+				</label>
+				<button class="section-cart__delete-all">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+					<span>Удалить выбранные</span>
+				</button>
+			</div>
+			<div class="section-cart__head-nav">
+				<div class="section-cart__head-btn print-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-print"></use>
+					</svg>
+					<span>Распечатать</span>
+				</div>
+				<a href="#modal-share" data-fancybox class="section-cart__head-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-share"></use>
+					</svg>
+					<span>Поделиться</span>
+				</a>
+			</div>
 		</div>
 		<div class="section-cart__wrapper">
 			<div class="section-cart__main">
-				<div class="section-cart__main">
-					<input type="checkbox" id="select-all" class="input-checkbox">
-					<label for="select-all" class="label-checkbox">
-						<span>Выделить все</span>
-					</label>
-					<button class="section-cart__delete-all">
-						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-close'></use>
-						</svg>
-						<span>Удалить выбранные</span>
-					</button>
+				<div class="section-cart__products">
+					<div class="card-product-cart">
+						<input type="checkbox" id="product-1" class="input-checkbox" />
+						<label for="product-1" class="label-checkbox"></label>
+						<a href="#" class="card-product-cart__gallery">
+							<img src="img/product.png" alt="image" />
+						</a>
+						<div class="card-product-cart__body">
+							<div class="card-product-cart__main">
+								<a href="" class="card-product-cart__title">
+									Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
+									М10*55 кл. пр.8.8 цинк (кг
+								</a>
+								<div class="card-product-cart__id">
+									<span>Артикул</span>
+									RB-М24
+								</div>
+								<div class="card-product-cart__tag-wrapper">
+									<div class="tag _red">распродажа</div>
+								</div>
+							</div>
+							<div class="card-product-cart__price">
+								<div class="card-product-cart__price-value _red">139,57 ₽</div>
+								<div class="card-product-cart__price-signature">
+									цена за 1 шт
+								</div>
+							</div>
+							<form action="#" class="counter">
+								<div class="counter__btn _minus">-</div>
+								<input type="number" value="1" min="1" max="100" class="counter__input" />
+								<div class="counter__btn _plus">+</div>
+							</form>
+							<div class="card-product-cart__main-price">134 393,47 ₽</div>
+						</div>
+					</div>
+					<div class="card-product-cart">
+						<input type="checkbox" id="product-2" class="input-checkbox" />
+						<label for="product-2" class="label-checkbox"></label>
+						<a href="#" class="card-product-cart__gallery">
+							<img src="img/product.png" alt="image" />
+						</a>
+						<div class="card-product-cart__body">
+							<div class="card-product-cart__main">
+								<a href="" class="card-product-cart__title">
+									Рым-болт DIN 580 (ГОСТ 4751-73) M36
+								</a>
+								<div class="card-product-cart__id">
+									<span>Артикул</span>
+									RB-М24
+								</div>
+								<div class="card-product-cart__tag-wrapper">
+									<div class="tag _green">новинка</div>
+									<div class="card-product-cart__warn">
+										<span>от 1 рабочего дня</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="card-product-cart__price">
+								<div class="card-product-cart__price-value _gray">139,57 ₽</div>
+								<div class="card-product-cart__price-signature">
+									цена за 1 шт
+								</div>
+							</div>
+							<form action="#" class="counter">
+								<div class="counter__btn _minus">-</div>
+								<input type="number" value="1" min="1" max="100" class="counter__input" />
+								<div class="counter__btn _plus">+</div>
+							</form>
+							<div class="card-product-cart__main-price _gray">
+								134 393,47 ₽
+							</div>
+						</div>
+					</div>
+					<div class="card-product-cart">
+						<input type="checkbox" id="product-3" class="input-checkbox" />
+						<label for="product-3" class="label-checkbox"></label>
+						<a href="#" class="card-product-cart__gallery">
+							<img src="img/product.png" alt="image" />
+						</a>
+						<div class="card-product-cart__body">
+							<div class="card-product-cart__main">
+								<a href="" class="card-product-cart__title">
+									Рым-болт DIN 580 (ГОСТ 4751-73) M36
+								</a>
+								<div class="card-product-cart__id">
+									<span>Артикул</span>
+									RB-М24
+								</div>
+								<div class="card-product-cart__tag-wrapper">
+									<div class="tag _green">новинка</div>
+									<div class="card-product-cart__warn">
+										<span>от 1 рабочего дня</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="card-product-cart__price">
+								<div class="card-product-cart__price-value">139,57 ₽</div>
+								<div class="card-product-cart__price-signature">
+									цена за 1 шт
+								</div>
+							</div>
+							<form action="#" class="counter">
+								<div class="counter__btn _minus">-</div>
+								<input type="number" value="1" min="1" max="100" class="counter__input" />
+								<div class="counter__btn _plus">+</div>
+							</form>
+							<div class="card-product-cart__main-price">134 393,47 ₽</div>
+						</div>
+					</div>
+					<div class="card-product-cart">
+						<input type="checkbox" id="product-4" class="input-checkbox" />
+						<label for="product-4" class="label-checkbox"></label>
+						<a href="#" class="card-product-cart__gallery">
+							<img src="img/product.png" alt="image" />
+						</a>
+						<div class="card-product-cart__body">
+							<div class="card-product-cart__main">
+								<a href="" class="card-product-cart__title">
+									Рым-болт DIN 580 (ГОСТ 4751-73) M36
+								</a>
+								<div class="card-product-cart__id">
+									<span>Артикул</span>
+									RB-М24
+								</div>
+								<div class="card-product-cart__tag-wrapper">
+									<div class="tag _green">новинка</div>
+									<div class="card-product-cart__warn">
+										<span>от 1 рабочего дня</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="card-product-cart__price">
+								<div class="card-product-cart__price-value">139,57 ₽</div>
+								<div class="card-product-cart__price-signature">
+									цена за 1 шт
+								</div>
+							</div>
+							<form action="#" class="counter">
+								<div class="counter__btn _minus">-</div>
+								<input type="number" value="1" min="1" max="100" class="counter__input" />
+								<div class="counter__btn _plus">+</div>
+							</form>
+							<div class="card-product-cart__main-price">134 393,47 ₽</div>
+						</div>
+					</div>
+					<div class="card-product-cart">
+						<input type="checkbox" id="product-5" class="input-checkbox" />
+						<label for="product-5" class="label-checkbox"></label>
+						<a href="#" class="card-product-cart__gallery">
+							<img src="img/product.png" alt="image" />
+						</a>
+						<div class="card-product-cart__body">
+							<div class="card-product-cart__main">
+								<a href="" class="card-product-cart__title">
+									Рым-болт DIN 580 (ГОСТ 4751-73) M36
+								</a>
+								<div class="card-product-cart__id">
+									<span>Артикул</span>
+									RB-М24
+								</div>
+								<div class="card-product-cart__tag-wrapper">
+									<div class="tag _green">новинка</div>
+									<div class="card-product-cart__warn">
+										<span>от 1 рабочего дня</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="card-product-cart__price">
+								<div class="card-product-cart__price-value">139,57 ₽</div>
+								<div class="card-product-cart__price-signature">
+									цена за 1 шт
+								</div>
+							</div>
+							<form action="#" class="counter">
+								<div class="counter__btn _minus">-</div>
+								<input type="number" value="1" min="1" max="100" class="counter__input" />
+								<div class="counter__btn _plus">+</div>
+							</form>
+							<div class="card-product-cart__main-price">134 393,47 ₽</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-cart__info">
+					<div class="section-cart__info-block switcher">
+						<div class="switcher__nav _start">
+							<div data-switcher-tab-btn="legal" class="switcher__nav-btn _active">
+								Юридическое лицо
+							</div>
+							<div class="switcher__switch"></div>
+							<div data-switcher-tab-btn="natural" class="switcher__nav-btn">
+								Физическое лицо
+							</div>
+						</div>
+						<div data-switcher-tab="legal" class="_show _active">
+							<form action="#" class="section-cart__form-person">
+								<div class="input-control">
+									<input type="text" placeholder="Фамилия Имя" class="input _wild" />
+								</div>
+								<div class="input-control">
+									<input type="text" placeholder="ИНН" class="input _wild" />
+								</div>
+								<div class="input-control">
+									<input type="file" class="input-file" id="order-file" />
+									<label for="order-file" data-text="Прикрепить реквизиты" class="btn-file _primary">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#icon-paper"></use>
+										</svg>
+										<span class="name">Прикрепить реквизиты</span>
+										<div class="file-close _hide">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#icon-close"></use>
+											</svg>
+										</div>
+									</label>
+								</div>
+								<div class="input-control">
+									<input type="tel" placeholder="Ваш телефон" class="input _wild" />
+								</div>
+								<div class="input-control">
+									<input type="email" placeholder="Электронная почта " class="input _wild" />
+								</div>
+								<div class="input-control _scrollbar">
+									<textarea name="Отзыв" placeholder="Комментарий к заказу" rows="7" class="input _wild _scrollbar-wild"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="section-cart__sidebar">
-
+			<div class="section-cart__sidebar" data-da=".section-cart__container, 767, 1">
+				<div class="section-cart__sidebar-block">
+					<h2 class="section-title section-cart__sidebar-title">
+						Детали заказа
+					</h2>
+					<div class="section-cart__sidebar-items">
+						<div class="section-cart__item">
+							<div class="section-cart__info-order">
+								<span>463 товара</span>
+								<span>324,25 кг</span>
+							</div>
+						</div>
+						<div class="section-cart__item">
+							<div class="section-cart__sum-order">
+								Сумма заказа:
+								<span>399 786,94 ₽</span>
+							</div>
+						</div>
+					</div>
+					<button class="btn section-cart__sidebar-btn">Оформить заказ</button>
+				</div>
+				<div class="section-cart__sidebar-content">
+					<p>
+						Уровень цен «Мелкооптовая»
+						<br />
+						Для перехода к уровню цен «Оптовая» добавьте в заказ товаров
+						на 18 697,02 ₽
+					</p>
+					<p>
+						Нажимая оформить заказ подтверждаю согласие с условиями 
+						<a href="#" target="_blank">политики конфиденциальности</a>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

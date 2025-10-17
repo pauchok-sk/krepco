@@ -14,7 +14,7 @@
     width: 1090px;
     max-width: 100%;
     @include tablet {
-      margin-bottom: 50px;
+      margin: 50px 0px;
       padding: 20px;
     }
 
@@ -35,6 +35,215 @@
       color: var(--dusty);
       @include tablet {
         display: block;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+  }
+  &__main {
+    flex: 1;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+  &__head-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+  &__delete-all {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    border: none;
+    gap: 10px;
+
+    font-size: 16px;
+    line-height: 87%;
+    color: var(--dusty);
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      font-size: 15px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__head-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 40px;
+    width: 335px;
+    flex-shrink: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__head-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+    line-height: 87%;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--primary);
+    }
+  }
+  &__sidebar {
+    position: sticky;
+    top: 20px;
+    width: 355px;
+    @include tablet {
+      position: static;
+      width: 100%;
+    }
+  }
+  &__sidebar-block {
+    padding: 40px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    width: 100%;
+    background: #fff;
+    @include tablet {
+      padding: 40px 20px;
+
+    }
+  }
+  &__sidebar-title {
+    margin-bottom: 20px;
+
+  }
+  &__sidebar-items {
+    border-top: 1px dashed var(--alto);
+  }
+  &__item {
+    padding: 20px 0px;
+    border-bottom: 1px dashed var(--alto);
+  }
+  &__info-order {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &:not(:last-child) {
+        &::after {
+          display: block;
+          content: "";
+          width: 5px;
+          height: 5px;
+          flex-shrink: 0;
+          background-color: var(--alto);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &__sum-order {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 900;
+    font-size: 24px;
+
+    span {
+      color: var(--primary);
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__sidebar-btn {
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__sidebar-content {
+    margin-top: 30px;
+    font-size: 15px;
+    color: var(--dusty);
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      transition: color .3s ease;
+
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 90px;
+    gap: 90px;
+  }
+  &__info-block {
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid var(--dusty);
+  }
+  &__form-person {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    .input-control {
+      &:last-child {
+        grid-column: 3 span;
       }
     }
   }

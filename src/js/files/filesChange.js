@@ -12,7 +12,7 @@ export default function filesChange() {
         e.preventDefault();
 
         input.value = null;
-        name.textContent = "Прикрепить файл";
+        name.textContent = btn.dataset.text || "Прикрепить файл";
         close.classList.add("_hide");
       });
 
