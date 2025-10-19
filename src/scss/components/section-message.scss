@@ -1,0 +1,96 @@
+.section-message {
+  position: relative;
+  color: black;
+  margin-bottom: 50px;
+  z-index: 1;
+  @include tablet-min {
+    margin-bottom: 150px;
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: -68px;
+    z-index: -1;
+
+    @media (max-width: 1679px) {
+      width: 650px;
+      top: 7px;
+    }
+    @include desktop {
+      width: auto;
+    }
+    @include laptop-middle {
+      top: 120px;
+    }
+    @include laptop-min {
+      top: auto;
+      bottom: -125px;
+    }
+    @include tablet {
+      bottom: -180px;
+    }
+    @include tablet-min {
+      bottom: -240px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    span {
+      color: var(--primary);
+    }
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__content {
+    font-size: 24px;
+    line-height: 120%;
+    max-width: 860px;
+
+    @include laptop-middle {
+      max-width: 650px;
+    }
+    @include tablet {
+      font-size: 15px;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      @include tablet {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+    @include tablet-min {
+      display: none;
+    }
+  }
+}

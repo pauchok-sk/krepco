@@ -89,6 +89,15 @@ body > header {
         display: none;
       }
     }
+
+    &._cities {
+      .dropdown-body {
+        min-width: 130px;
+      }
+      .dropdown-inside {
+        width: 100%;
+      }
+    }
   }
   &__top-contacts-btn {
     display: flex;

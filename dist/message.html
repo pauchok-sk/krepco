@@ -1181,7 +1181,6 @@
 	</aside>
 
 	<main>
-
 		<div class="breadcrumbs">
 			<div class="container">
 				<a href="#" class="btn-prev">
@@ -1193,452 +1192,36 @@
 			</div>
 		</div>
 
-		<section class="section-cart section-margin">
-			<div class="container section-cart__container">
-				<h1 class="main-title section-cart__title">Мой заказ</h1>
-				<div class="section-cart__warn">
-					<p class="section-cart__warn-content">
-						Не упустите распродажу
-						<span>1 товар скоро подорожает</span>
+		<section class="section-message">
+			<picture class="section-message__decor">
+				<source srcset="img/info-decor-mob.png" media="(max-width: 1023px)">
+				<source srcset="img/info-decor-laptop.png" media="(max-width: 1539px)">
+				<img src="img/info-decor.png" alt="image">
+			</picture>
+			<div class="container">
+				<h1 class="section-message__title main-title">
+					Заказ
+					<span>№4113</span>
+					успешно оформлен!
+				</h1>
+				<div class="section-message__content">
+					<p>
+						Оплата заказа будет доступна по счету после проверки заказа менеджером.
 					</p>
-					<div class="tag _red">осталось 9 дней</div>
+
+					<p>
+						Счет будет сформирован и отправлен на вашу электронную почту:
+						<br />
+						<strong>k-saranskikh@gmail.com</strong>
+					</p>
+
+					<p>
+						Для получения информации о готовности по телефону:
+						<a href="tel:88007074474">8 (800) 707-44-74</a>
+						указывайте номер заказа: №4113
+					</p>
 				</div>
-				<div class="section-cart__head">
-					<div class="section-cart__head-main">
-						<input type="checkbox" id="select-all" class="input-checkbox" />
-						<label for="select-all" class="label-checkbox">
-							<span>Выделить все</span>
-						</label>
-						<button class="section-cart__delete-all">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-close"></use>
-							</svg>
-							<span>Удалить выбранные</span>
-						</button>
-					</div>
-					<div class="section-cart__head-nav">
-						<div class="section-cart__head-btn print-btn">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-print"></use>
-							</svg>
-							<span>Распечатать</span>
-						</div>
-						<a href="#modal-share" data-fancybox class="section-cart__head-btn">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-share"></use>
-							</svg>
-							<span>Поделиться</span>
-						</a>
-					</div>
-				</div>
-				<div class="section-cart__wrapper">
-					<div class="section-cart__main">
-						<div class="section-cart__products">
-							<div class="card-product-cart">
-								<input type="checkbox" id="product-1" class="input-checkbox" />
-								<label for="product-1" class="label-checkbox"></label>
-								<a href="#" class="card-product-cart__gallery">
-									<img src="img/product.png" alt="image" />
-								</a>
-								<div class="card-product-cart__body">
-									<div class="card-product-cart__main">
-										<a href="" class="card-product-cart__title">
-											Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба
-											М10*55 кл. пр.8.8 цинк (кг
-										</a>
-										<div class="card-product-cart__id">
-											<span>Артикул</span>
-											RB-М24
-										</div>
-										<div class="card-product-cart__tag-wrapper">
-											<div class="tag _red">распродажа</div>
-										</div>
-									</div>
-									<div class="card-product-cart__price">
-										<div class="card-product-cart__price-value _red">139,57 ₽</div>
-										<div class="card-product-cart__price-signature">
-											цена за 1 шт
-										</div>
-									</div>
-									<form action="#" class="counter">
-										<div class="counter__btn _minus">-</div>
-										<input type="number" value="1" min="1" max="100" class="counter__input" />
-										<div class="counter__btn _plus">+</div>
-									</form>
-									<div class="card-product-cart__main-price">134 393,47 ₽</div>
-								</div>
-							</div>
-							<div class="card-product-cart">
-								<input type="checkbox" id="product-2" class="input-checkbox" />
-								<label for="product-2" class="label-checkbox"></label>
-								<a href="#" class="card-product-cart__gallery">
-									<img src="img/product.png" alt="image" />
-								</a>
-								<div class="card-product-cart__body">
-									<div class="card-product-cart__main">
-										<a href="" class="card-product-cart__title">
-											Рым-болт DIN 580 (ГОСТ 4751-73) M36
-										</a>
-										<div class="card-product-cart__id">
-											<span>Артикул</span>
-											RB-М24
-										</div>
-										<div class="card-product-cart__tag-wrapper">
-											<div class="tag _green">новинка</div>
-											<div class="card-product-cart__warn">
-												<span>от 1 рабочего дня</span>
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-warn"></use>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<div class="card-product-cart__price">
-										<div class="card-product-cart__price-value _gray">139,57 ₽</div>
-										<div class="card-product-cart__price-signature">
-											цена за 1 шт
-										</div>
-									</div>
-									<form action="#" class="counter">
-										<div class="counter__btn _minus">-</div>
-										<input type="number" value="1" min="1" max="100" class="counter__input" />
-										<div class="counter__btn _plus">+</div>
-									</form>
-									<div class="card-product-cart__main-price _gray">
-										134 393,47 ₽
-									</div>
-								</div>
-							</div>
-							<div class="card-product-cart">
-								<input type="checkbox" id="product-3" class="input-checkbox" />
-								<label for="product-3" class="label-checkbox"></label>
-								<a href="#" class="card-product-cart__gallery">
-									<img src="img/product.png" alt="image" />
-								</a>
-								<div class="card-product-cart__body">
-									<div class="card-product-cart__main">
-										<a href="" class="card-product-cart__title">
-											Рым-болт DIN 580 (ГОСТ 4751-73) M36
-										</a>
-										<div class="card-product-cart__id">
-											<span>Артикул</span>
-											RB-М24
-										</div>
-										<div class="card-product-cart__tag-wrapper">
-											<div class="tag _green">новинка</div>
-											<div class="card-product-cart__warn">
-												<span>от 1 рабочего дня</span>
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-warn"></use>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<div class="card-product-cart__price">
-										<div class="card-product-cart__price-value">139,57 ₽</div>
-										<div class="card-product-cart__price-signature">
-											цена за 1 шт
-										</div>
-									</div>
-									<form action="#" class="counter">
-										<div class="counter__btn _minus">-</div>
-										<input type="number" value="1" min="1" max="100" class="counter__input" />
-										<div class="counter__btn _plus">+</div>
-									</form>
-									<div class="card-product-cart__main-price">134 393,47 ₽</div>
-								</div>
-							</div>
-							<div class="card-product-cart">
-								<input type="checkbox" id="product-4" class="input-checkbox" />
-								<label for="product-4" class="label-checkbox"></label>
-								<a href="#" class="card-product-cart__gallery">
-									<img src="img/product.png" alt="image" />
-								</a>
-								<div class="card-product-cart__body">
-									<div class="card-product-cart__main">
-										<a href="" class="card-product-cart__title">
-											Рым-болт DIN 580 (ГОСТ 4751-73) M36
-										</a>
-										<div class="card-product-cart__id">
-											<span>Артикул</span>
-											RB-М24
-										</div>
-										<div class="card-product-cart__tag-wrapper">
-											<div class="tag _green">новинка</div>
-											<div class="card-product-cart__warn">
-												<span>от 1 рабочего дня</span>
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-warn"></use>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<div class="card-product-cart__price">
-										<div class="card-product-cart__price-value">139,57 ₽</div>
-										<div class="card-product-cart__price-signature">
-											цена за 1 шт
-										</div>
-									</div>
-									<form action="#" class="counter">
-										<div class="counter__btn _minus">-</div>
-										<input type="number" value="1" min="1" max="100" class="counter__input" />
-										<div class="counter__btn _plus">+</div>
-									</form>
-									<div class="card-product-cart__main-price">134 393,47 ₽</div>
-								</div>
-							</div>
-							<div class="card-product-cart">
-								<input type="checkbox" id="product-5" class="input-checkbox" />
-								<label for="product-5" class="label-checkbox"></label>
-								<a href="#" class="card-product-cart__gallery">
-									<img src="img/product.png" alt="image" />
-								</a>
-								<div class="card-product-cart__body">
-									<div class="card-product-cart__main">
-										<a href="" class="card-product-cart__title">
-											Рым-болт DIN 580 (ГОСТ 4751-73) M36
-										</a>
-										<div class="card-product-cart__id">
-											<span>Артикул</span>
-											RB-М24
-										</div>
-										<div class="card-product-cart__tag-wrapper">
-											<div class="tag _green">новинка</div>
-											<div class="card-product-cart__warn">
-												<span>от 1 рабочего дня</span>
-												<svg>
-													<use xlink:href="img/icons/icons.svg#icon-warn"></use>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<div class="card-product-cart__price">
-										<div class="card-product-cart__price-value">139,57 ₽</div>
-										<div class="card-product-cart__price-signature">
-											цена за 1 шт
-										</div>
-									</div>
-									<form action="#" class="counter">
-										<div class="counter__btn _minus">-</div>
-										<input type="number" value="1" min="1" max="100" class="counter__input" />
-										<div class="counter__btn _plus">+</div>
-									</form>
-									<div class="card-product-cart__main-price">134 393,47 ₽</div>
-								</div>
-							</div>
-						</div>
-						<form data-da=".section-cart__container, 1199" action="#" class="section-cart__form-search">
-							<input type="text" placeholder="Быстрое добавление товара по артикулу или наименованию" class="section-cart__search-input" />
-							<button class="section-cart__search-btn">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#icon-search"></use>
-								</svg>
-							</button>
-						</form>
-						<div data-da=".section-cart__container, 1199" class="section-cart__info">
-							<div class="section-cart__info-block switcher">
-								<div class="switcher__nav section-cart__info-switcher-nav">
-									<div data-switcher-tab-btn="legal" class="switcher__nav-btn _active">
-										<span>Юридическое лицо</span>
-										<span>Юр. лицо</span>
-									</div>
-									<div class="switcher__switch"></div>
-									<div data-switcher-tab-btn="natural" class="switcher__nav-btn">
-										<span>Физическое лицо</span>
-										<span>Физ. лицо</span>
-									</div>
-								</div>
-								<div data-switcher-tab="legal" class="_show _active">
-									<form action="#" class="section-cart__form-person">
-										<div class="input-control">
-											<input type="text" placeholder="Фамилия Имя" class="input _wild" />
-										</div>
-										<div class="input-control">
-											<input type="text" placeholder="ИНН" class="input _wild" />
-										</div>
-										<div class="input-control">
-											<input type="file" class="input-file" id="order-file" />
-											<label for="order-file" data-text="Прикрепить реквизиты" class="btn-file _primary">
-												<svg class="icon">
-													<use xlink:href="img/icons/icons.svg#icon-paper"></use>
-												</svg>
-												<span class="name">Прикрепить реквизиты</span>
-												<div class="file-close _hide">
-													<svg>
-														<use xlink:href="img/icons/icons.svg#icon-close"></use>
-													</svg>
-												</div>
-											</label>
-										</div>
-										<div class="input-control">
-											<input type="tel" placeholder="Ваш телефон" class="input _wild" />
-										</div>
-										<div class="input-control">
-											<input type="email" placeholder="Электронная почта " class="input _wild" />
-										</div>
-										<div class="input-control _scrollbar">
-											<textarea name="Отзыв" placeholder="Комментарий к заказу" rows="7" class="input _wild _scrollbar-wild"></textarea>
-										</div>
-									</form>
-								</div>
-								<div data-switcher-tab="natural">
-									<form action="#" class="section-cart__form-person">
-										<div class="input-control">
-											<input type="text" placeholder="Фамилия Имя" class="input _wild" />
-										</div>
-										<div class="input-control">
-											<input type="tel" placeholder="Ваш телефон" class="input _wild" />
-										</div>
-										<div class="input-control">
-											<input type="email" placeholder="Электронная почта " class="input _wild" />
-										</div>
-										<div class="input-control _scrollbar">
-											<textarea name="Отзыв" placeholder="Комментарий к заказу" rows="7" class="input _wild _scrollbar-wild"></textarea>
-										</div>
-									</form>
-								</div>
-							</div>
-							<div class="section-cart__info-block switcher">
-								<div class="switcher__nav section-cart__info-switcher-nav">
-									<div data-switcher-tab-btn="delivery" class="switcher__nav-btn _active">
-										Доставка
-									</div>
-									<div class="switcher__switch"></div>
-									<div data-switcher-tab-btn="pickup" class="switcher__nav-btn">
-										Самовывоз
-									</div>
-								</div>
-								<div data-switcher-tab="delivery" class="_show _active">
-									<form action="#" class="section-cart__form-delivery">
-										<div class="input-control">
-											<input type="text" placeholder="Адрес доставки заказа  " class="input _wild" />
-										</div>
-									</form>
-								</div>
-								<div data-switcher-tab="pickup">
-									<form action="#" class="section-cart__form-pickup">
-										<div class="input-control">
-											<div class="select">
-												<div class="select-btn">
-													<input type="text" name="Город" placeholder="Город" class="input select-input _wild" readonly />
-													<svg class="arrow">
-														<use xlink:href="img/icons/icons.svg#icon-down"></use>
-													</svg>
-												</div>
-												<div class="select-body">
-													<div class="select-container">
-														<div class="select-item" data-value="Рыльск">
-															<div class="value">Рыльск</div>
-															<span class="sub">Курская область</span>
-														</div>
-														<div class="select-item" data-value="Москва">
-															<div class="value">Москва</div>
-															<span class="sub">Московская область</span>
-														</div>
-														<div class="select-item" data-value="Тула">
-															<div class="value">Тула</div>
-															<span class="sub">Тульская область</span>
-														</div>
-														<div class="select-item" data-value="Рыльск">
-															<div class="value">Рыльск</div>
-															<span class="sub">Курская область</span>
-														</div>
-														<div class="select-item" data-value="Москва">
-															<div class="value">Москва</div>
-															<span class="sub">Московская область</span>
-														</div>
-														<div class="select-item" data-value="Тула">
-															<div class="value">Тула</div>
-															<span class="sub">Тульская область</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="input-control">
-											<div class="select">
-												<div class="select-btn">
-													<input type="text" name="Город" placeholder="Город" class="input select-input _wild" readonly />
-													<svg class="arrow">
-														<use xlink:href="img/icons/icons.svg#icon-down"></use>
-													</svg>
-												</div>
-												<div class="select-body">
-													<div class="select-container">
-														<div class="select-item" data-value="Рыльск">
-															<div class="value">Рыльск</div>
-															<span class="sub">Курская область</span>
-														</div>
-														<div class="select-item" data-value="Москва">
-															<div class="value">Москва</div>
-															<span class="sub">Московская область</span>
-														</div>
-														<div class="select-item" data-value="Тула">
-															<div class="value">Тула</div>
-															<span class="sub">Тульская область</span>
-														</div>
-														<div class="select-item" data-value="Рыльск">
-															<div class="value">Рыльск</div>
-															<span class="sub">Курская область</span>
-														</div>
-														<div class="select-item" data-value="Москва">
-															<div class="value">Москва</div>
-															<span class="sub">Московская область</span>
-														</div>
-														<div class="select-item" data-value="Тула">
-															<div class="value">Тула</div>
-															<span class="sub">Тульская область</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<a href="img/about-adv-1.svg" download class="section-cart__download-scheme">
-											<img src="img/file-icon.svg" alt="icon" />
-											<span>Скачать схему проезда</span>
-										</a>
-									</form>
-									<div class="section-cart__map map" data-center="[55.73516024945582,37.64646891552735]" data-zoom="16"></div>
-								</div>
-							</div>
-							<button class="btn section-cart__bottom-btn">Оформить заказ</button>
-						</div>
-					</div>
-					<div class="section-cart__sidebar" data-da=".section-cart__container, 767, 1">
-						<div class="section-cart__sidebar-block">
-							<h2 class="section-title section-cart__sidebar-title">
-								Детали заказа
-							</h2>
-							<div class="section-cart__sidebar-items">
-								<div class="section-cart__item">
-									<div class="section-cart__info-order">
-										<span>463 товара</span>
-										<span>324,25 кг</span>
-									</div>
-								</div>
-								<div class="section-cart__item">
-									<div class="section-cart__sum-order">
-										Сумма заказа:
-										<span>399 786,94 ₽</span>
-									</div>
-								</div>
-							</div>
-							<button class="btn section-cart__sidebar-btn">Оформить заказ</button>
-						</div>
-						<div class="section-cart__sidebar-content">
-							<p>
-								Уровень цен «Мелкооптовая»
-								<br />
-								Для перехода к уровню цен «Оптовая» добавьте в заказ товаров
-								на 18 697,02 ₽
-							</p>
-							<p>
-								Нажимая оформить заказ подтверждаю согласие с условиями 
-								<a href="#" target="_blank">политики конфиденциальности</a>
-							</p>
-						</div>
-					</div>
-				</div>
+				<a href="#" class="section-message__btn btn">Вернуться к покупкам</a>
 			</div>
 		</section>
 
@@ -1997,7 +1580,6 @@
 	<script src="./files/swiper/swiper.min.js?_v=20251019234622"></script>
 	<script src="./files/nouislider/nouislider.min.js?_v=20251019234622"></script>
 	<script src="./files/shareon/shareon.min.js?_v=20251019234622"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20251019234622" type="text/javascript"></script>
 	<script src="js/app.min.js?_v=20251019234622"></script>
 </body>
 
