@@ -144,6 +144,15 @@
   &__cart-btn {
     width: 100%;
 
+    &._outline {
+      color: var(--primary);
+
+      @include hover {
+        background-color: var(--primary);
+        color: white;
+      }
+    }
+
     @include tablet {
       font-size: 12px;
       line-height: 108%;
@@ -155,10 +164,6 @@
       padding: 0;
       width: 30px;
       height: 30px;
-
-      &._outline {
-        color: var(--primary);
-      }
     }
 
     span {

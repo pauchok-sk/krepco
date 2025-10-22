@@ -239,6 +239,16 @@
   }
   &__cart-btn {
     width: 115px;
+
+    &._outline {
+      color: var(--primary);
+
+      @include hover {
+        background-color: var(--primary);
+        color: white;
+      }
+    }
+
     @media (min-width: 1024px) {
       padding: 5px !important;
     }

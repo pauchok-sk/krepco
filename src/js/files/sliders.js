@@ -27,9 +27,6 @@ export default function sliders() {
         speed: 700,
         slidesPerView: 2,
         spaceBetween: 10,
-        autoplay: {
-          delay: 3200,
-        },
         navigation: {
           prevEl: slider
             .closest(".section-switcher__tab-wrapper")
@@ -198,9 +195,6 @@ export default function sliders() {
       speed: 800,
       slidesPerView: "auto",
       spaceBetween: 20,
-      autoplay: {
-        delay: 3600,
-      },
       breakpoints: {
         1366: {
           slidesPerView: 4,
@@ -296,9 +290,6 @@ export default function sliders() {
     const swiper = new Swiper(productSlider, {
       speed: 900,
       spaceBetween: 20,
-      autoplay: {
-        delay: 3500,
-      },
       navigation: {
         prevEl: ".section-product .slider-btn._prev",
         nextEl: ".section-product .slider-btn._next",

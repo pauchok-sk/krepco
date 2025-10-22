@@ -300,15 +300,15 @@
         </div>
       </section>
       <section class="section-margin section-shop" id="shop">
-        <div class="container">
+        <div class="container tabs">
           <div class="section-shop__head">
             <div class="section-shop__info-search">Найдено 1 298 товаров</div>
-            <ul class="list section-shop__head-list">
-              <li><a href="#">Конструкция</a></li>
-              <li><a href="#">Назначение</a></li>
-              <li><a href="#">Размеры</a></li>
-              <li><a href="#">Материал</a></li>
-              <li><a href="#">Бренды</a></li>
+            <ul class="tabs-nav list section-shop__head-list">
+              <li data-tab-btn="tab-1" class="_active">Конструкция</li>
+              <li data-tab-btn="tab-2">Назначение</li>
+              <li data-tab-btn="tab-3">Размеры</li>
+              <li data-tab-btn="tab-4">Материал</li>
+              <li data-tab-btn="tab-5">Бренды</li>
             </ul>
           </div>
           <div class="section-shop__wrapper">
@@ -1143,17 +1143,83 @@
               </div>
             </div>
             <div class="section-shop__main">
-              <div class="section-shop__main-list-wrapper">
-                <ul class="list section-shop__main-list">
-                  <li>
-                    <a href="#" class="btn-item">Для пустотелого кирпича</a>
-                  </li>
-                  <li><a href="#" class="btn-item">Для природного камня</a></li>
-                  <li><a href="#" class="btn-item">Для бетона</a></li>
-                  <li><a href="#" class="btn-item">Для кирпича</a></li>
-                  <li><a href="#" class="btn-item">Для газобетона</a></li>
-                  <li><a href="#" class="btn-item">Для газобетона</a></li>
-                </ul>
+              <div class="tabs-content">
+                <div data-tab="tab-1" class="_active _show">
+                  <div class="section-shop__main-list-wrapper">
+                    <ul class="list section-shop__main-list">
+                      <li>
+                        <a href="#" class="btn-item">Для пустотелого кирпича</a>
+                      </li>
+                      <li>
+                        <a href="#" class="btn-item">Для природного камня</a>
+                      </li>
+                      <li><a href="#" class="btn-item">Для бетона</a></li>
+                      <li><a href="#" class="btn-item">Для кирпича</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div data-tab="tab-2">
+                  <div class="section-shop__main-list-wrapper">
+                    <ul class="list section-shop__main-list">
+                      <li>
+                        <a href="#" class="btn-item">Для пустотелого кирпича</a>
+                      </li>
+                      <li>
+                        <a href="#" class="btn-item">Для природного камня</a>
+                      </li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div data-tab="tab-3">
+                  <div class="section-shop__main-list-wrapper">
+                    <ul class="list section-shop__main-list">
+                      <li>
+                        <a href="#" class="btn-item">Для пустотелого кирпича</a>
+                      </li>
+                      <li>
+                        <a href="#" class="btn-item">Для природного камня</a>
+                      </li>
+                      <li><a href="#" class="btn-item">Для бетона</a></li>
+                      <li><a href="#" class="btn-item">Для кирпича</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div data-tab="tab-4">
+                  <div class="section-shop__main-list-wrapper">
+                    <ul class="list section-shop__main-list">
+                      <li>
+                        <a href="#" class="btn-item">Для пустотелого кирпича</a>
+                      </li>
+                      <li>
+                        <a href="#" class="btn-item">Для природного камня</a>
+                      </li>
+                      <li><a href="#" class="btn-item">Для бетона</a></li>
+                      <li><a href="#" class="btn-item">Для кирпича</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div data-tab="tab-5">
+                  <div class="section-shop__main-list-wrapper">
+                    <ul class="list section-shop__main-list">
+                      <li>
+                        <a href="#" class="btn-item">Для пустотелого кирпича</a>
+                      </li>
+                      <li>
+                        <a href="#" class="btn-item">Для природного камня</a>
+                      </li>
+                      <li><a href="#" class="btn-item">Для кирпича</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                      <li><a href="#" class="btn-item">Для газобетона</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <button class="section-shop__filters-btn" id="filters-open">
                 <span>Фильтр товаров</span>
@@ -1551,7 +1617,9 @@
                       </form>
                       <button class="btn card-product-line__cart-btn _outline">
                         <svg>
-                          <use xlink:href="img/icons/icons.svg#icon-cart-add"></use>
+                          <use
+                            xlink:href="img/icons/icons.svg#icon-cart-add"
+                          ></use>
                         </svg>
                         <span>В корзине</span>
                       </button>
@@ -1869,7 +1937,9 @@
                       </form>
                       <button class="btn card-product-line__cart-btn _outline">
                         <svg>
-                          <use xlink:href="img/icons/icons.svg#icon-cart-add"></use>
+                          <use
+                            xlink:href="img/icons/icons.svg#icon-cart-add"
+                          ></use>
                         </svg>
                         <span>В корзине</span>
                       </button>

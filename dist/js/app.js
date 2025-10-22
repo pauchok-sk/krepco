@@ -252,7 +252,7 @@
             bodies.forEach(body => {
                 hide(body, 0);
             });
-            dropdowns.forEach(drop => {
+            if (window.matchMedia("(min-width: 1024px)").matches) dropdowns.forEach(drop => {
                 drop.addEventListener("mousemove", e => {
                     e.stopPropagation();
                     e.preventDefault();
@@ -270,7 +270,31 @@
                         if (!body.hasAttribute("hidden")) hide(body);
                     }, 500);
                 });
-            });
+            }); else {
+                document.body.addEventListener("click", () => {
+                    const openDrop = document.querySelector(".dropdown._open");
+                    if (openDrop) {
+                        const body = openDrop.querySelector(".dropdown-body");
+                        openDrop.classList.remove("_open");
+                        hide(body);
+                    }
+                });
+                dropdowns.forEach(drop => {
+                    const btn = drop.querySelector(".dropdown-btn");
+                    const body = drop.querySelector(".dropdown-body");
+                    body.addEventListener("click", e => e.stopPropagation());
+                    btn.addEventListener("click", e => {
+                        e.stopPropagation();
+                        if (!drop.classList.contains("_open")) {
+                            drop.classList.add("_open");
+                            show(body);
+                        } else {
+                            drop.classList.remove("_open");
+                            hide(body);
+                        }
+                    });
+                });
+            }
         }
     }
     function filesChange() {
@@ -639,9 +663,6 @@
                 speed: 700,
                 slidesPerView: 2,
                 spaceBetween: 10,
-                autoplay: {
-                    delay: 3200
-                },
                 navigation: {
                     prevEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._prev"),
                     nextEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._next")
@@ -779,9 +800,6 @@
                 speed: 800,
                 slidesPerView: "auto",
                 spaceBetween: 20,
-                autoplay: {
-                    delay: 3600
-                },
                 breakpoints: {
                     1366: {
                         slidesPerView: 4,
@@ -859,9 +877,6 @@
             new Swiper(productSlider, {
                 speed: 900,
                 spaceBetween: 20,
-                autoplay: {
-                    delay: 3500
-                },
                 navigation: {
                     prevEl: ".section-product .slider-btn._prev",
                     nextEl: ".section-product .slider-btn._next"

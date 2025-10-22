@@ -35,7 +35,8 @@
       margin: 0 -20px;
     }
 
-    a {
+    li {
+      cursor: pointer;
       display: block;
       font-size: 16px;
       border-bottom: 1px dashed var(--dusty);
@@ -45,6 +46,10 @@
         border-color 0.3s ease;
 
       @include hover {
+        border-color: transparent;
+        color: var(--primary);
+      }
+      &._active {
         border-color: transparent;
         color: var(--primary);
       }

@@ -232,10 +232,6 @@
     @include laptop-middle {
       margin-bottom: 35px;
     }
-
-    .section-product__info-link {
-      display: none;
-    }
   }
   &__info-title {
     font-weight: 900;
@@ -266,6 +262,9 @@
 
     @include hover {
       background-color: var(--primary-light);
+    }
+    @include laptop-middle {
+      display: none;
     }
 
     svg {

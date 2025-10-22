@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251019234622">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251019234622">
-	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251019234622">
-	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251019234622">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251019234622">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251022141520">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251022141520">
+	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251022141520">
+	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251022141520">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251022141520">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -221,6 +221,29 @@
 						</div>
 					</form>
 				</div>
+				<div class="dropdown header__mob-dropdown">
+					<div class="header__mob-dropdown-btn dropdown-btn">
+						<svg class="icon">
+							<use xlink:href="img/icons/icons.svg#icon-location"></use>
+						</svg>
+						<span>Москва</span>
+						<svg class="arrow">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-down"></use>
+							</svg>
+						</svg>
+					</div>
+					<div class="dropdown-body">
+						<div class="dropdown-inside">
+							<ul class="list dropdown-list">
+								<li><a href="#">Тверь</a></li>
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Тверь</a></li>
+								<li><a href="#">Москва</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="header__contacts">
 					<a href="tel:+74957139139" class="header__tel">+7 (495) 7-139-139</a>
 					<a href="#modal-call" data-fancybox class="header__tel-btn">
@@ -243,6 +266,7 @@
 				</a>
 			</div>
 		</div>
+
 		<div class="drop-catalog" id="drop-catalog">
 			<div class="drop-catalog__inside">
 				<div class="drop-catalog__menu">
@@ -816,6 +840,29 @@
 				<div class="burger__container">
 					<div class="burger__head">
 						<div class="burger__head-title">Меню</div>
+						<div class="dropdown burger__dropdown">
+							<div class="burger__dropdown-btn dropdown-btn">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#icon-location"></use>
+								</svg>
+								<span>Москва</span>
+								<svg class="arrow">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-down"></use>
+									</svg>
+								</svg>
+							</div>
+							<div class="dropdown-body">
+								<div class="dropdown-inside">
+									<ul class="list dropdown-list">
+										<li><a href="#">Тверь</a></li>
+										<li><a href="#">Москва</a></li>
+										<li><a href="#">Тверь</a></li>
+										<li><a href="#">Москва</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 						<div data-burger-close class="burger__close">
 							<svg>
 								<use xlink:href="img/icons/icons.svg#icon-close"></use>
@@ -1478,15 +1525,15 @@
 			</div>
 		</section>
 		<section class="section-margin section-shop" id="shop">
-			<div class="container">
+			<div class="container tabs">
 				<div class="section-shop__head">
 					<div class="section-shop__info-search">Найдено 1 298 товаров</div>
-					<ul class="list section-shop__head-list">
-						<li><a href="#">Конструкция</a></li>
-						<li><a href="#">Назначение</a></li>
-						<li><a href="#">Размеры</a></li>
-						<li><a href="#">Материал</a></li>
-						<li><a href="#">Бренды</a></li>
+					<ul class="tabs-nav list section-shop__head-list">
+						<li data-tab-btn="tab-1" class="_active">Конструкция</li>
+						<li data-tab-btn="tab-2">Назначение</li>
+						<li data-tab-btn="tab-3">Размеры</li>
+						<li data-tab-btn="tab-4">Материал</li>
+						<li data-tab-btn="tab-5">Бренды</li>
 					</ul>
 				</div>
 				<div class="section-shop__wrapper">
@@ -1931,17 +1978,83 @@
 						</div>
 					</div>
 					<div class="section-shop__main">
-						<div class="section-shop__main-list-wrapper">
-							<ul class="list section-shop__main-list">
-								<li>
-									<a href="#" class="btn-item">Для пустотелого кирпича</a>
-								</li>
-								<li><a href="#" class="btn-item">Для природного камня</a></li>
-								<li><a href="#" class="btn-item">Для бетона</a></li>
-								<li><a href="#" class="btn-item">Для кирпича</a></li>
-								<li><a href="#" class="btn-item">Для газобетона</a></li>
-								<li><a href="#" class="btn-item">Для газобетона</a></li>
-							</ul>
+						<div class="tabs-content">
+							<div data-tab="tab-1" class="_active _show">
+								<div class="section-shop__main-list-wrapper">
+									<ul class="list section-shop__main-list">
+										<li>
+											<a href="#" class="btn-item">Для пустотелого кирпича</a>
+										</li>
+										<li>
+											<a href="#" class="btn-item">Для природного камня</a>
+										</li>
+										<li><a href="#" class="btn-item">Для бетона</a></li>
+										<li><a href="#" class="btn-item">Для кирпича</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+									</ul>
+								</div>
+							</div>
+							<div data-tab="tab-2">
+								<div class="section-shop__main-list-wrapper">
+									<ul class="list section-shop__main-list">
+										<li>
+											<a href="#" class="btn-item">Для пустотелого кирпича</a>
+										</li>
+										<li>
+											<a href="#" class="btn-item">Для природного камня</a>
+										</li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+									</ul>
+								</div>
+							</div>
+							<div data-tab="tab-3">
+								<div class="section-shop__main-list-wrapper">
+									<ul class="list section-shop__main-list">
+										<li>
+											<a href="#" class="btn-item">Для пустотелого кирпича</a>
+										</li>
+										<li>
+											<a href="#" class="btn-item">Для природного камня</a>
+										</li>
+										<li><a href="#" class="btn-item">Для бетона</a></li>
+										<li><a href="#" class="btn-item">Для кирпича</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+									</ul>
+								</div>
+							</div>
+							<div data-tab="tab-4">
+								<div class="section-shop__main-list-wrapper">
+									<ul class="list section-shop__main-list">
+										<li>
+											<a href="#" class="btn-item">Для пустотелого кирпича</a>
+										</li>
+										<li>
+											<a href="#" class="btn-item">Для природного камня</a>
+										</li>
+										<li><a href="#" class="btn-item">Для бетона</a></li>
+										<li><a href="#" class="btn-item">Для кирпича</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+									</ul>
+								</div>
+							</div>
+							<div data-tab="tab-5">
+								<div class="section-shop__main-list-wrapper">
+									<ul class="list section-shop__main-list">
+										<li>
+											<a href="#" class="btn-item">Для пустотелого кирпича</a>
+										</li>
+										<li>
+											<a href="#" class="btn-item">Для природного камня</a>
+										</li>
+										<li><a href="#" class="btn-item">Для кирпича</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+										<li><a href="#" class="btn-item">Для газобетона</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 						<button class="section-shop__filters-btn" id="filters-open">
 							<span>Фильтр товаров</span>
@@ -4588,12 +4701,12 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251019234622"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251019234622"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251019234622"></script>
-	<script src="./files/nouislider/nouislider.min.js?_v=20251019234622"></script>
-	<script src="./files/shareon/shareon.min.js?_v=20251019234622"></script>
-	<script src="js/app.min.js?_v=20251019234622"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251022141520"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251022141520"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251022141520"></script>
+	<script src="./files/nouislider/nouislider.min.js?_v=20251022141520"></script>
+	<script src="./files/shareon/shareon.min.js?_v=20251022141520"></script>
+	<script src="js/app.min.js?_v=20251022141520"></script>
 </body>
 
 </html>

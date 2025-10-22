@@ -72,6 +72,14 @@
     font-size: 15px;
     line-height: 120%;
   }
+  &__dropdown {
+    .dropdown-body {
+      min-width: 130px;
+    }
+    .dropdown-inside {
+      width: 100%;
+    }
+  }
   &__dropdown-btn {
     display: flex;
     align-items: center;
