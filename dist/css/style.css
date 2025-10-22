@@ -194,6 +194,8 @@ template {
   --serenade: #fff4e6;
   --apricot: #fffeeb;
   --givry: #f8dfc9;
+  --iron: #e7e7e9;
+  --athens: #f3f3f4;
   --alabaster: #fbfbfb;
   --alto: #d9d9d9;
   --dark: #3e4041;
@@ -4508,6 +4510,61 @@ body>header._scroll {
   flex-wrap: wrap;
   gap: 10px
 }
+.section-info__sizes-wrapper table {
+  border: 1px solid var(--iron);
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 15px;
+  width: 1120px
+}
+.section-info__sizes-wrapper thead {
+  display: block;
+  border-bottom: 1px solid var(--iron)
+}
+.section-info__sizes-wrapper tr {
+  display: flex
+}
+.section-info__sizes-wrapper tr:not(:last-child) {
+  border-bottom: 1px solid var(--iron)
+}
+.section-info__sizes-wrapper th {
+  background-color: var(--athens)
+}
+.section-info__sizes-wrapper td,
+.section-info__sizes-wrapper th {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  flex-shrink: 0;
+  margin: 0;
+  font-weight: 400;
+  text-align: right;
+  padding: 15px 10px;
+  flex: 1;
+  transition: background-color .3s ease
+}
+.section-info__sizes-wrapper td:first-child,
+.section-info__sizes-wrapper th:first-child {
+  flex: 0 1 130px;
+  background-color: var(--athens)
+}
+.section-info__sizes-wrapper td:last-child,
+.section-info__sizes-wrapper th:last-child {
+  flex: 0 1 63px
+}
+.section-info__sizes-wrapper td:not(:last-child),
+.section-info__sizes-wrapper th:not(:last-child) {
+  border-right: 1px solid var(--iron)
+}
+.section-info__sizes-wrapper td.fill,
+.section-info__sizes-wrapper th.fill {
+  background-color: var(--athens)
+}
+.section-info__sizes-wrapper tbody {
+  display: block
+}
 .section-info__sizes {
   display: block;
   width: 100%
@@ -5224,6 +5281,12 @@ body>footer::before {
     top: 7px
   }
 }
+@media (max-width:1560px) {
+  .section-info__sizes-wrapper {
+    overflow-x: auto;
+    width: 900px
+  }
+}
 @media (max-width:1539px) {
   .drop-catalog__wrapper {
     gap: 30px;
@@ -5357,6 +5420,11 @@ body>footer::before {
   .section-product__sidebar {
     margin-left: auto;
     align-self: start
+  }
+  .section-info__sizes-wrapper {
+    width: 745px;
+    padding: 0 30px;
+    margin: 0 -30px
   }
   .section-cart__form-person {
     gap: 20px
@@ -5612,9 +5680,7 @@ body>footer::before {
     line-height: 120%
   }
   .section-info__sizes-wrapper {
-    overflow-x: auto;
-    padding: 0 30px;
-    margin: 0 -30px
+    width: auto
   }
   .section-info__sizes {
     min-width: 1100px
@@ -6519,6 +6585,10 @@ body>footer::before {
   .section-info__content-spec li {
     font-size: 15px
   }
+  .section-info__sizes-wrapper {
+    padding: 0 20px;
+    margin: 0 -20px
+  }
   .section-info__sizes {
     min-width: 760px
   }
@@ -6956,6 +7026,22 @@ body>footer::before {
   }
   .section-product__btn-share {
     font-size: 12px
+  }
+  .section-info__sizes-wrapper table {
+    width: 880px;
+    font-size: 12px
+  }
+  .section-info__sizes-wrapper td,
+  .section-info__sizes-wrapper th {
+    padding: 10px 5px
+  }
+  .section-info__sizes-wrapper td:first-child,
+  .section-info__sizes-wrapper th:first-child {
+    flex-basis: 100px
+  }
+  .section-info__sizes-wrapper td:last-child,
+  .section-info__sizes-wrapper th:last-child {
+    flex-basis: 50px
   }
   .section-cart__warn-content {
     font-size: 10px
@@ -7426,6 +7512,10 @@ body>footer::before {
   .section-info__table-product-title:hover {
     color: var(--primary)
   }
+  .section-info__sizes-wrapper td:hover,
+  .section-info__sizes-wrapper th:hover {
+    background-color: var(--athens)
+  }
   .section-info__product-title:hover {
     color: var(--primary)
   }
@@ -7780,6 +7870,10 @@ body>footer::before {
   }
   .section-info__table-product-title:active {
     color: var(--primary)
+  }
+  .section-info__sizes-wrapper td:active,
+  .section-info__sizes-wrapper th:active {
+    background-color: var(--athens)
   }
   .section-info__product-title:active {
     color: var(--primary)
