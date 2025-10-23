@@ -346,8 +346,14 @@
 
     tr {
       display: flex;
+      transition: background-color .3s ease;
+
       &:not(:last-child) {
         border-bottom: 1px solid var(--iron);
+      }
+
+      @include hover {
+        background-color: var(--athens);
       }
     }
     th {
@@ -367,7 +373,7 @@
       padding: 15px 10px;
       flex: 1;
 
-      transition: background-color .3s ease;
+      transition: background-color 0.3s ease;
 
       @include tablet-min {
         padding: 10px 5px;
@@ -389,10 +395,6 @@
 
       &:not(:last-child) {
         border-right: 1px solid var(--iron);
-      }
-
-      @include hover {
-        background-color: var(--athens);
       }
 
       &.fill {
