@@ -765,6 +765,10 @@
                 autoplay: {
                     delay: 3200
                 },
+                navigation: {
+                    prevEl: ".section-certificates .slider-btn._prev",
+                    nextEl: ".section-certificates .slider-btn._next"
+                },
                 breakpoints: {
                     1200: {
                         slidesPerView: 5,
@@ -834,9 +838,6 @@
                 speed: 700,
                 slidesPerView: "auto",
                 spaceBetween: 10,
-                autoplay: {
-                    delay: 3200 + index * 100
-                },
                 navigation: {
                     prevEl: slider.closest(".section-recommendation").querySelector(".slider-btn._prev"),
                     nextEl: slider.closest(".section-recommendation").querySelector(".slider-btn._next")
@@ -915,6 +916,35 @@
                     768: {
                         slidesPerView: 3,
                         spaceBetween: 30
+                    }
+                }
+            });
+        }
+        const trustSlider = document.querySelector(".section-trust__slider");
+        if (trustSlider) {
+            new Swiper(trustSlider, {
+                speed: 700,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3500
+                },
+                breakpoints: {
+                    1366: {
+                        slidesPerView: 6,
+                        spaceBetween: 25
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 25
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
                     }
                 }
             });

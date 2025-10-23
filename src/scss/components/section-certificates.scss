@@ -5,6 +5,19 @@
       display: none;
     }
   }
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include laptop-middle {
+      display: block;
+
+      .slider-btn {
+        display: none;
+      }
+    }
+  }
   &__slider {
     @include laptop-middle {
       overflow: visible !important;

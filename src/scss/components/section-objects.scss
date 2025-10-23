@@ -1,0 +1,66 @@
+.section-objects {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    @include laptop {
+      gap: 20px
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr)
+    }
+    @include tablet-min {
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    @include flex-center;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1/0.64;
+    padding: 20px;
+
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 120%;
+    color: white;
+
+    z-index: 1;
+
+    @include hover {
+      img {
+        transform: scale(1.07);
+      }
+    }
+    @include laptop {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: black;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+
+      transition: transform .3s ease;
+    }
+  }
+}

@@ -154,6 +154,10 @@ export default function sliders() {
       autoplay: {
         delay: 3200,
       },
+      navigation: {
+        prevEl: ".section-certificates .slider-btn._prev",
+        nextEl: ".section-certificates .slider-btn._next",
+      },
       breakpoints: {
         1200: {
           slidesPerView: 5,
@@ -236,9 +240,6 @@ export default function sliders() {
         speed: 700,
         slidesPerView: "auto",
         spaceBetween: 10,
-        autoplay: {
-          delay: 3200 + index * 100,
-        },
         navigation: {
           prevEl: slider
             .closest(".section-recommendation")
@@ -301,7 +302,6 @@ export default function sliders() {
   }
 
   const teamSlider = document.querySelector(".section-team__slider");
-
   if (teamSlider) {
     const swiper = new Swiper(teamSlider, {
       speed: 700,
@@ -330,6 +330,36 @@ export default function sliders() {
         768: {
           slidesPerView: 3,
           spaceBetween: 30,
+        },
+      },
+    });
+  }
+
+  const trustSlider = document.querySelector(".section-trust__slider");
+  if (trustSlider) {
+    const swiper = new Swiper(trustSlider, {
+      speed: 700,
+      slidesPerView: 2,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3500,
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 6,
+          spaceBetween: 25,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+        576: {
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
       },
     });

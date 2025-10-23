@@ -1,0 +1,126 @@
+.section-qr {
+  padding: 75px 0px;
+  background-color: #333;
+  color: white;
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__title {
+    margin: 0px 0px 75px 0px;
+    @include laptop-middle {
+      margin-bottom: 40px;
+    }
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-weight: 600;
+    font-size: 25px;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__grid {
+    display: flex;
+    flex-shrink: 0;
+    gap: 170px;
+    @include desktop {
+      gap: 30px;
+    }
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+      max-width: 350px;
+      margin: 0 auto; 
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 330px;
+    @include laptop-middle {
+      width: 280px;
+    }
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__item-gallery {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    z-index: 1;
+
+    .corner {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      z-index: -1;
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+        background: url('@img/clt.svg') top 0 left 0 / 100% auto no-repeat;
+      }
+      &:nth-child(2) {
+        top: 0;
+        right: 0;
+        background: url('@img/crt.svg') top 0 right 0 / 100% auto no-repeat;
+      }
+      &:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        background: url('@img/clb.svg') bottom 0 left 0 / 100% auto no-repeat;
+      }
+      &:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        background: url('@img/crb.svg') bottom 0 right 0 / 100% auto no-repeat;
+      }
+    }
+  }
+  &__item-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  &__item-btn {
+    display: block;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-top: 15px;
+
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}
