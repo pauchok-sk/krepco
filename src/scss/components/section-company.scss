@@ -1,0 +1,115 @@
+.section-company {
+  &__title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__about-img {
+    position: sticky;
+    top: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+  }
+  &__bottom {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    @include laptop-middle {
+      flex-direction: column-reverse;
+    }
+  }
+  &__bottom-content {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: 1px solid var(--primary);
+    padding: 20px 30px;
+    border-radius: 15px;
+    flex: 0 1 480px;
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 20px;
+    @include laptop {
+      flex-basis: 400px;
+      padding: 30px 20px;
+    }
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+    }
+    @include tablet {
+      font-size: 16px;
+      padding: 20px 15px;
+    }
+  }
+  &__adv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    flex: 1;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include tablet-min {
+      gap: 10px
+    }
+  }
+  &__adv-item {
+    @include flex-center;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background-color: var(--wild);
+    
+    text-align: center;
+    @include tablet {
+      padding: 20px 15px;
+    }
+    @include tablet-min {
+      padding: 15px 10px;
+      border-radius: 12px;
+    }
+  }
+  &__adv-num {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 120%;
+    margin-bottom: 10px;
+    @include desktop {
+      font-size: 32px
+    }
+    @include laptop {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 24px;
+    }
+    @include tablet-min {
+      font-size: 20px;
+    }
+  }
+  &__adv-value {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+}

@@ -11,9 +11,15 @@
   
   @include tablet-min {
     margin-bottom: 25px;
+  }
 
-    .btn {
+  .btn {
+    flex-shrink: 0;
+    @include tablet-min {
       display: none;
     }
+  }
+  .btn-mob {
+    flex-shrink: 0;
   }
 }

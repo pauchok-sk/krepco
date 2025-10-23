@@ -39,3 +39,23 @@
     }
   }
 }
+
+.content-big {
+  font-size: 20px;
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include tablet {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

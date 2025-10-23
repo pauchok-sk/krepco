@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    @@include('html/components/header.html')
+    <main>
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs-wrapper">
+            <a href="#" class="breadcrumbs-item">Главная</a>
+            <a href="#" class="btn-prev">
+              <svg>
+                <use xlink:href='img/icons/icons.svg#icon-arrow-prev'></use>
+              </svg>
+              <span>Вернуться к покупкам</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/components/section-company.html')
+      @@include('html/components/section-criterias.html')
+      @@include('html/components/section-team.html')
+      @@include('html/components/section-objects.html')
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

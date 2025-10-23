@@ -1,0 +1,37 @@
+.section-team {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include desktop {
+      gap: 30px;
+    }
+    @include laptop {
+      gap: 20px;
+    }
+    @include tablet {
+      display: block;
+    }
+
+    .slider-btn {
+      flex-shrink: 0;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  
+    .swiper-slide {
+      @include tablet {
+        width: 220px !important;
+      }
+    }
+  }
+}

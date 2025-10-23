@@ -646,7 +646,7 @@
             new Swiper(heroSlider, {
                 speed: 700,
                 slidesPerView: 1,
-                speaceBetween: 20,
+                spaceBetween: 20,
                 effect: "fade",
                 autoplay: {
                     delay: 3500
@@ -817,7 +817,7 @@
             new Swiper(bannerSlider, {
                 speed: 700,
                 slidesPerView: 1,
-                speaceBetween: 20,
+                spaceBetween: 20,
                 effect: "fade",
                 autoplay: {
                     delay: 3500
@@ -883,6 +883,39 @@
                 },
                 thumbs: {
                     swiper: thumbSlider
+                }
+            });
+        }
+        const teamSlider = document.querySelector(".section-team__slider");
+        if (teamSlider) {
+            new Swiper(teamSlider, {
+                speed: 700,
+                slidesPerView: "auto",
+                spaceBetween: 25,
+                autoplay: {
+                    delay: 3500
+                },
+                navigation: {
+                    prevEl: ".section-team .slider-btn._prev",
+                    nextEl: ".section-team .slider-btn._next"
+                },
+                breakpoints: {
+                    1540: {
+                        slidesPerView: 5,
+                        spaceBetween: 60
+                    },
+                    1366: {
+                        slidesPerView: 5,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
                 }
             });
         }
