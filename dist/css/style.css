@@ -340,6 +340,23 @@ body {
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
 }
+.btn-tab {
+  cursor: pointer;
+  padding: 14px 20px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  white-space: nowrap;
+  transition: color .3s ease,background-color .3s ease
+}
+.btn-tab._active {
+  pointer-events: none;
+  color: var(--primary);
+  background-color: var(--wild)
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -1389,6 +1406,12 @@ textarea.input::-webkit-scrollbar-thumb {
 }
 .breadcrumbs-item:last-child::before {
   background: url(../img/line-next.svg) center/100% auto no-repeat
+}
+.breadcrumbs-item:last-child._primary {
+  color: var(--primary)
+}
+.breadcrumbs-item:last-child._primary::before {
+  background: url(../img/line-next-primary.svg) center/100% auto no-repeat
 }
 a.breadcrumbs-item {
   color: var(--dusty);
@@ -5239,6 +5262,44 @@ body>header._scroll {
   margin-top: 15px;
   transition: color .3s ease
 }
+.intro__body {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 100px;
+  border-radius: 15px;
+  background: rgba(62,64,65,.1);
+  z-index: 1
+}
+.intro__title {
+  color: #000;
+  max-width: 850px
+}
+.intro__btn {
+  margin-top: 65px
+}
+.intro__img {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: 0;
+  right: 0
+}
+.section-shipping {
+  overflow: hidden
+}
+.section-shipping__nav {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 45px
+}
 body>footer {
   position: relative;
   padding-top: 255px;
@@ -5642,6 +5703,9 @@ body>footer::before {
   .section-qr__grid {
     gap: 30px
   }
+  .intro__body {
+    padding: 70px
+  }
   .footer__wrapper {
     gap: 30px
   }
@@ -5766,6 +5830,9 @@ body>footer::before {
   }
   .section-objects__item {
     font-size: 22px
+  }
+  .intro__title {
+    max-width: 700px
   }
   .footer__nav-item {
     width: 185px
@@ -6053,6 +6120,12 @@ body>footer::before {
   }
   .section-qr__item {
     width: 280px
+  }
+  .intro__body {
+    padding: 50px
+  }
+  .intro__img {
+    right: -200px
   }
   body>footer {
     padding-top: 175px
@@ -6398,6 +6471,15 @@ body>footer::before {
   .section-qr__content {
     font-size: 20px
   }
+  .intro__body {
+    padding: 30px
+  }
+  .intro__title {
+    max-width: 580px
+  }
+  .section-shipping__nav {
+    margin-bottom: 30px
+  }
   .footer__head {
     flex-wrap: wrap;
     gap: 35px
@@ -6411,6 +6493,9 @@ body>footer::before {
 @media (max-width:767px) {
   .container {
     padding: 0 20px
+  }
+  .btn-tab {
+    font-size: 16px
   }
   .label-checkbox {
     font-size: 15px
@@ -7111,6 +7196,16 @@ body>footer::before {
   .section-qr__item-btn {
     font-size: 16px
   }
+  .intro__body {
+    padding: 30px 20px
+  }
+  .intro__title {
+    max-width: 375px
+  }
+  .intro__img {
+    width: 300px;
+    right: -150px
+  }
   .footer__head {
     margin-bottom: 50px
   }
@@ -7138,6 +7233,11 @@ body>footer::before {
   }
 }
 @media (max-width:575px) {
+  .btn-tab {
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 6px 12px
+  }
   .select-item {
     padding: 10px 15px
   }
@@ -7566,6 +7666,9 @@ body>footer::before {
     max-width: 350px;
     margin: 0 auto
   }
+  .intro__img {
+    opacity: .5
+  }
   body>footer {
     padding-top: 70px
   }
@@ -7710,6 +7813,10 @@ body>footer::before {
   .btn-prev:hover svg {
     -webkit-transform: translateX(-5px);
     transform: translateX(-5px)
+  }
+  .btn-tab:hover {
+    color: var(--primary);
+    background-color: var(--wild)
   }
   .dropdown-list a:hover {
     color: var(--primary)
@@ -8078,6 +8185,10 @@ body>footer::before {
   .btn-prev:active svg {
     -webkit-transform: translateX(-5px);
     transform: translateX(-5px)
+  }
+  .btn-tab:active {
+    color: var(--primary);
+    background-color: var(--wild)
   }
   .dropdown-list a:active {
     color: var(--primary)

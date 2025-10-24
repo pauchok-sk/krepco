@@ -1,0 +1,57 @@
+.intro {
+  &__body {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 100px;
+    border-radius: 15px;
+    background: rgba(62, 64, 65, 0.1);
+    z-index: 1;
+
+    @include desktop {
+      padding: 70px;
+    }
+    @include laptop-middle {
+      padding: 50px;
+    }
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 30px 20px;
+    }
+  }
+  &__title {
+    color: black;
+    max-width: 850px;
+
+    @include laptop {
+      max-width: 700px;
+    }
+    @include laptop-min {
+      max-width: 580px;
+    }
+    @include tablet {
+      max-width: 375px;
+    }
+  }
+  &__btn {
+    margin-top: 65px;
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    @include laptop-middle {
+      right: -200px;
+    }
+    @include tablet {
+      width: 300px;
+      right: -150px;
+    }
+    @include tablet-min {
+      opacity: 0.5;
+    }
+  }
+}

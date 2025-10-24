@@ -43,6 +43,13 @@
         background: url("@img/line-next-primary.svg") center / 100% auto no-repeat;
       }
     }
+
+    &._primary {
+      color: var(--primary);
+      &::before {
+      background: url("@img/line-next-primary.svg") center / 100% auto no-repeat;
+    }
+    }
   }
 }
 a.breadcrumbs-item {

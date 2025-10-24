@@ -148,6 +148,43 @@
   svg {
     width: 20px;
     height: 10px;
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
+  }
+}
+
+.btn-tab {
+  cursor: pointer;
+  padding: 14px 20px;
+  border-radius: 10px;
+  flex-shrink: 0;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  &._active {
+    pointer-events: none;
+    color: var(--primary);
+    background-color: var(--wild);
+  }
+
+  @include hover {
+    color: var(--primary);
+    background-color: var(--wild);
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+  @include tablet-min {
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 6px 12px;
   }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    @@include('html/components/header.html')
+    <main>
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs-wrapper">
+            <a href="#" class="breadcrumbs-item">Главная</a>
+            <span class="breadcrumbs-item _primary">
+              <span>Анкера</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <section class="intro">
+        <div class="container">
+          <div class="intro__body">
+            <h1 class="main-title intro__title">Работаем с ведущими логистичискими компаниями </h1>
+            <a href="#modal-call" data-fancybox class="btn intro__btn">Обратный звонок</a>
+            <img src="@img/intro-delivery.png" alt="image" class="intro__img">
+          </div>
+        </div>
+      </section>
+      @@include('html/components/section-shipping.html')
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
