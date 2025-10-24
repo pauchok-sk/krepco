@@ -14,4 +14,27 @@
       margin-bottom: 30px;
     }
   }
+  &__head {
+    position: relative;
+    border-radius: 16px;
+    padding: 40px;
+    background-color: var(--primary-light);
+    z-index: 1;
+  }
+  &__head-body {
+    max-width: 710px;
+  }
+  &__head-content {
+    max-width: 670px;
+    margin: 20px 0px 0px 0px;
+  }
+  &__head-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @include desktop {
+      width: 600px;
+    }
+  }
 }

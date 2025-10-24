@@ -5300,6 +5300,26 @@ body>header._scroll {
   max-width: 100%;
   margin-bottom: 45px
 }
+.section-shipping__head {
+  position: relative;
+  border-radius: 16px;
+  padding: 40px;
+  background-color: var(--primary-light);
+  z-index: 1
+}
+.section-shipping__head-body {
+  max-width: 710px
+}
+.section-shipping__head-content {
+  max-width: 670px;
+  margin: 20px 0 0 0
+}
+.section-shipping__head-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1
+}
 body>footer {
   position: relative;
   padding-top: 255px;
@@ -5705,6 +5725,9 @@ body>footer::before {
   }
   .intro__body {
     padding: 70px
+  }
+  .section-shipping__head-img {
+    width: 600px
   }
   .footer__wrapper {
     gap: 30px
