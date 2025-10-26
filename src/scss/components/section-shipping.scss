@@ -1,10 +1,6 @@
 .section-shipping {
+  color: black;
   overflow: hidden;
-  &__title {
-    @media (min-width: 1024px) {
-      font-size: 40px;
-    }
-  }
   &__nav {
     padding: 10px;
     border-radius: 10px;
@@ -149,6 +145,10 @@
   }
   &__block {
     margin: 80px 0px;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+
     @include laptop-middle {
       margin: 60px 0px;
     }
@@ -191,7 +191,6 @@
   &__grid-item {
     border-radius: 16px;
     padding: 40px;
-    color: black;
     background-color: var(--primary-light);
     flex: 1;
 
@@ -235,22 +234,23 @@
   }
   &__logos {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 15px;
     margin-top: 25px;
-    @include laptop-min {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    @include laptop-middle {
+      justify-content: start;
+      flex-wrap: wrap;
       gap: 20px;
     }
     @include tablet {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
   }
   &__logo {
     @include flex-center;
-    flex: 1;
-    padding: 10px 20px;
+    padding: 10px 40px;
     min-height: 85px;
     border-radius: 10px;
     background-color: var(--wild);
@@ -259,6 +259,10 @@
 
     @include hover {
       background-color: var(--primary-light);
+    }
+    @include tablet {
+      padding: 7px 15px;
+      min-height: 70px;
     }
   }
   &__table-wrapper {
@@ -365,21 +369,145 @@
     }
   }
   &__pickup-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
   }
   &__pickup-info {
-  }
-  &__pickup-head {
-  }
-  &__pickup-content-title {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include tablet {
+      gap: 20px;
+    }
   }
   &__pickup-item {
-  }
-  &__pickup-content {
+    a {
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: var(--primary);
+      }
+    }
   }
   &__pickup-item-title {
+    margin-bottom: 25px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__pickup-content {
+    font-size: 20px;
+    margin: 0;
+    @include tablet {
+      font-size: 18px;
+    }
+    @include tablet-min {
+      font-size: 15px;
+    }
   }
   &__pickup-download {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 25px;
+      text-decoration: underline;
+      @include tablet {
+        font-size: 20px;
+      }
+      @include tablet-min {
+        font-size: 18px;
+      }
+    }
   }
   &__pickup-gallery {
+    display: block;
+
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.8;
+    }
+    @include laptop-min {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+  &__pickup-descr {
+    font-size: 25px;
+
+    @include laptop-middle {
+      font-size: 20px;
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include tablet {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  &__calc {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__calc-info {
+    flex: 1;
+    @include laptop-min {
+      width: 100%;
+      flex: none;
+    }
+  }
+  &__calc-content {
+    margin-top: 30px;
+  }
+  &__calc-main {
+    width: 600px;
+
+    @include laptop {
+      width: 500px;
+    }
+    @include laptop-middle {
+      width: 400px;
+    }
+    @include laptop-min {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
   }
 }
