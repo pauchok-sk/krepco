@@ -2,14 +2,6 @@
   color: black;
   overflow: hidden;
   &__nav {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    width: fit-content;
-    max-width: 100%;
     margin-bottom: 45px;
     @include laptop-min {
       margin-bottom: 30px;

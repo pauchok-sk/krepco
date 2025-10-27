@@ -56,5 +56,13 @@
     @include tablet-min {
       opacity: 0.5;
     }
+
+    &._pay {
+      top: auto;
+      bottom: 0;
+      @include tablet {
+        right: 0;
+      }
+    }
   }
 }

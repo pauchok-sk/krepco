@@ -1,0 +1,117 @@
+.section-pay {
+  overflow: hidden;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+  &__col-head {
+    border-radius: 15px;
+    padding: 25px 40px;
+    width: 100%;
+    background-color: var(--wild);
+    margin-bottom: 50px;
+    @include laptop {
+      padding: 25px;
+    }
+    @include tablet {
+      margin-bottom: 25px;
+    }
+    @include tablet-min {
+      padding: 15px;
+    }
+  }
+  &__col-title {
+    color: var(--primary);
+    margin: 0px 0px 20px 0px;
+
+    @media (min-width: 1540px) {
+      font-size: 40px;
+    }
+  }
+  &__head-content {
+    margin: 0;
+  }
+  &__col-body {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-bottom: 30px;
+    @include tablet {
+      gap: 25px;
+    }
+  }
+  &__col-item {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      color: var(--primary);
+
+      @include tablet {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &__col-item-title {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__col-item-content {
+    margin: 0;
+  }
+  &__col-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    gap: 20px;
+    padding: 18px 20px;
+
+    border-radius: 10px;
+    background: rgba(235, 110, 3, 0.1);
+
+    @include tablet {
+      padding: 15px;
+      gap: 10px;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      color: var(--primary);
+
+      @include tablet {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &__col-bottom-content {
+    font-weight: 600;
+    margin: 0;
+  }
+}

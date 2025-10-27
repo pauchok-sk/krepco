@@ -1883,6 +1883,18 @@ a.breadcrumbs-item:hover {
   text-underline-offset: 3px;
   transition: color .3s ease
 }
+.tab-nav {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%
+}
 .modal {
   border-radius: 20px;
   display: none;
@@ -5295,21 +5307,15 @@ body>header._scroll {
   top: 0;
   right: 0
 }
+.intro__img._pay {
+  top: auto;
+  bottom: 0
+}
 .section-shipping {
   color: #000;
   overflow: hidden
 }
 .section-shipping__nav {
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
   margin-bottom: 45px
 }
 .section-shipping__head {
@@ -5565,6 +5571,76 @@ body>header._scroll {
 .section-shipping__calc-main img {
   width: 100%;
   display: block
+}
+.section-pay {
+  overflow: hidden
+}
+.section-pay__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-top: 40px
+}
+.section-pay__col {
+  display: flex;
+  flex-direction: column
+}
+.section-pay__col-head {
+  border-radius: 15px;
+  padding: 25px 40px;
+  width: 100%;
+  background-color: var(--wild);
+  margin-bottom: 50px
+}
+.section-pay__col-title {
+  color: var(--primary);
+  margin: 0 0 20px 0
+}
+.section-pay__head-content {
+  margin: 0
+}
+.section-pay__col-body {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-bottom: 30px
+}
+.section-pay__col-item {
+  display: flex;
+  align-items: start;
+  gap: 20px
+}
+.section-pay__col-item svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  color: var(--primary)
+}
+.section-pay__col-item-title {
+  margin-bottom: 30px
+}
+.section-pay__col-item-content {
+  margin: 0
+}
+.section-pay__col-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  gap: 20px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: rgba(235,110,3,.1)
+}
+.section-pay__col-bottom svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  color: var(--primary)
+}
+.section-pay__col-bottom-content {
+  font-weight: 600;
+  margin: 0
 }
 body>footer {
   position: relative;
@@ -5911,6 +5987,9 @@ body>footer::before {
   .intro__title {
     font-size: 50px
   }
+  .section-pay__col-title {
+    font-size: 40px
+  }
 }
 @media (max-width:1679px) {
   .section-message__decor {
@@ -6119,6 +6198,9 @@ body>footer::before {
   }
   .section-shipping__calc-main {
     width: 500px
+  }
+  .section-pay__col-head {
+    padding: 25px
   }
   .footer__nav-item {
     width: 185px
@@ -6863,6 +6945,9 @@ body>footer::before {
     width: 100%;
     max-width: 600px
   }
+  .section-pay__wrapper {
+    margin-top: 30px
+  }
   .footer__head {
     flex-wrap: wrap;
     gap: 35px
@@ -7595,6 +7680,9 @@ body>footer::before {
     width: 300px;
     right: -150px
   }
+  .intro__img._pay {
+    right: 0
+  }
   .section-shipping__nav {
     margin-bottom: 25px
   }
@@ -7662,6 +7750,33 @@ body>footer::before {
   }
   .section-shipping__pickup-descr p:not(:last-child) {
     margin-bottom: 16px
+  }
+  .section-pay__wrapper {
+    grid-template-columns: 1fr
+  }
+  .section-pay__col-head {
+    margin-bottom: 25px
+  }
+  .section-pay__col-body {
+    gap: 25px
+  }
+  .section-pay__col-item {
+    gap: 10px
+  }
+  .section-pay__col-item svg {
+    width: 25px;
+    height: 25px
+  }
+  .section-pay__col-item-title {
+    margin-bottom: 20px
+  }
+  .section-pay__col-bottom {
+    padding: 15px;
+    gap: 10px
+  }
+  .section-pay__col-bottom svg {
+    width: 25px;
+    height: 25px
   }
   .footer__head {
     margin-bottom: 50px
@@ -8146,6 +8261,9 @@ body>footer::before {
   }
   .section-shipping__pickup-download a {
     font-size: 18px
+  }
+  .section-pay__col-head {
+    padding: 15px
   }
   body>footer {
     padding-top: 70px
