@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    @@include('html/components/header.html')
+    <main>
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs-wrapper">
+            <a href="#" class="breadcrumbs-item">Главная</a>
+            <span class="breadcrumbs-item _primary">
+              <span>Блог</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/components/section-blog.html')
+      @@include('html/components/section-faq.html')
+      @@include('html/components/section-connect.html')
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
