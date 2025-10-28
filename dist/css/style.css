@@ -1666,6 +1666,13 @@ a.breadcrumbs-item:hover {
   background-color: #fff;
   gap: 50px
 }
+.card-product-full__slider-wrapper {
+  position: relative;
+  width: 100px
+}
+.card-product-full__slider-wrapper .card-product__slider {
+  width: 100%
+}
 .card-product-full__gallery {
   display: block;
   border-radius: 15px;
@@ -2092,10 +2099,13 @@ a.breadcrumbs-item:hover {
   transform: translateY(100%);
   background: url(../img/corner-bottom.svg) 0 0/100% no-repeat
 }
-.drop-catalog__menu-item img {
+.drop-catalog__menu-item img,
+.drop-catalog__menu-item svg {
   display: block;
   flex-shrink: 0;
-  width: 24px
+  width: 24px;
+  height: 24px;
+  fill: currentColor
 }
 .drop-catalog__body {
   padding: 15px 5px 15px 0;
@@ -3204,6 +3214,9 @@ body>header._scroll {
   display: block;
   overflow: hidden;
   outline: 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   aspect-ratio: 1/1.41;
@@ -5132,6 +5145,9 @@ body>header._scroll {
 .section-message__btn {
   margin-top: 30px
 }
+.section-company {
+  margin-bottom: 0!important
+}
 .section-company__title {
   margin-bottom: 40px
 }
@@ -5191,6 +5207,9 @@ body>header._scroll {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 22px
+}
+.section-criterias {
+  margin-top: 60px!important
 }
 .section-criterias__content {
   width: 100%;

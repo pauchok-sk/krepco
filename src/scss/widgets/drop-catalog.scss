@@ -135,10 +135,12 @@
       background: url("@img/corner-bottom.svg") 0 0 / 100% no-repeat;
     }
 
-    img {
+    img, svg {
       display: block;
       flex-shrink: 0;
       width: 24px;
+      height: 24px;
+      fill: currentColor;
     }
   }
   &__body {

@@ -1105,7 +1105,7 @@
                         от 1 рабочего дня
                       </span>
                       <a
-                        href="#modal-call"
+                        href="#modal-order"
                         data-fancybox
                         class="section-shop__delivery-btn"
                       >
@@ -1307,9 +1307,27 @@
               </div>
               <div class="section-shop__grid-full-lines">
                 <div class="card-product-full">
-                  <a href="#" class="card-product-full__gallery">
-                    <img src="@img/product.png" alt="image" />
-                  </a>
+                  <div class="card-product-full__slider-wrapper">
+                    <a href="#" class="swiper card-product__slider">
+                      <div class="card-product__slide-switches">
+                        <div class="card-product__slide-switch"></div>
+                        <div class="card-product__slide-switch"></div>
+                        <div class="card-product__slide-switch"></div>
+                      </div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide card-product__slide">
+                          <img src="@img/product.png" alt="image" />
+                        </div>
+                        <div class="swiper-slide card-product__slide">
+                          <img src="@img/product.png" alt="image" />
+                        </div>
+                        <div class="swiper-slide card-product__slide">
+                          <img src="@img/product.png" alt="image" />
+                        </div>
+                      </div>
+                    </a>
+                    <div class="card-product__slider-pagination"></div>
+                  </div>
                   <div class="card-product-full__body">
                     <a href="#" class="card-product__title">
                       Болт в/проч. DIN 933 (ГОСТ 7798-70, 7805-70) полная резьба

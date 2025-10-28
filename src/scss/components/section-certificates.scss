@@ -27,6 +27,7 @@
     display: block;
     overflow: hidden;
     outline: none;
+    user-select: none;
 
     filter: grayscale(100%);
     aspect-ratio: 1/1.41;

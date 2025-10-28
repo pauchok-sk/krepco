@@ -7,6 +7,13 @@
   @include laptop {
     gap: 25px;
   }
+  &__slider-wrapper {
+    position: relative;
+    width: 100px;
+    .card-product__slider {
+      width: 100%;
+    }
+  }
   &__gallery {
     display: block;
     border-radius: 15px;
