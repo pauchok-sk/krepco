@@ -2381,11 +2381,14 @@ a.breadcrumbs-item:hover {
   line-height: 120%;
   transition: color .3s ease
 }
-.burger__list li img {
+.burger__list li svg:first-child {
   display: block;
-  width: 16px
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor
 }
-.burger__list li svg {
+.burger__list li .arrow {
   width: 10px;
   height: 10px;
   margin-left: auto
