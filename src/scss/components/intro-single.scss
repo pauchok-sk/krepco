@@ -1,0 +1,126 @@
+.intro-single {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0px;
+  color: black;
+  z-index: 1;
+
+  @include tablet-min {
+    padding: 40px 0px 0px 0px;
+  }
+  @include laptop-min {
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0 0px 140px 0px;
+      background-color: #fff3ec;
+      z-index: -1;
+    }
+  }
+
+  .breadcrumbs {
+    margin-top: 0 !important;
+    @include tablet {
+      margin-bottom: 30px !important;
+    }
+  }
+  &__bg {
+    position: absolute;
+    display: block;
+    max-width: none;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 100%;
+    z-index: -1;
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__wrapper {
+    @include flex-between;
+    gap: 20px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    flex: 0 0 735px;
+    @include laptop-middle {
+      flex-basis: 600px;
+    }
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      margin-bottom: 20px;
+    }
+    @include tablet-min {
+      font-size: 12px;
+    }
+  }
+  &__list {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 20px;
+    @include laptop-min {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      font-size: 20px;
+
+      @include laptop-min {
+        font-size: 18px;
+      }
+      @include tablet-min {
+        font-size: 12px;
+      }
+
+      &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+
+        background: url("@img/figure.svg") center / 100% auto no-repeat;
+      }
+    }
+  }
+  &__btn {
+    width: 225px;
+    max-width: 100%;
+    margin-top: 40px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__gallery {
+    flex: 1;
+  }
+  &__img {
+    display: block;
+    @include laptop-min {
+      margin: 0 auto;
+      max-width: calc(100% - 40px);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.section-portfolio {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: block;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    overflow: hidden;
+    outline: none;
+    user-select: none;
+
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+    @include tablet {
+      width: 240px !important;
+    }
+    @include tablet-min {
+      width: 135px !important;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform .3s ease;
+    }
+  }
+}

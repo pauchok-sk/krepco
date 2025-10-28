@@ -364,4 +364,26 @@ export default function sliders() {
       },
     });
   }
+
+  const portfolioSlider = document.querySelector(".section-portfolio__slider");
+  if (portfolioSlider) {
+    const swiper = new Swiper(portfolioSlider, {
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      autoplay: {
+        delay: 3500,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }
 }

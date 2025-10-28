@@ -456,7 +456,10 @@ body > header {
   }
 }
 .header-search {
-  padding: 0 10px;
+  position: relative;
+  z-index: 10;
+  padding: 0 10px 10px 10px;
+  box-shadow: 0 4px 10px 0 rgba(128, 128, 128, 0.1);
   @media (min-width: 768px) {
     display: none;
   }

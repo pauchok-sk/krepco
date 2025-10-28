@@ -951,6 +951,27 @@
                 }
             });
         }
+        const portfolioSlider = document.querySelector(".section-portfolio__slider");
+        if (portfolioSlider) {
+            new Swiper(portfolioSlider, {
+                speed: 700,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3500
+                },
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 25
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
