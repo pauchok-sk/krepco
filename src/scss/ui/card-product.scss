@@ -331,7 +331,7 @@
     @include laptop-min {
       align-self: start;
     }
-    @include tablet-min {
+    @include tablet {
       display: none;
     }
   }

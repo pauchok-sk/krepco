@@ -171,7 +171,9 @@
                 dropCatalog.classList.remove("_open");
                 toggleBtn.classList.remove("_active");
             });
-            dropCatalog.addEventListener("click", e => e.stopPropagation());
+            dropCatalog.addEventListener("click", e => {
+                if (!e.target.hasAttribute("data-fancybox")) e.stopPropagation();
+            });
             toggleBtn.addEventListener("click", e => {
                 e.stopPropagation();
                 toggleBtn.classList.toggle("_active");

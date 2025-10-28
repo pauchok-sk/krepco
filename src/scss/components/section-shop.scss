@@ -714,9 +714,19 @@
     }
   }
   &__btn-more {
-    width: 100%;
-    @media (min-width: 768px) {
-      display: none;
+    margin: 0 auto 20px auto;
+    @media (min-width: 575px) {
+      background-color: var(--primary-light);
+      border-color: var(--primary-light);
+      color: var(--primary);
+      @include hover {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+      }
+    }
+    @include tablet-min {
+      width: 100%;
     }
   }
   &__grid-lines {
