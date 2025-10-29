@@ -13,6 +13,7 @@ import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
+import jobModal from "./files/jobModal.js";
 import map from "./files/map.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import more from "./files/more.js";
@@ -50,6 +51,7 @@ anchors();
 printBtn();
 cartAllCheckbox();
 map();
+jobModal();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

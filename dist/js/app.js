@@ -378,6 +378,16 @@
         const im = new Inputmask("+7 (999) 999-99-99");
         im.mask(inputs);
     }
+    function jobModal() {
+        const buttons = document.querySelectorAll("[data-job-btn]");
+        const input = document.querySelector("#job-name-input");
+        if (buttons.length && input) buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const name = btn.dataset.jobBtn;
+                input.value = name;
+            });
+        });
+    }
     function map() {
         const maps = document.querySelectorAll(".map");
         if (maps.length) maps.forEach(map => {
@@ -1244,6 +1254,7 @@
     printBtn();
     cartAllCheckbox();
     map();
+    jobModal();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

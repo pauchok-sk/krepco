@@ -1369,9 +1369,18 @@ textarea.input::-webkit-scrollbar-thumb {
 .content p:last-child {
   margin-bottom: 0!important
 }
+.content ol,
 .content ul {
   padding-left: 30px;
   margin: 1rem 0
+}
+.content h1 {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0
+}
+.content h1:not(:first-child) {
+  margin-top: 30px
 }
 .content h2 {
   font-weight: 900;
@@ -6021,6 +6030,7 @@ body>header._scroll {
 .intro-single {
   position: relative;
   overflow: hidden;
+  min-height: 385px;
   padding: 56px 0;
   color: #000;
   z-index: 1
@@ -6033,7 +6043,7 @@ body>header._scroll {
   display: block;
   max-width: none;
   pointer-events: none;
-  top: 0;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -6043,11 +6053,13 @@ body>header._scroll {
 .intro-single__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px
 }
 .intro-single__info {
   flex: 0 0 735px
+}
+.intro-single__info._big {
+  flex-basis: 865px
 }
 .intro-single__title {
   margin-bottom: 30px
@@ -6062,6 +6074,9 @@ body>header._scroll {
   gap: 30px;
   row-gap: 20px
 }
+.intro-single__list._full {
+  max-width: none
+}
 .intro-single__list li {
   display: flex;
   align-items: center;
@@ -6072,10 +6087,11 @@ body>header._scroll {
   content: "";
   width: 14px;
   height: 14px;
+  flex-shrink: 0;
   background: url(../img/figure.svg) center/100% auto no-repeat
 }
 .intro-single__btn {
-  width: 225px;
+  min-width: 225px;
   max-width: 100%;
   margin-top: 40px
 }
@@ -6083,7 +6099,8 @@ body>header._scroll {
   flex: 1
 }
 .intro-single__img {
-  display: block
+  display: block;
+  margin: 0 auto
 }
 .section-single {
   margin-top: 50px;
@@ -6147,6 +6164,29 @@ body>header._scroll {
   font-weight: 600;
   flex-shrink: 0
 }
+.section-single__nav {
+  position: sticky;
+  width: 355px;
+  flex-shrink: 0;
+  top: 20px;
+  padding: 20px;
+  border: 1px solid var(--alto);
+  border-radius: 15px
+}
+.section-single__nav-title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 20px
+}
+.section-single__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+.section-single__nav-list a {
+  font-size: 16px;
+  transition: color .3s ease
+}
 .section-portfolio__slide {
   display: block;
   aspect-ratio: 1/1;
@@ -6166,6 +6206,94 @@ body>header._scroll {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
+}
+.section-jobs__wrapper {
+  display: flex;
+  align-items: start;
+  gap: 30px
+}
+.section-jobs__info {
+  flex: 1
+}
+.section-jobs__grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-top: 80px
+}
+.section-jobs__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 20px
+}
+.section-jobs__item-title {
+  margin-bottom: 20px
+}
+.section-jobs__item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  row-gap: 15px;
+  margin-top: auto;
+  margin-bottom: 10px
+}
+.section-jobs__item-salary {
+  margin: 0
+}
+.section-jobs__item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px
+}
+.section-jobs__item-list li {
+  padding: 6px 0
+}
+.section-jobs__item-tag {
+  padding: 10px;
+  background: rgba(237,110,0,.2);
+  border-radius: 10px;
+  flex-shrink: 0
+}
+.section-jobs__item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px
+}
+.section-jobs__item-btn {
+  min-width: 225px
+}
+.section-jobs__item-date {
+  font-size: 16px
+}
+.section-jobs__reklam {
+  position: sticky;
+  top: 20px;
+  width: 480px;
+  border-radius: 16px;
+  background-color: var(--wild)
+}
+.section-jobs__reklam-body {
+  padding: 40px
+}
+.section-jobs__reklam-title {
+  margin-bottom: 20px
+}
+.section-jobs__reklam-content {
+  margin: 0
+}
+.section-jobs__reklam-picture {
+  display: block;
+  max-width: 100%
+}
+.section-jobs__reklam-picture img {
+  display: block;
+  width: 100%
 }
 body>footer {
   position: relative;
@@ -6521,6 +6649,17 @@ body>footer::before {
   .section-info__table-product-btn svg {
     display: none
   }
+  .intro-single__gallery._jobs {
+    position: absolute;
+    bottom: 0;
+    right: calc((100vw - 1560px)/ 2 + 30px);
+    z-index: -1
+  }
+}
+@media (min-width:1365px) {
+  .intro-single__list._cols {
+    grid-template-columns: repeat(3,1fr)
+  }
 }
 @media (min-width:1540px) {
   .drop-catalog__banner-title {
@@ -6762,6 +6901,15 @@ body>footer::before {
   }
   .section-single__grid-item-list li {
     font-size: 18px
+  }
+  .section-jobs__grid {
+    grid-template-columns: 1fr
+  }
+  .section-jobs__reklam {
+    width: 420px
+  }
+  .section-jobs__reklam-body {
+    padding: 20px
   }
   .footer__nav-item {
     width: 185px
@@ -7098,12 +7246,15 @@ body>footer::before {
     right: 30px
   }
   .intro-single__info {
-    flex-basis: 600px
+    flex-basis: 600px!important
   }
   .section-single__grid {
     grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 30px
+  }
+  .section-jobs__reklam {
+    width: 350px
   }
   body>footer {
     padding-top: 175px
@@ -7591,7 +7742,7 @@ body>footer::before {
     flex-wrap: wrap
   }
   .intro-single__info {
-    flex: none;
+    flex: none!important;
     width: 100%
   }
   .intro-single__content {
@@ -7609,14 +7760,49 @@ body>footer::before {
     margin-top: 30px
   }
   .intro-single__img {
-    margin: 0 auto;
     max-width: calc(100% - 40px)
   }
   .section-single {
     margin-top: 0
   }
+  .section-single__wrapper {
+    flex-wrap: wrap
+  }
+  .section-single__info {
+    flex: none;
+    width: 100%;
+    order: 2
+  }
   .section-single__gallery {
-    width: 300px
+    position: static;
+    width: 350px;
+    margin: 20px auto;
+    aspect-ratio: 1/1.05
+  }
+  .section-single__nav {
+    position: static;
+    order: 1;
+    margin: 0 auto;
+    width: 400px;
+    max-width: 100%
+  }
+  .section-jobs__wrapper {
+    flex-wrap: wrap
+  }
+  .section-jobs__info {
+    flex: none;
+    width: 100%
+  }
+  .section-jobs__grid {
+    margin-top: 60px
+  }
+  .section-jobs__reklam {
+    width: 100%;
+    position: static
+  }
+  .section-jobs__reklam-picture {
+    width: 480px;
+    margin: 0 auto
   }
   .footer__head {
     flex-wrap: wrap;
@@ -7750,6 +7936,12 @@ body>footer::before {
   }
   .content {
     font-size: 15px
+  }
+  .content h1 {
+    font-size: 26px
+  }
+  .content h1:not(:first-child) {
+    margin-top: 20px
   }
   .content h2 {
     font-size: 22px;
@@ -8503,16 +8695,6 @@ body>footer::before {
   .intro-single .breadcrumbs {
     margin-bottom: 30px!important
   }
-  .section-single__info {
-    flex: none;
-    width: 100%
-  }
-  .section-single__gallery {
-    position: static;
-    width: 350px;
-    margin: 20px auto;
-    aspect-ratio: 1/1.05
-  }
   .section-single__grid {
     margin-top: 20px
   }
@@ -8530,6 +8712,9 @@ body>footer::before {
   }
   .section-portfolio__slide {
     width: 240px!important
+  }
+  .section-jobs__grid {
+    margin-top: 40px
   }
   .footer__head {
     margin-bottom: 50px
@@ -9042,6 +9227,22 @@ body>footer::before {
   }
   .section-portfolio__slide {
     width: 135px!important
+  }
+  .section-jobs__grid {
+    margin-top: 30px
+  }
+  .section-jobs__item-head {
+    align-items: start;
+    flex-direction: column-reverse
+  }
+  .section-jobs__item-list li {
+    padding: 3px 0
+  }
+  .section-jobs__item-bottom {
+    flex-wrap: wrap
+  }
+  .section-jobs__item-btn {
+    width: 100%
   }
   body>footer {
     padding-top: 70px
@@ -9569,6 +9770,9 @@ body>footer::before {
     -webkit-transform: scale(1.08);
     transform: scale(1.08)
   }
+  .section-single__nav-list a:hover {
+    color: var(--primary)
+  }
   .section-portfolio__slide:hover img {
     -webkit-transform: scale(1.08);
     transform: scale(1.08)
@@ -9991,6 +10195,9 @@ body>footer::before {
   .section-single__gallery:active img {
     -webkit-transform: scale(1.08);
     transform: scale(1.08)
+  }
+  .section-single__nav-list a:active {
+    color: var(--primary)
   }
   .section-portfolio__slide:active img {
     -webkit-transform: scale(1.08);

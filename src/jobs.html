@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    @@include('html/components/header.html')
+    <main>
+      
+      <section class="intro-single">
+        <img
+          src="@img/intro-single-bg.png"
+          alt="background"
+          class="intro-single__bg"
+        />
+        <div class="container">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs-wrapper">
+              <a href="#" class="breadcrumbs-item">Главная</a>
+              <span class="breadcrumbs-item _primary">
+                <span>Вакансии</span>
+              </span>
+            </div>
+          </div>
+          <div class="intro-single__wrapper">
+            <div class="intro-single__info _big">
+              <h1 class="main-title intro-single__title">
+                Вакансии
+              </h1>
+              <p class="content-big intro-single__content">
+                Стань частью команды, где ценят идеи, энергию и результат.
+              </p>
+            </div>
+            <div class="intro-single__gallery _jobs">
+              <img
+                src="@img/intro-jobs.png"
+                alt="image"
+                class="intro-single__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/section-jobs.html')
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

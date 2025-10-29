@@ -8,12 +8,16 @@
     display: flex;
     align-items: start;
     gap: 25px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
   }
   &__info {
     flex: 1;
-    @include tablet {
+    @include laptop-min  {
       flex: none;
       width: 100%;
+      order: 2;
     }
   }
   &__gallery {
@@ -33,9 +37,6 @@
     }
 
     @include laptop-min {
-      width: 300px;
-    }
-    @include tablet {
       position: static;
       width: 350px;
       margin: 20px auto;
@@ -103,6 +104,41 @@
             font-weight: 900;
           }
         }
+      }
+    }
+  }
+  &__nav {
+    position: sticky;
+    width: 355px;
+    flex-shrink: 0;
+    top: 20px;
+    padding: 20px;
+    border: 1px solid var(--alto);
+    border-radius: 15px;
+
+    @include laptop-min  {
+      position: static;
+      order: 1;
+      margin: 0 auto;
+      width: 400px;
+      max-width: 100%;
+    }
+  }
+  &__nav-title {
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      font-size: 16px;
+      transition: color .3s ease;
+      @include hover {
+        color: var(--primary);
       }
     }
   }

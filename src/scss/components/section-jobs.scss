@@ -1,0 +1,138 @@
+.section-jobs {
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    flex: 1;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 80px;
+    @include laptop {
+      grid-template-columns: 1fr;
+    }
+    @include laptop-min {
+      margin-top: 60px;
+    }
+    @include tablet {
+      margin-top: 40px;
+    }
+    @include tablet-min {
+      margin-top: 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: white;
+    padding: 20px;
+  }
+  &__item-title {
+    margin-bottom: 20px;
+  }
+  &__item-head {
+    @include flex-between;
+    gap: 10px;
+    row-gap: 15px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    @include tablet-min {
+      align-items: start;
+      flex-direction: column-reverse;
+    }
+  }
+  &__item-salary {
+    margin: 0;
+  }
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+
+    li {
+      padding: 6px 0px;
+      @include tablet-min {
+        padding: 3px 0px;
+      }
+    }
+  }
+  &__item-tag {
+    padding: 10px;
+    background: rgba(237, 110, 0, 0.2);
+    border-radius: 10px;
+    flex-shrink: 0
+  }
+  &__item-bottom {
+    @include flex-between;
+    gap: 15px;
+    margin-top: 15px;
+    @include tablet-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__item-btn {
+    min-width: 225px;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__item-date {
+    font-size: 16px;
+  }
+  &__reklam {
+    position: sticky;
+    top: 20px;
+    width: 480px;
+    border-radius: 16px;
+    background-color: var(--wild);
+    @include laptop {
+      width: 420px;
+    }
+    @include laptop-middle {
+      width: 350px;
+    }
+    @include laptop-min {
+      width: 100%;
+      position: static;
+    }
+  }
+  &__reklam-body {
+    padding: 40px;
+    @include laptop {
+      padding: 20px;
+    }
+  }
+  &__reklam-title {
+    margin-bottom: 20px;
+  }
+  &__reklam-content {
+    margin: 0;
+  }
+  &__reklam-picture {
+    display: block;
+    max-width: 100%;
+
+    @include laptop-min {
+      width: 480px;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
