@@ -81,7 +81,7 @@ export default function select() {
             item.style.display = "none";
           }
 
-          const unequal = document.querySelectorAll(
+          const unequal = body.querySelectorAll(
             '*[style*="display: none"]'
           ).length;
 

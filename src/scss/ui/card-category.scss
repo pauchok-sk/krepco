@@ -13,6 +13,7 @@
   @include tablet-min {
     padding: 10px;
     border-radius: 10px;
+    aspect-ratio: 1/0.85;
   }
 
   &._zumthor {

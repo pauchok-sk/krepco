@@ -633,7 +633,7 @@
                         const notFound = select.querySelector(".select-not-found");
                         const value = item.dataset.value.toLowerCase();
                         if (value.includes(inputValue)) item.style.display = "block"; else item.style.display = "none";
-                        const unequal = document.querySelectorAll('*[style*="display: none"]').length;
+                        const unequal = body.querySelectorAll('*[style*="display: none"]').length;
                         if (unequal === items.length) {
                             if (!notFound) {
                                 const div = document.createElement("div");

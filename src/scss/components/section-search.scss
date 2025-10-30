@@ -31,7 +31,7 @@
     }
     @include laptop-min {
       grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 0;
+      margin-bottom: 30px;
     }
     @include tablet {
       grid-template-columns: repeat(2, 1fr);

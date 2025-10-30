@@ -59,6 +59,12 @@
     position: relative;
     flex: 1;
 
+    @include tablet-min {
+      padding: 10px;
+      border-radius: 16px;
+      background-color: white;
+    }
+
     &:not(:last-child) {
       padding-right: 25px;
       @include laptop-middle {
