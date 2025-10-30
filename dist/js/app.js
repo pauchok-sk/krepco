@@ -393,12 +393,20 @@
         if (maps.length) maps.forEach(map => {
             const center = JSON.parse(map.dataset.center);
             const zoom = Number(map.dataset.zoom);
+            const iconHref = map.dataset.icon;
+            let objectMark = {};
+            if (iconHref) objectMark = {
+                iconLayout: "default#image",
+                iconImageHref: iconHref,
+                iconImageSize: [ 50, 50 ],
+                iconImageOffset: [ -25, -35 ]
+            };
             function init() {
                 const htmlMap = new ymaps.Map(map, {
                     center,
                     zoom
                 });
-                const placemark = new ymaps.Placemark(center, {}, {});
+                const placemark = new ymaps.Placemark(center, {}, objectMark);
                 htmlMap.geoObjects.add(placemark);
                 htmlMap.controls.remove("geolocationControl");
                 htmlMap.controls.remove("searchControl");

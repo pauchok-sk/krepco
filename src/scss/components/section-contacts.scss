@@ -1,0 +1,223 @@
+.section-contacts {
+  &__nav {
+    @include flex-between;
+    margin-bottom: 60px;
+
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+  }
+  &__btn {
+    @include tablet-min {
+      display: none;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 440px;
+    flex-shrink: 0;
+    @include laptop-middle {
+      gap: 25px;
+      width: 355px;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      gap: 15px;
+    }
+  }
+  &__info-tel {
+    font-size: 24px;
+    line-height: 167%;
+    margin: 0;
+
+    @include laptop-middle {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+    @include tablet-min {
+      font-size: 16px;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__info-title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 133%;
+    @include laptop-middle {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+    @include tablet-min {
+      font-size: 16px;
+    }
+  }
+  &__info-content {
+    font-size: 20px;
+    line-height: 167%;
+    margin: 0;
+    max-width: 450px;
+
+    @include laptop-middle {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__map {
+    flex: 0 1 980px;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 400px;
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      min-height: 350px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include laptop-min {
+      margin-top: 30px;
+      gap: 20px;
+    }
+  }
+  &__grid-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-color: white;
+
+    transition:
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      border-color: var(--primary);
+    }
+    @include tablet {
+      grid-column: 2 span;
+      flex-wrap: wrap;
+      gap: 30px;
+      row-gap: 20px;
+    }
+    @include tablet-min {
+      padding: 20px 16px;
+    }
+
+    &._big {
+      grid-column: 2 span;
+    }
+  }
+  &__grid-title {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__grid-content {
+    font-size: 24px;
+    line-height: 167%;
+    margin: 0;
+
+    @include desktop {
+      font-size: 20px
+    }
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+
+      &[href^="mailto:"] {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+  &__grid-download {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    img {
+      display: block;
+      width: 20px;
+      flex-shrink: 0;
+    }
+  }
+  &__grid-img {
+    display: block;
+    width: 405px;
+    @include laptop {
+      width: 300px;
+    }
+    @include tablet {
+      width: 200px;
+    }
+  }
+}
