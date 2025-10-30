@@ -8990,13 +8990,14 @@ body>footer::before {
   }
   .section-about__adv-icon {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     width: 30px;
     height: 30px
   }
   .section-about__adv-title {
-    margin: 0 0 12px 0
+    margin: 0 0 12px 0;
+    padding-right: 40px
   }
   .section-about__adv-content {
     font-size: 15px;
