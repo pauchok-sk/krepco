@@ -676,8 +676,8 @@
                 slidesPerView: 2,
                 spaceBetween: 10,
                 navigation: {
-                    prevEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._prev"),
-                    nextEl: slider.closest(".section-switcher__tab-wrapper").querySelector(".section-switcher__slider-btn._next")
+                    prevEl: slider.closest(".section-switcher__tab-wrapper")?.querySelector(".section-switcher__slider-btn._prev"),
+                    nextEl: slider.closest(".section-switcher__tab-wrapper")?.querySelector(".section-switcher__slider-btn._next")
                 },
                 breakpoints: {
                     1500: {
@@ -695,6 +695,15 @@
                     576: {
                         slidesPerView: 3,
                         spaceBetween: 10
+                    }
+                },
+                on: {
+                    touchStart: function(swiper, event) {
+                        const isProductSlider = event.target.closest(".card-product__slider");
+                        if (isProductSlider) swiper.allowTouchMove = false;
+                    },
+                    touchEnd: function(swiper) {
+                        swiper.allowTouchMove = true;
                     }
                 }
             });
@@ -845,14 +854,14 @@
             });
         }
         const recSliders = document.querySelectorAll(".section-recommendation__slider");
-        if (recSliders.length) recSliders.forEach((slider, index) => {
+        if (recSliders.length) recSliders.forEach(slider => {
             new Swiper(slider, {
                 speed: 700,
                 slidesPerView: "auto",
                 spaceBetween: 10,
                 navigation: {
-                    prevEl: slider.closest(".section-recommendation").querySelector(".slider-btn._prev"),
-                    nextEl: slider.closest(".section-recommendation").querySelector(".slider-btn._next")
+                    prevEl: slider.closest(".section-recommendation")?.querySelector(".slider-btn._prev"),
+                    nextEl: slider.closest(".section-recommendation")?.querySelector(".slider-btn._next")
                 },
                 breakpoints: {
                     1540: {

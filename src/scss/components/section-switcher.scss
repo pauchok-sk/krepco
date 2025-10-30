@@ -1,8 +1,11 @@
 .section-switcher {
   &__tab-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+    overflow: hidden; 
+    @media (min-width: 768px) {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
     @include laptop-middle {
       padding: 0 10px;
     }
@@ -52,11 +55,10 @@
     }
   }
   &__slider {
-    flex: 1;
-    margin: 0 20px;
-    @include tablet {
-      margin: 0;
-    }
+  //  margin: 0 20px;
+  @include desktop {
+    overflow: visible !important;
+  }
   }
   &__slide {
     box-sizing: border-box;

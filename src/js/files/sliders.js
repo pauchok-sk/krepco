@@ -30,10 +30,10 @@ export default function sliders() {
         navigation: {
           prevEl: slider
             .closest(".section-switcher__tab-wrapper")
-            .querySelector(".section-switcher__slider-btn._prev"),
+            ?.querySelector(".section-switcher__slider-btn._prev"),
           nextEl: slider
             .closest(".section-switcher__tab-wrapper")
-            .querySelector(".section-switcher__slider-btn._next"),
+            ?.querySelector(".section-switcher__slider-btn._next"),
         },
         breakpoints: {
           1500: {
@@ -51,6 +51,20 @@ export default function sliders() {
           576: {
             slidesPerView: 3,
             spaceBetween: 10,
+          },
+        },
+        on: {
+          touchStart: function (swiper, event) {
+            // Проверяем, является ли цель дочерним слайдером или его элементом
+            const isProductSlider = event.target.closest(
+              ".card-product__slider"
+            );
+            if (isProductSlider) {
+              swiper.allowTouchMove = false;
+            }
+          },
+          touchEnd: function (swiper) {
+            swiper.allowTouchMove = true;
           },
         },
       });
@@ -235,7 +249,7 @@ export default function sliders() {
   );
 
   if (recSliders.length) {
-    recSliders.forEach((slider, index) => {
+    recSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 700,
         slidesPerView: "auto",
@@ -243,10 +257,10 @@ export default function sliders() {
         navigation: {
           prevEl: slider
             .closest(".section-recommendation")
-            .querySelector(".slider-btn._prev"),
+            ?.querySelector(".slider-btn._prev"),
           nextEl: slider
             .closest(".section-recommendation")
-            .querySelector(".slider-btn._next"),
+            ?.querySelector(".slider-btn._next"),
         },
         breakpoints: {
           1540: {
