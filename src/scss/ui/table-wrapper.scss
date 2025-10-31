@@ -1,0 +1,88 @@
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 -30px;
+  padding: 0 30px;
+
+  @include tablet {
+    margin: 0 -20px;
+    padding: 0 20px;
+  }
+  table {
+    border: 1px solid var(--iron);
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    min-width: 1120px;
+    @include tablet-min {
+      width: 880px;
+      font-size: 12px;
+    }
+  }
+  thead {
+    display: block;
+    border-bottom: 1px solid var(--iron);
+  }
+
+  tr {
+    display: flex;
+    transition: background-color 0.3s ease;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--iron);
+    }
+
+    @include hover {
+      background-color: var(--athens);
+    }
+  }
+  th {
+    background-color: var(--athens);
+  }
+  th,
+  td {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    flex-shrink: 0;
+
+    margin: 0;
+    font-weight: 400;
+    text-align: right;
+    padding: 15px 10px;
+    flex: 1;
+
+    transition: background-color 0.3s ease;
+
+    @include tablet-min {
+      padding: 10px 5px;
+    }
+
+    &:first-child {
+      flex: 0 1 130px;
+      background-color: var(--athens);
+      @include tablet-min {
+        flex-basis: 100px;
+      }
+    }
+    &:last-child {
+      flex: 0 1 63px;
+      @include tablet-min {
+        flex-basis: 50px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--iron);
+    }
+
+    &.fill {
+      background-color: var(--athens);
+    }
+  }
+  tbody {
+    display: block;
+  }
+}

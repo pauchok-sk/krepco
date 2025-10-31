@@ -168,7 +168,7 @@
           color: var(--black);
           text-decoration: underline !important;
 
-          transition: color .3s ease;
+          transition: color 0.3s ease;
 
           @include hover {
             color: var(--primary);
@@ -301,8 +301,8 @@
           width: 12px;
           height: 12px;
           margin-top: 8px;
-          
-          background: url('@img/figure.svg') center / 100% auto no-repeat;
+
+          background: url("@img/figure.svg") center / 100% auto no-repeat;
           @include tablet {
             margin-top: 6px;
           }
@@ -312,5 +312,149 @@
   }
   &__img {
     display: block;
+  }
+  &__single {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__single-content {
+    flex: 0 1 990px;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__single-gallery {
+    width: 350px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include laptop-min {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+  &__single-gallery-item {
+    @include flex-center;
+    width: 100%;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: white;
+    @include laptop-min {
+      aspect-ratio: 1/1;
+    }
+
+    &:first-child {
+      aspect-ratio: 1/1;
+    }
+  }
+  &__sizes-table {
+    margin-top: 60px;
+    @include laptop {
+      margin-top: 40px;
+    }
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+  &__sizes-title {
+    margin-bottom: 60px;
+    @include laptop {
+      margin-bottom: 40px;
+    }
+    @include laptop-min {
+      margin-bottom: 25px;
+    }
+  }
+  &__sizes-table-wrapper {
+    @include laptop-min {
+      overflow-x: auto;
+      margin: 0 -30px;
+      padding: 0 30px;
+    }
+    table {
+      border: 1px solid var(--alto);
+      display: block;
+    }
+    thead {
+      display: block;
+      border-bottom: 1px solid var(--alto);
+    }
+    tbody {
+      display: block;
+    }
+    tr {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+      @include hover {
+        color: white;
+        background-color: #ffad28;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--alto);
+      }
+    }
+    th {
+      font-weight: 400;
+    }
+    th,
+    td {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
+      flex: 1;
+      padding: 5px;
+      border: none;
+
+      text-align: center;
+      font-size: 16px;
+
+      &:not(:last-child) {
+        border-right: 1px solid var(--alto);
+      }
+
+      &[colspan="9"] {
+        grid-column: 9 span;
+      }
+      &[colspan="8"] {
+        grid-column: 8 span;
+      }
+      &[colspan="7"] {
+        grid-column: 7 span;
+      }
+      &[colspan="6"] {
+        grid-column: 6 span;
+      }
+      &[colspan="5"] {
+        grid-column: 5 span;
+      }
+      &[colspan="4"] {
+        grid-column: 4 span;
+      }
+      &[colspan="3"] {
+        grid-column: 3 span;
+      }
+      &[colspan="2"] {
+        grid-column: 2 span;
+      }
+    }
   }
 }

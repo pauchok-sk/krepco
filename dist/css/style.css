@@ -1414,6 +1414,9 @@ textarea.input::-webkit-scrollbar-thumb {
 .content-big {
   font-size: 20px
 }
+.content-big *:first-child {
+  margin-top: 0
+}
 .content-big p {
   margin: 0
 }
@@ -1429,6 +1432,28 @@ textarea.input::-webkit-scrollbar-thumb {
 }
 .content-big ul:not(:last-child) {
   margin-bottom: 20px
+}
+.content-big h1 {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0
+}
+.content-big h1:not(:first-child) {
+  margin-top: 30px
+}
+.content-big h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 120%;
+  margin: 0 0 30px 0
+}
+.content-big h2:not(:first-child) {
+  margin-top: 30px
+}
+.content-big h3 {
+  font-weight: 900;
+  font-size: 24px;
+  margin: 30px 0
 }
 .breadcrumbs {
   margin: 56px 0 50px 0
@@ -1972,6 +1997,68 @@ a.breadcrumbs-item:hover {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100%
+}
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 -30px;
+  padding: 0 30px
+}
+.table-wrapper table {
+  border: 1px solid var(--iron);
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 15px;
+  width: 100%;
+  min-width: 1120px
+}
+.table-wrapper thead {
+  display: block;
+  border-bottom: 1px solid var(--iron)
+}
+.table-wrapper tr {
+  display: flex;
+  transition: background-color .3s ease
+}
+.table-wrapper tr:not(:last-child) {
+  border-bottom: 1px solid var(--iron)
+}
+.table-wrapper th {
+  background-color: var(--athens)
+}
+.table-wrapper td,
+.table-wrapper th {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  flex-shrink: 0;
+  margin: 0;
+  font-weight: 400;
+  text-align: right;
+  padding: 15px 10px;
+  flex: 1;
+  transition: background-color .3s ease
+}
+.table-wrapper td:first-child,
+.table-wrapper th:first-child {
+  flex: 0 1 130px;
+  background-color: var(--athens)
+}
+.table-wrapper td:last-child,
+.table-wrapper th:last-child {
+  flex: 0 1 63px
+}
+.table-wrapper td:not(:last-child),
+.table-wrapper th:not(:last-child) {
+  border-right: 1px solid var(--iron)
+}
+.table-wrapper td.fill,
+.table-wrapper th.fill {
+  background-color: var(--athens)
+}
+.table-wrapper tbody {
+  display: block
 }
 .modal {
   border-radius: 20px;
@@ -6610,6 +6697,111 @@ body>header._scroll {
 .section-encyclopedia__img {
   display: block
 }
+.section-encyclopedia__single {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px
+}
+.section-encyclopedia__single-content {
+  flex: 0 1 990px
+}
+.section-encyclopedia__single-gallery {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.section-encyclopedia__single-gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  border-radius: 16px;
+  background-color: #fff
+}
+.section-encyclopedia__single-gallery-item:first-child {
+  aspect-ratio: 1/1
+}
+.section-encyclopedia__sizes-table {
+  margin-top: 60px
+}
+.section-encyclopedia__sizes-title {
+  margin-bottom: 60px
+}
+.section-encyclopedia__sizes-table-wrapper table {
+  border: 1px solid var(--alto);
+  display: block
+}
+.section-encyclopedia__sizes-table-wrapper thead {
+  display: block;
+  border-bottom: 1px solid var(--alto)
+}
+.section-encyclopedia__sizes-table-wrapper tbody {
+  display: block
+}
+.section-encyclopedia__sizes-table-wrapper tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  transition: background-color .3s ease,color .3s ease
+}
+.section-encyclopedia__sizes-table-wrapper tr:not(:last-child) {
+  border-bottom: 1px solid var(--alto)
+}
+.section-encyclopedia__sizes-table-wrapper th {
+  font-weight: 400
+}
+.section-encyclopedia__sizes-table-wrapper td,
+.section-encyclopedia__sizes-table-wrapper th {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  flex: 1;
+  padding: 5px;
+  border: none;
+  text-align: center;
+  font-size: 16px
+}
+.section-encyclopedia__sizes-table-wrapper td:not(:last-child),
+.section-encyclopedia__sizes-table-wrapper th:not(:last-child) {
+  border-right: 1px solid var(--alto)
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="9"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="9"] {
+  grid-column: 9 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="8"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="8"] {
+  grid-column: 8 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="7"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="7"] {
+  grid-column: 7 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="6"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="6"] {
+  grid-column: 6 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="5"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="5"] {
+  grid-column: 5 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="4"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="4"] {
+  grid-column: 4 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="3"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="3"] {
+  grid-column: 3 span
+}
+.section-encyclopedia__sizes-table-wrapper td[colspan="2"],
+.section-encyclopedia__sizes-table-wrapper th[colspan="2"] {
+  grid-column: 2 span
+}
 body>footer {
   position: relative;
   padding-top: 255px;
@@ -7248,6 +7440,12 @@ body>footer::before {
   }
   .section-encyclopedia__content {
     margin-top: 60px
+  }
+  .section-encyclopedia__sizes-table {
+    margin-top: 40px
+  }
+  .section-encyclopedia__sizes-title {
+    margin-bottom: 40px
   }
   .footer__nav-item {
     width: 185px
@@ -8236,6 +8434,32 @@ body>footer::before {
     flex: none;
     width: 100%
   }
+  .section-encyclopedia__single {
+    flex-wrap: wrap
+  }
+  .section-encyclopedia__single-content {
+    flex: none;
+    width: 100%
+  }
+  .section-encyclopedia__single-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
+  }
+  .section-encyclopedia__single-gallery-item {
+    aspect-ratio: 1/1
+  }
+  .section-encyclopedia__sizes-table {
+    margin-top: 30px
+  }
+  .section-encyclopedia__sizes-title {
+    margin-bottom: 25px
+  }
+  .section-encyclopedia__sizes-table-wrapper {
+    overflow-x: auto;
+    margin: 0 -30px;
+    padding: 0 30px
+  }
   .footer__head {
     flex-wrap: wrap;
     gap: 35px
@@ -8398,6 +8622,23 @@ body>footer::before {
   .content-big ul:not(:last-child) {
     margin-bottom: 16px
   }
+  .content-big h1 {
+    font-size: 26px
+  }
+  .content-big h1:not(:first-child) {
+    margin-top: 20px
+  }
+  .content-big h2 {
+    font-size: 22px;
+    margin-bottom: 20px
+  }
+  .content-big h2:not(:first-child) {
+    margin-top: 20px
+  }
+  .content-big h3 {
+    font-size: 18px;
+    margin: 20px 0
+  }
   .breadcrumbs {
     margin: 45px 0 15px 0
   }
@@ -8466,6 +8707,10 @@ body>footer::before {
   }
   .card-team__list {
     font-size: 15px
+  }
+  .table-wrapper {
+    margin: 0 -20px;
+    padding: 0 20px
   }
   body>header {
     padding: 0;
@@ -9224,6 +9469,10 @@ body>footer::before {
   .section-encyclopedia__main-content ul li::before {
     margin-top: 6px
   }
+  .section-encyclopedia__single-gallery {
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px
+  }
   .footer__head {
     margin-bottom: 50px
   }
@@ -9408,6 +9657,22 @@ body>footer::before {
   }
   .switcher__switch._right::before {
     left: calc(100% - 30px)
+  }
+  .table-wrapper table {
+    width: 880px;
+    font-size: 12px
+  }
+  .table-wrapper td,
+  .table-wrapper th {
+    padding: 10px 5px
+  }
+  .table-wrapper td:first-child,
+  .table-wrapper th:first-child {
+    flex-basis: 100px
+  }
+  .table-wrapper td:last-child,
+  .table-wrapper th:last-child {
+    flex-basis: 50px
   }
   .modal {
     padding: 40px 15px 20px 15px;
@@ -10059,6 +10324,9 @@ body>footer::before {
   .card-team__list a:hover {
     color: var(--primary)
   }
+  .table-wrapper tr:hover {
+    background-color: var(--athens)
+  }
   .modal__close:hover {
     color: var(--primary)
   }
@@ -10350,6 +10618,10 @@ body>footer::before {
   .section-encyclopedia__table a:hover {
     text-decoration: none
   }
+  .section-encyclopedia__sizes-table-wrapper tr:hover {
+    color: #fff;
+    background-color: #ffad28
+  }
   .footer__list a:hover {
     color: var(--primary)
   }
@@ -10518,6 +10790,9 @@ body>footer::before {
   }
   .card-team__list a:active {
     color: var(--primary)
+  }
+  .table-wrapper tr:active {
+    background-color: var(--athens)
   }
   .modal__close:active {
     color: var(--primary)
@@ -10809,6 +11084,10 @@ body>footer::before {
   }
   .section-encyclopedia__table a:active {
     text-decoration: none
+  }
+  .section-encyclopedia__sizes-table-wrapper tr:active {
+    color: #fff;
+    background-color: #ffad28
   }
   .footer__list a:active {
     color: var(--primary)
