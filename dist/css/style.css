@@ -6585,9 +6585,11 @@ body>header._scroll {
   display: block;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  transition: -webkit-filter .4s ease,-webkit-transform .4s ease;
-  transition: filter .4s ease,transform .4s ease;
-  transition: filter .4s ease,transform .4s ease,-webkit-filter .4s ease,-webkit-transform .4s ease
+  opacity: .3;
+  max-width: 60px;
+  transition: opacity .4s ease,-webkit-filter .4s ease,-webkit-transform .4s ease;
+  transition: filter .4s ease,transform .4s ease,opacity .4s ease;
+  transition: filter .4s ease,transform .4s ease,opacity .4s ease,-webkit-filter .4s ease,-webkit-transform .4s ease
 }
 .section-encyclopedia__search {
   margin-top: 75px
@@ -9436,10 +9438,6 @@ body>footer::before {
   .section-encyclopedia__item {
     width: 150px
   }
-  .section-encyclopedia__item::before {
-    -webkit-transform: rotate(45deg)!important;
-    transform: rotate(45deg)!important
-  }
   .section-encyclopedia__item img {
     width: 30px
   }
@@ -10610,7 +10608,8 @@ body>footer::before {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     -webkit-transform: scale(1.2);
-    transform: scale(1.2)
+    transform: scale(1.2);
+    opacity: 1
   }
   .section-encyclopedia__table.table-info .cell a:hover {
     color: var(--primary)
@@ -11077,7 +11076,8 @@ body>footer::before {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     -webkit-transform: scale(1.2);
-    transform: scale(1.2)
+    transform: scale(1.2);
+    opacity: 1
   }
   .section-encyclopedia__table.table-info .cell a:active {
     color: var(--primary)

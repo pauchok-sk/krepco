@@ -62,6 +62,7 @@
       img {
         filter: grayscale(0%);
         transform: scale(1.2);
+        opacity: 1;
       }
     }
 
@@ -88,18 +89,20 @@
 
       transition: transform 0.4s ease;
 
-      @include tablet {
-        transform: rotate(45deg) !important;
-      }
+      // @include tablet {
+      //   transform: rotate(45deg) !important;
+      // }
     }
 
     img {
       display: block;
       filter: grayscale(100%);
+      opacity: 0.3;
+      max-width: 60px;
 
       transition:
         filter 0.4s ease,
-        transform 0.4s ease;
+        transform 0.4s ease, opacity 0.4s ease;
 
       @include tablet {
         width: 30px;
