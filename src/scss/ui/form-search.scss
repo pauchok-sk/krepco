@@ -16,6 +16,9 @@
       transform: translateY(0);
     }
   }
+  &._gray {
+    border-color: var(--alto);
+  }
 
   &__btn {
     cursor: pointer;
