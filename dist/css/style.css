@@ -8516,9 +8516,6 @@ body>footer::before {
     height: 48px;
     border-radius: 5px
   }
-  .section-recommendation__slide {
-    width: 155px!important
-  }
   .section-search__title {
     margin-bottom: 30px
   }
