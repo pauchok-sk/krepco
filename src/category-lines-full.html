@@ -1703,6 +1703,7 @@
                 </div>
               </div>
               <div class="section-shop__navigation">
+                <button class="btn section-shop__btn-more">Показать ещё</button>
                 <div class="pagination">
                   <a href="#" class="pagination-arrow">
                     <svg>
@@ -1713,6 +1714,7 @@
                   </a>
                   <div class="pagination-item _active">1</div>
                   <a href="#" class="pagination-item">2</a>
+                  <div class="pagination-item">...</div>
                   <a href="#" class="pagination-item">3</a>
                   <a href="#" class="pagination-arrow">
                     <svg>
@@ -1722,17 +1724,14 @@
                     </svg>
                   </a>
                 </div>
-                <button class="btn section-shop__btn-more">Показать ещё</button>
               </div>
             </div>
           </div>
         </div>
         <div class="section-shop__filters-overlay" id="filters-overlay"></div>
       </section>
-      @@include('html/components/section-recommendation.html',{ "title":"Хиты
-      продаж" })
-      @@include('html/components/section-recommendation.html',{"title":"Вы
-      недавно посмотрели" }) @@include('html/components/section-faq.html')
+      @@include('html/components/section-recommendation.html',{ "title":"Хиты продаж" })
+      @@include('html/components/section-recommendation.html',{"title":"Вы недавно посмотрели" }) @@include('html/components/section-faq.html')
       @@include('html/components/section-connect.html')
     </main>
     @@include('html/components/modals.html')
