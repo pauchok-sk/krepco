@@ -8806,15 +8806,11 @@ body>footer::before {
   .section-catalog__grid {
     grid-template-columns: repeat(2,1fr)
   }
-  .section-switcher__tab-wrapper {
-    overflow: hidden
-  }
   .section-switcher__slider-btn {
     display: none
   }
   .section-switcher__slider {
-    margin: 0;
-    overflow: visible!important
+    margin: 0
   }
   .section-fasteners__slider-wrapper .swiper-slide {
     width: 265px!important

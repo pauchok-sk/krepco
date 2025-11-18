@@ -6,9 +6,6 @@
       display: flex;
       align-items: center;
     }
-    @include tablet {
-      overflow: hidden;
-    }
   }
   &__slider-btn {
     cursor: pointer;
@@ -78,7 +75,6 @@
     }
     @include tablet {
       margin: 0;
-      overflow: visible !important;
     }
   }
   &__slide {
