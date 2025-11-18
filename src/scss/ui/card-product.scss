@@ -68,6 +68,8 @@
   &__slider {
     width: 100%;
     height: fit-content !important;
+    display: block;
+    position: relative;
   }
   &__slide {
     display: flex !important;
@@ -75,6 +77,7 @@
     justify-content: center;
     height: auto !important;
     aspect-ratio: 1/0.85;
+    min-height: 0;
 
     @include tablet {
       aspect-ratio: 1/0.7;
@@ -87,6 +90,7 @@
       object-fit: contain;
       object-position: center;
       transform: scale(1) !important;
+      width: 100%;
     }
   }
   &__slider-pagination {

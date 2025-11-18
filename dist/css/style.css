@@ -1013,14 +1013,17 @@ textarea.input::-webkit-scrollbar-thumb {
   width: 100%;
   height: -webkit-fit-content!important;
   height: -moz-fit-content!important;
-  height: fit-content!important
+  height: fit-content!important;
+  display: block;
+  position: relative
 }
 .card-product__slide {
   display: flex!important;
   align-items: center;
   justify-content: center;
   height: auto!important;
-  aspect-ratio: 1/.85
+  aspect-ratio: 1/.85;
+  min-height: 0
 }
 .card-product__slide img {
   display: block;
@@ -1031,7 +1034,8 @@ textarea.input::-webkit-scrollbar-thumb {
   -o-object-position: center;
   object-position: center;
   -webkit-transform: scale(1)!important;
-  transform: scale(1)!important
+  transform: scale(1)!important;
+  width: 100%
 }
 .card-product__slider-pagination {
   display: flex;
