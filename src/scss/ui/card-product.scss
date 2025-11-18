@@ -67,6 +67,7 @@
   }
   &__slider {
     width: 100%;
+    height: fit-content !important;
   }
   &__slide {
     display: flex !important;

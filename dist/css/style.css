@@ -1010,7 +1010,10 @@ textarea.input::-webkit-scrollbar-thumb {
   background-color: var(--red-light)
 }
 .card-product__slider {
-  width: 100%
+  width: 100%;
+  height: -webkit-fit-content!important;
+  height: -moz-fit-content!important;
+  height: fit-content!important
 }
 .card-product__slide {
   display: flex!important;
