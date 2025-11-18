@@ -1,11 +1,13 @@
 .section-switcher {
-  overflow: hidden;
   &__tab-wrapper {
     position: relative;
     @media (min-width: 768px) {
       position: relative;
       display: flex;
       align-items: center;
+    }
+    @include tablet {
+      overflow: hidden;
     }
   }
   &__slider-btn {

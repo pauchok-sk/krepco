@@ -1021,6 +1021,7 @@ textarea.input::-webkit-scrollbar-thumb {
 }
 .card-product__slide img {
   display: block;
+  height: auto;
   max-height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
@@ -3093,9 +3094,6 @@ body>header._scroll {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   gap: 25px
-}
-.section-switcher {
-  overflow: hidden
 }
 .section-switcher__tab-wrapper {
   position: relative
@@ -8804,6 +8802,9 @@ body>footer::before {
   }
   .section-catalog__grid {
     grid-template-columns: repeat(2,1fr)
+  }
+  .section-switcher__tab-wrapper {
+    overflow: hidden
   }
   .section-switcher__slider-btn {
     display: none
