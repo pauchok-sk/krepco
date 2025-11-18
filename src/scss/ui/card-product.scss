@@ -70,6 +70,9 @@
     height: fit-content !important;
     display: block;
     position: relative;
+    @include mobile {
+      height: 110px !important;
+    }
   }
   &__slide {
     display: flex !important;
@@ -82,9 +85,9 @@
     @include tablet {
       aspect-ratio: 1/0.7;
     }
-    @include tablet-min {
+    @include mobile {
       aspect-ratio: inherit;
-      height: 110px !important;
+      height: 100% !important;
     }
 
     img {

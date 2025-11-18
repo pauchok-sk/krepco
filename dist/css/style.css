@@ -9588,10 +9588,6 @@ body>footer::before {
   .card-product__top {
     min-height: 20px
   }
-  .card-product__slide {
-    aspect-ratio: inherit;
-    height: 110px!important
-  }
   .card-product__title {
     font-size: 12px
   }
@@ -10170,6 +10166,13 @@ body>footer::before {
   }
 }
 @media (max-width:479px) {
+  .card-product__slider {
+    height: 110px!important
+  }
+  .card-product__slide {
+    aspect-ratio: inherit;
+    height: 100%!important
+  }
   .card-product-line .card-product__title {
     font-size: 10px;
     margin-bottom: 0
