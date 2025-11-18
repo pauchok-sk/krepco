@@ -80,7 +80,9 @@
     min-height: 0;
 
     @include tablet {
-      aspect-ratio: 1/0.7;
+      // aspect-ratio: 1/0.7;
+      aspect-ratio: inherit;
+      height: 110px;
     }
 
     img {

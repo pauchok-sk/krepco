@@ -8567,7 +8567,8 @@ body>footer::before {
     font-size: 8px
   }
   .card-product__slide {
-    aspect-ratio: 1/.7
+    aspect-ratio: inherit;
+    height: 110px
   }
   .card-product__title {
     font-size: 14px
