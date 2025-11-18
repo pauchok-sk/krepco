@@ -1025,7 +1025,9 @@ textarea.input::-webkit-scrollbar-thumb {
   -o-object-fit: contain;
   object-fit: contain;
   -o-object-position: center;
-  object-position: center
+  object-position: center;
+  -webkit-transform: scale(1)!important;
+  transform: scale(1)!important
 }
 .card-product__slider-pagination {
   display: flex;
@@ -3092,8 +3094,11 @@ body>header._scroll {
   grid-template-columns: repeat(6,1fr);
   gap: 25px
 }
-.section-switcher__tab-wrapper {
+.section-switcher {
   overflow: hidden
+}
+.section-switcher__tab-wrapper {
+  position: relative
 }
 .section-switcher__slider-btn {
   cursor: pointer;
@@ -3104,6 +3109,12 @@ body>header._scroll {
   color: var(--primary);
   transition: color .3s ease,opacity .3s ease
 }
+.section-switcher__slider-btn._prev {
+  left: -15px
+}
+.section-switcher__slider-btn._next {
+  right: -15px
+}
 .section-switcher__slider-btn.swiper-button-disabled {
   color: var(--dark);
   pointer-events: none
@@ -3111,6 +3122,9 @@ body>header._scroll {
 .section-switcher__slider-btn svg {
   width: 100%;
   height: 100%
+}
+.section-switcher__slider {
+  margin: 0 20px
 }
 .section-switcher__slide {
   box-sizing: border-box;
@@ -7074,6 +7088,12 @@ body>footer::before {
     display: flex;
     align-items: center
   }
+  .section-switcher__slider-btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+  }
   .section-delivery__adv-slider .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -7160,18 +7180,6 @@ body>footer::before {
   }
 }
 @media (min-width:1200px) {
-  .section-switcher__slider-btn {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%)
-  }
-  .section-switcher__slider-btn._prev {
-    left: -15px
-  }
-  .section-switcher__slider-btn._next {
-    right: -15px
-  }
   .section-production__item:nth-child(1) {
     grid-area: 1/1/3/2
   }
@@ -7238,9 +7246,6 @@ body>footer::before {
   }
   .section-catalog__grid {
     grid-template-columns: repeat(5,1fr)
-  }
-  .section-switcher__slider {
-    overflow: visible!important
   }
   .section-popular__grid {
     grid-template-columns: repeat(5,1fr)
@@ -7601,8 +7606,14 @@ body>footer::before {
   .section-about__adv-item:not(:last-child) {
     padding-right: 20px
   }
-  .section-switcher__tab-wrapper {
-    padding: 0 10px
+  .section-switcher__slider-btn._prev {
+    left: 0
+  }
+  .section-switcher__slider-btn._next {
+    right: 0
+  }
+  .section-switcher__slider {
+    margin: 0 35px
   }
   .section-fasteners__slider-wrapper .swiper-slide {
     width: 390px!important
@@ -7972,6 +7983,15 @@ body>footer::before {
   }
   .section-catalog__grid {
     grid-template-columns: repeat(3,1fr)
+  }
+  .section-switcher__slider-btn._prev {
+    left: -15px
+  }
+  .section-switcher__slider-btn._next {
+    right: -15px
+  }
+  .section-switcher__slider {
+    margin: 0 10px
   }
   .section-popular__grid {
     grid-template-columns: repeat(3,1fr)
@@ -8785,11 +8805,12 @@ body>footer::before {
   .section-catalog__grid {
     grid-template-columns: repeat(2,1fr)
   }
-  .section-switcher__tab-wrapper {
-    padding: 0
-  }
   .section-switcher__slider-btn {
     display: none
+  }
+  .section-switcher__slider {
+    margin: 0;
+    overflow: visible!important
   }
   .section-fasteners__slider-wrapper .swiper-slide {
     width: 265px!important

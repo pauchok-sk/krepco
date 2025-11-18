@@ -1,16 +1,11 @@
 .section-switcher {
+  overflow: hidden;
   &__tab-wrapper {
-    overflow: hidden; 
+    position: relative;
     @media (min-width: 768px) {
       position: relative;
       display: flex;
       align-items: center;
-    }
-    @include laptop-middle {
-      padding: 0 10px;
-    }
-    @include tablet {
-      padding: 0;
     }
   }
   &__slider-btn {
@@ -29,16 +24,33 @@
       opacity: 0.8;
     }
 
-    @media (min-width: 1200px) {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+    &._prev {
+      left: -15px;
+    }
+    &._next {
+      right: -15px;
+    }
+    @include laptop-middle {
+      &._prev {
+        left: 0px;
+      }
+      &._next {
+        right: 0px;
+      }
+    }
+    @include laptop-min {
       &._prev {
         left: -15px;
       }
       &._next {
         right: -15px;
       }
+    }
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
     @include tablet {
       display: none;
@@ -55,10 +67,17 @@
     }
   }
   &__slider {
-  //  margin: 0 20px;
-  @include desktop {
-    overflow: visible !important;
-  }
+    margin: 0 20px;
+    @include laptop-middle {
+      margin: 0 35px;
+    }
+    @include laptop-min {
+      margin: 0px 10px;
+    }
+    @include tablet {
+      margin: 0;
+      overflow: visible !important;
+    }
   }
   &__slide {
     box-sizing: border-box;
