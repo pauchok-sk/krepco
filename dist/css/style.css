@@ -370,6 +370,9 @@ body {
   background-color: rgba(235,110,3,.1);
   pointer-events: none
 }
+.btn-more {
+  margin: 0 auto 20px auto
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -383,7 +386,10 @@ body {
   right: 0;
   padding-top: 5px;
   overflow: hidden;
-  z-index: 10
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity .3s ease,visibility .3s ease
 }
 .dropdown-inside {
   width: -webkit-fit-content;
@@ -2554,6 +2560,9 @@ a.breadcrumbs-item:hover {
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
 }
+.burger__menu-list .list a {
+  padding-left: 15px
+}
 .burger__address {
   display: flex;
   align-items: center;
@@ -2912,7 +2921,7 @@ body>header._scroll {
 .header-search {
   position: relative;
   z-index: 10;
-  padding: 0 10px 10px 10px;
+  padding-bottom: 10px;
   box-shadow: 0 4px 10px 0 rgba(128,128,128,.1)
 }
 .section-hero {
@@ -7004,6 +7013,11 @@ body>footer::before {
   .btn-mob {
     display: none
   }
+  .btn-more {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    color: var(--primary)
+  }
   .section-shop__btn-more {
     background-color: var(--primary-light);
     border-color: var(--primary-light);
@@ -7011,6 +7025,11 @@ body>footer::before {
   }
 }
 @media (min-width:575px)and (any-hover:hover) {
+  .btn-more:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff
+  }
   .section-shop__btn-more:hover {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -7018,6 +7037,11 @@ body>footer::before {
   }
 }
 @media (min-width:575px)and (hover:none) {
+  .btn-more:active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff
+  }
   .section-shop__btn-more:active {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -7921,7 +7945,7 @@ body>footer::before {
     row-gap: 10px
   }
   .header__logo {
-    width: 25px
+    width: 135px
   }
   .header__catalog-btn {
     display: none
@@ -8719,10 +8743,13 @@ body>footer::before {
     box-shadow: none
   }
   .header__wrapper {
-    padding: 10px
+    padding: 10px 0
   }
   .header__catalog-btn span {
     display: none
+  }
+  .header__contacts {
+    margin-left: auto
   }
   .section-hero {
     margin-bottom: 25px
@@ -9503,6 +9530,9 @@ body>footer::before {
     border-radius: 6px;
     padding: 6px 12px
   }
+  .btn-more {
+    width: 100%
+  }
   .select-item {
     padding: 10px 15px
   }
@@ -9700,19 +9730,12 @@ body>footer::before {
     grid-template-columns: 1fr
   }
   .section-about__adv-item {
-    padding: 10px;
+    padding: 0;
     border-radius: 16px;
-    background-color: #fff
-  }
-  .section-about__adv-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px
+    background-color: rgba(0,0,0,0)
   }
   .section-about__adv-title {
-    margin: 0 0 12px 0;
+    margin: 10px 0 12px 0;
     padding-right: 40px
   }
   .section-about__adv-content {
@@ -10204,6 +10227,10 @@ body>footer::before {
   .btn-tag:hover {
     background-color: rgba(235,110,3,.1)
   }
+  .dropdown:hover .dropdown-body {
+    opacity: 1;
+    visibility: visible
+  }
   .dropdown-list a:hover {
     color: var(--primary)
   }
@@ -10671,6 +10698,10 @@ body>footer::before {
   }
   .btn-tag:active {
     background-color: rgba(235,110,3,.1)
+  }
+  .dropdown:active .dropdown-body {
+    opacity: 1;
+    visibility: visible
   }
   .dropdown-list a:active {
     color: var(--primary)

@@ -1,21 +1,12 @@
 .dropdown {
   position: relative;
 
-  // @media (min-width: 1023px) {
-  //   @include hover {
-  //     .dropdown-body {
-  //       max-height: 600px;
-  //       visibility: visible;
-  //     }
-  //   }
-  // }
-
-  // &._open {
-  //   .dropdown-body {
-  //     max-height: 600px;
-  //     visibility: visible;
-  //   }
-  // }
+  @include hover {
+    .dropdown-body {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   &-body {
     position: absolute;
@@ -23,12 +14,12 @@
     padding-top: 5px;
     overflow: hidden;
 
-    // visibility: hidden;
-    // max-height: 0px;
+    visibility: hidden;
+    opacity: 0;
 
     z-index: 10;
 
-    // transition: all 0.5s ease;
+    transition: opacity 0.3s ease, visibility .3s ease;
   }
   &-inside {
     width: fit-content;

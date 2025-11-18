@@ -85,6 +85,10 @@
             btnMinus.addEventListener("click", () => {
                 change("minus");
             });
+            input.addEventListener("change", e => {
+                const value = +e.target.value;
+                if (!value || value <= 0) input.value = 1;
+            });
             input.addEventListener("input", e => {
                 const value = +e.target.value;
                 if (value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
@@ -116,7 +120,7 @@
         const counters = document.querySelectorAll(".counter");
         if (counters.length) counters.forEach(counter => {
             const input = counter.querySelector(".counter__input");
-            const min = +input.min;
+            const min = 1;
             const max = +input.max;
             const btnPlus = counter.querySelector(".counter__btn._plus");
             const btnMinus = counter.querySelector(".counter__btn._minus");
@@ -127,6 +131,10 @@
             });
             btnMinus.addEventListener("click", () => {
                 change("minus");
+            });
+            input.addEventListener("change", e => {
+                const value = +e.target.value;
+                if (!value || value <= 0) input.value = 1;
             });
             input.addEventListener("input", e => {
                 const value = +e.target.value;
@@ -179,124 +187,6 @@
                 toggleBtn.classList.toggle("_active");
                 dropCatalog.classList.toggle("_open");
             });
-        }
-    }
-    function hide(target, duration = 200, showmore = 0) {
-        if (!target.classList.contains("_slide")) {
-            target.classList.add("_slide");
-            target.style.transitionProperty = "height, margin, padding";
-            target.style.transitionDuration = duration + "ms";
-            target.style.height = `${target.offsetHeight}px`;
-            target.offsetHeight;
-            target.style.overflow = "hidden";
-            target.style.height = showmore ? `${showmore}px` : `0px`;
-            target.style.paddingTop = 0;
-            target.style.paddingBottom = 0;
-            target.style.marginTop = 0;
-            target.style.marginBottom = 0;
-            window.setTimeout(() => {
-                target.hidden = !showmore ? true : false;
-                !showmore ? target.style.removeProperty("height") : null;
-                target.style.removeProperty("padding-top");
-                target.style.removeProperty("padding-bottom");
-                target.style.removeProperty("margin-top");
-                target.style.removeProperty("margin-bottom");
-                !showmore ? target.style.removeProperty("overflow") : null;
-                target.style.removeProperty("transition-duration");
-                target.style.removeProperty("transition-property");
-                target.classList.remove("_slide");
-                document.dispatchEvent(new CustomEvent("slideUpDone", {
-                    detail: {
-                        target
-                    }
-                }));
-            }, duration);
-        }
-    }
-    function show(target, duration = 200, showmore = 0) {
-        if (!target.classList.contains("_slide")) {
-            target.classList.add("_slide");
-            target.hidden = target.hidden ? false : null;
-            showmore ? target.style.removeProperty("height") : null;
-            let height = target.offsetHeight;
-            target.style.overflow = "hidden";
-            target.style.height = showmore ? `${showmore}px` : `0px`;
-            target.style.paddingTop = 0;
-            target.style.paddingBottom = 0;
-            target.style.marginTop = 0;
-            target.style.marginBottom = 0;
-            target.offsetHeight;
-            target.style.transitionProperty = "height, margin, padding";
-            target.style.transitionDuration = duration + "ms";
-            target.style.height = height + "px";
-            target.style.removeProperty("padding-top");
-            target.style.removeProperty("padding-bottom");
-            target.style.removeProperty("margin-top");
-            target.style.removeProperty("margin-bottom");
-            window.setTimeout(() => {
-                target.style.removeProperty("height");
-                target.style.removeProperty("overflow");
-                target.style.removeProperty("transition-duration");
-                target.style.removeProperty("transition-property");
-                target.classList.remove("_slide");
-                document.dispatchEvent(new CustomEvent("slideDownDone", {
-                    detail: {
-                        target
-                    }
-                }));
-            }, duration);
-        }
-    }
-    function dropdown() {
-        const dropdowns = document.querySelectorAll(".dropdown");
-        if (dropdowns.length) {
-            const bodies = document.querySelectorAll(".dropdown-body");
-            bodies.forEach(body => {
-                hide(body, 0);
-            });
-            if (window.matchMedia("(min-width: 1024px)").matches) dropdowns.forEach(drop => {
-                drop.addEventListener("mousemove", e => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                });
-                drop.addEventListener("mouseenter", e => {
-                    e.stopPropagation();
-                    const body = drop.querySelector(".dropdown-body");
-                    show(body);
-                });
-                drop.addEventListener("mouseleave", e => {
-                    e.stopPropagation();
-                    const body = drop.querySelector(".dropdown-body");
-                    hide(body);
-                    setTimeout(() => {
-                        if (!body.hasAttribute("hidden")) hide(body);
-                    }, 500);
-                });
-            }); else {
-                document.body.addEventListener("click", () => {
-                    const openDrop = document.querySelector(".dropdown._open");
-                    if (openDrop) {
-                        const body = openDrop.querySelector(".dropdown-body");
-                        openDrop.classList.remove("_open");
-                        hide(body);
-                    }
-                });
-                dropdowns.forEach(drop => {
-                    const btn = drop.querySelector(".dropdown-btn");
-                    const body = drop.querySelector(".dropdown-body");
-                    body.addEventListener("click", e => e.stopPropagation());
-                    btn.addEventListener("click", e => {
-                        e.stopPropagation();
-                        if (!drop.classList.contains("_open")) {
-                            drop.classList.add("_open");
-                            show(body);
-                        } else {
-                            drop.classList.remove("_open");
-                            hide(body);
-                        }
-                    });
-                });
-            }
         }
     }
     function filesChange() {
@@ -375,8 +265,26 @@
     }
     function inputmask() {
         const inputs = document.querySelectorAll('input[type="tel"]');
-        const im = new Inputmask("+7 (999) 999-99-99");
-        im.mask(inputs);
+        const im_seven = new Inputmask("+7 (999) 999-99-99");
+        const im_eight = new Inputmask("9 (999) 999-99-99");
+        inputs.forEach(input => {
+            input.addEventListener("focus", e => {
+                const value = e.target.value;
+                if (!value) input?.inputmask?.remove();
+            });
+            input.addEventListener("blur", e => {
+                const value = e.target.value;
+                if (!value) input.placeholder = "+7 (999) 999-99-99";
+            });
+            input.addEventListener("input", e => {
+                const value = e.target.value.replace(/\D/g, "");
+                if (value.length === 1) if (value[0] === "8") {
+                    e.preventDefault();
+                    im_eight.mask(input);
+                    return false;
+                } else im_seven.mask(input);
+            });
+        });
     }
     function jobModal() {
         const buttons = document.querySelectorAll("[data-job-btn]");
@@ -1248,7 +1156,6 @@
     }
     spoller();
     mediaAdaptive();
-    dropdown();
     inputmask();
     select_select();
     dropCatalog();

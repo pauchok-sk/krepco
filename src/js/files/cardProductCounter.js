@@ -22,6 +22,12 @@ export default function cardProductCounter() {
         change("minus");
       });
 
+      input.addEventListener("change", (e) => {
+        const value = +e.target.value;
+
+        if (!value || value <= 0) input.value = 1;
+      });
+
       input.addEventListener("input", (e) => {
         const value = +e.target.value;
 

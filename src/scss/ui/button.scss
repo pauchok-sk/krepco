@@ -197,7 +197,7 @@
 
   font-size: 16px;
 
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 
   @include hover {
     background-color: rgba(235, 110, 3, 0.1);
@@ -210,5 +210,22 @@
   &._active {
     background-color: rgba(235, 110, 3, 0.1);
     pointer-events: none;
+  }
+}
+
+.btn-more {
+  margin: 0 auto 20px auto;
+  @media (min-width: 575px) {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    color: var(--primary);
+    @include hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+  }
+  @include tablet-min {
+    width: 100%;
   }
 }

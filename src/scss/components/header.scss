@@ -214,7 +214,7 @@ body > header {
       row-gap: 10px;
     }
     @include tablet {
-      padding: 10px;
+      padding: 10px 0px;
     }
   }
   &__burger-btn {
@@ -250,7 +250,7 @@ body > header {
       width: 180px;
     }
     @include laptop-min {
-      width: 25px;
+      width: 135px;
     }
 
     picture,
@@ -331,6 +331,9 @@ body > header {
   &__contacts {
     @include laptop-middle {
       order: 5;
+    }
+    @include tablet {
+      margin-left: auto;
     }
   }
   &__tel {
@@ -458,7 +461,7 @@ body > header {
 .header-search {
   position: relative;
   z-index: 10;
-  padding: 0 10px 10px 10px;
+  padding-bottom: 10px;
   box-shadow: 0 4px 10px 0 rgba(128, 128, 128, 0.1);
   @media (min-width: 768px) {
     display: none;

@@ -4,13 +4,11 @@ export default function counter() {
   if (counters.length) {
     counters.forEach((counter) => {
       const input = counter.querySelector(".counter__input");
-      const min = +input.min;
+      const min = 1;
       const max = +input.max;
 
       const btnPlus = counter.querySelector(".counter__btn._plus");
-      const btnMinus = counter.querySelector(
-        ".counter__btn._minus"
-      );
+      const btnMinus = counter.querySelector(".counter__btn._minus");
 
       if (+input.value <= min) btnMinus.classList.add("_disabled");
       if (+input.value >= max) btnPlus.classList.add("_disabled");
@@ -20,6 +18,12 @@ export default function counter() {
       });
       btnMinus.addEventListener("click", () => {
         change("minus");
+      });
+
+      input.addEventListener("change", (e) => {
+        const value = +e.target.value;
+
+        if (!value || value <= 0) input.value = 1;
       });
 
       input.addEventListener("input", (e) => {
