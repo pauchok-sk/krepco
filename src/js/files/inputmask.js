@@ -14,17 +14,18 @@ export default function inputmask() {
         input.placeholder = "+7 (999) 999-99-99";
       }
     });
-    input.addEventListener("input", (e) => {
+    input.addEventListener("keydown", (e) => {
       const value = e.target.value.replace(/\D/g, "");
 
-      if (value.length === 1) {
-        if (value[0] === "8") {
-          e.preventDefault();
-          im_eight.mask(input);
-          return false;
-        } else {
-          im_seven.mask(input);
-        }
+      if (e.key === "8") {
+        im_eight.mask(input);
+      } else if (e.key !== "Backspace") {
+        im_seven.mask(input);
+      }
+
+      if (e.key === "Backspace" && (value === "7" || value === "8")) {
+        input?.inputmask?.remove();
+        input.value = "";
       }
     });
   });
