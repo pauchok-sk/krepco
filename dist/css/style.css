@@ -7892,6 +7892,13 @@ body>footer::before {
   .card-product__slide-switches {
     display: none
   }
+  .card-product__slider {
+    height: 150px!important
+  }
+  .card-product__slide {
+    aspect-ratio: inherit;
+    height: 100%!important
+  }
   .card-product__footer {
     flex-direction: column;
     gap: 10px
@@ -8565,9 +8572,6 @@ body>footer::before {
   .card-product__tag {
     padding: 5px;
     font-size: 8px
-  }
-  .card-product__slide {
-    aspect-ratio: 1/.7
   }
   .card-product__title {
     font-size: 14px
@@ -10168,10 +10172,6 @@ body>footer::before {
 @media (max-width:479px) {
   .card-product__slider {
     height: 110px!important
-  }
-  .card-product__slide {
-    aspect-ratio: inherit;
-    height: 100%!important
   }
   .card-product-line .card-product__title {
     font-size: 10px;

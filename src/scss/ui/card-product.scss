@@ -70,6 +70,9 @@
     display: block;
     position: relative;
     
+    @include laptop-min {
+      height: 150px !important;
+    }
     @include mobile {
       height: 110px !important;
     }
@@ -82,10 +85,7 @@
     aspect-ratio: 1/0.85;
     min-height: 0;
 
-    @include tablet {
-      aspect-ratio: 1/0.7;
-    }
-    @include mobile {
+    @include laptop-min {
       aspect-ratio: inherit;
       height: 100% !important;
     }
