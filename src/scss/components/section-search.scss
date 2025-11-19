@@ -1,6 +1,7 @@
 .section-search {
   &__title {
     margin-bottom: 50px;
+    font-weight: 700;
 
     @include tablet {
       margin-bottom: 30px;

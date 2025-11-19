@@ -83,11 +83,12 @@
       @include flex-between;
       gap: 15px;
 
-      font-size: 20px;
+      font-size: 18px;
+      // font-size: 20px;
 
-      @include laptop {
-        font-size: 18px;
-      }
+      // @include laptop {
+      //   font-size: 18px;
+      // }
       @include tablet {
         font-size: 16px;
       }

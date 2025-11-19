@@ -82,7 +82,8 @@
       align-items: start;
       gap: 20px;
 
-      font-size: 20px;
+      // font-size: 20px;
+      font-size: 18px;
       line-height: 120%;
 
       @include tablet {
@@ -392,11 +393,12 @@
     }
   }
   &__pickup-content {
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: 18px;
     margin: 0;
-    @include tablet {
-      font-size: 18px;
-    }
+    // @include tablet {
+    //   font-size: 18px;
+    // }
     @include tablet-min {
       font-size: 15px;
     }

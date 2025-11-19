@@ -920,7 +920,7 @@ textarea.input::-webkit-scrollbar-thumb {
   border-color: var(--givry)
 }
 .card-category__title {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   margin: 0 0 5px 0
 }
@@ -1064,7 +1064,7 @@ textarea.input::-webkit-scrollbar-thumb {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   margin: 10px 0 20px 0;
   transition: color .3s ease
@@ -1428,7 +1428,7 @@ textarea.input::-webkit-scrollbar-thumb {
   font-weight: 900
 }
 .content-big {
-  font-size: 20px
+  font-size: 18px
 }
 .content-big *:first-child {
   margin-top: 0
@@ -1437,7 +1437,7 @@ textarea.input::-webkit-scrollbar-thumb {
   margin: 0
 }
 .content-big p:not(:last-child) {
-  margin-bottom: 20px
+  margin-bottom: 10px
 }
 .content-big strong {
   font-weight: 900
@@ -1447,7 +1447,7 @@ textarea.input::-webkit-scrollbar-thumb {
   padding-left: 30px
 }
 .content-big ul:not(:last-child) {
-  margin-bottom: 20px
+  margin-bottom: 10px
 }
 .content-big h1 {
   font-weight: 900;
@@ -1472,7 +1472,7 @@ textarea.input::-webkit-scrollbar-thumb {
   margin: 30px 0
 }
 .breadcrumbs {
-  margin: 56px 0 50px 0
+  margin: 40px 0
 }
 .breadcrumbs+section {
   margin-top: 0!important;
@@ -1654,6 +1654,7 @@ a.breadcrumbs-item:hover {
   font-weight: 900;
   font-size: 16px;
   margin: 0 0 5px 0;
+  font-weight: 700;
   padding-right: 30px
 }
 .card-search__count {
@@ -3023,14 +3024,7 @@ body>header._scroll {
   margin-bottom: 20px
 }
 .section-about__content {
-  font-size: 20px;
   max-width: 1010px
-}
-.section-about__content p {
-  margin: 0
-}
-.section-about__content p:not(:last-child) {
-  margin-bottom: 20px
 }
 .section-about__adv {
   display: flex;
@@ -3270,7 +3264,7 @@ body>header._scroll {
   display: flex;
   align-items: start;
   gap: 20px;
-  font-size: 20px
+  font-size: 18px
 }
 .section-delivery__list li svg {
   flex-shrink: 0;
@@ -3809,7 +3803,7 @@ body>header._scroll {
   margin-bottom: 20px
 }
 .section-connect__head-content {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 40px 0
 }
 .section-connect__body {
@@ -3830,7 +3824,6 @@ body>header._scroll {
   margin-bottom: 50px
 }
 .section-connect__content {
-  font-size: 20px;
   margin: 0 0 30px 0
 }
 .section-connect__guarantee {
@@ -3952,8 +3945,6 @@ body>header._scroll {
   margin-top: 40px
 }
 .section-shop__sidebar {
-  position: sticky;
-  top: 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -4409,7 +4400,8 @@ body>header._scroll {
 }
 .section-shop__product-count {
   font-size: 16px;
-  color: var(--dusty)
+  color: var(--dusty);
+  margin-bottom: 7px
 }
 .section-shop__product-wrapper {
   display: flex;
@@ -4431,14 +4423,13 @@ body>header._scroll {
   flex: 0 1 730px
 }
 .section-shop__product-content {
-  font-size: 20px;
-  color: #000
+  font-size: 18px
 }
 .section-shop__product-content p {
   margin: 0
 }
 .section-shop__product-content p:not(:last-child) {
-  margin-bottom: 20px
+  margin-bottom: 10px
 }
 .section-shop__product-content strong {
   font-weight: 900
@@ -4476,7 +4467,8 @@ body>header._scroll {
   box-sizing: border-box
 }
 .section-search__title {
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  font-weight: 700
 }
 .section-search__title span {
   color: var(--primary)
@@ -4658,7 +4650,7 @@ body>header._scroll {
   margin-bottom: 45px
 }
 .section-product__info-list li {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--dusty)
 }
 .section-product__info-list li span {
@@ -4802,7 +4794,7 @@ body>header._scroll {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-weight: 500;
   flex: 1;
   transition: color .3s ease
 }
@@ -4852,14 +4844,7 @@ body>header._scroll {
   margin: 0 0 40px 0
 }
 .section-info__content-descr {
-  font-size: 20px;
   color: #000
-}
-.section-info__content-descr p {
-  margin: 0
-}
-.section-info__content-descr p:not(:last-child) {
-  margin-bottom: 20px
 }
 .section-info__content-spec {
   max-width: 730px;
@@ -4870,7 +4855,7 @@ body>header._scroll {
   row-gap: 15px
 }
 .section-info__content-spec li {
-  font-size: 20px
+  font-size: 18px
 }
 .section-info__content-spec li span {
   color: var(--dusty)
@@ -5374,8 +5359,7 @@ body>header._scroll {
   padding: 10px 40px;
   border-radius: 10px;
   margin: 0 0 50px 0;
-  background-color: var(--alabaster);
-  font-size: 20px
+  background-color: #f7f7f7
 }
 .section-criterias__grid {
   display: grid;
@@ -5628,7 +5612,7 @@ body>header._scroll {
   display: flex;
   align-items: start;
   gap: 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 120%
 }
 .section-shipping__list li svg {
@@ -5793,7 +5777,7 @@ body>header._scroll {
   margin-bottom: 25px
 }
 .section-shipping__pickup-content {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0
 }
 .section-shipping__pickup-download {
@@ -6288,7 +6272,7 @@ body>header._scroll {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: 20px
+  font-size: 18px
 }
 .section-single__grid-item-list li span:nth-child(2) {
   font-weight: 600;
@@ -6481,7 +6465,7 @@ body>header._scroll {
   line-height: 133%
 }
 .section-contacts__info-content {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 167%;
   margin: 0;
   max-width: 450px
@@ -7453,9 +7437,6 @@ body>footer::before {
   .section-advices__consult-info {
     max-width: 450px
   }
-  .section-single__grid-item-list li {
-    font-size: 18px
-  }
   .section-jobs__grid {
     grid-template-columns: 1fr
   }
@@ -7850,9 +7831,6 @@ body>footer::before {
   .section-contacts__info-title {
     font-size: 20px
   }
-  .section-contacts__info-content {
-    font-size: 18px
-  }
   .section-contacts__grid {
     grid-template-columns: repeat(2,1fr)
   }
@@ -7915,9 +7893,6 @@ body>footer::before {
   }
   .card-product__time-info {
     align-self: start
-  }
-  .content-big {
-    font-size: 18px
   }
   .card-product-line__gallery {
     width: 240px
@@ -8010,9 +7985,6 @@ body>footer::before {
   }
   .section-delivery__list {
     max-width: 450px
-  }
-  .section-delivery__list li {
-    font-size: 18px
   }
   .section-delivery__car {
     width: 300px
@@ -8668,14 +8640,8 @@ body>footer::before {
   .content-big {
     font-size: 16px
   }
-  .content-big p:not(:last-child) {
-    margin-bottom: 16px
-  }
   .content-big ul {
     padding-left: 20px
-  }
-  .content-big ul:not(:last-child) {
-    margin-bottom: 16px
   }
   .content-big h1 {
     font-size: 26px
@@ -8695,7 +8661,7 @@ body>footer::before {
     margin: 20px 0
   }
   .breadcrumbs {
-    margin: 45px 0 15px 0
+    margin: 25px 0
   }
   .pagination {
     gap: 10px
@@ -8971,7 +8937,6 @@ body>footer::before {
     margin-bottom: 20px
   }
   .section-connect__content {
-    font-size: 15px;
     margin: 0
   }
   .section-connect__guarantee {
@@ -9035,7 +9000,8 @@ body>footer::before {
     margin-bottom: 35px
   }
   .section-shop__product-count {
-    font-size: 12px
+    font-size: 12px;
+    margin-bottom: 0
   }
   .section-shop__product-content {
     font-size: 15px
@@ -9145,9 +9111,6 @@ body>footer::before {
   }
   .section-info__content-descr {
     font-size: 15px
-  }
-  .section-info__content-descr p:not(:last-child) {
-    margin-bottom: 15px
   }
   .section-info__content-spec {
     max-width: 500px
@@ -9355,9 +9318,6 @@ body>footer::before {
   }
   .section-shipping__pickup-item-title {
     margin-bottom: 20px
-  }
-  .section-shipping__pickup-content {
-    font-size: 18px
   }
   .section-shipping__pickup-download a {
     font-size: 20px
@@ -9748,12 +9708,6 @@ body>footer::before {
   }
   .section-hero__slide {
     min-height: 405px
-  }
-  .section-about__content {
-    font-size: 15px
-  }
-  .section-about__content p:not(:last-child) {
-    margin-bottom: 15px
   }
   .section-about__adv {
     grid-template-columns: 1fr

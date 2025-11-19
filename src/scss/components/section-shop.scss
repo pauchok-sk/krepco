@@ -67,8 +67,8 @@
     }
   }
   &__sidebar {
-    position: sticky;
-    top: 20px;
+    // position: sticky;
+    // top: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -760,9 +760,11 @@
   &__product-count {
     font-size: 16px;
     color: var(--dusty);
+    margin-bottom: 7px;
 
     @include tablet {
       font-size: 12px;
+      margin-bottom: 0;
     }
   }
   &__product-wrapper {
@@ -805,8 +807,7 @@
     }
   }
   &__product-content {
-    font-size: 20px;
-    color: black;
+    font-size: 18px;
 
     @include tablet {
       font-size: 15px;
@@ -815,7 +816,8 @@
     p {
       margin: 0;
       &:not(:last-child) {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
     strong {

@@ -77,14 +77,14 @@
     }
   }
   &__info-content {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 167%;
     margin: 0;
     max-width: 450px;
 
-    @include laptop-middle {
-      font-size: 18px;
-    }
+    // @include laptop-middle {
+    //   font-size: 18px;
+    // }
     @include tablet {
       font-size: 16px;
     }
