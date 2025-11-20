@@ -8623,7 +8623,8 @@ body>footer::before {
   }
   .section-encyclopedia__table-wrapper {
     margin: 0 -30px;
-    padding-left: 30px
+    padding-left: 30px;
+    padding: 0 10px 0 30px
   }
   .section-encyclopedia__table {
     margin-top: 30px
@@ -9646,11 +9647,12 @@ body>footer::before {
   }
   .section-encyclopedia__table-wrapper {
     padding-left: 20px;
+    padding: 0 10px 0 20px;
     margin: 0 -20px
   }
   .section-encyclopedia__table {
     min-width: 780px;
-    padding-right: 30px
+    padding-right: 20px
   }
   .section-encyclopedia__table thead {
     margin-bottom: 15px;
@@ -10245,7 +10247,7 @@ body>footer::before {
   }
   .section-encyclopedia__table {
     min-width: 670px;
-    padding-right: 20px
+    padding-right: 10px
   }
   body>footer {
     padding-top: 70px

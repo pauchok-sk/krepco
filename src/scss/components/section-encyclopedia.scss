@@ -143,9 +143,11 @@
     @include laptop-min {
       margin:  0px -30px;
       padding-left: 30px;
+      padding: 0px 10px 0px 30px;
     }
     @include tablet {
       padding-left: 20px;
+      padding: 0px 10px 0px 20px;
       margin:  0px -20px;
     }
   }
@@ -158,11 +160,11 @@
     }
     @include tablet {
       min-width: 780px;
-      padding-right: 30px;
+      padding-right: 20px;
     }
     @include tablet-min {
       min-width: 670px;
-      padding-right: 20px;
+      padding-right: 10px;
     }
 
     &.table-info {
