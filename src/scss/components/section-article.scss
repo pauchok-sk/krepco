@@ -1,5 +1,4 @@
 .section-article {
-  color: black;
   &__head {
     display: flex;
     align-items: flex-end;
@@ -55,13 +54,16 @@
     @include laptop-min {
       width: auto;
     }
+
+    .share {
+      margin-left: auto;
+    }
   }
   &__head-share {
     display: block;
     width: 20px;
     height: 20px;
     color: var(--primary);
-    margin-left: auto;
 
     transition: color 0.3s ease;
     @include hover {

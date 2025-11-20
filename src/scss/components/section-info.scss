@@ -250,7 +250,6 @@
   &__content-title {
     font-weight: 900;
     font-size: 26px;
-    color: black;
     margin: 0px 0px 40px 0px;
     @include laptop-middle {
       font-size: 32px;
@@ -263,7 +262,6 @@
   }
   &__content-descr {
     // font-size: 20px;
-    color: black;
 
     @include tablet {
       font-size: 15px;

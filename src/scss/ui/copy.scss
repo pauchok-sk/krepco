@@ -1,0 +1,27 @@
+[data-copy] {
+  position: relative;
+  &._active {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &::after {
+    position: absolute;
+    font-size: 14px;
+    top: -20px;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 4px;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    // content: attr(data-copy);
+    content: "Скопировано";
+    pointer-events: none;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+}

@@ -3,6 +3,7 @@
   background-color: #333;
   color: white;
   @include tablet {
+    display: none;
     padding: 50px 0px;
   }
   &__title {

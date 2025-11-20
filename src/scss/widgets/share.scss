@@ -1,0 +1,64 @@
+.share {
+  position: relative;
+  width: fit-content;
+  z-index: 1;
+
+  &._open {
+    .share-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+  }
+}
+.share-btn {
+  cursor: pointer;
+}
+.share-body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: calc(50% - 105px);
+  width: 210px;
+  border-radius: 10px;
+  padding: 10px 0px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-top: 12px;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+
+  transition:
+    transform 0.4s ease,
+    visibility 0.4s ease,
+    opacity 0.4s ease;
+
+  @media (max-width: 1630px) {
+    left: auto;
+    right: 0;
+  }
+}
+.share-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--wild-s);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}

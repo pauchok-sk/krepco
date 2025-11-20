@@ -1,0 +1,47 @@
+.hint {
+  &._active {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @media (min-width: 1024px) {
+    @include hover {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &::after {
+    position: absolute;
+    content: attr(data-text);
+    padding: 10px;
+    user-select: none;
+    pointer-events: none;
+    width: 140px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 6px));
+    background-color: white;
+    border-radius: 10px;
+
+    color: var(--dark);
+    font-size: 12px;
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    @include laptop-min {
+      transform: translateY(calc(-100% - 6px));
+      left: auto;
+      right: 0;
+    }
+  }
+}

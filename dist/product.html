@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251119225517">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251119225517">
-	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251119225517">
-	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251119225517">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251119225517">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css">
+	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css">
+	<link rel="stylesheet" href="./files/shareon/shareon.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -3114,12 +3114,52 @@
 							Артикул
 							<span>RB-М36</span>
 						</div>
-						<a href="#modal-share" data-fancybox class="section-product__btn-share">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-share"></use>
-							</svg>
-							<span>Поделиться</span>
-						</a>
+						<div class="share">
+							<div class="section-product__btn-share share-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-share"></use>
+								</svg>
+								<span>Поделиться</span>
+							</div>
+							<div class="share-body">
+								<div data-copy="#my-link" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-link"></use>
+									</svg>
+									<span>Скопировать ссылку</span>
+								</div>
+								<a href="#" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-wh-2"></use>
+									</svg>
+									<span>WhatsApp</span>
+								</a>
+								<a href="#" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-tg-2"></use>
+									</svg>
+									<span>Telegram</span>
+								</a>
+								<a href="#" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-max"></use>
+									</svg>
+									<span>Max</span>
+								</a>
+								<a href="#" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-vk"></use>
+									</svg>
+									<span>Вконтакте</span>
+								</a>
+								<a href="#" class="share-item">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-classmates"></use>
+									</svg>
+									<span>Однокласники</span>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="section-product__body">
@@ -3154,12 +3194,12 @@
 						<div class="swiper section-product__slider">
 							<div class="slider-btn _prev">
 								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-prev-line'></use>
+									<use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
 								</svg>
 							</div>
 							<div class="slider-btn _next">
 								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-next-line'></use>
+									<use xlink:href="img/icons/icons.svg#icon-next-line"></use>
 								</svg>
 							</div>
 							<div class="tag _red">распродажа</div>
@@ -3277,14 +3317,12 @@
 							</div>
 							<div class="section-product__price-item _primary">
 								<div class="section-product__price-title">Сумма:</div>
-								<div class="section-product__price-value">
-									399 786,94 ₽
-								</div>
+								<div class="section-product__price-value">399 786,94 ₽</div>
 							</div>
 							<div class="section-product__nav-bottom">
 								<form action="#" class="counter">
 									<div class="counter__btn _minus">-</div>
-									<input type="number" value="1" max="100" class="counter__input" />
+									<input type="number" value="1" max="20000" class="counter__input" />
 									<div class="counter__btn _plus">+</div>
 								</form>
 								<button class="btn section-product__cart-btn">В корзину</button>
@@ -3294,7 +3332,8 @@
 							Цена может отличаться от цен в розничных магазинах.
 							<br />
 							<br />
-							Вы можете направить запрос на адрес e-mail: <a href="mailto:moscow@krepco.ru">moscow@krepco.ru</a>
+							Вы можете направить запрос на адрес e-mail:
+							<a href="mailto:moscow@krepco.ru">moscow@krepco.ru</a>
 						</p>
 					</div>
 				</div>
@@ -7236,12 +7275,12 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251119225517"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251119225517"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251119225517"></script>
-	<script src="./files/nouislider/nouislider.min.js?_v=20251119225517"></script>
-	<script src="./files/shareon/shareon.min.js?_v=20251119225517"></script>
-	<script src="js/app.min.js?_v=20251119225517"></script>
+	<script src="./files/fancybox/fancybox.min.js"></script>
+	<script src="./files/inputmask/inputmask.min.js"></script>
+	<script src="./files/swiper/swiper.min.js"></script>
+	<script src="./files/nouislider/nouislider.min.js"></script>
+	<script src="./files/shareon/shareon.min.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@ import burger from "./files/burger.js";
 import burgerMenus from "./files/burgerMenus.js";
 import cardProductCounter from "./files/cardProductCounter.js";
 import cartAllCheckbox from "./files/cartAllCheckbox.js";
+import copy from "./files/copy.js";
 import counter from "./files/counters.js";
 import dropCatalog from "./files/dropCatalog.js";
 import dropdown from "./files/dropdown.js";
@@ -11,6 +12,7 @@ import filesChange from "./files/filesChange.js";
 import filters from "./files/fitlers.js";
 import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
+import hint from "./files/hint.js";
 import inputControlScrollbar from "./files/inputControlScrollbar.js";
 import inputmask from "./files/inputmask.js";
 import jobModal from "./files/jobModal.js";
@@ -21,6 +23,7 @@ import placeholderIteration from "./files/placeholderIteration.js";
 import priceRange from "./files/priceRange.js";
 import printBtn from "./files/printBtn.js";
 import select from "./files/select.js";
+import share from "./files/share.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import switcherTab from "./files/switcherTab.js";
@@ -52,6 +55,9 @@ printBtn();
 cartAllCheckbox();
 map();
 jobModal();
+copy();
+share();
+hint();
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

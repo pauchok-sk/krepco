@@ -116,6 +116,17 @@
             });
         }
     }
+    function copy() {
+        const buttons = document.querySelectorAll("[data-copy]");
+        if (buttons.length) buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const value = btn.dataset.copy;
+                navigator.clipboard.writeText(value);
+                btn.classList.add("_active");
+                setTimeout(() => btn.classList.remove("_active"), 2e3);
+            });
+        });
+    }
     function counter() {
         const counters = document.querySelectorAll(".counter");
         if (counters.length) counters.forEach(counter => {
@@ -248,6 +259,21 @@
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 if (scrollTop > header.clientHeight && scrollTop > lastScrollTop) header.classList.add("_scroll"); else header.classList.remove("_scroll");
                 lastScrollTop = scrollTop;
+            });
+        }
+    }
+    function hint() {
+        const hints = document.querySelectorAll(".hint");
+        if (hints.length && window.matchMedia("(max-width: 1023px)").matches) {
+            document.body.addEventListener("click", () => {
+                const openHints = document.querySelectorAll(".hint._active");
+                if (openHints.length) openHints.forEach(h => h.classList.remove("_active"));
+            });
+            hints.forEach(hint => {
+                hint.addEventListener("click", e => {
+                    e.stopPropagation();
+                    hint.classList.toggle("_active");
+                });
             });
         }
     }
@@ -579,6 +605,29 @@
                 const input = select.querySelector(".select-input");
                 select.classList.remove("_open");
                 input.setAttribute("readonly", "");
+            }
+        }
+    }
+    function share() {
+        const items = document.querySelectorAll(".share");
+        if (items.length) {
+            document.addEventListener("click", () => {
+                const shareItemsOpen = document.querySelectorAll(".share._open");
+                if (shareItemsOpen.length) shareItemsOpen.forEach(item => handleClose(item));
+            });
+            items.forEach(item => {
+                const btn = item.querySelector(".share-btn");
+                item.addEventListener("click", e => e.stopPropagation());
+                btn.addEventListener("click", () => {
+                    const container = btn.closest(".share");
+                    if (container.classList.contains("_open")) handleClose(container); else handleOpen(container);
+                });
+            });
+            function handleClose(item) {
+                item.classList.remove("_open");
+            }
+            function handleOpen(item) {
+                item.classList.add("_open");
             }
         }
     }
@@ -1193,6 +1242,9 @@
     cartAllCheckbox();
     map();
     jobModal();
+    copy();
+    share();
+    hint();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

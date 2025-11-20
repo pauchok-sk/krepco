@@ -51,7 +51,7 @@
   }
   &._wild {
     background-color: var(--wild);
-    color: black;
+    // color: black;
 
     &::placeholder {
       color: var(--dark);
