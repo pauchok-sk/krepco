@@ -1,0 +1,44 @@
+.section-requisites {
+  &__head {
+    flex-wrap: wrap;
+  }
+  &__list {
+    border-top: 1px solid var(--alto);
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+      border-bottom: 1px solid var(--alto);
+
+      font-size: 24px;
+      line-height: 133%;
+
+      @include laptop {
+        font-size: 20px;
+      }
+      @include laptop-min {
+        font-size: 18px;
+      }
+      @include tablet {
+        font-size: 16px;
+      }
+
+      span {
+        &:first-child {
+          flex: 0 0 245px;
+          @include laptop-min {
+            flex-basis: 180px;
+          }
+          @include tablet {
+            flex-basis: 150px;
+          }
+          @include tablet-min {
+            flex-basis: 110px;
+          }
+        }
+      }
+    }
+  }
+}

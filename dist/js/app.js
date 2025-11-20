@@ -342,6 +342,7 @@
             const center = JSON.parse(map.dataset.center);
             const zoom = Number(map.dataset.zoom);
             const iconHref = map.dataset.icon;
+            const pointsData = map.dataset.points;
             let objectMark = {};
             if (iconHref) objectMark = {
                 iconLayout: "default#image",
@@ -354,8 +355,17 @@
                     center,
                     zoom
                 });
-                const placemark = new ymaps.Placemark(center, {}, objectMark);
-                htmlMap.geoObjects.add(placemark);
+                if (pointsData) {
+                    const points = JSON.parse(pointsData);
+                    points.forEach(point => {
+                        console.log(point);
+                        const placemark = new ymaps.Placemark(point, {}, objectMark);
+                        htmlMap.geoObjects.add(placemark);
+                    });
+                } else {
+                    const placemark = new ymaps.Placemark(center, {}, objectMark);
+                    htmlMap.geoObjects.add(placemark);
+                }
                 htmlMap.controls.remove("geolocationControl");
                 htmlMap.controls.remove("searchControl");
                 htmlMap.controls.remove("trafficControl");

@@ -6,6 +6,7 @@ export default function map() {
       const center = JSON.parse(map.dataset.center);
       const zoom = Number(map.dataset.zoom);
       const iconHref = map.dataset.icon;
+      const pointsData = map.dataset.points;
 
       let objectMark = {};
 
@@ -24,9 +25,18 @@ export default function map() {
           zoom,
         });
 
-        const placemark = new ymaps.Placemark(center, {}, objectMark);
+        if (pointsData) {
+          const points = JSON.parse(pointsData);
 
-        htmlMap.geoObjects.add(placemark);
+          points.forEach((point) => {
+            console.log(point)
+            const placemark = new ymaps.Placemark(point, {}, objectMark);
+            htmlMap.geoObjects.add(placemark);
+          });
+        } else {
+          const placemark = new ymaps.Placemark(center, {}, objectMark);
+          htmlMap.geoObjects.add(placemark);
+        }
 
         htmlMap.controls.remove("geolocationControl"); // удаляем геолокацию
         htmlMap.controls.remove("searchControl"); // удаляем поиск

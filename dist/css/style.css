@@ -379,6 +379,20 @@ body {
 .btn-more {
   margin: 0 auto 20px auto
 }
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .3s ease
+}
+.btn-download img {
+  display: block;
+  flex-shrink: 0;
+  width: 18px
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -843,6 +857,7 @@ textarea.input::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  row-gap: 15px;
   margin-bottom: 50px
 }
 .section-head .btn {
@@ -853,7 +868,7 @@ textarea.input::-webkit-scrollbar-thumb {
 }
 .main-title {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 36px;
   margin: 0
 }
 .section-title {
@@ -6451,10 +6466,17 @@ body>header._scroll {
   flex-direction: column;
   border-radius: 16px;
   background-color: #fff;
-  padding: 20px
+  padding: 20px;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease,-webkit-transform .3s ease
 }
 .section-jobs__item-title {
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0
 }
 .section-jobs__item-head {
   display: flex;
@@ -6514,7 +6536,9 @@ body>header._scroll {
 }
 .section-jobs__reklam-picture {
   display: block;
-  max-width: 100%
+  max-width: 100%;
+  width: 365px;
+  margin: 0 auto
 }
 .section-jobs__reklam-picture img {
   display: block;
@@ -6933,6 +6957,24 @@ body>header._scroll {
 .section-encyclopedia__sizes-table-wrapper td[colspan="2"],
 .section-encyclopedia__sizes-table-wrapper th[colspan="2"] {
   grid-column: 2 span
+}
+.section-requisites__head {
+  flex-wrap: wrap
+}
+.section-requisites__list {
+  border-top: 1px solid var(--alto)
+}
+.section-requisites__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--alto);
+  font-size: 24px;
+  line-height: 133%
+}
+.section-requisites__list li span:first-child {
+  flex: 0 0 245px
 }
 body>footer {
   position: relative;
@@ -7616,6 +7658,9 @@ body>footer::before {
   }
   .section-encyclopedia__sizes-title {
     margin-bottom: 40px
+  }
+  .section-requisites__list li {
+    font-size: 20px
   }
   .footer__nav-item {
     width: 185px
@@ -8579,10 +8624,6 @@ body>footer::before {
     width: 100%;
     position: static
   }
-  .section-jobs__reklam-picture {
-    width: 480px;
-    margin: 0 auto
-  }
   .section-notfound__content {
     font-size: 28px
   }
@@ -8668,6 +8709,12 @@ body>footer::before {
     overflow-x: auto;
     margin: 0 -30px;
     padding: 0 30px
+  }
+  .section-requisites__list li {
+    font-size: 18px
+  }
+  .section-requisites__list li span:first-child {
+    flex-basis: 180px
   }
   .footer__head {
     flex-wrap: wrap;
@@ -9596,6 +9643,9 @@ body>footer::before {
   .section-jobs__grid {
     margin-top: 40px
   }
+  .section-jobs__item-title {
+    font-size: 22px
+  }
   .section-notfound__content {
     font-size: 24px
   }
@@ -9674,6 +9724,12 @@ body>footer::before {
     grid-template-columns: repeat(2,1fr);
     gap: 15px
   }
+  .section-requisites__list li {
+    font-size: 16px
+  }
+  .section-requisites__list li span:first-child {
+    flex-basis: 150px
+  }
   .footer__head {
     margin-bottom: 50px
   }
@@ -9708,6 +9764,9 @@ body>footer::before {
   }
   .btn-more {
     width: 100%
+  }
+  .btn-download {
+    font-size: 14px
   }
   .select-item {
     padding: 10px 15px
@@ -10249,6 +10308,9 @@ body>footer::before {
     min-width: 670px;
     padding-right: 10px
   }
+  .section-requisites__list li span:first-child {
+    flex-basis: 110px
+  }
   body>footer {
     padding-top: 70px
   }
@@ -10417,6 +10479,10 @@ body>footer::before {
   }
   .btn-tag:hover {
     background-color: rgba(235,110,3,.1)
+  }
+  .btn-download:hover {
+    text-decoration: none;
+    color: var(--primary)
   }
   .dropdown:hover .dropdown-body {
     opacity: 1;
@@ -10809,6 +10875,10 @@ body>footer::before {
     -webkit-transform: scale(1.08);
     transform: scale(1.08)
   }
+  .section-jobs__item:hover {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px)
+  }
   .section-notfound__content a:hover {
     text-decoration: none
   }
@@ -10903,6 +10973,10 @@ body>footer::before {
   }
   .btn-tag:active {
     background-color: rgba(235,110,3,.1)
+  }
+  .btn-download:active {
+    text-decoration: none;
+    color: var(--primary)
   }
   .dropdown:active .dropdown-body {
     opacity: 1;
@@ -11294,6 +11368,10 @@ body>footer::before {
   .section-portfolio__slide:active img {
     -webkit-transform: scale(1.08);
     transform: scale(1.08)
+  }
+  .section-jobs__item:active {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px)
   }
   .section-notfound__content a:active {
     text-decoration: none
