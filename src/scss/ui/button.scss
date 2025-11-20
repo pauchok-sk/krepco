@@ -44,6 +44,16 @@
       color: white;
     }
   }
+  &._light {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    color: var(--primary);
+    @include hover {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: white;
+    }
+  }
 }
 
 .btn-mob {

@@ -102,7 +102,8 @@
 
       transition:
         filter 0.4s ease,
-        transform 0.4s ease, opacity 0.4s ease;
+        transform 0.4s ease,
+        opacity 0.4s ease;
 
       @include tablet {
         width: 30px;
@@ -140,12 +141,12 @@
   &__table-wrapper {
     overflow-x: auto;
     @include laptop-min {
-      margin: 0 -30px;
-      padding: 0 30px;
+      margin:  0px -30px;
+      padding-left: 30px;
     }
     @include tablet {
-      margin: 0 -20px;
-      padding: 0 20px;
+      padding-left: 20px;
+      margin:  0px -20px;
     }
   }
   &__table {
@@ -156,10 +157,12 @@
       margin-top: 30px;
     }
     @include tablet {
-      min-width: 750px;
+      min-width: 780px;
+      padding-right: 30px;
     }
     @include tablet-min {
-      min-width: 650px;
+      min-width: 670px;
+      padding-right: 20px;
     }
 
     &.table-info {

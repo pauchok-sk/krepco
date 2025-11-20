@@ -273,6 +273,11 @@ body {
   background-color: var(--dark);
   color: #fff
 }
+.btn._light {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: var(--primary)
+}
 .btn-mob {
   display: flex;
   align-items: center;
@@ -2158,6 +2163,17 @@ a.breadcrumbs-item:hover {
   transition: color .3s ease
 }
 .modal__form-send {
+  width: 100%
+}
+.modal-delete .modal__content {
+  font-weight: 400
+}
+.modal-delete__nav {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px
+}
+.modal-delete__btn {
   width: 100%
 }
 .drop-catalog {
@@ -5515,7 +5531,8 @@ body>header._scroll {
   inset: 0;
   background-color: #000;
   opacity: .5;
-  z-index: -1
+  z-index: -1;
+  transition: opacity .3s ease
 }
 .section-objects__item img {
   position: absolute;
@@ -5528,6 +5545,25 @@ body>header._scroll {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
+}
+.section-objects__item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  z-index: 10
+}
+.section-objects__item-info .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 900px;
+  opacity: 0;
+  transition: backdrop-filter .3s ease,opacity .3s ease
 }
 .section-trust__slider {
   padding: 10px!important;
@@ -7174,6 +7210,12 @@ body>footer::before {
     gap: 20px
   }
 }
+@media (min-width:992px) {
+  .modal-delete {
+    padding-left: 20px;
+    padding-right: 20px
+  }
+}
 @media (min-width:1023px) {
   .section-shop__orderby-select .icon {
     display: none
@@ -7865,6 +7907,11 @@ body>footer::before {
   }
   .section-criterias__grid {
     grid-template-columns: repeat(2,1fr)
+  }
+  .section-objects__item-info {
+    right: 20px;
+    bottom: 20px;
+    left: 20px
   }
   .section-qr__title {
     margin-bottom: 40px
@@ -8576,7 +8623,7 @@ body>footer::before {
   }
   .section-encyclopedia__table-wrapper {
     margin: 0 -30px;
-    padding: 0 30px
+    padding-left: 30px
   }
   .section-encyclopedia__table {
     margin-top: 30px
@@ -9364,6 +9411,11 @@ body>footer::before {
     font-size: 18px;
     padding: 10px
   }
+  .section-objects__item-info {
+    left: 10px;
+    right: 10px;
+    bottom: 10px
+  }
   .section-qr {
     display: none;
     padding: 50px 0
@@ -9593,11 +9645,12 @@ body>footer::before {
     font-size: 16px
   }
   .section-encyclopedia__table-wrapper {
-    margin: 0 -20px;
-    padding: 0 20px
+    padding-left: 20px;
+    margin: 0 -20px
   }
   .section-encyclopedia__table {
-    min-width: 750px
+    min-width: 780px;
+    padding-right: 30px
   }
   .section-encyclopedia__table thead {
     margin-bottom: 15px;
@@ -9837,6 +9890,9 @@ body>footer::before {
   .modal__content {
     font-size: 16px;
     margin-bottom: 25px
+  }
+  .modal-delete__nav {
+    grid-template-columns: 1fr
   }
   .section-hero__slide {
     min-height: 405px
@@ -10188,7 +10244,8 @@ body>footer::before {
     width: 20px
   }
   .section-encyclopedia__table {
-    min-width: 650px
+    min-width: 670px;
+    padding-right: 20px
   }
   body>footer {
     padding-top: 70px
@@ -10330,6 +10387,11 @@ body>footer::before {
   .btn._dark:hover {
     background-color: #000;
     border-color: #000;
+    color: #fff
+  }
+  .btn._light:hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
     color: #fff
   }
   .btn-mob:hover {
@@ -10696,9 +10758,16 @@ body>footer::before {
   .section-message__content a:hover {
     color: var(--primary)
   }
-  .section-objects__item:hover img {
-    -webkit-transform: scale(1.07);
-    transform: scale(1.07)
+  .section-objects__item:hover::before {
+    opacity: 0
+  }
+  .section-objects__item:hover .section-objects__item-info {
+    visibility: visible;
+    opacity: 1
+  }
+  .section-objects__item:hover .section-objects__item-info .item {
+    backdrop-filter: blur(20px);
+    opacity: 1
   }
   .section-qr__item-btn:hover {
     color: var(--primary)
@@ -10804,6 +10873,11 @@ body>footer::before {
   .btn._dark:active {
     background-color: #000;
     border-color: #000;
+    color: #fff
+  }
+  .btn._light:active {
+    border-color: var(--primary);
+    background-color: var(--primary);
     color: #fff
   }
   .btn-mob:active {
@@ -11170,9 +11244,16 @@ body>footer::before {
   .section-message__content a:active {
     color: var(--primary)
   }
-  .section-objects__item:active img {
-    -webkit-transform: scale(1.07);
-    transform: scale(1.07)
+  .section-objects__item:active::before {
+    opacity: 0
+  }
+  .section-objects__item:active .section-objects__item-info {
+    visibility: visible;
+    opacity: 1
+  }
+  .section-objects__item:active .section-objects__item-info .item {
+    backdrop-filter: blur(20px);
+    opacity: 1
   }
   .section-qr__item-btn:active {
     color: var(--primary)

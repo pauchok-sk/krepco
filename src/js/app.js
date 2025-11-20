@@ -63,4 +63,4 @@ Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
 Shareon.init();
-// Fancybox.show([{ src: "#modal-order", type: "inline" }]);
+// Fancybox.show([{ src: "#modal-delete", type: "inline" }]);
