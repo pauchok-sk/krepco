@@ -1,10 +1,12 @@
 .dropdown {
   position: relative;
 
-  @include hover {
-    .dropdown-body {
-      opacity: 1;
-      visibility: visible;
+  @media (min-width: 1024px) {
+    @include hover {
+      .dropdown-body {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
   &._open {
