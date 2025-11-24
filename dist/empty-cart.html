@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251124131407">
-	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251124131407">
-	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251124131407">
-	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251124131407">
-	<link rel="stylesheet" href="css/style.min.css?_v=20251124131407">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20251124154933">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20251124154933">
+	<link rel="stylesheet" href="./files/nouislider/nouislider.min.css?_v=20251124154933">
+	<link rel="stylesheet" href="./files/shareon/shareon.min.css?_v=20251124154933">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251124154933">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -3094,9 +3094,24 @@
 		<section class="section-notfound section-margin">
 			<div class="container">
 				<div class="section-notfound__wrapper">
-					<img src="img/empty-cart.png" alt="image" class="section-notfound__img">
-					<p class="section-notfound__content">Ваша корзина пуста <br> Пришло время её заполнять!</p>
+					<img src="img/empty-cart.png" alt="image" class="section-notfound__img" />
+					<p class="section-notfound__content">
+						Ваша корзина пуста
+						<br />
+						Пришло время её заполнять!
+					</p>
 					<a href="#" class="btn section-notfound__btn">Перейти в каталог</a>
+					<form action="#" class="quick-cart">
+						<input type="text" id="cart-search-input" class="quick-cart__input" />
+						<label for="cart-search-input" class="quick-cart__label">
+							Быстрое добавление товара по артикулу или наименованию
+						</label>
+						<button class="quick-cart__btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-search"></use>
+							</svg>
+						</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -4007,7 +4022,7 @@
 				<div class="section-recommendation__slider-wrapper">
 					<div class="slider-btn _prev">
 						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-prev-line'></use>
+							<use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
 						</svg>
 					</div>
 					<div class="swiper section-recommendation__slider">
@@ -4376,13 +4391,12 @@
 					</div>
 					<div class="slider-btn _next">
 						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-next-line'></use>
+							<use xlink:href="img/icons/icons.svg#icon-next-line"></use>
 						</svg>
 					</div>
 				</div>
 			</div>
 		</section>
-
 	</main>
 	<aside>
 		<div class="modal" id="modal-call">
@@ -4834,12 +4848,12 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20251124131407"></script>
-	<script src="./files/inputmask/inputmask.min.js?_v=20251124131407"></script>
-	<script src="./files/swiper/swiper.min.js?_v=20251124131407"></script>
-	<script src="./files/nouislider/nouislider.min.js?_v=20251124131407"></script>
-	<script src="./files/shareon/shareon.min.js?_v=20251124131407"></script>
-	<script src="js/app.min.js?_v=20251124131407"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20251124154933"></script>
+	<script src="./files/inputmask/inputmask.min.js?_v=20251124154933"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20251124154933"></script>
+	<script src="./files/nouislider/nouislider.min.js?_v=20251124154933"></script>
+	<script src="./files/shareon/shareon.min.js?_v=20251124154933"></script>
+	<script src="js/app.min.js?_v=20251124154933"></script>
 </body>
 
 </html>

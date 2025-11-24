@@ -1,0 +1,88 @@
+.quick-cart {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  border: 1px solid var(--alto);
+  border-radius: 15px;
+
+  @media (min-width: 1024px) {
+    @include hover {
+      .quick-cart__label {
+        font-size: 14px;
+        color: var(--dusty);
+        top: 0;
+        // transform: translateY(-50%);
+        background-color: var(--alabaster);
+      }
+    }
+  }
+  &__input {
+    flex: 1;
+    padding: 22px 25px;
+    margin: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+      color: var(--dark);
+    }
+    @include laptop-min {
+      &:focus + .quick-cart__label {
+        font-size: 14px;
+        color: var(--dusty);
+        top: 0;
+        transform: translateY(-50%);
+        background-color: var(--alabaster);
+      }
+    }
+  }
+  &__label {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 120%;
+    padding: 3px;
+    max-width: calc(100% - 70px);
+    text-align: start;
+    width: fit-content;
+
+    transition:
+      top 0.3s ease,
+      left 0.3s ease,
+      color 0.3s ease,
+      background-color 0.3s ease,
+      font-size 0.3s ease,
+      transform 0.3s ease;
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    position: relative;
+    cursor: pointer;
+    @include flex-center;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 62px;
+    // height: 100%;
+    flex-shrink: 0;
+
+    color: var(--gray);
+    transition: color 0.3s ease;
+    z-index: 1;
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

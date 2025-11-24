@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   @@include('html/head.html',{ "title":"pauchoo0k" })
   <body>
@@ -7,9 +7,35 @@
       <section class="section-notfound section-margin">
         <div class="container">
           <div class="section-notfound__wrapper">
-            <img src="@img/empty-cart.png" alt="image" class="section-notfound__img">
-            <p class="section-notfound__content">Ваша корзина пуста <br> Пришло время её заполнять!</p>
+            <img
+              src="@img/empty-cart.png"
+              alt="image"
+              class="section-notfound__img"
+            />
+            <p class="section-notfound__content">
+              Ваша корзина пуста
+              <br />
+              Пришло время её заполнять!
+            </p>
             <a href="#" class="btn section-notfound__btn">Перейти в каталог</a>
+            <form
+              action="#"
+              class="quick-cart"
+            >
+              <input
+                type="text"
+                id="cart-search-input"
+                class="quick-cart__input"
+              />
+              <label for="cart-search-input" class="quick-cart__label">
+                Быстрое добавление товара по артикулу или наименованию
+              </label>
+              <button class="quick-cart__btn">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -22,7 +48,7 @@
           <div class="section-recommendation__slider-wrapper">
             <div class="slider-btn _prev">
               <svg>
-                <use xlink:href='img/icons/icons.svg#icon-prev-line'></use>
+                <use xlink:href="img/icons/icons.svg#icon-prev-line"></use>
               </svg>
             </div>
             <div class="swiper section-recommendation__slider">
@@ -66,7 +92,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -117,7 +142,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -168,7 +192,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -219,7 +242,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -270,7 +292,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -321,7 +342,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -372,7 +392,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -423,7 +442,6 @@
                         <input
                           type="number"
                           value="1"
-                          
                           max="100"
                           class="card-product__counter-input"
                         />
@@ -439,13 +457,12 @@
             </div>
             <div class="slider-btn _next">
               <svg>
-                <use xlink:href='img/icons/icons.svg#icon-next-line'></use>
+                <use xlink:href="img/icons/icons.svg#icon-next-line"></use>
               </svg>
             </div>
           </div>
         </div>
       </section>
-
     </main>
     @@include('html/components/modals.html')
     @@include('html/components/footer.html')

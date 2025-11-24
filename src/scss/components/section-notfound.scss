@@ -4,6 +4,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    .quick-cart {
+      margin-top: 50px;
+      @include tablet {
+        margin-top: 30px;
+      }
+    }
   }
   &__img {
     display: block;
@@ -33,7 +40,7 @@
       font-size: 24px;
     }
     @include tablet-min {
-      font-size: 20px
+      font-size: 20px;
     }
 
     a {
