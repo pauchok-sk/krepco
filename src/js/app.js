@@ -31,7 +31,7 @@ import tabs from "./files/tabs.js";
 
 spoller();
 mediaAdaptive();
-// dropdown();
+dropdown();
 inputmask();
 select();
 dropCatalog();

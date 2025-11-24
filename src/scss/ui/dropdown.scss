@@ -7,19 +7,32 @@
       visibility: visible;
     }
   }
+  &._open {
+    .dropdown-body {
+      opacity: 1;
+      visibility: visible;
+    }
+    .dropdown-btn {
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
   &-body {
     position: absolute;
     right: 0;
     padding-top: 5px;
-    overflow: hidden;
+    // overflow: hidden;
 
     visibility: hidden;
     opacity: 0;
 
     z-index: 10;
 
-    transition: opacity 0.3s ease, visibility .3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
   &-inside {
     width: fit-content;

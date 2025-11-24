@@ -401,11 +401,18 @@ body {
 .dropdown {
   position: relative
 }
+.dropdown._open .dropdown-body {
+  opacity: 1;
+  visibility: visible
+}
+.dropdown._open .dropdown-btn .arrow {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .dropdown-body {
   position: absolute;
   right: 0;
   padding-top: 5px;
-  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   z-index: 10;
