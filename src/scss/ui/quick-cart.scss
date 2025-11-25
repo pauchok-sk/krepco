@@ -17,6 +17,15 @@
       }
     }
   }
+
+  &._searched {
+    .quick-cart__result {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+  }
+
   &__input {
     flex: 1;
     padding: 22px 25px;
@@ -83,6 +92,62 @@
     svg {
       width: 20px;
       height: 20px;
+    }
+  }
+  &__result {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid var(--alto);
+    overflow: hidden;
+    text-align: start;
+    z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+  &__result-body {
+    overflow-y: auto;
+    max-height: 250px;
+  }
+  &__result-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 15px;
+
+    font-size: 16px;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--wild);
+    }
+    @include tablet-min {
+      font-size: 14px;
+      padding: 8px 14px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--alto);
+    }
+
+    .name {
+      font-weight: 500;
+      flex: 1;
+    }
+    .price {
+      font-weight: 600;
     }
   }
 }

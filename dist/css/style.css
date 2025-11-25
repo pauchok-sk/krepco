@@ -2140,6 +2140,12 @@ a.breadcrumbs-item:hover {
   border: 1px solid var(--alto);
   border-radius: 15px
 }
+.quick-cart._searched .quick-cart__result {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
 .quick-cart__input {
   flex: 1;
   padding: 22px 25px;
@@ -2197,6 +2203,48 @@ a.breadcrumbs-item:hover {
 .quick-cart__btn svg {
   width: 20px;
   height: 20px
+}
+.quick-cart__result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid var(--alto);
+  overflow: hidden;
+  text-align: start;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  transition: opacity .3s ease,visibility .3s ease,-webkit-transform .3s ease;
+  transition: opacity .3s ease,visibility .3s ease,transform .3s ease;
+  transition: opacity .3s ease,visibility .3s ease,transform .3s ease,-webkit-transform .3s ease
+}
+.quick-cart__result-body {
+  overflow-y: auto;
+  max-height: 250px
+}
+.quick-cart__result-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+  font-size: 16px;
+  transition: color .3s ease,background-color .3s ease
+}
+.quick-cart__result-item:not(:last-child) {
+  border-bottom: 1px solid var(--alto)
+}
+.quick-cart__result-item .name {
+  font-weight: 500;
+  flex: 1
+}
+.quick-cart__result-item .price {
+  font-weight: 600
 }
 .modal {
   border-radius: 20px;
@@ -10047,6 +10095,10 @@ body>footer::before {
   .quick-cart__label {
     font-size: 14px
   }
+  .quick-cart__result-item {
+    font-size: 14px;
+    padding: 8px 14px
+  }
   .modal {
     padding: 40px 15px 20px 15px;
     border-radius: 12px
@@ -10714,6 +10766,9 @@ body>footer::before {
   .quick-cart__btn:hover {
     color: var(--primary)
   }
+  .quick-cart__result-item:hover {
+    background-color: var(--wild)
+  }
   .modal__close:hover {
     color: var(--primary)
   }
@@ -11206,6 +11261,9 @@ body>footer::before {
   }
   .quick-cart__btn:active {
     color: var(--primary)
+  }
+  .quick-cart__result-item:active {
+    background-color: var(--wild)
   }
   .modal__close:active {
     color: var(--primary)
