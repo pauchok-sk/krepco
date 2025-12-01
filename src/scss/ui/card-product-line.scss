@@ -37,7 +37,7 @@
     }
     @include tablet-min {
       width: 70px;
-
+      
       .card-product__top {
         min-height: none;
         margin-bottom: 9px;
@@ -50,8 +50,8 @@
       .card-product__tag {
         display: none;
       }
-      .card-product__slide {
-        aspect-ratio: 1/1;
+      .card-product__slider {
+        height: 70px !important;
       }
       .card-product__slider-pagination {
         margin-top: 5px;

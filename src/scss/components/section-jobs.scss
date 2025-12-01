@@ -44,14 +44,14 @@
     }
   }
   &__item-title {
-    margin-bottom: 20px;
     font-weight: 900;
     font-size: 24px;
     line-height: 120%;
-    margin: 0;
+    margin: 0px 0px 20px 0px;
 
     @include tablet {
       font-size: 22px;
+      margin-bottom: 15px;
     }
   }
   &__item-head {
@@ -74,10 +74,14 @@
     gap: 10px;
     font-size: 16px;
 
+    @include tablet {
+      gap: 5px;
+    }
+
     li {
       padding: 6px 0px;
       @include tablet-min {
-        padding: 3px 0px;
+        padding: 0px;
       }
     }
   }
@@ -92,13 +96,13 @@
     gap: 15px;
     margin-top: 15px;
     @include tablet-min {
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
     }
   }
   &__item-btn {
     min-width: 225px;
     @include tablet-min {
-      width: 100%;
+      min-width: 175px;
     }
   }
   &__item-date {

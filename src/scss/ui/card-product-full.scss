@@ -12,6 +12,9 @@
     width: 100px;
     .card-product__slider {
       width: 100%;
+      @include laptop-min {
+        height: 100px !important;
+      }
     }
   }
   &__gallery {

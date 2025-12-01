@@ -1,17 +1,17 @@
 .section-margin {
-  margin: 80px 0px;
+  margin: 60px 0px;
   @include tablet {
-    margin: 70px 0px;
+    margin: 30px 0px;
   }
 }
 .section-head {
   @include flex-between;
   gap: 30px;
   row-gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   
   @include tablet-min {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .btn {

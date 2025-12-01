@@ -5,7 +5,6 @@ export default function cardProductCounter() {
     counters.forEach((counter) => {
       const input = counter.querySelector(".card-product__counter-input");
       const min = +input.min;
-      const max = +input.max;
 
       const btnPlus = counter.querySelector(".card-product__counter-btn._plus");
       const btnMinus = counter.querySelector(
@@ -13,7 +12,6 @@ export default function cardProductCounter() {
       );
 
       if (+input.value <= min) btnMinus.classList.add("_disabled");
-      if (+input.value >= max) btnPlus.classList.add("_disabled");
 
       btnPlus.addEventListener("click", () => {
         change("plus");
@@ -37,15 +35,7 @@ export default function cardProductCounter() {
           btnMinus.classList.add("_disabled");
         }
 
-        if (value < max) {
-          btnPlus.classList.remove("_disabled");
-        } else {
-          btnPlus.classList.add("_disabled");
-        }
-
-        if (value > max) {
-          input.value = 100;
-        } else if (value < min) {
+        if (value < min) {
           input.value = 1;
         }
       });
@@ -61,12 +51,6 @@ export default function cardProductCounter() {
           btnMinus.classList.remove("_disabled");
         } else {
           btnMinus.classList.add("_disabled");
-        }
-
-        if (+input.value < max) {
-          btnPlus.classList.remove("_disabled");
-        } else {
-          btnPlus.classList.add("_disabled");
         }
       }
     });

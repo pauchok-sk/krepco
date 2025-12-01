@@ -391,9 +391,16 @@
           font-size: 14px;
           color: var(--dusty);
           top: 0;
-          // transform: translateY(-50%);
           background-color: var(--alabaster);
         }
+      }
+    }
+    &._entered {
+      .section-cart__search-label {
+        font-size: 14px;
+        color: var(--dusty);
+        top: 0;
+        background-color: var(--alabaster);
       }
     }
   }
@@ -413,7 +420,6 @@
         font-size: 14px;
         color: var(--dusty);
         top: 0;
-        transform: translateY(-50%);
         background-color: var(--alabaster);
       }
     }

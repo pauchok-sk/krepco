@@ -5,13 +5,11 @@ export default function counter() {
     counters.forEach((counter) => {
       const input = counter.querySelector(".counter__input");
       const min = 1;
-      const max = +input.max;
 
       const btnPlus = counter.querySelector(".counter__btn._plus");
       const btnMinus = counter.querySelector(".counter__btn._minus");
 
       if (+input.value <= min) btnMinus.classList.add("_disabled");
-      if (+input.value >= max) btnPlus.classList.add("_disabled");
 
       btnPlus.addEventListener("click", () => {
         change("plus");
@@ -35,15 +33,8 @@ export default function counter() {
           btnMinus.classList.add("_disabled");
         }
 
-        if (value < max) {
-          btnPlus.classList.remove("_disabled");
-        } else {
-          btnPlus.classList.add("_disabled");
-        }
 
-        if (value > max) {
-          input.value = 100;
-        } else if (value < min) {
+        if (value < min) {
           input.value = 1;
         }
       });
@@ -59,12 +50,6 @@ export default function counter() {
           btnMinus.classList.remove("_disabled");
         } else {
           btnMinus.classList.add("_disabled");
-        }
-
-        if (+input.value < max) {
-          btnPlus.classList.remove("_disabled");
-        } else {
-          btnPlus.classList.add("_disabled");
         }
       }
     });

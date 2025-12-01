@@ -22,6 +22,7 @@ import more from "./files/more.js";
 import placeholderIteration from "./files/placeholderIteration.js";
 import priceRange from "./files/priceRange.js";
 import printBtn from "./files/printBtn.js";
+import searchInputCart from "./files/searchInputCart.js";
 import select from "./files/select.js";
 import share from "./files/share.js";
 import sliders from "./files/sliders.js";
@@ -58,6 +59,7 @@ jobModal();
 copy();
 share();
 hint();
+searchInputCart()
 
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,

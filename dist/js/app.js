@@ -74,11 +74,9 @@
         if (counters.length) counters.forEach(counter => {
             const input = counter.querySelector(".card-product__counter-input");
             const min = +input.min;
-            const max = +input.max;
             const btnPlus = counter.querySelector(".card-product__counter-btn._plus");
             const btnMinus = counter.querySelector(".card-product__counter-btn._minus");
             if (+input.value <= min) btnMinus.classList.add("_disabled");
-            if (+input.value >= max) btnPlus.classList.add("_disabled");
             btnPlus.addEventListener("click", () => {
                 change("plus");
             });
@@ -92,13 +90,11 @@
             input.addEventListener("input", e => {
                 const value = +e.target.value;
                 if (value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
-                if (value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
-                if (value > max) input.value = 100; else if (value < min) input.value = 1;
+                if (value < min) input.value = 1;
             });
             function change(action) {
                 if (action === "minus") input.value = +input.value - 1; else if (action === "plus") input.value = +input.value + 1;
                 if (+input.value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
-                if (+input.value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
             }
         });
     }
@@ -132,11 +128,9 @@
         if (counters.length) counters.forEach(counter => {
             const input = counter.querySelector(".counter__input");
             const min = 1;
-            const max = +input.max;
             const btnPlus = counter.querySelector(".counter__btn._plus");
             const btnMinus = counter.querySelector(".counter__btn._minus");
             if (+input.value <= min) btnMinus.classList.add("_disabled");
-            if (+input.value >= max) btnPlus.classList.add("_disabled");
             btnPlus.addEventListener("click", () => {
                 change("plus");
             });
@@ -150,13 +144,11 @@
             input.addEventListener("input", e => {
                 const value = +e.target.value;
                 if (value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
-                if (value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
-                if (value > max) input.value = 100; else if (value < min) input.value = 1;
+                if (value < min) input.value = 1;
             });
             function change(action) {
                 if (action === "minus") input.value = +input.value - 1; else if (action === "plus") input.value = +input.value + 1;
                 if (+input.value > min) btnMinus.classList.remove("_disabled"); else btnMinus.classList.add("_disabled");
-                if (+input.value < max) btnPlus.classList.remove("_disabled"); else btnPlus.classList.add("_disabled");
             }
         });
     }
@@ -564,6 +556,15 @@
         const buttons = document.querySelectorAll(".print-btn");
         if (buttons.length) buttons.forEach(btn => {
             btn.addEventListener("click", () => window.print());
+        });
+    }
+    function searchInputCart() {
+        const forms = document.querySelectorAll(".section-cart__form-search");
+        if (forms.length) forms.forEach(form => {
+            const input = form.querySelector(".section-cart__search-input");
+            input.addEventListener("input", e => {
+                if (e.target.value) form.classList.add("_entered"); else form.classList.remove("_entered");
+            });
         });
     }
     function select_select() {
@@ -1279,6 +1280,7 @@
     copy();
     share();
     hint();
+    searchInputCart();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

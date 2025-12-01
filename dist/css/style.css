@@ -857,7 +857,7 @@ textarea.input::-webkit-scrollbar-thumb {
   border: 3px solid var(--alabaster)
 }
 .section-margin {
-  margin: 80px 0
+  margin: 60px 0
 }
 .section-head {
   display: flex;
@@ -865,7 +865,7 @@ textarea.input::-webkit-scrollbar-thumb {
   justify-content: space-between;
   gap: 30px;
   row-gap: 15px;
-  margin-bottom: 50px
+  margin-bottom: 30px
 }
 .section-head .btn {
   flex-shrink: 0
@@ -4233,8 +4233,7 @@ body>header._scroll {
 }
 .section-shop__filters-spollers {
   display: flex;
-  flex-direction: column;
-  gap: 10px
+  flex-direction: column
 }
 .section-shop__filters-item {
   padding: 10px;
@@ -4379,6 +4378,9 @@ body>header._scroll {
 .section-shop__variant-input {
   display: none
 }
+.section-shop__variant-input:checked+label {
+  color: var(--primary)
+}
 .section-shop__variant-input:checked+label::before {
   background: url(../img/check-white.svg) center/12px auto no-repeat;
   background-color: var(--primary);
@@ -4392,7 +4394,7 @@ body>header._scroll {
   text-align: center;
   gap: 4px;
   font-size: 12px;
-  transition: background-color .3s ease,border-color .3s ease
+  transition: background-color .3s ease,border-color .3s ease,color .3s ease
 }
 .section-shop__variant-btn._row {
   flex-direction: row;
@@ -4411,8 +4413,7 @@ body>header._scroll {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 190px;
-  max-width: 100%
+  width: 100%
 }
 .section-shop__filters-nav-btn {
   width: 100%
@@ -4814,8 +4815,8 @@ body>header._scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
   z-index: -1;
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
@@ -4939,8 +4940,7 @@ body>header._scroll {
   gap: 20px
 }
 .section-product__nav-bottom .counter {
-  flex: none;
-  width: 100px!important
+  flex: 1
 }
 .section-product__sidebar-content {
   font-size: 15px;
@@ -5430,6 +5430,12 @@ body>header._scroll {
   border: 1px solid var(--alto);
   border-radius: 15px;
   margin-top: 80px
+}
+.section-cart__form-search._entered .section-cart__search-label {
+  font-size: 14px;
+  color: var(--dusty);
+  top: 0;
+  background-color: var(--alabaster)
 }
 .section-cart__search-input {
   flex: 1;
@@ -6593,11 +6599,10 @@ body>header._scroll {
   transition: transform .3s ease,-webkit-transform .3s ease
 }
 .section-jobs__item-title {
-  margin-bottom: 20px;
   font-weight: 900;
   font-size: 24px;
   line-height: 120%;
-  margin: 0
+  margin: 0 0 20px 0
 }
 .section-jobs__item-head {
   display: flex;
@@ -8264,6 +8269,9 @@ body>footer::before {
     width: 100%;
     flex: none
   }
+  .card-product-full__slider-wrapper .card-product__slider {
+    height: 100px!important
+  }
   .card-product-cart {
     padding: 20px 0;
     gap: 10px
@@ -8546,8 +8554,6 @@ body>footer::before {
     font-size: 14px;
     color: var(--dusty);
     top: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
     background-color: var(--alabaster)
   }
   .section-message__decor {
@@ -8892,7 +8898,7 @@ body>footer::before {
     font-size: 15px
   }
   .section-margin {
-    margin: 70px 0
+    margin: 30px 0
   }
   .main-title {
     font-size: 26px
@@ -9422,7 +9428,8 @@ body>footer::before {
     width: 75px!important
   }
   .section-product__slide {
-    border: 1px solid var(--wild)
+    border: 1px solid var(--wild);
+    aspect-ratio: 1/.7
   }
   .section-product__info {
     margin-top: 20px
@@ -9441,11 +9448,28 @@ body>footer::before {
     max-width: 100%;
     margin-right: auto
   }
+  .section-product__nav {
+    padding: 25px 20px
+  }
+  .section-product__price-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px
+  }
+  .section-product__price-title {
+    font-size: 18px;
+    margin: 0
+  }
+  .section-product__price-value {
+    font-size: 18px
+  }
   .section-product__nav-bottom {
     display: grid;
     grid-template-columns: repeat(2,1fr)
   }
   .section-product__nav-bottom .counter {
+    flex: auto;
     width: 100%!important
   }
   .section-product__cart-btn {
@@ -9796,7 +9820,11 @@ body>footer::before {
     margin-top: 40px
   }
   .section-jobs__item-title {
-    font-size: 22px
+    font-size: 22px;
+    margin-bottom: 15px
+  }
+  .section-jobs__item-list {
+    gap: 5px
   }
   .section-notfound__wrapper .quick-cart {
     margin-top: 30px
@@ -9931,7 +9959,7 @@ body>footer::before {
     font-size: 14px
   }
   .section-head {
-    margin-bottom: 25px
+    margin-bottom: 15px
   }
   .section-head .btn {
     display: none
@@ -9995,8 +10023,8 @@ body>footer::before {
   .card-product-line__gallery .card-product__tag {
     display: none
   }
-  .card-product-line__gallery .card-product__slide {
-    aspect-ratio: 1/1
+  .card-product-line__gallery .card-product__slider {
+    height: 70px!important
   }
   .card-product-line__gallery .card-product__slider-pagination {
     margin-top: 5px
@@ -10409,7 +10437,8 @@ body>footer::before {
     right: -30px
   }
   .intro-single {
-    padding: 40px 0 0 0
+    padding: 40px 0 0 0;
+    min-height: auto
   }
   .intro-single__content {
     font-size: 12px
@@ -10434,13 +10463,10 @@ body>footer::before {
     flex-direction: column-reverse
   }
   .section-jobs__item-list li {
-    padding: 3px 0
-  }
-  .section-jobs__item-bottom {
-    flex-wrap: wrap
+    padding: 0
   }
   .section-jobs__item-btn {
-    width: 100%
+    min-width: 175px
   }
   .section-notfound__img {
     height: 285px
