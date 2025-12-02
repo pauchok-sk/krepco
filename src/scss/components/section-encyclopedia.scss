@@ -37,20 +37,17 @@
   }
   &__grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 50px;
     @include laptop-min {
       gap: 30px;
     }
-    @include tablet {
-      justify-content: center;
-    }
   }
   &__item {
     @include flex-center;
     position: relative;
-    width: 310px;
+    width: 290px;
     aspect-ratio: 1/1;
     z-index: 1;
 
@@ -141,14 +138,14 @@
   &__table-wrapper {
     overflow-x: auto;
     @include laptop-min {
-      margin:  0px -30px;
+      margin: 0px -30px;
       padding-left: 30px;
       padding: 0px 10px 0px 30px;
     }
     @include tablet {
       padding-left: 20px;
       padding: 0px 10px 0px 20px;
-      margin:  0px -20px;
+      margin: 0px -20px;
     }
   }
   &__table {
@@ -204,10 +201,7 @@
     tbody {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      @include tablet {
-        gap: 10px;
-      }
+      gap: 10px;
     }
     tr {
       display: flex;
@@ -261,6 +255,12 @@
         text-decoration: none;
       }
     }
+
+    [data-more-item] {
+      &:nth-child(n + 14) {
+        display: none;
+      }
+    }
   }
   &__content {
     max-width: 1190px;
@@ -275,7 +275,13 @@
       margin-top: 30px;
     }
   }
-
+  &__btn-more {
+    margin: 30px auto 0px auto;
+    @include tablet-min {
+      margin-top: 25px;
+      width: 100%;
+    }
+  }
   &__wrapper {
     display: flex;
     align-items: start;

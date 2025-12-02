@@ -2331,10 +2331,6 @@ a.breadcrumbs-item:hover {
   opacity: 1;
   visibility: visible
 }
-.drop-catalog._open .drop-catalog__inside {
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
-}
 .drop-catalog__inside {
   display: flex;
   align-items: start;
@@ -2343,12 +2339,7 @@ a.breadcrumbs-item:hover {
   background-color: #fff;
   border-radius: 20px;
   height: 100%;
-  width: 100%;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-  transition: transform .4s ease,-webkit-transform .4s ease
+  width: 100%
 }
 .drop-catalog__menu {
   height: 100%;
@@ -4714,7 +4705,7 @@ body>header._scroll {
   margin-bottom: 50px
 }
 .section-product__head {
-  margin-bottom: 30px
+  margin-bottom: 20px
 }
 .section-product__title {
   margin-bottom: 10px
@@ -4805,6 +4796,7 @@ body>header._scroll {
   aspect-ratio: 1/1;
   border-radius: 20px;
   overflow: hidden;
+  background-color: #fff;
   z-index: 1;
   outline: 0
 }
@@ -4977,7 +4969,7 @@ body>header._scroll {
   transition: color .3s ease,background-color .3s ease
 }
 .section-info__table {
-  margin-top: 60px
+  margin-top: 30px
 }
 .section-info__table-head {
   display: flex;
@@ -4998,19 +4990,19 @@ body>header._scroll {
   flex: 0 1 150px
 }
 .section-info__table-head-cell:nth-child(4) {
-  flex: 0 1 390px
+  flex: 0 1 385px
 }
 .section-info__table-body {
   display: flex;
   flex-direction: column;
-  gap: 15px
+  gap: 10px
 }
 .section-info__table-product {
   display: flex;
   align-items: center;
   gap: 40px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   font-size: 16px
 }
@@ -6028,37 +6020,44 @@ body>header._scroll {
 .section-shipping__pickup-info {
   display: flex;
   flex-direction: column;
-  gap: 25px
+  gap: 20px
 }
 .section-shipping__pickup-item a {
   transition: color .3s ease
 }
 .section-shipping__pickup-item-title {
-  margin-bottom: 25px
+  margin-bottom: 5px
+}
+.section-shipping__pickup-content-head {
+  font-size: 18px;
+  max-width: 440px;
+  margin: 0
+}
+.section-shipping__pickup-content-head strong {
+  font-weight: 900;
+  color: var(--primary)
 }
 .section-shipping__pickup-content {
   font-size: 18px;
   margin: 0
 }
 .section-shipping__pickup-download {
-  display: flex;
-  align-items: center;
-  gap: 5px
-}
-.section-shipping__pickup-download a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 25px;
-  text-decoration: underline
+  padding: 4px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
 }
 .section-shipping__pickup-gallery {
   display: block;
+  height: 285px;
   transition: opacity .3s ease
 }
 .section-shipping__pickup-gallery img {
   display: block;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 16px
 }
 .section-shipping__pickup-descr {
@@ -6839,7 +6838,7 @@ body>header._scroll {
 }
 .section-encyclopedia__grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 50px
 }
@@ -6848,7 +6847,7 @@ body>header._scroll {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 310px;
+  width: 290px;
   aspect-ratio: 1/1;
   z-index: 1
 }
@@ -6908,7 +6907,7 @@ body>header._scroll {
 .section-encyclopedia__table tbody {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 10px
 }
 .section-encyclopedia__table tr {
   display: flex;
@@ -6948,9 +6947,15 @@ body>header._scroll {
   text-decoration: underline;
   text-underline-offset: 3px
 }
+.section-encyclopedia__table [data-more-item]:nth-child(n+14) {
+  display: none
+}
 .section-encyclopedia__content {
   max-width: 1190px;
   margin-top: 80px
+}
+.section-encyclopedia__btn-more {
+  margin: 30px auto 0 auto
 }
 .section-encyclopedia__wrapper {
   display: flex;
@@ -8027,11 +8032,11 @@ body>footer::before {
   .section-info {
     overflow: hidden
   }
-  .section-info__table {
-    margin-top: 40px
+  .section-info__table-head {
+    gap: 20px
   }
   .section-info__table-head-cell:nth-child(1) {
-    flex: 0 1 385px
+    flex: 0 1 395px
   }
   .section-info__table-head-cell:nth-child(2) {
     flex: 1
@@ -8040,7 +8045,7 @@ body>footer::before {
     flex: 1
   }
   .section-info__table-head-cell:nth-child(4) {
-    flex-basis: 300px
+    flex-basis: 290px
   }
   .section-info__table-product {
     gap: 20px
@@ -9483,9 +9488,6 @@ body>footer::before {
     font-size: 16px;
     padding: 15px 20px
   }
-  .section-info__table-body {
-    gap: 10px
-  }
   .section-info__table-product {
     padding: 10px
   }
@@ -9721,15 +9723,6 @@ body>footer::before {
   .section-shipping__table-wrapper table th {
     font-size: 16px
   }
-  .section-shipping__pickup-info {
-    gap: 20px
-  }
-  .section-shipping__pickup-item-title {
-    margin-bottom: 20px
-  }
-  .section-shipping__pickup-download a {
-    font-size: 20px
-  }
   .section-shipping__pickup-descr {
     font-size: 16px
   }
@@ -9866,9 +9859,6 @@ body>footer::before {
     gap: 20px;
     row-gap: 10px
   }
-  .section-encyclopedia__grid {
-    justify-content: center
-  }
   .section-encyclopedia__item {
     width: 150px
   }
@@ -9890,9 +9880,6 @@ body>footer::before {
   .section-encyclopedia__table thead {
     margin-bottom: 15px;
     padding-bottom: 10px
-  }
-  .section-encyclopedia__table tbody {
-    gap: 10px
   }
   .section-encyclopedia__table .cell {
     font-size: 14px
@@ -10323,6 +10310,16 @@ body>footer::before {
   .section-product__btn-share {
     font-size: 12px
   }
+  .section-product__slide {
+    aspect-ratio: inherit;
+    height: 230px
+  }
+  .section-product__info-head {
+    margin-bottom: 15px
+  }
+  .section-info__table {
+    margin-top: 15px
+  }
   .section-info__sizes-wrapper table {
     width: 880px;
     font-size: 12px
@@ -10423,9 +10420,6 @@ body>footer::before {
   .section-shipping__pickup-content {
     font-size: 15px
   }
-  .section-shipping__pickup-download a {
-    font-size: 18px
-  }
   .section-pay__col-head {
     padding: 15px
   }
@@ -10495,6 +10489,10 @@ body>footer::before {
   .section-encyclopedia__table {
     min-width: 670px;
     padding-right: 10px
+  }
+  .section-encyclopedia__btn-more {
+    margin-top: 25px;
+    width: 100%
   }
   .section-requisites__list li span:first-child {
     flex-basis: 110px
