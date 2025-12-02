@@ -37,10 +37,10 @@
     }
     @include tablet-min {
       width: 70px;
-      
+
       .card-product__top {
-        min-height: none;
-        margin-bottom: 9px;
+        min-height: auto;
+        margin-bottom: 0;
       }
       .card-product__id {
         span {
@@ -182,7 +182,7 @@
   &__time-info {
     font-size: 14px;
     color: var(--dusty);
-    margin: auto 0px 15px 0px;
+    margin-bottom: 15px;
     @include laptop-min {
       align-self: start;
     }

@@ -344,14 +344,12 @@
                         <div class="section-shop__price">
                           <input
                             type="number"
-                            
                             value="1"
                             class="section-shop__price-input"
                             id="input-price-min"
                           />
                           <input
                             type="number"
-                            
                             value="100000"
                             class="section-shop__price-input"
                             id="input-price-max"
@@ -1372,8 +1370,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1454,8 +1450,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1528,17 +1522,28 @@
                         <strong>34.47 ₽</strong>
                         / шт
                       </div>
-                      <div class="card-product-line__time-info">
-                        От 1 рабочего дня
+                      <form action="#" class="card-product__counter">
+                        <div class="card-product__counter-btn _minus">-</div>
+                        <input
+                          type="number"
+                          value="1"
+                          class="card-product__counter-input"
+                        />
+                        <div class="card-product__counter-btn _plus">+</div>
+                      </form>
+                      <div class="card-product-line__order">
+                        <div class="card-product-line__time-info">
+                          От 1 рабочего дня
+                        </div>
+                        <button class="card-product-line__order-btn">
+                          <svg>
+                            <use
+                              xlink:href="img/icons/icons.svg#icon-timer"
+                            ></use>
+                          </svg>
+                          <span>Заказать</span>
+                        </button>
                       </div>
-                      <button class="card-product-line__order-btn">
-                        <svg>
-                          <use
-                            xlink:href="img/icons/icons.svg#icon-timer"
-                          ></use>
-                        </svg>
-                        <span>Заказать</span>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -1609,8 +1614,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1692,8 +1695,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1774,8 +1775,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1848,17 +1847,28 @@
                         <strong>34.47 ₽</strong>
                         / шт
                       </div>
-                      <div class="card-product-line__time-info">
-                        От 1 рабочего дня
+                      <form action="#" class="card-product__counter">
+                        <div class="card-product__counter-btn _minus">-</div>
+                        <input
+                          type="number"
+                          value="1"
+                          class="card-product__counter-input"
+                        />
+                        <div class="card-product__counter-btn _plus">+</div>
+                      </form>
+                      <div class="card-product-line__order">
+                        <div class="card-product-line__time-info">
+                          От 1 рабочего дня
+                        </div>
+                        <button class="card-product-line__order-btn">
+                          <svg>
+                            <use
+                              xlink:href="img/icons/icons.svg#icon-timer"
+                            ></use>
+                          </svg>
+                          <span>Заказать</span>
+                        </button>
                       </div>
-                      <button class="card-product-line__order-btn">
-                        <svg>
-                          <use
-                            xlink:href="img/icons/icons.svg#icon-timer"
-                          ></use>
-                        </svg>
-                        <span>Заказать</span>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -1929,8 +1939,6 @@
                         <input
                           type="number"
                           value="1"
-                          
-                          
                           class="card-product__counter-input"
                         />
                         <div class="card-product__counter-btn _plus">+</div>
@@ -1975,8 +1983,9 @@
         </div>
         <div class="section-shop__filters-overlay" id="filters-overlay"></div>
       </section>
-      @@include('html/components/section-recommendation.html',{ "title":"Хиты продаж" }) 
-      @@include('html/components/section-recommendation.html',{ "title":"Вы недавно посмотрели" })
+      @@include('html/components/section-recommendation.html',{ "title":"Хиты
+      продаж" }) @@include('html/components/section-recommendation.html',{
+      "title":"Вы недавно посмотрели" })
       @@include('html/components/section-faq.html')
       @@include('html/components/section-connect.html')
     </main>
