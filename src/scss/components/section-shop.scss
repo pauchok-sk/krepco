@@ -204,6 +204,9 @@
     @include hover {
       color: var(--primary);
     }
+    &._selected {
+      color: var(--primary);
+    }
 
     &._spoller-active {
       svg {
@@ -340,7 +343,6 @@
     display: none;
 
     &:checked + label {
-      color: var(--primary);
       &::before {
         background: url("@img/check-white.svg") center / 12px auto no-repeat;
         background-color: var(--primary);

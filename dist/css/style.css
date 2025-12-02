@@ -4246,6 +4246,9 @@ body>header._scroll {
   border-radius: 0;
   transition: color .3s ease
 }
+.section-shop__filters-spoller-btn._selected {
+  color: var(--primary)
+}
 .section-shop__filters-spoller-btn._spoller-active svg {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg)
@@ -4368,9 +4371,6 @@ body>header._scroll {
 }
 .section-shop__variant-input {
   display: none
-}
-.section-shop__variant-input:checked+label {
-  color: var(--primary)
 }
 .section-shop__variant-input:checked+label::before {
   background: url(../img/check-white.svg) center/12px auto no-repeat;
