@@ -179,17 +179,6 @@
       }
     }
   }
-  &__time-info {
-    font-size: 14px;
-    color: var(--dusty);
-    margin-bottom: 15px;
-    @include laptop-min {
-      align-self: start;
-    }
-    @include tablet-min {
-      display: none;
-    }
-  }
   &__order-btn {
     @include flex-center;
     position: relative;
@@ -260,6 +249,17 @@
         width: 12px;
         height: 16px;
       }
+    }
+  }
+  &__time-info {
+    font-size: 14px;
+    color: var(--dusty);
+    margin-bottom: 15px;
+    @include laptop-min {
+      align-self: start;
+    }
+    @include tablet-min {
+      display: none;
     }
   }
 }

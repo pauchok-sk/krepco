@@ -1626,11 +1626,6 @@ a.breadcrumbs-item:hover {
   width: 18px;
   height: 18px
 }
-.card-product-line__time-info {
-  font-size: 14px;
-  color: var(--dusty);
-  margin-bottom: 15px
-}
 .card-product-line__order-btn {
   display: flex;
   align-items: center;
@@ -1667,6 +1662,11 @@ a.breadcrumbs-item:hover {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
+}
+.card-product-line__time-info {
+  font-size: 14px;
+  color: var(--dusty);
+  margin-bottom: 15px
 }
 .card-search {
   position: relative;
@@ -1811,6 +1811,11 @@ a.breadcrumbs-item:hover {
 }
 .card-product-full__order {
   width: 120px
+}
+.card-product-full__time-info {
+  font-size: 14px;
+  color: var(--dusty);
+  margin-top: 15px
 }
 .card-product-cart {
   display: flex;
@@ -7788,6 +7793,12 @@ body>footer::before {
     flex: none;
     width: 100%
   }
+  .card-product-full__order {
+    width: 100%
+  }
+  .card-product-full__order-btn {
+    width: 100%
+  }
   .card-product-cart {
     padding: 28px 0
   }
@@ -8202,11 +8213,11 @@ body>footer::before {
   .card-product-line__nav {
     width: 240px
   }
-  .card-product-line__time-info {
-    align-self: start
-  }
   .card-product-line__order-btn {
     width: 100%
+  }
+  .card-product-line__time-info {
+    align-self: start
   }
   .counter {
     width: 100%;
@@ -8214,6 +8225,9 @@ body>footer::before {
   }
   .card-product-full__slider-wrapper .card-product__slider {
     height: 100px!important
+  }
+  .card-product-full__time-info {
+    align-self: start
   }
   .card-product-cart {
     padding: 20px 0;
@@ -9979,15 +9993,18 @@ body>footer::before {
   .card-product-line__cart-btn span {
     display: none
   }
-  .card-product-line__time-info {
-    display: none
-  }
   .card-product-line__order-btn {
     padding: 0;
     width: 30px;
     height: 30px
   }
   .card-product-line__order-btn span {
+    display: none
+  }
+  .card-product-line__time-info {
+    display: none
+  }
+  .card-product-full__time-info {
     display: none
   }
   .card-product-cart {
