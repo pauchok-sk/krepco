@@ -1,9 +1,9 @@
-export default function searchInputCart() {
-  const forms = document.querySelectorAll(".section-cart__form-search");
+export default function quickCart() {
+  const forms = document.querySelectorAll(".quick-cart");
 
   if (forms.length) {
     forms.forEach(form => {
-      const input = form.querySelector(".section-cart__search-input")
+      const input = form.querySelector(".quick-cart__input")
       
       input.addEventListener("input", (e) => {
         if (e.target.value) {

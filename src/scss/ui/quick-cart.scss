@@ -25,6 +25,14 @@
       transform: translateY(0px);
     }
   }
+  &._entered {
+    .quick-cart__label {
+      font-size: 14px;
+      color: var(--dusty);
+      top: 0;
+      background-color: var(--alabaster);
+    }
+  }
 
   &__input {
     flex: 1;
@@ -68,6 +76,17 @@
       transform 0.3s ease;
     @include tablet-min {
       font-size: 14px;
+    }
+
+    .desk {
+      @include tablet {
+        display: none;
+      }
+    }
+    .mob {
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
   }
   &__btn {

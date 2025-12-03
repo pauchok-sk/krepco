@@ -2149,6 +2149,12 @@ a.breadcrumbs-item:hover {
   -webkit-transform: translateY(0);
   transform: translateY(0)
 }
+.quick-cart._entered .quick-cart__label {
+  font-size: 14px;
+  color: var(--dusty);
+  top: 0;
+  background-color: var(--alabaster)
+}
 .quick-cart__input {
   flex: 1;
   padding: 22px 25px;
@@ -5418,70 +5424,8 @@ body>header._scroll {
 .section-cart__bottom-btn {
   width: 100%
 }
-.section-cart__form-search {
-  position: relative;
-  display: flex;
-  gap: 20px;
-  border: 1px solid var(--alto);
-  border-radius: 15px;
+.section-cart__quick-cart-wrapper {
   margin-top: 80px
-}
-.section-cart__form-search._entered .section-cart__search-label {
-  font-size: 14px;
-  color: var(--dusty);
-  top: 0;
-  background-color: var(--alabaster)
-}
-.section-cart__search-input {
-  flex: 1;
-  padding: 22px 25px;
-  margin: 0;
-  background-color: rgba(0,0,0,0);
-  outline: 0;
-  border: none
-}
-.section-cart__search-input::-webkit-input-placeholder {
-  color: var(--dark)
-}
-.section-cart__search-input:-ms-input-placeholder {
-  color: var(--dark)
-}
-.section-cart__search-input::-ms-input-placeholder {
-  color: var(--dark)
-}
-.section-cart__search-input::placeholder {
-  color: var(--dark)
-}
-.section-cart__search-label {
-  position: absolute;
-  left: 22px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-size: 16px;
-  line-height: 120%;
-  padding: 3px;
-  transition: top .3s ease,left .3s ease,color .3s ease,background-color .3s ease,font-size .3s ease,-webkit-transform .3s ease;
-  transition: top .3s ease,left .3s ease,color .3s ease,background-color .3s ease,font-size .3s ease,transform .3s ease;
-  transition: top .3s ease,left .3s ease,color .3s ease,background-color .3s ease,font-size .3s ease,transform .3s ease,-webkit-transform .3s ease
-}
-.section-cart__search-btn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  outline: 0;
-  background-color: rgba(0,0,0,0);
-  width: 62px;
-  flex-shrink: 0;
-  color: var(--gray);
-  transition: color .3s ease
-}
-.section-cart__search-btn svg {
-  width: 20px;
-  height: 20px
 }
 .section-message {
   position: relative;
@@ -7369,6 +7313,9 @@ body>footer::before {
   }
 }
 @media (min-width:768px) {
+  .quick-cart__label .mob {
+    display: none
+  }
   .header-search {
     display: none
   }
@@ -7426,12 +7373,6 @@ body>footer::before {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg)
   }
-  .section-cart__form-search:hover .section-cart__search-label {
-    font-size: 14px;
-    color: var(--dusty);
-    top: 0;
-    background-color: var(--alabaster)
-  }
 }
 @media (min-width:1024px)and (hover:none) {
   .dropdown:active .dropdown-body {
@@ -7458,12 +7399,6 @@ body>footer::before {
   .header__top-contacts-btn:active .arrow {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg)
-  }
-  .section-cart__form-search:active .section-cart__search-label {
-    font-size: 14px;
-    color: var(--dusty);
-    top: 0;
-    background-color: var(--alabaster)
   }
 }
 @media (min-width:1024px) {
@@ -8558,12 +8493,6 @@ body>footer::before {
   .section-cart__info-switcher-nav .switcher__nav-btn span:nth-child(1) {
     display: none
   }
-  .section-cart__search-input:focus+.section-cart__search-label {
-    font-size: 14px;
-    color: var(--dusty);
-    top: 0;
-    background-color: var(--alabaster)
-  }
   .section-message__decor {
     top: auto;
     bottom: -125px
@@ -9125,6 +9054,9 @@ body>footer::before {
     margin: 0 -20px;
     padding: 0 20px
   }
+  .quick-cart__label .desk {
+    display: none
+  }
   body>header {
     padding: 0;
     box-shadow: none
@@ -9573,7 +9505,7 @@ body>footer::before {
   .section-cart__download-scheme {
     margin: 0
   }
-  .section-cart__form-search {
+  .section-cart__quick-cart-wrapper {
     margin-top: 50px
   }
   .section-message__decor {
@@ -10364,7 +10296,7 @@ body>footer::before {
   .section-cart__download-scheme {
     margin: 0 auto
   }
-  .section-cart__form-search {
+  .section-cart__quick-cart-wrapper {
     display: none
   }
   .section-message {
@@ -11011,9 +10943,6 @@ body>footer::before {
   .section-cart__download-scheme:hover {
     color: var(--primary)
   }
-  .section-cart__search-btn:hover {
-    color: var(--primary)
-  }
   .section-message__content a:hover {
     color: var(--primary)
   }
@@ -11505,9 +11434,6 @@ body>footer::before {
     color: var(--primary)
   }
   .section-cart__download-scheme:active {
-    color: var(--primary)
-  }
-  .section-cart__search-btn:active {
     color: var(--primary)
   }
   .section-message__content a:active {
