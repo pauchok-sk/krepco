@@ -10297,7 +10297,7 @@ body>footer::before {
     margin: 0 auto
   }
   .section-cart__quick-cart-wrapper {
-    display: none
+    margin-top: 30px
   }
   .section-message {
     margin-bottom: 150px
